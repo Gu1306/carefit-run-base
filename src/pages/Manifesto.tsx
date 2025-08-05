@@ -1,6 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { ChevronRight, Flag, Shield, Award, Heart, Users, Mountain } from "lucide-react";
+import { ChevronRight, Flag, Shield, Award, Heart, Users } from "lucide-react";
+import CareFitLogo from "@/components/CareFitLogo";
 
 const Manifesto = () => {
   const manifestoBlocks = [
@@ -47,19 +48,19 @@ const Manifesto = () => {
       <section className="py-20 bg-gradient-to-r from-primary via-secondary to-accent">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-center mb-6">
-            <Mountain className="w-10 h-10 text-white mr-4" />
+            <CareFitLogo size={40} className="mr-4" />
             <h1 className="text-5xl md:text-6xl font-bold text-white">
               Nosso Manifesto
             </h1>
-            <Mountain className="w-10 h-10 text-white ml-4" />
+            <CareFitLogo size={40} className="ml-4" />
           </div>
           <p className="text-xl text-white/90 max-w-2xl mx-auto mb-4">
             Os valores e princípios que guiam cada passo da nossa jornada junto aos corredores
           </p>
           <div className="flex items-center justify-center text-white/80">
-            <Mountain className="w-5 h-5 mr-2" />
-            <span className="text-sm font-medium">Rumo ao seu Everest pessoal</span>
-            <Mountain className="w-5 h-5 ml-2" />
+            <CareFitLogo size={20} className="mr-2" />
+            <span className="text-sm font-medium">Seu desafio começa na base. A gente caminha junto até o topo.</span>
+            <CareFitLogo size={20} className="ml-2" />
           </div>
         </div>
       </section>

@@ -1,7 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Heart, Target, Users, Zap, Mountain } from "lucide-react";
+import { Heart, Target, Users, Zap } from "lucide-react";
 import heroImage from "@/assets/hero-runners.jpg";
+import CareFitLogo from "@/components/CareFitLogo";
 
 const Home = () => {
   return (
@@ -44,19 +45,19 @@ const Home = () => {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <div className="flex items-center justify-center mb-6">
-              <Mountain className="w-8 h-8 text-accent mr-3" />
+              <CareFitLogo size={32} className="mr-3" />
               <h2 className="text-4xl font-bold text-primary">
                 Correr é mais que cruzar a linha de chegada
               </h2>
-              <Mountain className="w-8 h-8 text-accent ml-3" />
+              <CareFitLogo size={32} className="ml-3" />
             </div>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               É começar com consciência. A base está em recovery, fortalecimento, nutrição e mente treinada.
             </p>
             <div className="flex items-center justify-center mt-4 text-accent">
-              <Mountain className="w-4 h-4 mr-2" />
-              <span className="text-sm font-medium">Encontre seu Everest</span>
-              <Mountain className="w-4 h-4 ml-2" />
+              <CareFitLogo size={16} className="mr-2" />
+              <span className="text-sm font-medium">Seu desafio começa na base. A gente caminha junto até o topo.</span>
+              <CareFitLogo size={16} className="ml-2" />
             </div>
           </div>
 
