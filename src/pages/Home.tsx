@@ -3,15 +3,12 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Heart, Target, Users, Zap } from "lucide-react";
 import heroImage from "@/assets/hero-runners.jpg";
 import CareFitLogo from "@/components/CareFitLogo";
-
 const Home = () => {
-  return (
-    <div className="min-h-screen">
+  return <div className="min-h-screen">
       {/* Hero Section */}
-      <section 
-        className="relative h-screen flex items-center justify-center bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${heroImage})` }}
-      >
+      <section className="relative h-screen flex items-center justify-center bg-cover bg-center bg-no-repeat" style={{
+      backgroundImage: `url(${heroImage})`
+    }}>
         <div className="absolute inset-0 bg-gradient-to-r from-primary/80 via-primary/60 to-transparent"></div>
         <div className="relative z-10 max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
@@ -21,19 +18,8 @@ const Home = () => {
             Seu clube para encontrar a melhor versão de si mesmo
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button 
-              variant="hero" 
-              size="lg" 
-              className="text-lg px-8 py-4"
-              onClick={() => window.open('https://wa.me/5511999999999', '_blank')}
-            >
-              Agende sua avaliação
-            </Button>
-            <Button 
-              variant="outline" 
-              size="lg" 
-              className="text-lg px-8 py-4 bg-white/10 border-white text-white hover:bg-white hover:text-primary"
-            >
+            <Button variant="hero" size="lg" className="text-lg px-8 py-4" onClick={() => window.open('https://wa.me/5511999999999', '_blank')}>Agende sua primeira sessão</Button>
+            <Button variant="outline" size="lg" className="text-lg px-8 py-4 bg-white/10 border-white text-white hover:bg-white hover:text-primary">
               Conheça nossos serviços
             </Button>
           </div>
@@ -80,9 +66,7 @@ const Home = () => {
                   <Zap className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-primary mb-2">Fortalecimento</h3>
-                <p className="text-muted-foreground">
-                  Treinos funcionais para corredores e prevenção de lesões
-                </p>
+                <p className="text-muted-foreground">Planos online de fortalecimento. Específicos para corredores  </p>
               </CardContent>
             </Card>
 
@@ -122,18 +106,11 @@ const Home = () => {
           <p className="text-xl text-white/90 mb-8">
             Estamos prontos para cuidar da sua jornada. Comece hoje mesmo.
           </p>
-          <Button 
-            variant="warm" 
-            size="lg" 
-            className="text-lg px-8 py-4"
-            onClick={() => window.open('https://wa.me/5511999999999', '_blank')}
-          >
+          <Button variant="warm" size="lg" className="text-lg px-8 py-4" onClick={() => window.open('https://wa.me/5511999999999', '_blank')}>
             Fale conosco agora
           </Button>
         </div>
       </section>
-    </div>
-  );
+    </div>;
 };
-
 export default Home;
