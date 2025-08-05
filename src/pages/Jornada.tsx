@@ -1,7 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { CheckCircle, Award, Users, Target, Calendar, Trophy } from "lucide-react";
+import { CheckCircle, Award, Users, Target, Calendar, Trophy, Mountain } from "lucide-react";
 
 const Jornada = () => {
   const etapas = [
@@ -108,12 +108,21 @@ const Jornada = () => {
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-r from-primary to-secondary">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            Jornada de 12 Semanas
-          </h1>
-          <p className="text-xl text-white/90 max-w-2xl mx-auto">
+          <div className="flex items-center justify-center mb-6">
+            <Mountain className="w-10 h-10 text-white mr-4" />
+            <h1 className="text-5xl md:text-6xl font-bold text-white">
+              Jornada de 12 Semanas
+            </h1>
+            <Mountain className="w-10 h-10 text-white ml-4" />
+          </div>
+          <p className="text-xl text-white/90 max-w-2xl mx-auto mb-4">
             Uma transformação estruturada que vai além do físico. Cada semana é um passo na construção da sua melhor versão como corredor.
           </p>
+          <div className="flex items-center justify-center text-white/80">
+            <Mountain className="w-5 h-5 mr-2" />
+            <span className="text-sm font-medium">Cada etapa te aproxima do seu Everest</span>
+            <Mountain className="w-5 h-5 ml-2" />
+          </div>
         </div>
       </section>
 
