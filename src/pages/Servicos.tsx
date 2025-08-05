@@ -1,11 +1,8 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Heart, Zap, Target, Users, Play, ArrowRight } from "lucide-react";
-
 const Servicos = () => {
-
-  return (
-    <div className="min-h-screen pt-16">
+  return <div className="min-h-screen pt-16">
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-r from-primary to-secondary">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
@@ -52,11 +49,11 @@ const Servicos = () => {
                   </li>
                   <li className="flex items-center gap-3">
                     <ArrowRight className="w-5 h-5 text-accent flex-shrink-0" />
-                    <span className="text-foreground">Botas de compressão pneumática NormaTec</span>
+                    <span className="text-foreground">Botas de compressão pneumática</span>
                   </li>
                   <li className="flex items-center gap-3">
                     <ArrowRight className="w-5 h-5 text-accent flex-shrink-0" />
-                    <span className="text-foreground">Liberação miofascial com equipamentos profissionais</span>
+                    <span className="text-foreground">Liberação miofascial</span>
                   </li>
                   <li className="flex items-center gap-3">
                     <ArrowRight className="w-5 h-5 text-accent flex-shrink-0" />
@@ -64,11 +61,7 @@ const Servicos = () => {
                   </li>
                 </ul>
                 
-                <Button 
-                  variant="hero" 
-                  size="lg"
-                  onClick={() => window.open('https://wa.me/5511999999999', '_blank')}
-                >
+                <Button variant="hero" size="lg" onClick={() => window.open('https://wa.me/5511999999999', '_blank')}>
                   Agendar consulta
                 </Button>
               </div>
@@ -121,7 +114,7 @@ const Servicos = () => {
                 <ul className="space-y-3">
                   <li className="flex items-center gap-3">
                     <ArrowRight className="w-5 h-5 text-accent flex-shrink-0" />
-                    <span className="text-foreground">Avaliação biomecânica completa</span>
+                    <span className="text-foreground">Avaliação presencial de mobilidade, força e alongamento</span>
                   </li>
                   <li className="flex items-center gap-3">
                     <ArrowRight className="w-5 h-5 text-accent flex-shrink-0" />
@@ -129,7 +122,7 @@ const Servicos = () => {
                   </li>
                   <li className="flex items-center gap-3">
                     <ArrowRight className="w-5 h-5 text-accent flex-shrink-0" />
-                    <span className="text-foreground">Fortalecimento de core e estabilidade</span>
+                    <span className="text-foreground">Fortalecimento específico para corredores, de core, estabilidade e força</span>
                   </li>
                   <li className="flex items-center gap-3">
                     <ArrowRight className="w-5 h-5 text-accent flex-shrink-0" />
@@ -137,11 +130,7 @@ const Servicos = () => {
                   </li>
                 </ul>
                 
-                <Button 
-                  variant="hero" 
-                  size="lg"
-                  onClick={() => window.open('https://wa.me/5511999999999', '_blank')}
-                >
+                <Button variant="hero" size="lg" onClick={() => window.open('https://wa.me/5511999999999', '_blank')}>
                   Agendar consulta
                 </Button>
               </div>
@@ -210,11 +199,7 @@ const Servicos = () => {
                   </li>
                 </ul>
                 
-                <Button 
-                  variant="hero" 
-                  size="lg"
-                  onClick={() => window.open('https://wa.me/5511999999999', '_blank')}
-                >
+                <Button variant="hero" size="lg" onClick={() => window.open('https://wa.me/5511999999999', '_blank')}>
                   Agendar consulta
                 </Button>
               </div>
@@ -283,11 +268,7 @@ const Servicos = () => {
                   </li>
                 </ul>
                 
-                <Button 
-                  variant="hero" 
-                  size="lg"
-                  onClick={() => window.open('https://wa.me/5511999999999', '_blank')}
-                >
+                <Button variant="hero" size="lg" onClick={() => window.open('https://wa.me/5511999999999', '_blank')}>
                   Agendar consulta
                 </Button>
               </div>
@@ -325,29 +306,17 @@ const Servicos = () => {
           <h2 className="text-4xl font-bold text-white mb-6">
             Pronto para elevar sua performance?
           </h2>
-          <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-            Nossos fisioterapeutas especializados estão prontos para guiar sua jornada de evolução como corredor.
-          </p>
+          <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">Nosso time de fisioterapeutas, educadores físicos e nutricionistas estão prontos para guiar sua jornada de evolução como corredor.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button 
-              variant="hero" 
-              size="lg"
-              onClick={() => window.open('https://wa.me/5511999999999', '_blank')}
-            >
+            <Button variant="hero" size="lg" onClick={() => window.open('https://wa.me/5511999999999', '_blank')}>
               Agende sua avaliação
             </Button>
-            <Button 
-              variant="outline" 
-              size="lg"
-              className="bg-white/10 border-white text-white hover:bg-white hover:text-primary"
-            >
+            <Button variant="outline" size="lg" className="bg-white/10 border-white text-white hover:bg-white hover:text-primary">
               Conhecer a jornada de 12 semanas
             </Button>
           </div>
         </div>
       </section>
-    </div>
-  );
+    </div>;
 };
-
 export default Servicos;
