@@ -100,9 +100,7 @@ const Home = () => {
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-primary to-secondary">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-white mb-6">
-            A CareFit Run Base é onde prevenção encontra performance
-          </h2>
+          <h2 className="text-4xl font-bold text-white mb-6">A CAREFIT RUN BASE é onde prevenção encontra performance</h2>
           <p className="text-xl text-white/90 mb-8">
             Estamos prontos para cuidar da sua jornada. Comece hoje mesmo.
           </p>
