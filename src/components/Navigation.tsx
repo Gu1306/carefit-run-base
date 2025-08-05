@@ -6,25 +6,6 @@ import CareFitLogo from "./CareFitLogo";
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
-  const navItems = [{
-    name: "Início",
-    path: "/"
-  }, {
-    name: "Manifesto",
-    path: "/manifesto"
-  }, {
-    name: "Serviços",
-    path: "/servicos"
-  }, {
-    name: "Jornada Propósito",
-    path: "/jornada"
-  }, {
-    name: "Nossa História",
-    path: "/historia"
-  }, {
-    name: "Contato",
-    path: "/contato"
-  }];
   const isActive = (path: string) => location.pathname === path;
   return <>
       <nav className="fixed top-0 w-full bg-background/95 backdrop-blur-sm border-b border-border z-50">
@@ -43,9 +24,24 @@ const Navigation = () => {
 
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center space-x-8">
-              {navItems.map(item => <Link key={item.name} to={item.path} className={`text-sm font-medium transition-colors hover:text-accent ${isActive(item.path) ? "text-accent" : "text-foreground"}`}>
-                  {item.name}
-                </Link>)}
+              <Link to="/" className={`text-sm font-medium transition-colors hover:text-accent ${isActive("/") ? "text-accent" : "text-foreground"}`}>
+                Início
+              </Link>
+              <Link to="/manifesto" className={`text-sm font-medium transition-colors hover:text-accent ${isActive("/manifesto") ? "text-accent" : "text-foreground"}`}>
+                Porquê Existimos
+              </Link>
+              <Link to="/servicos" className={`text-sm font-medium transition-colors hover:text-accent ${isActive("/servicos") ? "text-accent" : "text-foreground"}`}>
+                Serviços
+              </Link>
+              <Link to="/jornada" className={`text-sm font-medium transition-colors hover:text-accent ${isActive("/jornada") ? "text-accent" : "text-foreground"}`}>
+                Jornada Propósito
+              </Link>
+              <Link to="/historia" className={`text-sm font-medium transition-colors hover:text-accent ${isActive("/historia") ? "text-accent" : "text-foreground"}`}>
+                Nossa História
+              </Link>
+              <Link to="/contato" className={`text-sm font-medium transition-colors hover:text-accent ${isActive("/contato") ? "text-accent" : "text-foreground"}`}>
+                Contato
+              </Link>
               <Button variant="whatsapp" size="sm" onClick={() => window.open('https://wa.me/5511999999999', '_blank')}>
                 <MessageCircle className="w-4 h-4" />
                 WhatsApp
@@ -64,9 +60,24 @@ const Navigation = () => {
         {/* Mobile Navigation */}
         {isOpen && <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 bg-background border-t border-border">
-              {navItems.map(item => <Link key={item.name} to={item.path} className={`block px-3 py-2 text-base font-medium transition-colors hover:text-accent ${isActive(item.path) ? "text-accent" : "text-foreground"}`} onClick={() => setIsOpen(false)}>
-                  {item.name}
-                </Link>)}
+              <Link to="/" className={`block px-3 py-2 text-base font-medium transition-colors hover:text-accent ${isActive("/") ? "text-accent" : "text-foreground"}`} onClick={() => setIsOpen(false)}>
+                Início
+              </Link>
+              <Link to="/manifesto" className={`block px-3 py-2 text-base font-medium transition-colors hover:text-accent ${isActive("/manifesto") ? "text-accent" : "text-foreground"}`} onClick={() => setIsOpen(false)}>
+                Porquê Existimos
+              </Link>
+              <Link to="/servicos" className={`block px-3 py-2 text-base font-medium transition-colors hover:text-accent ${isActive("/servicos") ? "text-accent" : "text-foreground"}`} onClick={() => setIsOpen(false)}>
+                Serviços
+              </Link>
+              <Link to="/jornada" className={`block px-3 py-2 text-base font-medium transition-colors hover:text-accent ${isActive("/jornada") ? "text-accent" : "text-foreground"}`} onClick={() => setIsOpen(false)}>
+                Jornada Propósito
+              </Link>
+              <Link to="/historia" className={`block px-3 py-2 text-base font-medium transition-colors hover:text-accent ${isActive("/historia") ? "text-accent" : "text-foreground"}`} onClick={() => setIsOpen(false)}>
+                Nossa História
+              </Link>
+              <Link to="/contato" className={`block px-3 py-2 text-base font-medium transition-colors hover:text-accent ${isActive("/contato") ? "text-accent" : "text-foreground"}`} onClick={() => setIsOpen(false)}>
+                Contato
+              </Link>
               <div className="px-3 py-2">
                 <Button variant="whatsapp" size="sm" className="w-full" onClick={() => {
               window.open('https://wa.me/5511999999999', '_blank');
