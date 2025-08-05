@@ -1,201 +1,255 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { CheckCircle, Award, Users, Target, Calendar, Trophy } from "lucide-react";
 import CareFitLogo from "@/components/CareFitLogo";
+import { CheckCircle2, Users, Heart, Trophy, Target, Zap } from "lucide-react";
+
+// Dados das 12 semanas
+const semanas = [
+  { numero: 1, titulo: "Avaliação Inicial", descricao: "Base inicial para sua jornada" },
+  { numero: 2, titulo: "Construção da Base", descricao: "Fortalecendo os fundamentos" },
+  { numero: 3, titulo: "Checkpoint 1: Ritmo e Constância", descricao: "Primeiro marco da sua evolução", destaque: true },
+  { numero: 4, titulo: "Primeira Evolução", descricao: "Consolidando os primeiros ganhos" },
+  { numero: 5, titulo: "Intensificação", descricao: "Elevando o nível de treinamento" },
+  { numero: 6, titulo: "Pirâmide da Performance 🟤", descricao: "Marco simbólico da sua performance", ritual: true },
+  { numero: 7, titulo: "Aprofundamento", descricao: "Refinando técnicas e estratégias" },
+  { numero: 8, titulo: "Checkpoint 2: Resistência Mental", descricao: "Fortalecendo mente e corpo", destaque: true },
+  { numero: 9, titulo: "Quebra de Pedra 🪨", descricao: "Superando limites pessoais", ritual: true },
+  { numero: 10, titulo: "Refinamento", descricao: "Polindo os últimos detalhes" },
+  { numero: 11, titulo: "Preparação Final", descricao: "Preparando para a conclusão" },
+  { numero: 12, titulo: "Mural dos Corredores 🎉", descricao: "Celebração e planejamento futuro", ritual: true }
+];
+
+// Rituais simbólicos
+const rituais = [
+  {
+    icone: Trophy,
+    titulo: "Pirâmide da Performance",
+    semana: 6,
+    descricao: "Peça simbólica entregue ao atleta representando sua evolução",
+    cor: "from-yellow-500 to-orange-600"
+  },
+  {
+    icone: Target,
+    titulo: "Quebra de Pedra",
+    semana: 9,
+    descricao: "Desafio simbólico de superação dos seus limites pessoais",
+    cor: "from-gray-500 to-gray-700"
+  },
+  {
+    icone: Users,
+    titulo: "Mural dos Corredores",
+    semana: 12,
+    descricao: "Nome eternizado e planejamento do próximo ciclo de evolução",
+    cor: "from-green-500 to-emerald-600"
+  }
+];
+
+// Benefícios inclusos
+const beneficios = [
+  "4 avaliações físicas completas",
+  "12 Planilhas de Treinos semanais de fortalecimento direcionado para sua Jornada",
+  "12 Sessões de recovery personalizadas toda semana",
+  "Plano de nutrição individualizado com 3 consultas com nutricionista",
+  "3 Experiências guiadas para foco mental e resiliência emocional"
+];
+
+// Para quem é
+const publicoAlvo = [
+  "Quem está começando a correr com segurança",
+  "Quem já corre mas sofre com lesões",
+  "Quem quer evoluir para 10K, 21K ou 42K",
+  "Quem busca performance com consciência"
+];
+
+// Como funciona
+const comoFunciona = [
+  "Atendimento semanal (presencial ou híbrido)",
+  "Fisioterapeuta exclusivo",
+  "Treinos e recovery ajustados toda semana",
+  "Rituais que marcam sua evolução"
+];
 
 const Jornada = () => {
-  const etapas = [
-    { 
-      semana: 1, 
-      titulo: "Avaliação Inicial", 
-      descricao: "Mapeamento completo da sua condição física e objetivos",
-      destaque: "Primeira impressão"
-    },
-    { 
-      semana: 2, 
-      titulo: "Construção da Base", 
-      descricao: "Início do fortalecimento e adaptação aos protocolos",
-      destaque: null
-    },
-    { 
-      semana: 3, 
-      titulo: "Ritmo e Consistência", 
-      descricao: "Estabelecimento de rotinas e hábitos saudáveis",
-      destaque: "Checkpoint 1"
-    },
-    { 
-      semana: 4, 
-      titulo: "Primeira Evolução", 
-      descricao: "Primeiros resultados mensuráveis e ajustes",
-      destaque: null
-    },
-    { 
-      semana: 5, 
-      titulo: "Intensificação", 
-      descricao: "Aumento gradual da complexidade dos treinos",
-      destaque: null
-    },
-    { 
-      semana: 6, 
-      titulo: "Meio da Jornada", 
-      descricao: "Reavaliação e celebração do progresso",
-      destaque: "Pirâmide da Performance"
-    },
-    { 
-      semana: 7, 
-      titulo: "Aprofundamento", 
-      descricao: "Foco em pontos específicos de melhoria",
-      destaque: null
-    },
-    { 
-      semana: 8, 
-      titulo: "Resistência Mental", 
-      descricao: "Desenvolvimento de estratégias psicológicas",
-      destaque: "Checkpoint 2"
-    },
-    { 
-      semana: 9, 
-      titulo: "Pico de Performance", 
-      descricao: "Máximo desenvolvimento das capacidades",
-      destaque: "Quebra de Pedra"
-    },
-    { 
-      semana: 10, 
-      titulo: "Refinamento", 
-      descricao: "Polimento das técnicas e estratégias",
-      destaque: null
-    },
-    { 
-      semana: 11, 
-      titulo: "Preparação Final", 
-      descricao: "Últimos ajustes e preparação mental",
-      destaque: null
-    },
-    { 
-      semana: 12, 
-      titulo: "Celebração e Planejamento", 
-      descricao: "Entrega do símbolo e planejamento futuro",
-      destaque: "Mural dos Corredores"
-    }
-  ];
-
-  const rituais = [
-    {
-      icon: Target,
-      titulo: "Pirâmide da Performance",
-      semana: 6,
-      descricao: "Marco simbólico que representa a construção sólida das suas capacidades como corredor.",
-      color: "from-accent to-earth"
-    },
-    {
-      icon: Award,
-      titulo: "Quebra de Pedra",
-      semana: 9,
-      descricao: "Ritual de superação que simboliza quebrar barreiras mentais e físicas.",
-      color: "from-secondary to-primary"
-    },
-    {
-      icon: Users,
-      titulo: "Mural dos Corredores",
-      semana: 12,
-      descricao: "Seu nome eternizado no mural, junto aos símbolos entregues pela jornada completa.",
-      color: "from-warm to-accent"
-    }
-  ];
-
   return (
-    <div className="min-h-screen pt-16">
-      {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-r from-primary to-secondary">
-        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-center mb-6">
-            <CareFitLogo size={40} className="mr-4" />
-            <h1 className="text-5xl md:text-6xl font-bold text-white">
-              Jornada de 12 Semanas
-            </h1>
-            <CareFitLogo size={40} className="ml-4" />
+    <div className="min-h-screen bg-gradient-to-br from-background via-background/95 to-muted/30">
+      {/* Seção Hero */}
+      <section className="relative pt-20 pb-16 px-4 text-center overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-accent/5 -z-10" />
+        <div className="container mx-auto max-w-4xl">
+          <div className="flex justify-center mb-8">
+            <CareFitLogo />
           </div>
-          <p className="text-xl text-white/90 max-w-2xl mx-auto mb-4">
+          
+          <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent mb-6 animate-fade-in">
+            JORNADA PROPÓSITO
+          </h1>
+          
+          <div className="text-2xl md:text-3xl font-semibold text-muted-foreground mb-4">
+            12 SEMANAS
+          </div>
+          
+          <p className="text-xl md:text-2xl text-foreground/80 mb-6 max-w-3xl mx-auto">
+            Toda corrida precisa de uma base. Aqui, ela começa com propósito.
+          </p>
+          
+          <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
             Uma transformação estruturada que vai além do físico. Cada semana é um passo na construção da sua melhor versão como corredor.
           </p>
-          <div className="flex items-center justify-center text-white/80">
-            <CareFitLogo size={20} className="mr-2" />
-            <span className="text-sm font-medium">Seu desafio começa na base. A gente caminha junto até o topo.</span>
-            <CareFitLogo size={20} className="ml-2" />
+          
+          <Button 
+            size="lg" 
+            className="hover-scale bg-gradient-to-r from-primary to-accent text-white px-8 py-4 text-lg"
+            onClick={() => window.open("https://wa.me/5516996008849", "_blank")}
+          >
+            Quero começar minha jornada
+          </Button>
+        </div>
+      </section>
+
+      {/* Seção O que é */}
+      <section className="py-16 px-4">
+        <div className="container mx-auto max-w-4xl">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
+              O que é a Jornada?
+            </h2>
+          </div>
+          
+          <div className="bg-card/50 backdrop-blur-sm rounded-2xl p-8 border border-border/50">
+            <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
+              A Jornada Propósito é um programa completo e personalizado de 12 semanas, acompanhado de perto por fisioterapeutas, educadores físicos e nutricionistas, todos especializados no universo da corrida.
+            </p>
+            
+            <p className="text-lg text-muted-foreground mb-6">
+              Durante essa jornada, você terá acesso a:
+            </p>
+            
+            <div className="grid gap-4 mb-8">
+              {beneficios.map((beneficio, index) => (
+                <div key={index} className="flex items-start gap-3">
+                  <CheckCircle2 className="w-6 h-6 text-primary mt-0.5 flex-shrink-0" />
+                  <span className="text-lg text-muted-foreground">{beneficio}</span>
+                </div>
+              ))}
+            </div>
+            
+            <p className="text-lg text-muted-foreground leading-relaxed">
+              Tudo isso estruturado com checkpoints, marcos simbólicos e acompanhamento constante, para que sua evolução seja concreta, visível e celebrada.
+            </p>
           </div>
         </div>
       </section>
 
-      {/* Timeline */}
-      <section className="py-20 bg-background">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-primary mb-4">
-              Sua Jornada de Transformação
+      {/* Seção Para quem é */}
+      <section className="py-16 px-4 bg-muted/30">
+        <div className="container mx-auto max-w-4xl">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
+              Para quem é?
             </h2>
-            <p className="text-xl text-muted-foreground">
-              Cada etapa foi pensada para construir uma base sólida e duradoura
+          </div>
+          
+          <div className="grid gap-6 md:grid-cols-2">
+            {publicoAlvo.map((item, index) => (
+              <Card key={index} className="bg-card/50 backdrop-blur-sm border-border/50 hover-scale">
+                <CardContent className="p-6">
+                  <div className="flex items-center gap-3">
+                    <Heart className="w-6 h-6 text-primary flex-shrink-0" />
+                    <span className="text-lg text-muted-foreground">{item}</span>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Seção Como funciona */}
+      <section className="py-16 px-4">
+        <div className="container mx-auto max-w-4xl">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
+              Como funciona?
+            </h2>
+          </div>
+          
+          <div className="grid gap-6 md:grid-cols-2">
+            {comoFunciona.map((item, index) => (
+              <Card key={index} className="bg-card/50 backdrop-blur-sm border-border/50 hover-scale">
+                <CardContent className="p-6">
+                  <div className="flex items-center gap-3">
+                    <Zap className="w-6 h-6 text-accent flex-shrink-0" />
+                    <span className="text-lg text-muted-foreground">{item}</span>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Seção As 12 Semanas */}
+      <section className="py-16 px-4 bg-muted/20">
+        <div className="container mx-auto max-w-6xl">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
+              As 12 Semanas
+            </h2>
+            <p className="text-lg text-muted-foreground">
+              Sua jornada de transformação, semana a semana
             </p>
           </div>
-
+          
           <div className="relative">
-            {/* Timeline Line */}
-            <div className="absolute left-1/2 transform -translate-x-px w-0.5 bg-gradient-to-b from-accent to-primary h-full hidden lg:block"></div>
-
-            <div className="space-y-12">
-              {etapas.map((etapa, index) => (
+            {/* Linha temporal */}
+            <div className="absolute left-1/2 transform -translate-x-1/2 w-1 bg-gradient-to-b from-primary to-accent h-full opacity-30 hidden md:block" />
+            
+            <div className="space-y-8">
+              {semanas.map((semana, index) => (
                 <div
-                  key={index}
-                  className={`flex flex-col lg:flex-row items-center gap-8 ${
-                    index % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"
-                  }`}
+                  key={semana.numero}
+                  className={`flex items-center gap-8 ${
+                    index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
+                  } flex-col md:justify-center`}
                 >
-                  {/* Content */}
-                  <div className="lg:w-5/12">
-                    <Card className={`${etapa.destaque ? 'border-accent shadow-lg' : ''} hover:shadow-md transition-all duration-300`}>
-                      <CardHeader>
-                        <div className="flex items-center justify-between">
-                          <CardTitle className="text-xl text-primary">
-                            Semana {etapa.semana}
-                          </CardTitle>
-                          {etapa.destaque && (
-                            <Badge variant="secondary" className="bg-accent text-white">
-                              {etapa.destaque}
+                  {/* Conteúdo */}
+                  <div className="flex-1 max-w-lg">
+                    <Card className={`
+                      ${semana.ritual ? "bg-gradient-to-br from-primary/10 to-accent/10 border-primary/30" : "bg-card/50 border-border/50"}
+                      backdrop-blur-sm hover-scale transition-all duration-300
+                    `}>
+                      <CardContent className="p-6">
+                        <div className="flex items-center gap-3 mb-3">
+                          <Badge 
+                            variant={semana.destaque || semana.ritual ? "default" : "secondary"}
+                            className="text-sm"
+                          >
+                            Semana {semana.numero}
+                          </Badge>
+                          {semana.ritual && (
+                            <Badge variant="outline" className="text-xs bg-gradient-to-r from-primary/10 to-accent/10">
+                              Ritual
                             </Badge>
                           )}
                         </div>
-                        <h3 className="text-lg font-semibold text-foreground">
-                          {etapa.titulo}
+                        <h3 className="text-xl font-semibold text-foreground mb-2">
+                          {semana.titulo}
                         </h3>
-                      </CardHeader>
-                      <CardContent>
                         <p className="text-muted-foreground">
-                          {etapa.descricao}
+                          {semana.descricao}
                         </p>
                       </CardContent>
                     </Card>
                   </div>
-
-                  {/* Timeline Dot */}
-                  <div className="lg:w-2/12 flex justify-center">
-                    <div className={`w-8 h-8 rounded-full flex items-center justify-center ${
-                      etapa.destaque 
-                        ? 'bg-gradient-to-r from-accent to-earth' 
-                        : 'bg-secondary'
-                    }`}>
-                      {etapa.destaque ? (
-                        <CheckCircle className="w-5 h-5 text-white" />
-                      ) : (
-                        <span className="text-white font-bold text-sm">
-                          {etapa.semana}
-                        </span>
-                      )}
-                    </div>
+                  
+                  {/* Número da semana (centro) */}
+                  <div className="relative z-10 w-16 h-16 bg-gradient-to-br from-primary to-accent rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg">
+                    {semana.numero}
                   </div>
-
-                  {/* Spacer */}
-                  <div className="lg:w-5/12"></div>
+                  
+                  {/* Espaço em branco para o outro lado */}
+                  <div className="flex-1 max-w-lg hidden md:block" />
                 </div>
               ))}
             </div>
@@ -203,34 +257,38 @@ const Jornada = () => {
         </div>
       </section>
 
-      {/* Rituais Especiais */}
-      <section className="py-20 bg-gradient-to-r from-warm/20 to-accent/20">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Seção Rituais Simbólicos */}
+      <section className="py-16 px-4">
+        <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-primary mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
               Rituais Simbólicos
             </h2>
-            <p className="text-xl text-muted-foreground">
-              Momentos especiais que marcam sua evolução e fortalecem seu compromisso
+            <p className="text-lg text-muted-foreground">
+              Marcos especiais que celebram sua evolução
             </p>
           </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
+          
+          <div className="grid gap-8 md:grid-cols-3">
             {rituais.map((ritual, index) => (
-              <Card key={index} className="text-center hover:shadow-xl transition-all duration-500 transform hover:scale-105">
-                <CardHeader>
-                  <div className={`w-20 h-20 bg-gradient-to-br ${ritual.color} rounded-full flex items-center justify-center mx-auto mb-4`}>
-                    <ritual.icon className="w-10 h-10 text-white" />
+              <Card 
+                key={index} 
+                className="bg-card/50 backdrop-blur-sm border-border/50 hover-scale transition-all duration-300 group"
+              >
+                <CardContent className="p-8 text-center">
+                  <div className={`w-20 h-20 mx-auto mb-6 bg-gradient-to-br ${ritual.cor} rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
+                    <ritual.icone className="w-10 h-10 text-white" />
                   </div>
-                  <CardTitle className="text-xl text-primary">
+                  
+                  <h3 className="text-xl font-semibold text-foreground mb-2">
                     {ritual.titulo}
-                  </CardTitle>
-                  <Badge variant="outline" className="mx-auto">
+                  </h3>
+                  
+                  <Badge variant="outline" className="mb-4">
                     Semana {ritual.semana}
                   </Badge>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground leading-relaxed">
+                  
+                  <p className="text-muted-foreground">
                     {ritual.descricao}
                   </p>
                 </CardContent>
@@ -240,88 +298,23 @@ const Jornada = () => {
         </div>
       </section>
 
-      {/* Features da Jornada */}
-      <section className="py-20 bg-background">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-primary mb-4">
-              O que torna nossa jornada única
-            </h2>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="space-y-6">
-              <div className="flex items-start gap-4">
-                <CheckCircle className="w-6 h-6 text-accent flex-shrink-0 mt-1" />
-                <div>
-                  <h3 className="text-lg font-semibold text-primary">Mapa Mental Individual</h3>
-                  <p className="text-muted-foreground">CRM humanizado que acompanha cada detalhe da sua evolução</p>
-                </div>
-              </div>
-              
-              <div className="flex items-start gap-4">
-                <CheckCircle className="w-6 h-6 text-accent flex-shrink-0 mt-1" />
-                <div>
-                  <h3 className="text-lg font-semibold text-primary">Fisioterapeuta como Guia</h3>
-                  <p className="text-muted-foreground">Profissional especializado acompanha toda sua jornada</p>
-                </div>
-              </div>
-              
-              <div className="flex items-start gap-4">
-                <CheckCircle className="w-6 h-6 text-accent flex-shrink-0 mt-1" />
-                <div>
-                  <h3 className="text-lg font-semibold text-primary">Experiências Sensoriais</h3>
-                  <p className="text-muted-foreground">Momentos únicos que marcam sua transformação</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="space-y-6">
-              <div className="flex items-start gap-4">
-                <CheckCircle className="w-6 h-6 text-accent flex-shrink-0 mt-1" />
-                <div>
-                  <h3 className="text-lg font-semibold text-primary">Checkpoints Regulares</h3>
-                  <p className="text-muted-foreground">Avaliações constantes para ajustar o curso da jornada</p>
-                </div>
-              </div>
-              
-              <div className="flex items-start gap-4">
-                <CheckCircle className="w-6 h-6 text-accent flex-shrink-0 mt-1" />
-                <div>
-                  <h3 className="text-lg font-semibold text-primary">Comunidade de Apoio</h3>
-                  <p className="text-muted-foreground">Clube de corredores que entende sua jornada</p>
-                </div>
-              </div>
-              
-              <div className="flex items-start gap-4">
-                <CheckCircle className="w-6 h-6 text-accent flex-shrink-0 mt-1" />
-                <div>
-                  <h3 className="text-lg font-semibold text-primary">Celebração da Conquista</h3>
-                  <p className="text-muted-foreground">Reconhecimento simbólico no mural dos corredores</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-primary to-secondary">
-        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <Trophy className="w-16 h-16 text-white mx-auto mb-6" />
-          <h2 className="text-4xl font-bold text-white mb-6">
-            Pronto para começar sua jornada?
+      {/* Seção CTA Final */}
+      <section className="py-16 px-4 bg-gradient-to-br from-primary/10 to-accent/10">
+        <div className="container mx-auto max-w-4xl text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
+            📲 Pronto para viver sua jornada?
           </h2>
-          <p className="text-xl text-white/90 mb-8">
-            12 semanas para transformar não apenas sua corrida, mas sua relação com o cuidado e a performance.
+          
+          <p className="text-xl text-muted-foreground mb-8">
+            Agende sua avaliação inicial agora mesmo.
           </p>
+          
           <Button 
-            variant="warm" 
-            size="lg"
-            onClick={() => window.open('https://wa.me/5511999999999', '_blank')}
+            size="lg" 
+            className="hover-scale bg-gradient-to-r from-primary to-accent text-white px-8 py-4 text-lg"
+            onClick={() => window.open("https://wa.me/5516996008849", "_blank")}
           >
-            <Calendar className="w-5 h-5" />
-            Agende sua avaliação inicial
+            Falar no WhatsApp
           </Button>
         </div>
       </section>

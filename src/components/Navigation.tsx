@@ -16,7 +16,7 @@ const Navigation = () => {
     name: "Serviços",
     path: "/servicos"
   }, {
-    name: "Jornada",
+    name: "Jornada Propósito",
     path: "/jornada"
   }, {
     name: "Nossa História",
