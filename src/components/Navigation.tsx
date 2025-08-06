@@ -13,7 +13,7 @@ const Navigation = () => {
           <div className="flex justify-between items-center h-16">
             {/* Logo */}
             <Link to="/" className="flex items-center space-x-3">
-              <CareFitLogo size={48} />
+              <CareFitLogo size={58} />
               <div className="text-xl font-bold text-primary">
                 <span>CAREFIT</span> <span className="text-accent">Run Base</span>
                 <div className="text-xs text-muted-foreground font-normal">
