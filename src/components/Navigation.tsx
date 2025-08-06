@@ -15,7 +15,7 @@ const Navigation = () => {
             <Link to="/" className="flex items-center space-x-3">
               <CareFitLogo size={48} />
               <div className="text-xl font-bold text-primary">
-                <span>CareFit</span> <span className="text-accent">Run Base</span>
+                <span>CAREFIT</span> <span className="text-accent">Run Base</span>
                 <div className="text-xs text-muted-foreground font-normal">
                   Seu desafio começa na base. A gente caminha junto até o topo.
                 </div>

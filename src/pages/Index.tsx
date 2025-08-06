@@ -3,14 +3,12 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Heart, Target, Users, Zap } from "lucide-react";
 import heroImage from "@/assets/hero-runners.jpg";
 import CareFitLogo from "@/components/CareFitLogo";
-
 const Index = () => {
-  return (
-    <div className="min-h-screen">
+  return <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center bg-cover bg-center bg-no-repeat" style={{
-        backgroundImage: `url(${heroImage})`
-      }}>
+      backgroundImage: `url(${heroImage})`
+    }}>
         <div className="absolute inset-0 bg-gradient-to-r from-primary/80 via-primary/60 to-transparent"></div>
         <div className="relative z-10 max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <div className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
@@ -104,7 +102,7 @@ const Index = () => {
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-primary to-secondary">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <div className="text-4xl font-bold text-white mb-6">A CAREFIT RUN BASE é onde prevenção encontra performance</div>
+          <div className="text-4xl font-bold text-white mb-6">A CAREFIT Run Base é onde prevenção encontra performance</div>
           <div className="text-xl text-white/90 mb-8">
             Estamos prontos para cuidar da sua jornada. Comece hoje mesmo.
           </div>
@@ -113,8 +111,6 @@ const Index = () => {
           </Button>
         </div>
       </section>
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
