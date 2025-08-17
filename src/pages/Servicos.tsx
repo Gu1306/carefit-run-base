@@ -1,7 +1,9 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Heart, Zap, Target, Users, Play, ArrowRight } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 const Servicos = () => {
+  const navigate = useNavigate();
   return <div className="min-h-screen pt-16">
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-r from-primary to-secondary">
@@ -311,7 +313,7 @@ const Servicos = () => {
             <Button variant="hero" size="lg" onClick={() => window.open('https://wa.me/5516996008849', '_blank')}>
               Agende sua avaliação
             </Button>
-            <Button variant="outline" size="lg" className="bg-white/10 border-white text-white hover:bg-white hover:text-primary">
+            <Button variant="outline" size="lg" className="bg-white/10 border-white text-white hover:bg-white hover:text-primary" onClick={() => navigate('/jornada')}>
               Conhecer a jornada de 12 semanas
             </Button>
           </div>
