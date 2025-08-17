@@ -246,8 +246,8 @@ const Historia = () => {
                 Um espaço especialmente pensado para acolher corredores em todas as fases de sua jornada.
               </p>
               <div className="bg-muted rounded-lg p-6">
-                <p className="font-medium text-primary">Endereço em breve</p>
-                <p className="text-muted-foreground">Local estratégico para servir nossa comunidade</p>
+                <p className="font-medium text-primary">Av. Áurea Aparecida Bragheto Machado, 263</p>
+                <p className="text-muted-foreground">City Ribeirão, Ribeirão Preto - SP, 14021-460</p>
               </div>
             </div>
 
@@ -259,15 +259,15 @@ const Historia = () => {
               <div className="space-y-3 text-muted-foreground">
                 <div className="flex justify-between">
                   <span>Segunda a Sexta:</span>
-                  <span className="font-medium">6h às 22h</span>
+                  <span className="font-medium">8h às 18:30h</span>
                 </div>
                 <div className="flex justify-between">
                   <span>Sábados:</span>
-                  <span className="font-medium">7h às 18h</span>
+                  <span className="font-medium">8h às 12h</span>
                 </div>
                 <div className="flex justify-between">
                   <span>Domingos:</span>
-                  <span className="font-medium">8h às 16h</span>
+                  <span className="font-medium">Fechado</span>
                 </div>
               </div>
             </div>
