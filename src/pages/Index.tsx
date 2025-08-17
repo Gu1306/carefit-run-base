@@ -1,12 +1,9 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Heart, Target, Users, Zap } from "lucide-react";
-import { useNavigate } from "react-router-dom";
 import heroImage from "@/assets/hero-runners.jpg";
 import CareFitLogo from "@/components/CareFitLogo";
 const Index = () => {
-  const navigate = useNavigate();
-  
   return <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center bg-cover bg-center bg-no-repeat" style={{
@@ -17,14 +14,12 @@ const Index = () => {
           <div className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
             Toda corrida precisa de uma <span className="text-accent">base</span>
           </div>
-          <div className="text-xl md:text-2xl text-white/90 mb-8 max-w-2xl mx-auto">
-            Seu clube para encontrar a melhor versão de si mesmo
-          </div>
+          <div className="text-xl md:text-2xl text-white/90 mb-8 max-w-2xl mx-auto">A base que você constrói hoje sustenta a vitória de amanhã</div>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button variant="hero" size="lg" className="text-lg px-8 py-4" onClick={() => window.open('https://wa.me/5516996008849', '_blank')}>
               Agende sua primeira sessão
             </Button>
-            <Button variant="outline" size="lg" className="text-lg px-8 py-4 bg-white/10 border-white text-white hover:bg-white hover:text-primary" onClick={() => navigate('/servicos')}>
+            <Button variant="outline" size="lg" className="text-lg px-8 py-4 bg-white/10 border-white text-white hover:bg-white hover:text-primary">
               Conheça nossos serviços
             </Button>
           </div>
