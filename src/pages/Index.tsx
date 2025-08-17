@@ -1,9 +1,12 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Heart, Target, Users, Zap } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 import heroImage from "@/assets/hero-runners.jpg";
 import CareFitLogo from "@/components/CareFitLogo";
 const Index = () => {
+  const navigate = useNavigate();
+  
   return <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center bg-cover bg-center bg-no-repeat" style={{
@@ -21,7 +24,7 @@ const Index = () => {
             <Button variant="hero" size="lg" className="text-lg px-8 py-4" onClick={() => window.open('https://wa.me/5516996008849', '_blank')}>
               Agende sua primeira sessão
             </Button>
-            <Button variant="outline" size="lg" className="text-lg px-8 py-4 bg-white/10 border-white text-white hover:bg-white hover:text-primary">
+            <Button variant="outline" size="lg" className="text-lg px-8 py-4 bg-white/10 border-white text-white hover:bg-white hover:text-primary" onClick={() => navigate('/servicos')}>
               Conheça nossos serviços
             </Button>
           </div>
