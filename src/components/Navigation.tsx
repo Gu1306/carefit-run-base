@@ -42,7 +42,7 @@ const Navigation = () => {
               <Link to="/contato" className={`text-sm font-medium transition-colors hover:text-accent ${isActive("/contato") ? "text-accent" : "text-foreground"}`}>
                 Contato
               </Link>
-              <Button variant="whatsapp" size="sm" onClick={() => window.open('https://wa.me/5511999999999', '_blank')}>
+              <Button variant="whatsapp" size="sm" onClick={() => window.open('https://wa.me/5516996008849', '_blank')}>
                 <MessageCircle className="w-4 h-4" />
                 WhatsApp
               </Button>
@@ -80,7 +80,7 @@ const Navigation = () => {
               </Link>
               <div className="px-3 py-2">
                 <Button variant="whatsapp" size="sm" className="w-full" onClick={() => {
-              window.open('https://wa.me/5511999999999', '_blank');
+              window.open('https://wa.me/5516996008849', '_blank');
               setIsOpen(false);
             }}>
                   <MessageCircle className="w-4 h-4" />
@@ -93,7 +93,7 @@ const Navigation = () => {
 
       {/* WhatsApp Floating Button */}
       <div className="fixed bottom-6 right-6 z-50">
-        <Button variant="whatsapp" size="icon" className="w-14 h-14 rounded-full shadow-2xl" onClick={() => window.open('https://wa.me/5511999999999', '_blank')}>
+        <Button variant="whatsapp" size="icon" className="w-14 h-14 rounded-full shadow-2xl" onClick={() => window.open('https://wa.me/5516996008849', '_blank')}>
           <MessageCircle className="w-6 h-6" />
         </Button>
       </div>

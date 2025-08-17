@@ -61,7 +61,7 @@ const Servicos = () => {
                   </li>
                 </ul>
                 
-                <Button variant="hero" size="lg" onClick={() => window.open('https://wa.me/5511999999999', '_blank')}>
+                <Button variant="hero" size="lg" onClick={() => window.open('https://wa.me/5516996008849', '_blank')}>
                   Agendar consulta
                 </Button>
               </div>
@@ -130,7 +130,7 @@ const Servicos = () => {
                   </li>
                 </ul>
                 
-                <Button variant="hero" size="lg" onClick={() => window.open('https://wa.me/5511999999999', '_blank')}>
+                <Button variant="hero" size="lg" onClick={() => window.open('https://wa.me/5516996008849', '_blank')}>
                   Agendar consulta
                 </Button>
               </div>
@@ -199,7 +199,7 @@ const Servicos = () => {
                   </li>
                 </ul>
                 
-                <Button variant="hero" size="lg" onClick={() => window.open('https://wa.me/5511999999999', '_blank')}>
+                <Button variant="hero" size="lg" onClick={() => window.open('https://wa.me/5516996008849', '_blank')}>
                   Agendar consulta
                 </Button>
               </div>
@@ -268,7 +268,7 @@ const Servicos = () => {
                   </li>
                 </ul>
                 
-                <Button variant="hero" size="lg" onClick={() => window.open('https://wa.me/5511999999999', '_blank')}>
+                <Button variant="hero" size="lg" onClick={() => window.open('https://wa.me/5516996008849', '_blank')}>
                   Agendar consulta
                 </Button>
               </div>
@@ -308,7 +308,7 @@ const Servicos = () => {
           </h2>
           <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">Nosso time de fisioterapeutas, educadores físicos e nutricionistas estão prontos para guiar sua jornada de evolução como corredor.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button variant="hero" size="lg" onClick={() => window.open('https://wa.me/5511999999999', '_blank')}>
+            <Button variant="hero" size="lg" onClick={() => window.open('https://wa.me/5516996008849', '_blank')}>
               Agende sua avaliação
             </Button>
             <Button variant="outline" size="lg" className="bg-white/10 border-white text-white hover:bg-white hover:text-primary">

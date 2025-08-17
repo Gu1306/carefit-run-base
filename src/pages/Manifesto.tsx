@@ -124,7 +124,7 @@ const Manifesto = () => {
           <Button 
             variant="hero" 
             size="lg"
-            onClick={() => window.open('https://wa.me/5511999999999', '_blank')}
+            onClick={() => window.open('https://wa.me/5516996008849', '_blank')}
           >
             Inicie sua jornada
             <ChevronRight className="w-5 h-5" />

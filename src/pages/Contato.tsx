@@ -138,7 +138,7 @@ const Contato = () => {
                 <div className="pt-4">
                   <Button 
                     variant="outline" 
-                    onClick={() => window.open('https://wa.me/5511999999999', '_blank')}
+                    onClick={() => window.open('https://wa.me/5516996008849', '_blank')}
                   >
                     Por enquanto, agende via WhatsApp
                   </Button>
@@ -230,7 +230,7 @@ const Contato = () => {
             <Button 
               variant="warm" 
               size="lg"
-              onClick={() => window.open('https://wa.me/5511999999999', '_blank')}
+              onClick={() => window.open('https://wa.me/5516996008849', '_blank')}
             >
               <MessageCircle className="w-5 h-5" />
               WhatsApp agora
