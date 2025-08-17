@@ -65,11 +65,19 @@ const Contato = () => {
                   <div className="space-y-3">
                     <p className="text-muted-foreground">
                       <strong className="text-primary">Endereço:</strong><br />
-                      Em breve - Local estratégico para servir nossa comunidade de corredores
+                      <a 
+                        href="https://maps.google.com/?q=Av.+Áurea+Aparecida+Bragheto+Machado,+263+-+City+Ribeirão,+Ribeirão+Preto+-+SP,+14021-460"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-primary hover:text-accent transition-colors underline"
+                      >
+                        Av. Áurea Aparecida Bragheto Machado, 263<br />
+                        City Ribeirão, Ribeirão Preto - SP, 14021-460
+                      </a>
                     </p>
                     <div className="bg-muted rounded-lg p-4">
                       <p className="text-sm text-muted-foreground">
-                        📍 Mapa interativo será disponibilizado em breve
+                        📍 Clique no endereço acima para abrir no Google Maps
                       </p>
                     </div>
                   </div>
@@ -96,7 +104,7 @@ const Contato = () => {
                     </div>
                     <div className="flex justify-between">
                       <span className="text-muted-foreground">Domingos:</span>
-                      <span className="font-medium text-primary">8h às 16h</span>
+                      <span className="font-medium text-primary">Fechado</span>
                     </div>
                     <div className="border-t pt-3 mt-3">
                       <p className="text-sm text-muted-foreground">
