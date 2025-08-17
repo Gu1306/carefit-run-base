@@ -5,74 +5,92 @@ import CareFitLogo from "@/components/CareFitLogo";
 import { CheckCircle2, Users, Heart, Trophy, Target, Zap } from "lucide-react";
 
 // Dados das 12 semanas
-const semanas = [
-  { numero: 1, titulo: "O Primeiro Passo", descricao: "Início da jornada, ritual de entrada, definição do propósito e primeiros ajustes." },
-  { numero: 2, titulo: "Constância", descricao: "Construção de rotina, fortalecimento da disciplina e primeiros checkpoints de cuidado." },
-  { numero: 3, titulo: "Reconexão", descricao: "Escuta do corpo, percepção das respostas iniciais, ajustes de treino e nutrição." },
-  { numero: 4, titulo: "Força Real ⭐", descricao: "Ênfase em fortalecimento, introdução de cargas progressivas e foco no corpo que sustenta a corrida.", destaque: true },
-  { numero: 5, titulo: "Cuidado Ativo", descricao: "Recovery mais intenso, prevenção de lesões e ajustes de dores/tensões." },
-  { numero: 6, titulo: "Pirâmide da Performance 🟤", descricao: "Marco simbólico com entrega de peça representando evolução. 50% do caminho já foi!", ritual: true },
-  { numero: 7, titulo: "Potência", descricao: "Treinos mais desafiadores, evolução física e mental." },
-  { numero: 8, titulo: "Propósito", descricao: "Reforço do 'porquê', conexão emocional e alinhamento corpo + mente." },
-  { numero: 9, titulo: "Quebra de Pedra 🪨 ⭐", descricao: "Desafio simbólico de superação de limites pessoais. Reta Final!", ritual: true, destaque: true },
-  { numero: 10, titulo: "Orgulho", descricao: "Revisão dos ganhos, percepção das mudanças e autoestima fortalecida." },
-  { numero: 11, titulo: "Clareza", descricao: "Preparação final, revisão de metas e integração das conquistas." },
-  { numero: 12, titulo: "A Linha de Chegada 🎉", descricao: "Celebração, kit conquista, mural dos corredores e convite para o próximo ciclo.", ritual: true }
-];
+const semanas = [{
+  numero: 1,
+  titulo: "O Primeiro Passo",
+  descricao: "Início da jornada, ritual de entrada, definição do propósito e primeiros ajustes."
+}, {
+  numero: 2,
+  titulo: "Constância",
+  descricao: "Construção de rotina, fortalecimento da disciplina e primeiros checkpoints de cuidado."
+}, {
+  numero: 3,
+  titulo: "Reconexão",
+  descricao: "Escuta do corpo, percepção das respostas iniciais, ajustes de treino e nutrição."
+}, {
+  numero: 4,
+  titulo: "Força Real ⭐",
+  descricao: "Ênfase em fortalecimento, introdução de cargas progressivas e foco no corpo que sustenta a corrida.",
+  destaque: true
+}, {
+  numero: 5,
+  titulo: "Cuidado Ativo",
+  descricao: "Recovery mais intenso, prevenção de lesões e ajustes de dores/tensões."
+}, {
+  numero: 6,
+  titulo: "Pirâmide da Performance 🟤",
+  descricao: "Marco simbólico com entrega de peça representando evolução. 50% do caminho já foi!",
+  ritual: true
+}, {
+  numero: 7,
+  titulo: "Potência",
+  descricao: "Treinos mais desafiadores, evolução física e mental."
+}, {
+  numero: 8,
+  titulo: "Propósito",
+  descricao: "Reforço do 'porquê', conexão emocional e alinhamento corpo + mente."
+}, {
+  numero: 9,
+  titulo: "Quebra de Pedra 🪨 ⭐",
+  descricao: "Desafio simbólico de superação de limites pessoais. Reta Final!",
+  ritual: true,
+  destaque: true
+}, {
+  numero: 10,
+  titulo: "Orgulho",
+  descricao: "Revisão dos ganhos, percepção das mudanças e autoestima fortalecida."
+}, {
+  numero: 11,
+  titulo: "Clareza",
+  descricao: "Preparação final, revisão de metas e integração das conquistas."
+}, {
+  numero: 12,
+  titulo: "A Linha de Chegada 🎉",
+  descricao: "Celebração, kit conquista, mural dos corredores e convite para o próximo ciclo.",
+  ritual: true
+}];
 
 // Rituais simbólicos
-const rituais = [
-  {
-    icone: Trophy,
-    titulo: "Pirâmide da Performance",
-    semana: 6,
-    descricao: "Objeto simbólico de evolução",
-    cor: "from-yellow-500 to-orange-600"
-  },
-  {
-    icone: Target,
-    titulo: "Quebra de Pedra",
-    semana: 9,
-    descricao: "Desafio simbólico de superação de limites pessoais",
-    cor: "from-gray-500 to-gray-700"
-  },
-  {
-    icone: Users,
-    titulo: "Mural dos Corredores",
-    semana: 12,
-    descricao: "Nome eternizado e kit conquista",
-    cor: "from-green-500 to-emerald-600"
-  }
-];
+const rituais = [{
+  icone: Trophy,
+  titulo: "Pirâmide da Performance",
+  semana: 6,
+  descricao: "Objeto simbólico de evolução",
+  cor: "from-yellow-500 to-orange-600"
+}, {
+  icone: Target,
+  titulo: "Quebra de Pedra",
+  semana: 9,
+  descricao: "Desafio simbólico de superação de limites pessoais",
+  cor: "from-gray-500 to-gray-700"
+}, {
+  icone: Users,
+  titulo: "Mural dos Corredores",
+  semana: 12,
+  descricao: "Nome eternizado e kit conquista",
+  cor: "from-green-500 to-emerald-600"
+}];
 
 // Benefícios inclusos
-const beneficios = [
-  "4 avaliações físicas completas",
-  "12 planilhas semanais de fortalecimento específicos para você",
-  "12 sessões de recovery personalizadas",
-  "Plano de nutrição individualizado com 3 consultas",
-  "3 experiências guiadas para foco mental e resiliência"
-];
+const beneficios = ["4 avaliações físicas completas", "12 planilhas semanais de fortalecimento específicos para você", "12 sessões de recovery personalizadas", "Plano de nutrição individualizado com 3 consultas", "3 experiências guiadas para foco mental e resiliência"];
 
 // Para quem é
-const publicoAlvo = [
-  "Quem está começando a correr com segurança",
-  "Quem já corre mas sofre com lesões",
-  "Quem quer evoluir para 10K, 21K ou 42K",
-  "Quem busca performance com consciência"
-];
+const publicoAlvo = ["Quem está começando a correr com segurança", "Quem já corre mas sofre com lesões", "Quem quer evoluir para 10K, 21K ou 42K", "Quem busca performance com consciência"];
 
 // Como funciona
-const comoFunciona = [
-  "Atendimento semanal (presencial ou híbrido)",
-  "Fisioterapeuta exclusivo (Agente Pessoal de Performance)",
-  "Treinos, nutrição e recovery ajustados toda semana",
-  "Rituais que marcam sua evolução"
-];
-
+const comoFunciona = ["Atendimento semanal (presencial ou híbrido)", "Fisioterapeuta exclusivo (Agente Pessoal de Performance)", "Treinos, nutrição e recovery ajustados toda semana", "Rituais que marcam sua evolução"];
 const Jornada = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-background via-background/95 to-muted/30">
+  return <div className="min-h-screen bg-gradient-to-br from-background via-background/95 to-muted/30">
       {/* Seção Hero */}
       <section className="relative pt-20 pb-16 px-4 text-center overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-accent/5 -z-10" />
@@ -85,9 +103,7 @@ const Jornada = () => {
             JORNADA PROPÓSITO
           </h1>
           
-          <div className="text-2xl md:text-3xl font-semibold text-muted-foreground mb-4">
-            12 SEMANAS PARA CONSTRUIR A BASE DE UMA CORRIDA INTELIGENTE
-          </div>
+          <div className="text-2xl md:text-3xl font-semibold text-muted-foreground mb-4">PLANO DE 12 SEMANAS 100% CUSTOMIZADO PARA VOCÊ</div>
           
           <p className="text-xl md:text-2xl text-foreground/80 mb-6 max-w-3xl mx-auto">
             Toda <span className="font-bold text-primary">JORNADA</span> precisa de uma base. Aqui, ela começa com propósito.
@@ -97,11 +113,7 @@ const Jornada = () => {
             Uma transformação estruturada que vai além do físico. Cada semana é um passo na construção da sua melhor versão como corredor.
           </p>
           
-          <Button 
-            size="lg" 
-            className="hover-scale bg-gradient-to-r from-primary to-accent text-white px-8 py-4 text-lg"
-            onClick={() => window.open("https://wa.me/5516996008849", "_blank")}
-          >
+          <Button size="lg" className="hover-scale bg-gradient-to-r from-primary to-accent text-white px-8 py-4 text-lg" onClick={() => window.open("https://wa.me/5516996008849", "_blank")}>
             Quero começar minha jornada
           </Button>
         </div>
@@ -126,12 +138,10 @@ const Jornada = () => {
             </p>
             
             <div className="grid gap-4 mb-8">
-              {beneficios.map((beneficio, index) => (
-                <div key={index} className="flex items-start gap-3">
+              {beneficios.map((beneficio, index) => <div key={index} className="flex items-start gap-3">
                   <CheckCircle2 className="w-6 h-6 text-primary mt-0.5 flex-shrink-0" />
                   <span className="text-lg text-muted-foreground">{beneficio}</span>
-                </div>
-              ))}
+                </div>)}
             </div>
             
             <p className="text-lg text-muted-foreground leading-relaxed">
@@ -151,16 +161,14 @@ const Jornada = () => {
           </div>
           
           <div className="grid gap-6 md:grid-cols-2">
-            {publicoAlvo.map((item, index) => (
-              <Card key={index} className="bg-card/50 backdrop-blur-sm border-border/50 hover-scale">
+            {publicoAlvo.map((item, index) => <Card key={index} className="bg-card/50 backdrop-blur-sm border-border/50 hover-scale">
                 <CardContent className="p-6">
                   <div className="flex items-center gap-3">
                     <Heart className="w-6 h-6 text-primary flex-shrink-0" />
                     <span className="text-lg text-muted-foreground">{item}</span>
                   </div>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>)}
           </div>
         </div>
       </section>
@@ -175,16 +183,14 @@ const Jornada = () => {
           </div>
           
           <div className="grid gap-6 md:grid-cols-2">
-            {comoFunciona.map((item, index) => (
-              <Card key={index} className="bg-card/50 backdrop-blur-sm border-border/50 hover-scale">
+            {comoFunciona.map((item, index) => <Card key={index} className="bg-card/50 backdrop-blur-sm border-border/50 hover-scale">
                 <CardContent className="p-6">
                   <div className="flex items-center gap-3">
                     <Zap className="w-6 h-6 text-accent flex-shrink-0" />
                     <span className="text-lg text-muted-foreground">{item}</span>
                   </div>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>)}
           </div>
         </div>
       </section>
@@ -206,13 +212,7 @@ const Jornada = () => {
             <div className="absolute left-1/2 transform -translate-x-1/2 w-1 bg-gradient-to-b from-primary to-accent h-full opacity-30 hidden md:block" />
             
             <div className="space-y-8">
-              {semanas.map((semana, index) => (
-                <div
-                  key={semana.numero}
-                  className={`flex items-center gap-8 ${
-                    index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
-                  } flex-col md:justify-center`}
-                >
+              {semanas.map((semana, index) => <div key={semana.numero} className={`flex items-center gap-8 ${index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"} flex-col md:justify-center`}>
                   {/* Conteúdo */}
                   <div className="flex-1 max-w-lg">
                     <Card className={`
@@ -221,17 +221,12 @@ const Jornada = () => {
                     `}>
                       <CardContent className="p-6">
                         <div className="flex items-center gap-3 mb-3">
-                          <Badge 
-                            variant={semana.destaque || semana.ritual ? "default" : "secondary"}
-                            className="text-sm"
-                          >
+                          <Badge variant={semana.destaque || semana.ritual ? "default" : "secondary"} className="text-sm">
                             Semana {semana.numero}
                           </Badge>
-                          {semana.ritual && (
-                            <Badge variant="outline" className="text-xs bg-gradient-to-r from-primary/10 to-accent/10">
+                          {semana.ritual && <Badge variant="outline" className="text-xs bg-gradient-to-r from-primary/10 to-accent/10">
                               Ritual
-                            </Badge>
-                          )}
+                            </Badge>}
                         </div>
                         <h3 className="text-xl font-semibold text-foreground mb-2">
                           {semana.titulo}
@@ -250,8 +245,7 @@ const Jornada = () => {
                   
                   {/* Espaço em branco para o outro lado */}
                   <div className="flex-1 max-w-lg hidden md:block" />
-                </div>
-              ))}
+                </div>)}
             </div>
           </div>
         </div>
@@ -270,11 +264,7 @@ const Jornada = () => {
           </div>
           
           <div className="grid gap-8 md:grid-cols-3">
-            {rituais.map((ritual, index) => (
-              <Card 
-                key={index} 
-                className="bg-card/50 backdrop-blur-sm border-border/50 hover-scale transition-all duration-300 group"
-              >
+            {rituais.map((ritual, index) => <Card key={index} className="bg-card/50 backdrop-blur-sm border-border/50 hover-scale transition-all duration-300 group">
                 <CardContent className="p-8 text-center">
                   <div className={`w-20 h-20 mx-auto mb-6 bg-gradient-to-br ${ritual.cor} rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
                     <ritual.icone className="w-10 h-10 text-white" />
@@ -292,8 +282,7 @@ const Jornada = () => {
                     {ritual.descricao}
                   </p>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>)}
           </div>
         </div>
       </section>
@@ -309,17 +298,11 @@ const Jornada = () => {
             Agende sua avaliação inicial agora mesmo.
           </p>
           
-          <Button 
-            size="lg" 
-            className="hover-scale bg-gradient-to-r from-primary to-accent text-white px-8 py-4 text-lg"
-            onClick={() => window.open("https://wa.me/5516996008849", "_blank")}
-          >
+          <Button size="lg" className="hover-scale bg-gradient-to-r from-primary to-accent text-white px-8 py-4 text-lg" onClick={() => window.open("https://wa.me/5516996008849", "_blank")}>
             Falar no WhatsApp
           </Button>
         </div>
       </section>
-    </div>
-  );
+    </div>;
 };
-
 export default Jornada;
