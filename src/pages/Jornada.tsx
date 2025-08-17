@@ -6,18 +6,18 @@ import { CheckCircle2, Users, Heart, Trophy, Target, Zap } from "lucide-react";
 
 // Dados das 12 semanas
 const semanas = [
-  { numero: 1, titulo: "Avaliação Inicial", descricao: "Base inicial para sua jornada" },
-  { numero: 2, titulo: "Construção da Base", descricao: "Fortalecendo os fundamentos" },
-  { numero: 3, titulo: "Checkpoint 1: Ritmo e Constância", descricao: "Primeiro marco da sua evolução", destaque: true },
-  { numero: 4, titulo: "Primeira Evolução", descricao: "Consolidando os primeiros ganhos" },
-  { numero: 5, titulo: "Intensificação", descricao: "Elevando o nível de treinamento" },
-  { numero: 6, titulo: "Pirâmide da Performance 🟤", descricao: "Marco simbólico da sua performance", ritual: true },
-  { numero: 7, titulo: "Aprofundamento", descricao: "Refinando técnicas e estratégias" },
-  { numero: 8, titulo: "Checkpoint 2: Resistência Mental", descricao: "Fortalecendo mente e corpo", destaque: true },
-  { numero: 9, titulo: "Quebra de Pedra 🪨", descricao: "Superando limites pessoais", ritual: true },
-  { numero: 10, titulo: "Refinamento", descricao: "Polindo os últimos detalhes" },
-  { numero: 11, titulo: "Preparação Final", descricao: "Preparando para a conclusão" },
-  { numero: 12, titulo: "Mural dos Corredores 🎉", descricao: "Celebração e planejamento futuro", ritual: true }
+  { numero: 1, titulo: "O Primeiro Passo", descricao: "Início da jornada, ritual de entrada, definição do propósito e primeiros ajustes." },
+  { numero: 2, titulo: "Constância", descricao: "Construção de rotina, fortalecimento da disciplina e primeiros checkpoints de cuidado." },
+  { numero: 3, titulo: "Reconexão", descricao: "Escuta do corpo, percepção das respostas iniciais, ajustes de treino e nutrição." },
+  { numero: 4, titulo: "Força Real ⭐", descricao: "Ênfase em fortalecimento, introdução de cargas progressivas e foco no corpo que sustenta a corrida.", destaque: true },
+  { numero: 5, titulo: "Cuidado Ativo", descricao: "Recovery mais intenso, prevenção de lesões e ajustes de dores/tensões." },
+  { numero: 6, titulo: "Pirâmide da Performance 🟤", descricao: "Marco simbólico com entrega de peça representando evolução. 50% do caminho já foi!", ritual: true },
+  { numero: 7, titulo: "Potência", descricao: "Treinos mais desafiadores, evolução física e mental." },
+  { numero: 8, titulo: "Propósito", descricao: "Reforço do 'porquê', conexão emocional e alinhamento corpo + mente." },
+  { numero: 9, titulo: "Quebra de Pedra 🪨 ⭐", descricao: "Desafio simbólico de superação de limites pessoais. Reta Final!", ritual: true, destaque: true },
+  { numero: 10, titulo: "Orgulho", descricao: "Revisão dos ganhos, percepção das mudanças e autoestima fortalecida." },
+  { numero: 11, titulo: "Clareza", descricao: "Preparação final, revisão de metas e integração das conquistas." },
+  { numero: 12, titulo: "A Linha de Chegada 🎉", descricao: "Celebração, kit conquista, mural dos corredores e convite para o próximo ciclo.", ritual: true }
 ];
 
 // Rituais simbólicos
@@ -26,21 +26,21 @@ const rituais = [
     icone: Trophy,
     titulo: "Pirâmide da Performance",
     semana: 6,
-    descricao: "Peça simbólica entregue ao atleta representando sua evolução",
+    descricao: "Objeto simbólico de evolução",
     cor: "from-yellow-500 to-orange-600"
   },
   {
     icone: Target,
     titulo: "Quebra de Pedra",
     semana: 9,
-    descricao: "Desafio simbólico de superação dos seus limites pessoais",
+    descricao: "Desafio simbólico de superação de limites pessoais",
     cor: "from-gray-500 to-gray-700"
   },
   {
     icone: Users,
     titulo: "Mural dos Corredores",
     semana: 12,
-    descricao: "Nome eternizado e planejamento do próximo ciclo de evolução",
+    descricao: "Nome eternizado e kit conquista",
     cor: "from-green-500 to-emerald-600"
   }
 ];
@@ -48,10 +48,10 @@ const rituais = [
 // Benefícios inclusos
 const beneficios = [
   "4 avaliações físicas completas",
-  "12 Planilhas de Treinos semanais de fortalecimento direcionado para sua Jornada",
-  "12 Sessões de recovery personalizadas toda semana",
-  "Plano de nutrição individualizado com 3 consultas com nutricionista",
-  "3 Experiências guiadas para foco mental e resiliência emocional"
+  "12 planilhas semanais de fortalecimento específicos para você",
+  "12 sessões de recovery personalizadas",
+  "Plano de nutrição individualizado com 3 consultas",
+  "3 experiências guiadas para foco mental e resiliência"
 ];
 
 // Para quem é
@@ -65,8 +65,8 @@ const publicoAlvo = [
 // Como funciona
 const comoFunciona = [
   "Atendimento semanal (presencial ou híbrido)",
-  "Fisioterapeuta exclusivo",
-  "Treinos e recovery ajustados toda semana",
+  "Fisioterapeuta exclusivo (Agente Pessoal de Performance)",
+  "Treinos, nutrição e recovery ajustados toda semana",
   "Rituais que marcam sua evolução"
 ];
 
@@ -86,11 +86,11 @@ const Jornada = () => {
           </h1>
           
           <div className="text-2xl md:text-3xl font-semibold text-muted-foreground mb-4">
-            12 SEMANAS
+            12 SEMANAS PARA CONSTRUIR A BASE DE UMA CORRIDA INTELIGENTE
           </div>
           
           <p className="text-xl md:text-2xl text-foreground/80 mb-6 max-w-3xl mx-auto">
-            Toda corrida precisa de uma base. Aqui, ela começa com propósito.
+            Toda <span className="font-bold text-primary">JORNADA</span> precisa de uma base. Aqui, ela começa com propósito.
           </p>
           
           <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
@@ -118,7 +118,7 @@ const Jornada = () => {
           
           <div className="bg-card/50 backdrop-blur-sm rounded-2xl p-8 border border-border/50">
             <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-              A Jornada Propósito é um programa completo e personalizado de 12 semanas, acompanhado de perto por fisioterapeutas, educadores físicos e nutricionistas, todos especializados no universo da corrida.
+              A Jornada Propósito é um programa completo e personalizado de 12 semanas, acompanhado de perto por fisioterapeutas, educadores físicos e nutricionistas especializados no universo da corrida. Nosso foco é preparar corpo e mente antes da dor, com prevenção, fortalecimento e recuperação integrados.
             </p>
             
             <p className="text-lg text-muted-foreground mb-6">
