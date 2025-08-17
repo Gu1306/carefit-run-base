@@ -14,7 +14,7 @@ const Index = () => {
           <div className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
             Toda corrida precisa de uma <span className="text-accent">base</span>
           </div>
-          <div className="text-xl md:text-2xl text-white/90 mb-8 max-w-2xl mx-auto">A base que você constrói hoje sustenta a vitória de amanhã</div>
+          <div className="text-xl md:text-2xl text-white/90 mb-8 max-w-2xl mx-auto">Seu Hub de corrida inteligente — corpo, mente e propósito no mesmo ritmo.</div>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button variant="hero" size="lg" className="text-lg px-8 py-4" onClick={() => window.open('https://wa.me/5516996008849', '_blank')}>
               Agende sua primeira sessão
