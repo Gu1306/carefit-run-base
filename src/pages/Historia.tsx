@@ -11,39 +11,53 @@ const Historia = () => {
     color: "from-accent to-earth"
   }, {
     nome: "Livia",
-    papel: "Líder de Desenvolvimento",
+    papel: "Fisioterapeuta e Agente da Performance",
     descricao: "Responsável por ampliar o conceito original, Livia trouxe a dimensão científica e o olhar humanizado que transforma tratamento em jornada de autoconhecimento.",
     especialidade: "Desenvolvimento de protocolos e experiência do cliente",
     icon: Heart,
     color: "from-secondary to-primary"
   }, {
-    nome: "Ana Júlia",
-    papel: "Líder de Inovação",
-    descricao: "Ana Júlia revolucionou a abordagem terapêutica, criando a metodologia única onde fisioterapeutas se tornam parceiros de performance dos atletas.",
-    especialidade: "Inovação em métodos terapêuticos",
+    nome: "Educador Físico",
+    papel: "Especialista em Performance",
+    descricao: "Desenvolvendo protocolos de fortalecimento e condicionamento específicos para corredores, integrando ciência e prática esportiva.",
+    especialidade: "Condicionamento físico e preparação esportiva",
     icon: Target,
     color: "from-warm to-accent"
+  }, {
+    nome: "Nutricionista",
+    papel: "Especialista em Nutrição Esportiva",
+    descricao: "Criando planos nutricionais personalizados que potencializam performance e aceleram a recuperação dos atletas.",
+    especialidade: "Nutrição esportiva e metabolismo",
+    icon: Users,
+    color: "from-primary to-secondary"
+  }, {
+    nome: "Fisioterapeuta",
+    papel: "Líder de Reabilitação",
+    descricao: "Especializado em reabilitação e tratamento específico para corredores, focando na recuperação completa e retorno seguro aos treinos.",
+    especialidade: "Reabilitação e fisioterapia esportiva", 
+    icon: Heart,
+    color: "from-earth to-warm"
   }];
   const timeline = [{
-    ano: "2020",
-    titulo: "CareFit Recovery",
-    descricao: "Nascimento da clínica focada em recuperação e fisioterapia, com Gustavo trazendo sua experiência como ultramaratonista."
-  }, {
-    ano: "2021",
-    titulo: "Expansão da Visão",
-    descricao: "Livia e Ana Júlia se juntam ao projeto, ampliando o conceito de cuidado preventivo e performance integrada."
-  }, {
     ano: "2022",
-    titulo: "Metodologia Única",
-    descricao: "Desenvolvimento da abordagem onde fisioterapeutas se tornam agentes de performance, não apenas tratamento."
+    titulo: "O Despertar da Necessidade",
+    descricao: "Durante sua preparação para ciclos de maratonas e ultramaratonas, Gustavo percebeu a fragmentação do cuidado esportivo: endocrinologista, nutricionista, fisioterapeuta, educador físico e treinador de corrida não se comunicavam entre si, obrigando o atleta a repetir várias vezes a mesma história e no ciclo de sua primeira ultramaratona, essa realidade ficou ainda mais clara: faltava um modelo integrado de acompanhamento. Nasceu a ideia de um espaço onde o atleta contasse sua história apenas uma vez, recebendo um plano unificado para toda a jornada."
+  }, {
+    ano: "Julho de 2023",
+    titulo: "CareFit Recovery",
+    descricao: "Nascimento da clínica focada em recuperação e fisioterapia, criada a partir da vivência de Gustavo como maratonista e ultramaratonista."
   }, {
     ano: "2023",
-    titulo: "CareFit Run Base",
-    descricao: "Transformação em hub especializado para corredores, com jornadas de 12 semanas e rituais simbólicos únicos."
+    titulo: "Consolidação no Mercado de Corrida",
+    descricao: "O projeto começa com foco em recovery e acompanhamento de ciclos de meia maratona e maratona. Com o boca a boca no meio da corrida, a CareFit ganhou força e se tornou referência entre atletas de Ribeirão Preto e região."
   }, {
     ano: "2024",
     titulo: "Comunidade Crescente",
-    descricao: "Consolidação como referência em cuidado preventivo para corredores, com centenas de jornadas completadas."
+    descricao: "Acompanhamos mais de 70 atletas, entre eles mais de 20 maratonistas e 4 ultramaratonistas. O método de prevenção, fortalecimento e recovery foi validado no mercado, consolidando a CareFit como referência em cuidado preventivo para corredores."
+  }, {
+    ano: "2025",
+    titulo: "A Transformação",
+    descricao: "Já consolidados, buscamos um novo espaço e trouxemos para o time profissionais de nutrição, fisiologia e educação física — muitos deles ex-clientes que viveram a jornada e entenderam nosso conceito. Foi nesse ano que a CareFit Recovery se transformou em CareFit Run Base, um hub completo para corredores."
   }];
   return <div className="min-h-screen pt-16">
       {/* Hero Section */}
@@ -70,15 +84,18 @@ const Historia = () => {
                 <p>
                   Tudo começou com uma pergunta simples: <strong className="text-accent">"Por que esperar a dor chegar?"</strong>
                 </p>
-                <p>Gustavo, ultramaratonista apaixonado, conhecia intimamente os desafios do corpo em longas distâncias. Cada quilômetro percorrido era uma lição sobre limites, recuperação e a importância de uma base sólida.</p>
+                <p>Gustavo, maratonista e ultramaratonista apaixonado, conhecia intimamente os desafios do corpo em longas distâncias. Cada quilômetro percorrido era uma lição sobre limites, recuperação e a importância de uma base sólida.</p>
                 <p>
-                  Em 2020, nasceu a CareFit Recovery com uma proposta diferente: <strong className="text-primary">cuidar antes de precisar tratar</strong>. 
-                  Não era apenas mais uma clínica - era um conceito revolucionário.
+                  Em 2020, nasceu a CareFit Recovery, com uma proposta diferente: <strong className="text-primary">cuidar antes de precisar tratar</strong>. 
+                  Não era apenas mais uma clínica – era um conceito revolucionário.
                 </p>
                 <p>
-                  Com a chegada de Livia e Ana Júlia, o projeto ganhou dimensões científicas e humanas que transformaram 
+                  Com a chegada da Lívia, o projeto ganhou dimensões científicas e humanas que transformaram 
                   completamente a experiência do atleta. Fisioterapeutas deixaram de ser apenas profissionais de tratamento 
                   para se tornarem <strong className="text-accent">parceiros de performance</strong>.
+                </p>
+                <p>
+                  A soma do conhecimento de Gustavo — com mais de 20 maratonas e ultramaratonas no currículo, vivência em inúmeros ciclos de preparação e a criação do mapa mental como forma de acompanhamento — com a visão da Lívia, que através de ferramentas da fisioterapia desenvolveu metodologias de prevenção de lesões, redução da fadiga e entendimento profundo da corrida, estruturou a base única que hoje sustenta a CareFit Run Base.
                 </p>
               </div>
             </div>
@@ -103,7 +120,7 @@ const Historia = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {equipe.map((membro, index) => <Card key={index} className="text-center hover:shadow-xl transition-all duration-500 transform hover:scale-105 border-0">
                 <CardHeader>
                   <div className={`w-24 h-24 bg-gradient-to-br ${membro.color} rounded-full flex items-center justify-center mx-auto mb-4`}>
