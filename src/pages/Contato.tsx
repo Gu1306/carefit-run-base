@@ -1,8 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
 import { MessageCircle, MapPin, Clock, Phone, Mail, Calendar } from "lucide-react";
+import ContactForm from "@/components/ContactForm";
 
 const Contato = () => {
   return (
@@ -25,73 +24,7 @@ const Contato = () => {
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Contact Form */}
             <div>
-              <Card className="border-0 shadow-lg">
-                <CardHeader>
-                  <CardTitle className="text-2xl text-primary">
-                    Envie sua mensagem
-                  </CardTitle>
-                  <p className="text-muted-foreground">
-                    Preencha o formulário abaixo ou use nossos canais diretos de contato.
-                  </p>
-                </CardHeader>
-                <CardContent className="space-y-6">
-                  <div className="grid md:grid-cols-2 gap-4">
-                    <div>
-                      <label className="text-sm font-medium text-primary">Nome</label>
-                      <Input placeholder="Seu nome completo" className="mt-1" />
-                    </div>
-                    <div>
-                      <label className="text-sm font-medium text-primary">Telefone</label>
-                      <Input placeholder="(11) 99999-9999" className="mt-1" />
-                    </div>
-                  </div>
-                  
-                  <div>
-                    <label className="text-sm font-medium text-primary">E-mail</label>
-                    <Input placeholder="seu@email.com" className="mt-1" />
-                  </div>
-                  
-                  <div>
-                    <label className="text-sm font-medium text-primary">Objetivo</label>
-                    <select className="w-full p-3 border border-input rounded-md bg-background">
-                      <option>Selecione seu objetivo</option>
-                      <option>Avaliação inicial</option>
-                      <option>Jornada de 12 semanas</option>
-                      <option>Recovery</option>
-                      <option>Fortalecimento</option>
-                      <option>Nutrição</option>
-                      <option>Treinamento Mental</option>
-                      <option>Informações gerais</option>
-                    </select>
-                  </div>
-                  
-                  <div>
-                    <label className="text-sm font-medium text-primary">Mensagem</label>
-                    <Textarea 
-                      placeholder="Conte-nos sobre sua experiência com corrida e seus objetivos..."
-                      className="mt-1 min-h-[120px]"
-                    />
-                  </div>
-                  
-                  <Button variant="hero" className="w-full">
-                    Enviar mensagem
-                  </Button>
-                  
-                  <div className="text-center">
-                    <p className="text-sm text-muted-foreground mb-4">
-                      Ou fale conosco diretamente pelo WhatsApp
-                    </p>
-                    <Button 
-                      variant="whatsapp" 
-                      className="w-full"
-                      onClick={() => window.open('https://wa.me/5511999999999', '_blank')}
-                    >
-                      <MessageCircle className="w-5 h-5" />
-                      Iniciar conversa no WhatsApp
-                    </Button>
-                  </div>
-                </CardContent>
-              </Card>
+              <ContactForm />
             </div>
 
             {/* Contact Info */}

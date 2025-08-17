@@ -1,73 +1,90 @@
-# Welcome to your Lovable project
+# CareFit Run Base
 
-## Project info
+Site institucional para CareFit Run Base - sua jornada de corrida personalizada.
 
-**URL**: https://lovable.dev/projects/c40bc565-d527-41f3-9cde-7c3c22c09d8f
+## 🚀 Deploy no Render
 
-## How can I edit this code?
+Este projeto está configurado para deploy automático no Render com:
 
-There are several ways of editing your application.
+### Frontend (React + Vite)
+- Build estático servido via CDN
+- Domínio personalizado: `carefitrunbase.com.br`
+- Cache otimizado para assets
 
-**Use Lovable**
+### Backend (Node.js + Express)
+- API RESTful para contatos e agendamentos
+- Integração com Google Calendar
+- Banco PostgreSQL
+- Rate limiting e segurança
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/c40bc565-d527-41f3-9cde-7c3c22c09d8f) and start prompting.
+### Banco de Dados (PostgreSQL)
+- Tabelas: contacts, appointments, analytics_events
+- Backups automáticos
+- SSL/TLS encryption
 
-Changes made via Lovable will be committed automatically to this repo.
+## 🔧 Configuração Local
 
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+### Frontend
+```bash
+npm install
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+### Backend
+```bash
+cd api
+npm install
+npm run dev
+```
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## 📁 Estrutura do Projeto
 
-**Use GitHub Codespaces**
+```
+├── src/                 # Frontend React
+│   ├── components/      # Componentes reutilizáveis
+│   ├── pages/           # Páginas do site
+│   ├── services/        # APIs e integrações
+│   └── hooks/           # React hooks customizados
+├── api/                 # Backend Node.js
+│   ├── routes/          # Rotas da API
+│   ├── database/        # Schema e migrações
+│   └── server.js        # Servidor principal
+└── render.yaml          # Configuração Render
+```
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## 🌟 Funcionalidades
 
-## What technologies are used for this project?
+- ✅ Site institucional responsivo
+- ✅ Formulário de contato funcional
+- ✅ Integração WhatsApp
+- ✅ Sistema de agendamento (Google Calendar)
+- ✅ Analytics e tracking
+- ✅ SEO otimizado
+- ✅ SSL/HTTPS automático
 
-This project is built with:
+## 🔑 Variáveis de Ambiente
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
+### Backend (Render)
+```
+DATABASE_URL=postgres://...
+EMAIL_USER=contato@carefitrunbase.com.br
+EMAIL_PASSWORD=app_password_gmail
+GOOGLE_CLIENT_EMAIL=service@project.iam.gserviceaccount.com
+GOOGLE_PRIVATE_KEY=-----BEGIN PRIVATE KEY-----...
+GOOGLE_CALENDAR_ID=calendar_id@gmail.com
+```
+
+## 📞 Suporte
+
+Entre em contato via WhatsApp: (11) 99999-9999
+
+---
+
+## Original Lovable Info
+
+**URL**: https://lovable.dev/projects/c40bc565-d527-41f3-9cde-7c3c22c09d8f
+
+### Technologies
+- Vite + TypeScript
+- React + shadcn-ui  
 - Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/c40bc565-d527-41f3-9cde-7c3c22c09d8f) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
