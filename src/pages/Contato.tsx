@@ -2,6 +2,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { MessageCircle, MapPin, Clock, Phone, Mail, Calendar } from "lucide-react";
 import ContactForm from "@/components/ContactForm";
+import { BookingForm } from "@/components/BookingForm";
 const Contato = () => {
   return <div className="min-h-screen pt-16">
       {/* Hero Section */}
@@ -119,36 +120,20 @@ const Contato = () => {
         </div>
       </section>
 
-      {/* Scheduling Section */}
-      <section className="py-20 bg-gradient-to-r from-warm/20 to-accent/20">
-        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <Calendar className="w-16 h-16 text-accent mx-auto mb-6" />
-          <h2 className="text-4xl font-bold text-primary mb-6">
-            Agendamento Online
-          </h2>
-          <p className="text-xl text-muted-foreground mb-8">
-            Em breve, você poderá agendar seus atendimentos diretamente pelo site através do nosso sistema integrado.
-          </p>
+      {/* Online Booking Section */}
+      <section className="py-20 bg-muted/30">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <Calendar className="w-16 h-16 text-accent mx-auto mb-6" />
+            <h2 className="text-4xl font-bold text-primary mb-6">
+              Agendamento Online
+            </h2>
+            <p className="text-xl text-muted-foreground mb-8">
+              Agende seus atendimentos diretamente pelo site de forma rápida e segura.
+            </p>
+          </div>
           
-          {/* Placeholder for future Calendly integration */}
-          <Card className="max-w-2xl mx-auto border-2 border-dashed border-accent/30">
-            <CardContent className="py-12">
-              <div className="text-center space-y-4">
-                <Calendar className="w-12 h-12 text-accent mx-auto opacity-50" />
-                <h3 className="text-xl font-semibold text-primary">
-                  Sistema de Agendamento
-                </h3>
-                <p className="text-muted-foreground">
-                  Integração com Google Calendar e Calendly em desenvolvimento
-                </p>
-                <div className="pt-4">
-                  <Button variant="outline" onClick={() => window.open('https://wa.me/5516996008849', '_blank')}>
-                    Por enquanto, agende via WhatsApp
-                  </Button>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
+          <BookingForm />
         </div>
       </section>
 
