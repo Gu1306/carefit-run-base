@@ -1,8 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { MessageCircle, MapPin, Clock, Phone, Mail, Calendar } from "lucide-react";
-import ContactForm from "@/components/ContactForm";
-import { BookingForm } from "@/components/BookingForm";
 const Contato = () => {
   return <div className="min-h-screen pt-16">
       {/* Hero Section */}
@@ -21,9 +19,29 @@ const Contato = () => {
       <section className="py-20 bg-background">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12">
-            {/* Contact Form */}
+            {/* Online Booking Button */}
             <div>
-              <ContactForm />
+              <Card className="border-0 shadow-lg">
+                <CardHeader>
+                  <CardTitle className="text-2xl text-primary text-center">
+                    Agendamento Online
+                  </CardTitle>
+                  <p className="text-muted-foreground text-center">
+                    Agende sua consulta diretamente através do nosso sistema online.
+                  </p>
+                </CardHeader>
+                <CardContent className="text-center">
+                  <Button 
+                    variant="hero" 
+                    size="lg"
+                    className="w-full text-lg py-6"
+                    onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/AcZssZ12VGfInV4yCnUbwftPTOnh96at_-GR0021W_A=', '_blank')}
+                  >
+                    <Calendar className="w-6 h-6 mr-3" />
+                    FAÇA SEU AGENDAMENTO ONLINE
+                  </Button>
+                </CardContent>
+              </Card>
             </div>
 
             {/* Contact Info */}
@@ -120,22 +138,6 @@ const Contato = () => {
         </div>
       </section>
 
-      {/* Online Booking Section */}
-      <section className="py-20 bg-muted/30">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <Calendar className="w-16 h-16 text-accent mx-auto mb-6" />
-            <h2 className="text-4xl font-bold text-primary mb-6">
-              Agendamento Online
-            </h2>
-            <p className="text-xl text-muted-foreground mb-8">
-              Agende seus atendimentos diretamente pelo site de forma rápida e segura.
-            </p>
-          </div>
-          
-          <BookingForm />
-        </div>
-      </section>
 
       {/* FAQ/Quick Questions */}
       <section className="py-20 bg-background">
