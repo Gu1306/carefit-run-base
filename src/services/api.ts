@@ -47,24 +47,5 @@ export const submitContactForm = async (data: {
   return response.data;
 };
 
-// Calendar availability
-export const getCalendarAvailability = async (date: string) => {
-  const response = await api.get(`/calendar/availability?date=${date}`);
-  return response.data;
-};
-
-// Book appointment
-export const bookAppointment = async (data: {
-  name: string;
-  email: string;
-  phone: string;
-  service: string;
-  datetime: string;
-  duration: number;
-  notes?: string;
-}) => {
-  const response = await api.post('/calendar/book', data);
-  return response.data;
-};
 
 export default api;
