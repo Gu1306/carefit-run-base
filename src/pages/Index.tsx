@@ -12,7 +12,7 @@ const Index = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-primary/80 via-primary/60 to-transparent"></div>
         <div className="relative z-10 max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <div className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight" data-lovable-editable="hero-title">
-            Toda corrida precisa de uma <span className="text-accent">base</span>
+            A base que você constrói hoje sustenta a <span className="text-accent">vitória de amanhã</span>
           </div>
           <div className="text-xl md:text-2xl text-white/90 mb-8 max-w-2xl mx-auto" data-lovable-editable="hero-subtitle">Seu Hub de corrida inteligente — corpo, mente e propósito no mesmo ritmo.</div>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
