@@ -71,11 +71,11 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				},
 				carefit: {
-					primary: 'hsl(14 60 65)', // Verde petróleo
-					secondary: 'hsl(200 100 61)', // Terracota  
-					warm: 'hsl(244 237 228)', // Bege claro
-					earth: 'hsl(212 166 86)', // Dourado
-					white: 'hsl(0 0 100)' // Branco
+					primary: 'hsl(186 59% 16%)', // Verde petróleo
+					secondary: 'hsl(19 64% 51%)', // Terracota  
+					warm: 'hsl(30 50% 93%)', // Bege claro
+					earth: 'hsl(44 42% 66%)', // Dourado
+					white: 'hsl(0 0% 100%)' // Branco
 				}
 			},
 			fontFamily: {
