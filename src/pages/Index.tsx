@@ -63,8 +63,8 @@ const Index = () => {
           </Badge>
           
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-montserrat font-bold mb-6 leading-tight">
-            Da sala pequena ao<br />
-            <span className="text-earth">sonho realizado</span>
+            Cuidamos da sua corrida.<br />
+            <span className="text-earth">Transformamos a sua vida.</span>
           </h1>
           
           <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto leading-relaxed font-poppins font-light">
