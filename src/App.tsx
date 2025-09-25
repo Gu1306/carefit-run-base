@@ -9,6 +9,8 @@ import Manifesto from "./pages/Manifesto";
 import Servicos from "./pages/Servicos";
 import Jornada from "./pages/Jornada";
 import Historia from "./pages/Historia";
+import Espaco from "./pages/Espaco";
+import Comunidade from "./pages/Comunidade";
 import Contato from "./pages/Contato";
 import Agendar from "./pages/Agendar";
 import NotFound from "./pages/NotFound";
@@ -28,6 +30,8 @@ const App = () => (
           <Route path="/servicos" element={<Servicos />} />
           <Route path="/jornada" element={<Jornada />} />
           <Route path="/historia" element={<Historia />} />
+          <Route path="/espaco" element={<Espaco />} />
+          <Route path="/comunidade" element={<Comunidade />} />
           <Route path="/contato" element={<Contato />} />
           <Route path="/agendar" element={<Agendar />} />
           <Route path="*" element={<NotFound />} />

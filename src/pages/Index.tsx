@@ -1,116 +1,245 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Heart, Target, Users, Zap } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
 import { useNavigate } from "react-router-dom";
-import heroImage from "@/assets/hero-runners.jpg";
-import CareFitLogo from "@/components/CareFitLogo";
+import { Heart, Zap, Target, Users, MapPin, Calendar, Star, Award, Clock, CheckCircle } from "lucide-react";
+
 const Index = () => {
   const navigate = useNavigate();
-  return <div className="min-h-screen">
+
+  const handleWhatsApp = () => {
+    window.open("https://wa.me/5516993552357?text=Ol%C3%A1%2C%20gostaria%20de%20conhecer%20a%20CareFit%20RunBase!", "_blank");
+  };
+
+  const pilares = [
+    {
+      icon: Heart,
+      title: "Recovery",
+      subtitle: "Recuperar também é treinar",
+      description: "Técnicas avançadas de recuperação muscular e prevenção de lesões para manter você sempre em movimento."
+    },
+    {
+      icon: Zap,
+      title: "Fortalecimento",
+      subtitle: "Base forte, corrida sem dor",
+      description: "Fortalecimento específico para corredores, focando nos grupos musculares essenciais para performance."
+    },
+    {
+      icon: Target,
+      title: "Nutrição",
+      subtitle: "Combustível para a performance",
+      description: "Orientação nutricional especializada para otimizar seu rendimento e acelerar a recuperação."
+    },
+    {
+      icon: Users,
+      title: "Mente",
+      subtitle: "Foco, consistência, superação",
+      description: "Suporte psicológico e mental para desenvolver a mentalidade vencedora do corredor de alta performance."
+    }
+  ];
+
+  const numeros = [
+    { numero: "100+", texto: "Corredores transformados" },
+    { numero: "20+", texto: "Maratonistas" },
+    { numero: "4+", texto: "Ultramaratonistas" },
+    { numero: "3", texto: "Anos de jornada" }
+  ];
+
+  return (
+    <div className="min-h-screen bg-background">
       {/* Hero Section */}
-      <section className="relative h-screen flex items-center justify-center bg-cover bg-center bg-no-repeat" style={{
-      backgroundImage: `url(${heroImage})`
-    }}>
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/80 via-primary/60 to-transparent"></div>
-        <div className="relative z-10 max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <div className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight" data-lovable-editable="hero-title">
-            A base que você constrói hoje sustenta a <span className="text-accent">vitória de amanhã</span>
-          </div>
-          <div className="text-xl md:text-2xl text-white/90 mb-8 max-w-2xl mx-auto" data-lovable-editable="hero-subtitle">Seu Hub de corrida inteligente — corpo, mente e propósito no mesmo ritmo.</div>
+      <section className="relative h-screen flex items-center justify-center overflow-hidden">
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage: `url('/src/assets/hero-runners.jpg')`,
+          }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/70 to-transparent" />
+        
+        <div className="relative z-10 container mx-auto px-4 text-center text-white">
+          <Badge className="mb-6 bg-secondary hover:bg-secondary/90 text-secondary-foreground text-sm px-4 py-2">
+            A Evolução Nunca Para
+          </Badge>
+          
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-montserrat font-bold mb-6 leading-tight">
+            Da sala pequena ao<br />
+            <span className="text-earth">sonho realizado</span>
+          </h1>
+          
+          <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto leading-relaxed font-poppins font-light">
+            Somos o HUB completo para corredores em Ribeirão Preto.<br />
+            Onde a ciência encontra o coração, e a performance anda de mãos dadas com o propósito.
+          </p>
+          
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button variant="hero" size="lg" className="text-lg px-8 py-4" onClick={() => window.open('https://wa.me/5516996008849', '_blank')}>
-              Agende sua primeira sessão
+            <Button 
+              size="lg"
+              className="bg-secondary hover:bg-secondary/90 text-secondary-foreground px-8 py-4 text-lg font-montserrat font-semibold"
+              onClick={() => navigate('/espaco')}
+            >
+              Conheça Nosso Novo Espaço
             </Button>
-            <Button variant="outline" size="lg" className="text-lg px-8 py-4 bg-white/10 border-white text-white hover:bg-white hover:text-primary" onClick={() => navigate('/servicos')}>
-              Conheça nossos serviços
+            <Button 
+              variant="outline"
+              size="lg"
+              className="border-2 border-white text-white hover:bg-white hover:text-primary px-8 py-4 text-lg font-montserrat font-semibold"
+              onClick={() => navigate('/jornada')}
+            >
+              Inicie sua Jornada Propósito
             </Button>
           </div>
         </div>
       </section>
 
-      {/* Manifesto Preview */}
-      <section className="py-20 bg-background">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Nossa Jornada de Crescimento */}
+      <section className="py-20 bg-warm">
+        <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <div className="flex items-center justify-center mb-6">
-              <CareFitLogo size={32} className="mr-3" />
-              <div className="text-4xl font-bold text-primary">
-                Correr é mais que cruzar a linha de chegada
-              </div>
-              <CareFitLogo size={32} className="ml-3" />
-            </div>
-            <div className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              É começar com consciência. A base está em recovery, fortalecimento, nutrição e mente treinada.
-            </div>
-            <div className="flex items-center justify-center mt-4 text-accent">
-              <CareFitLogo size={16} className="mr-2" />
-              <span className="text-sm font-medium">Seu desafio começa na base. A gente caminha junto até o topo.</span>
-              <CareFitLogo size={16} className="ml-2" />
-            </div>
+            <h2 className="text-4xl md:text-5xl font-montserrat font-bold text-primary mb-6">
+              De uma pequena sala ao nosso lar
+            </h2>
+            <p className="text-xl text-primary/80 max-w-3xl mx-auto font-poppins">
+              A jornada que nos trouxe até aqui
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-4 gap-8">
+            {[
+              { ano: "2022", titulo: "O Despertar", descricao: "Gustavo percebe a fragmentação do cuidado", icon: Star },
+              { ano: "2023", titulo: "Os Primeiros Passos", descricao: "Nasce a CareFit Recovery", icon: CheckCircle },
+              { ano: "2024", titulo: "Crescimento e Validação", descricao: "Mais de 100 corredores transformados", icon: Award },
+              { ano: "2025", titulo: "O Novo Lar", descricao: "Espaço 100% próprio e equipe completa", icon: MapPin }
+            ].map((marco, index) => (
+              <Card key={index} className="bg-white border-0 shadow-lg hover:shadow-xl transition-all duration-300">
+                <CardContent className="p-8 text-center">
+                  <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                    <marco.icon className="h-8 w-8 text-white" />
+                  </div>
+                  <div className="text-3xl font-montserrat font-bold text-earth mb-2">{marco.ano}</div>
+                  <h3 className="text-xl font-montserrat font-semibold text-primary mb-3">{marco.titulo}</h3>
+                  <p className="text-primary/70 font-poppins">{marco.descricao}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Pilares de Cuidado */}
+      <section className="py-20 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-montserrat font-bold text-primary mb-6">
+              Onde prevenção encontra performance
+            </h2>
+            <p className="text-xl text-primary/80 max-w-3xl mx-auto font-poppins">
+              Nossos 4 pilares de cuidado integrado para corredores
+            </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <Card className="text-center hover:shadow-lg transition-all duration-300 hover:scale-105">
-              <CardContent className="pt-6">
-                <div className="w-16 h-16 bg-gradient-to-br from-accent to-earth rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Heart className="w-8 h-8 text-white" />
+            {pilares.map((pilar, index) => (
+              <Card key={index} className="group bg-white border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+                <CardContent className="p-8 text-center">
+                  <div className="w-20 h-20 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                    <pilar.icon className="h-10 w-10 text-white" />
+                  </div>
+                  <h3 className="text-2xl font-montserrat font-bold text-primary mb-2">{pilar.title}</h3>
+                  <p className="text-secondary font-montserrat font-semibold mb-4">{pilar.subtitle}</p>
+                  <p className="text-primary/70 font-poppins leading-relaxed">{pilar.description}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Números de Impacto */}
+      <section className="py-20 bg-primary text-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-montserrat font-bold mb-6">
+              Histórias que inspiram
+            </h2>
+            <p className="text-xl opacity-90 max-w-3xl mx-auto font-poppins">
+              Mais de 100 jornadas transformadas
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-4 gap-8">
+            {numeros.map((item, index) => (
+              <div key={index} className="text-center">
+                <div className="text-5xl md:text-6xl font-montserrat font-bold text-earth mb-4">
+                  {item.numero}
                 </div>
-                <div className="text-xl font-semibold text-primary mb-2">Recovery</div>
-                <div className="text-muted-foreground">
-                  Banheiras de imersão, botas de compressão e liberação miofascial
+                <p className="text-lg font-poppins opacity-90">{item.texto}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Nossa Equipe */}
+      <section className="py-20 bg-warm">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-montserrat font-bold text-primary mb-6">
+              Corredores cuidando de corredores
+            </h2>
+            <p className="text-xl text-primary/80 max-w-3xl mx-auto font-poppins">
+              Nossa equipe é formada por corredores que entendem suas dores porque vivem isso na pele
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto">
+            <Card className="bg-white border-0 shadow-lg overflow-hidden">
+              <CardContent className="p-8 text-center">
+                <div className="w-32 h-32 bg-gradient-to-br from-primary to-secondary rounded-full mx-auto mb-6 flex items-center justify-center">
+                  <span className="text-4xl font-montserrat font-bold text-white">G</span>
                 </div>
+                <h3 className="text-2xl font-montserrat font-bold text-primary mb-2">Gustavo</h3>
+                <p className="text-secondary font-montserrat font-semibold mb-4">Fundador & Ultramaratonista</p>
+                <p className="text-primary/70 font-poppins italic">"A vivência que inspira"</p>
               </CardContent>
             </Card>
 
-            <Card className="text-center hover:shadow-lg transition-all duration-300 hover:scale-105">
-              <CardContent className="pt-6">
-                <div className="w-16 h-16 bg-gradient-to-br from-secondary to-primary rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Zap className="w-8 h-8 text-white" />
+            <Card className="bg-white border-0 shadow-lg overflow-hidden">
+              <CardContent className="p-8 text-center">
+                <div className="w-32 h-32 bg-gradient-to-br from-primary to-secondary rounded-full mx-auto mb-6 flex items-center justify-center">
+                  <span className="text-4xl font-montserrat font-bold text-white">L</span>
                 </div>
-                <div className="text-xl font-semibold text-primary mb-2">Fortalecimento</div>
-                <div className="text-muted-foreground">Planos online de fortalecimento. Específicos para corredores</div>
-              </CardContent>
-            </Card>
-
-            <Card className="text-center hover:shadow-lg transition-all duration-300 hover:scale-105">
-              <CardContent className="pt-6">
-                <div className="w-16 h-16 bg-gradient-to-br from-warm to-accent rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Target className="w-8 h-8 text-white" />
-                </div>
-                <div className="text-xl font-semibold text-primary mb-2">Nutrição</div>
-                <div className="text-muted-foreground">
-                  Acompanhamento conectado ao ciclo de treinos e objetivos
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card className="text-center hover:shadow-lg transition-all duration-300 hover:scale-105">
-              <CardContent className="pt-6">
-                <div className="w-16 h-16 bg-gradient-to-br from-earth to-secondary rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Users className="w-8 h-8 text-white" />
-                </div>
-                <div className="text-xl font-semibold text-primary mb-2">Mente</div>
-                <div className="text-muted-foreground">
-                  Foco, consistência, autocuidado e superação
-                </div>
+                <h3 className="text-2xl font-montserrat font-bold text-primary mb-2">Livia</h3>
+                <p className="text-secondary font-montserrat font-semibold mb-4">Fisioterapeuta & Agente da Performance</p>
+                <p className="text-primary/70 font-poppins italic">"A ciência que transforma"</p>
               </CardContent>
             </Card>
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-primary to-secondary">
-        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <div className="text-4xl font-bold text-white mb-6">A CAREFIT Run Base é onde prevenção encontra performance</div>
-          <div className="text-xl text-white/90 mb-8">
-            Estamos prontos para cuidar da sua jornada. Comece hoje mesmo.
-          </div>
-          <Button variant="warm" size="lg" className="text-lg px-8 py-4" onClick={() => window.open('https://wa.me/5516996008849', '_blank')}>
-            Fale conosco agora
+      {/* CTA Final */}
+      <section className="py-20 bg-gradient-to-r from-primary via-secondary to-primary text-white">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-4xl md:text-5xl font-montserrat font-bold mb-6">
+            Você não precisa correr sozinho
+          </h2>
+          <p className="text-xl mb-8 max-w-3xl mx-auto font-poppins opacity-90">
+            Todo passo conta. Cuidar não é parar, é evoluir.<br />
+            Sua jornada de transformação começa aqui.
+          </p>
+          <Button 
+            size="lg"
+            variant="outline"
+            className="border-2 border-white text-white hover:bg-white hover:text-primary px-8 py-4 text-lg font-montserrat font-semibold"
+            onClick={handleWhatsApp}
+          >
+            Agende sua Primeira Sessão
           </Button>
         </div>
       </section>
-    </div>;
+    </div>
+  );
 };
+
 export default Index;

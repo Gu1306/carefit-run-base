@@ -69,7 +69,18 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				carefit: {
+					primary: 'hsl(14 60 65)', // Verde petróleo
+					secondary: 'hsl(200 100 61)', // Terracota  
+					warm: 'hsl(244 237 228)', // Bege claro
+					earth: 'hsl(212 166 86)', // Dourado
+					white: 'hsl(0 0 100)' // Branco
 				}
+			},
+			fontFamily: {
+				'montserrat': ['Montserrat', 'sans-serif'],
+				'poppins': ['Poppins', 'sans-serif'],
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
