@@ -8,7 +8,7 @@ const Index = () => {
   const navigate = useNavigate();
 
   const handleWhatsApp = () => {
-    window.open("https://wa.me/5516993552357?text=Ol%C3%A1%2C%20gostaria%20de%20conhecer%20a%20CareFit%20RunBase!", "_blank");
+    window.open("https://wa.me/16996008849", "_blank");
   };
 
   const pilares = [
@@ -72,21 +72,13 @@ const Index = () => {
             Onde a ciência encontra o coração, e a performance anda de mãos dadas com o propósito.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex justify-center">
             <Button 
               size="lg"
               className="bg-secondary hover:bg-secondary/90 text-secondary-foreground px-8 py-4 text-lg font-montserrat font-semibold"
-              onClick={() => navigate('/espaco')}
+              onClick={handleWhatsApp}
             >
-              Conheça Nosso Novo Espaço
-            </Button>
-            <Button 
-              variant="outline"
-              size="lg"
-              className="border-2 border-white text-white hover:bg-white hover:text-primary px-8 py-4 text-lg font-montserrat font-semibold"
-              onClick={() => navigate('/jornada')}
-            >
-              Inicie sua Jornada Propósito
+              Marque sua Sessão
             </Button>
           </div>
         </div>
