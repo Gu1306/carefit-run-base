@@ -45,7 +45,10 @@ const Navigation = () => {
               <Button
                 variant="secondary"
                 size="sm"
-                onClick={() => window.open("https://wa.me/5516996008849", "_blank")}
+                onClick={() => {
+                  console.log('WhatsApp link clicked: https://wa.me/5516996008849');
+                  window.open("https://wa.me/5516996008849?text=Olá!", "_blank");
+                }}
                 className="bg-secondary hover:bg-secondary/90 text-secondary-foreground font-montserrat font-semibold"
               >
                 Agende sua Primeira Sessão
@@ -81,7 +84,8 @@ const Navigation = () => {
                   size="sm" 
                   className="w-full bg-secondary hover:bg-secondary/90 text-secondary-foreground font-montserrat font-semibold" 
                   onClick={() => {
-                    window.open("https://wa.me/5516996008849", "_blank");
+                    console.log('Mobile WhatsApp link clicked: https://wa.me/5516996008849');
+                    window.open("https://wa.me/5516996008849?text=Olá!", "_blank");
                     setIsOpen(false);
                   }}
                 >
@@ -95,7 +99,10 @@ const Navigation = () => {
 
       {/* WhatsApp Floating Button */}
       <div className="fixed bottom-6 right-6 z-50">
-        <Button variant="whatsapp" size="icon" className="w-14 h-14 rounded-full shadow-2xl" onClick={() => window.open('https://wa.me/5516996008849', '_blank')}>
+        <Button variant="whatsapp" size="icon" className="w-14 h-14 rounded-full shadow-2xl" onClick={() => {
+          console.log('Floating WhatsApp button clicked: https://wa.me/5516996008849');
+          window.open('https://wa.me/5516996008849?text=Olá!', '_blank');
+        }}>
           <MessageCircle className="w-6 h-6" />
         </Button>
       </div>

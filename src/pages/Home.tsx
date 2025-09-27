@@ -18,7 +18,7 @@ const Home = () => {
             Seu clube para encontrar a melhor versão de si mesmo
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button variant="hero" size="lg" className="text-lg px-8 py-4" onClick={() => window.open('https://wa.me/5516996008849', '_blank')}>Agende sua primeira sessão</Button>
+            <Button variant="hero" size="lg" className="text-lg px-8 py-4" onClick={() => window.open('https://wa.me/5516996008849?text=Olá!', '_blank')}>Agende sua primeira sessão</Button>
             <Button variant="outline" size="lg" className="text-lg px-8 py-4 bg-white/10 border-white text-white hover:bg-white hover:text-primary">
               Conheça nossos serviços
             </Button>
@@ -104,7 +104,7 @@ const Home = () => {
           <p className="text-xl text-white/90 mb-8">
             Estamos prontos para cuidar da sua jornada. Comece hoje mesmo.
           </p>
-          <Button variant="warm" size="lg" className="text-lg px-8 py-4" onClick={() => window.open('https://wa.me/5516996008849', '_blank')}>
+          <Button variant="warm" size="lg" className="text-lg px-8 py-4" onClick={() => window.open('https://wa.me/5516996008849?text=Olá!', '_blank')}>
             Fale conosco agora
           </Button>
         </div>
