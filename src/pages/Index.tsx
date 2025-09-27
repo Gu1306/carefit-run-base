@@ -101,7 +101,7 @@ const Index = () => {
               { ano: "2022", titulo: "O Despertar", descricao: "Gustavo percebe a fragmentação do cuidado", icon: Star },
               { ano: "2023", titulo: "Os Primeiros Passos", descricao: "Nasce a CareFit Recovery", icon: CheckCircle },
               { ano: "2024", titulo: "Crescimento e Validação", descricao: "Mais de 100 corredores transformados", icon: Award },
-              { ano: "2025", titulo: "O Novo Lar", descricao: "Espaço 100% próprio e equipe completa", icon: MapPin }
+              { ano: "2025", titulo: "O HUB DO CORREDOR", descricao: "Espaço 100% preparado para sua Jornada", icon: MapPin }
             ].map((marco, index) => (
               <Card key={index} className="bg-white border-0 shadow-lg hover:shadow-xl transition-all duration-300">
                 <CardContent className="p-8 text-center">

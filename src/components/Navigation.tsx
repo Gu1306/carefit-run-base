@@ -42,17 +42,6 @@ const Navigation = () => {
                   {item.name}
                 </Link>
               ))}
-              <Button
-                variant="secondary"
-                size="sm"
-                onClick={() => {
-                  console.log('WhatsApp link clicked: https://wa.me/5516996008849');
-                  window.open("https://wa.me/5516996008849?text=Olá!", "_blank");
-                }}
-                className="bg-secondary hover:bg-secondary/90 text-secondary-foreground font-montserrat font-semibold"
-              >
-                Agende sua Primeira Sessão
-              </Button>
             </div>
 
             {/* Mobile Menu Button */}
@@ -78,20 +67,6 @@ const Navigation = () => {
                   {item.name}
                 </Link>
               ))}
-              <div className="px-3 py-2">
-                <Button 
-                  variant="secondary" 
-                  size="sm" 
-                  className="w-full bg-secondary hover:bg-secondary/90 text-secondary-foreground font-montserrat font-semibold" 
-                  onClick={() => {
-                    console.log('Mobile WhatsApp link clicked: https://wa.me/5516996008849');
-                    window.open("https://wa.me/5516996008849?text=Olá!", "_blank");
-                    setIsOpen(false);
-                  }}
-                >
-                  Agende sua Primeira Sessão
-                </Button>
-              </div>
             </div>
           </div>
         )}
