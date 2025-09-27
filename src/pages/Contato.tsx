@@ -66,7 +66,7 @@ const Contato = () => {
                     <Mail className="w-5 h-5 text-accent" />
                     <div>
                       <p className="font-medium text-primary">E-mail</p>
-                      <p className="text-muted-foreground">contato@carefitrunbase.com.br</p>
+                      <p className="text-muted-foreground">gustavo@coutorosa.com</p>
                     </div>
                   </div>
                 </CardContent>
@@ -85,12 +85,12 @@ const Contato = () => {
                     <p className="text-muted-foreground">
                       <strong className="text-primary">Endereço:</strong><br />
                       <a 
-                        href="https://maps.google.com/?q=Av.+Áurea+Aparecida+Bragheto+Machado,+263+-+City+Ribeirão,+Ribeirão+Preto+-+SP,+14021-460"
+                        href="https://maps.google.com/?q=Av.+Áurea+Aparecida+Bragheto+Machado,+241+-+City+Ribeirão,+Ribeirão+Preto+-+SP,+14021-460"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-primary hover:text-accent transition-colors underline"
                       >
-                        Av. Áurea Aparecida Bragheto Machado, 263<br />
+                        Av. Áurea Aparecida Bragheto Machado, 241<br />
                         City Ribeirão, Ribeirão Preto - SP, 14021-460
                       </a>
                     </p>
