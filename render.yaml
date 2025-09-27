@@ -8,6 +8,10 @@ services:
     domains:
       - carefitrunbase.com.br
       - www.carefitrunbase.com.br
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
     headers:
       - path: /*
         name: X-Frame-Options
