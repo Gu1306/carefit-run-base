@@ -5,7 +5,7 @@ import { MapPin, Clock, Phone, Camera, Award, Users, Heart, Zap } from "lucide-r
 
 const Espaco = () => {
   const handleWhatsApp = () => {
-    window.open("https://wa.me/5516993552357?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20visita%20ao%20novo%20espaço!", "_blank");
+    window.open("https://wa.me/5516996008849", "_blank");
   };
 
   const equipamentos = [

@@ -45,7 +45,7 @@ const Navigation = () => {
               <Button
                 variant="secondary"
                 size="sm"
-                onClick={() => window.open("https://wa.me/5516993552357?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20sess%C3%A3o!", "_blank")}
+                onClick={() => window.open("https://wa.me/5516996008849", "_blank")}
                 className="bg-secondary hover:bg-secondary/90 text-secondary-foreground font-montserrat font-semibold"
               >
                 Agende sua Primeira Sessão
@@ -81,7 +81,7 @@ const Navigation = () => {
                   size="sm" 
                   className="w-full bg-secondary hover:bg-secondary/90 text-secondary-foreground font-montserrat font-semibold" 
                   onClick={() => {
-                    window.open("https://wa.me/5516993552357?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20sess%C3%A3o!", "_blank");
+                    window.open("https://wa.me/5516996008849", "_blank");
                     setIsOpen(false);
                   }}
                 >

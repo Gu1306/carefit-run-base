@@ -8,7 +8,7 @@ const Index = () => {
   const navigate = useNavigate();
 
   const handleWhatsApp = () => {
-    window.open("https://wa.me/16996008849", "_blank");
+    window.open("https://wa.me/5516996008849", "_blank");
   };
 
   const pilares = [

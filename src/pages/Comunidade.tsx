@@ -5,7 +5,7 @@ import { Calendar, Users, Heart, MessageSquare, Instagram, MapPin, Clock, Trophy
 
 const Comunidade = () => {
   const handleWhatsApp = () => {
-    window.open("https://wa.me/5516993552357?text=Ol%C3%A1%2C%20gostaria%20de%20fazer%20parte%20da%20comunidade%20CareFit!", "_blank");
+    window.open("https://wa.me/5516996008849", "_blank");
   };
 
   const eventos = [
