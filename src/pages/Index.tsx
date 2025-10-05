@@ -232,9 +232,7 @@ Viva com equilíbrio.</span>
             Todo passo conta. Cuidar não é parar, é evoluir.<br />
             Sua jornada de transformação começa aqui.
           </p>
-          <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-primary px-8 py-4 text-lg font-montserrat font-semibold" onClick={handleWhatsApp}>
-            Agende sua Primeira Sessão
-          </Button>
+          
         </div>
       </section>
     </div>;
