@@ -40,24 +40,24 @@ const Historia = () => {
   }];
   const timeline = [{
     ano: "2022",
-    titulo: "O Despertar da Necessidade",
-    descricao: "Durante sua preparação para ciclos de maratonas e ultramaratonas, Gustavo percebeu a fragmentação do cuidado esportivo: endocrinologista, nutricionista, fisioterapeuta, educador físico e treinador de corrida não se comunicavam entre si, obrigando o atleta a repetir várias vezes a mesma história e no ciclo de sua primeira ultramaratona, essa realidade ficou ainda mais clara: faltava um modelo integrado de acompanhamento. Nasceu a ideia de um espaço onde o atleta contasse sua história apenas uma vez, recebendo um plano unificado para toda a jornada."
-  }, {
-    ano: "Julho de 2023",
-    titulo: "CareFit Recovery",
-    descricao: "Nascimento da clínica focada em recuperação e fisioterapia, criada a partir da vivência de Gustavo como maratonista e ultramaratonista."
+    emoji: "🏁",
+    titulo: "O Despertar",
+    descricao: "Gustavo percebe que o cuidado com o corredor é fragmentado. Das longas distâncias e dores veio a pergunta que mudaria tudo: \"Por que esperar a dor chegar?\""
   }, {
     ano: "2023",
-    titulo: "Consolidação no Mercado de Corrida",
-    descricao: "O projeto começa com foco em recovery e acompanhamento de ciclos de meia maratona e maratona. Com o boca a boca no meio da corrida, a CareFit ganhou força e se tornou referência entre atletas de Ribeirão Preto e região."
+    emoji: "🧩",
+    titulo: "Os Primeiros Passos",
+    descricao: "Nasce a CareFit Recovery, com um novo olhar sobre o cuidado. Gustavo e Lívia unem ciência e propósito para transformar o recovery em parceiro da performance."
   }, {
     ano: "2024",
-    titulo: "Comunidade Crescente",
-    descricao: "Acompanhamos mais de 70 atletas, entre eles mais de 20 maratonistas e 4 ultramaratonistas. O método de prevenção, fortalecimento e recovery foi validado no mercado, consolidando a CareFit como referência em cuidado preventivo para corredores."
+    emoji: "💪",
+    titulo: "Crescimento e Validação",
+    descricao: "Chegam Guilherme e Arthur, completando o time. Força, nutrição e fisioterapia integradas tornam a CareFit referência em prevenção e performance."
   }, {
     ano: "2025",
-    titulo: "A Transformação",
-    descricao: "Já consolidados, buscamos um novo espaço e trouxemos para o time profissionais de nutrição, fisiologia e educação física — muitos deles ex-clientes que viveram a jornada e entenderam nosso conceito. Foi nesse ano que a CareFit Recovery se transformou em CareFit Run Base, um hub completo para corredores."
+    emoji: "🏃‍♀️",
+    titulo: "O Hub do Corredor",
+    descricao: "Surge a CareFit Run Base, um espaço 100% preparado para a jornada do atleta. O sonho se torna real: um centro de transformação que une ciência, cuidado e propósito."
   }];
   return <div className="min-h-screen pt-16">
       {/* Hero Section */}
@@ -205,8 +205,8 @@ const Historia = () => {
             <div className="space-y-12">
               {timeline.map((item, index) => <div key={index} className="flex items-start gap-6">
                   <div className="w-16 h-16 bg-gradient-to-br from-accent to-earth rounded-full flex items-center justify-center flex-shrink-0 z-10">
-                    <span className="text-white font-bold">
-                      {item.ano.slice(-2)}
+                    <span className="text-3xl">
+                      {item.emoji}
                     </span>
                   </div>
                   <Card className="flex-1 border-l-4 border-accent">
