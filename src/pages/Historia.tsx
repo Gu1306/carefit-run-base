@@ -78,24 +78,43 @@ const Historia = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-4xl font-bold text-primary mb-6">
-                Do Asfalto à Revolução no Cuidado
+                🏃‍♂️ Do Asfalto à Revolução no Cuidado
               </h2>
               <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
                 <p>
                   Tudo começou com uma pergunta simples: <strong className="text-accent">"Por que esperar a dor chegar?"</strong>
                 </p>
-                <p>Gustavo, maratonista e ultramaratonista, percebeu nas longas distâncias a importância de cuidar do corpo antes que ele pedisse socorro. Em 2022, nasceu a CareFit Recovery, com a proposta de cuidar antes de precisar tratar — e transformar o recovery em parte essencial da performance.
-
-
-Com a chegada da Lívia, fisioterapeuta especializada em corrida, a CareFit ganhou base científica e humana. O projeto se expandiu com a entrada de Guilherme Coelho, educador físico e corredor, responsável por toda a preparação de força e treinos específicos, ajudando atletas a correr com mais eficiência e menos lesões.</p>
-                
-                
-                <p>Na sequência, Arthur Angelotti, nutricionista e maratonista, trouxe o olhar que faltava: a nutrição como combustível da performance e da recuperação.
-
-Hoje, Gustavo, Lívia, Guilherme e Arthur formam o núcleo da CareFit Run Base — um hub de transformação que une ciência, propósito e experiência real de quem vive a corrida na pele.
-Aqui, o cuidado é a base, a constância é o caminho e a performance é a consequência.
-
-              </p>
+                <p>
+                  Gustavo, maratonista e ultramaratonista apaixonado, conhecia intimamente os desafios do corpo em longas distâncias.
+                  Cada quilômetro percorrido era uma lição sobre limites, recuperação e a importância de uma base sólida.
+                </p>
+                <p>
+                  Em 2020, nasceu a CareFit Recovery, com uma proposta diferente: cuidar antes de precisar tratar.
+                  Não era apenas mais uma clínica — era o início de um conceito revolucionário no cuidado com o atleta.
+                </p>
+                <p>
+                  Com a chegada da Lívia, fisioterapeuta especializada em corrida, o projeto ganhou dimensões científicas e humanas que transformaram completamente a experiência do atleta.
+                  Os fisioterapeutas deixaram de ser apenas profissionais de tratamento para se tornarem parceiros de performance.
+                </p>
+                <p>
+                  A soma do conhecimento de Gustavo — com mais de 20 maratonas e ultramaratonas no currículo, vivência em inúmeros ciclos de preparação e a criação do mapa mental como ferramenta de acompanhamento — com a visão da Lívia, que através da fisioterapia desenvolveu metodologias de prevenção de lesões, redução da fadiga e compreensão profunda da corrida, estruturou a base única que hoje sustenta a CareFit Run Base.
+                </p>
+                <p>
+                  Mas a história não parou aí.
+                </p>
+                <p>
+                  Com a entrada do educador físico esportivo Guilherme Coelho, a CareFit ganhou uma nova dimensão na preparação de força. Corredor e personal trainer experiente, Guilherme trouxe sua vivência prática e técnica para dentro da metodologia CareFit, criando programas específicos de fortalecimento voltados para a corrida, com o objetivo de melhorar a economia de energia, aumentar a potência e prevenir lesões.
+                  Cada treino é pensado para que o corpo do atleta não apenas suporte os quilômetros — mas responda com eficiência a cada passo.
+                </p>
+                <p>
+                  Logo depois, a chegada do nutricionista Arthur Angelotti completou o ecossistema. Também maratonista, Arthur entende que alimentação é o combustível do corredor.
+                  Mais do que prescrever dietas, ele traduz a nutrição em performance real, integrando estratégias de energia, recuperação e longevidade esportiva à rotina de cada atleta.
+                  Com ele, o cuidado se tornou completo — corpo, mente e nutrição trabalhando em sintonia para sustentar o propósito de correr com equilíbrio e constância.
+                </p>
+                <p>
+                  Hoje, Gustavo, Lívia, Guilherme e Arthur formam o coração da CareFit Run Base.
+                  Um time de especialistas que vive o que ensina — corredores, profissionais e visionários que transformaram o simples ato de correr em um movimento de autocuidado, performance e propósito.
+                </p>
               </div>
             </div>
             <div className="flex justify-center">
@@ -108,22 +127,61 @@ Aqui, o cuidado é a base, a constância é o caminho e a performance é a conse
       </section>
 
       {/* Team */}
-      <section className="py-20 bg-gradient-to-r from-warm/20 to-accent/20">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-20 bg-warm">
+        <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-primary mb-4">
+            <h2 className="text-4xl md:text-5xl font-montserrat font-bold text-primary mb-6">
               Nosso Time de Líderes
             </h2>
-            <p className="text-xl text-muted-foreground">
+            <p className="text-xl text-primary/80 max-w-3xl mx-auto font-poppins">
               As mentes visionárias por trás da transformação no cuidado esportivo
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {equipe.map((membro, index) => <Card key={index} className="text-center hover:shadow-xl transition-all duration-500 transform hover:scale-105 border-0">
-                
-                
-              </Card>)}
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
+            <Card className="bg-white border-0 shadow-lg overflow-hidden">
+              <CardContent className="p-8 text-center">
+                <div className="w-32 h-32 bg-gradient-to-br from-primary to-secondary rounded-full mx-auto mb-6 flex items-center justify-center">
+                  <span className="text-4xl font-montserrat font-bold text-white">GR</span>
+                </div>
+                <h3 className="text-2xl font-montserrat font-bold text-primary mb-2">Gustavo Rosa</h3>
+                <p className="text-secondary font-montserrat font-semibold mb-4">Fundador e Head Coach</p>
+                <p className="text-primary/70 font-poppins">Com mais de 20 Ultramaratonas e Maratonas. Criador da metodologia CareFit e especialista em transformação de corredores.</p>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-white border-0 shadow-lg overflow-hidden">
+              <CardContent className="p-8 text-center">
+                <div className="w-32 h-32 bg-gradient-to-br from-primary to-secondary rounded-full mx-auto mb-6 flex items-center justify-center">
+                  <span className="text-4xl font-montserrat font-bold text-white">LD</span>
+                </div>
+                <h3 className="text-2xl font-montserrat font-bold text-primary mb-2">Lívia Dias</h3>
+                <p className="text-secondary font-montserrat font-semibold mb-4">Fisioterapeuta Esportiva & Agente de Performance</p>
+                <p className="text-primary/70 font-poppins">Especialista em prevenção e recovery, corredora apaixonada que une ciência e sensibilidade no cuidado de cada atleta.</p>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-white border-0 shadow-lg overflow-hidden">
+              <CardContent className="p-8 text-center">
+                <div className="w-32 h-32 bg-gradient-to-br from-primary to-secondary rounded-full mx-auto mb-6 flex items-center justify-center">
+                  <span className="text-4xl font-montserrat font-bold text-white">GC</span>
+                </div>
+                <h3 className="text-2xl font-montserrat font-bold text-primary mb-2">Guilherme Coelho</h3>
+                <p className="text-secondary font-montserrat font-semibold mb-4">Educador Físico</p>
+                <p className="text-primary/70 font-poppins">Corredor dos rápidos e especialista em fortalecimento funcional para corredores, focado em construir a base que sustenta cada quilômetro da jornada.</p>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-white border-0 shadow-lg overflow-hidden">
+              <CardContent className="p-8 text-center">
+                <div className="w-32 h-32 bg-gradient-to-br from-primary to-secondary rounded-full mx-auto mb-6 flex items-center justify-center">
+                  <span className="text-4xl font-montserrat font-bold text-white">AA</span>
+                </div>
+                <h3 className="text-2xl font-montserrat font-bold text-primary mb-2">Arthur Angelotti</h3>
+                <p className="text-secondary font-montserrat font-semibold mb-4">Nutricionista Esportivo</p>
+                <p className="text-primary/70 font-poppins">Maratonista e especialista em nutrição para performance, desenvolvendo estratégias alimentares que transformam treinos em conquistas.</p>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
