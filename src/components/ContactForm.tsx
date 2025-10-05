@@ -146,7 +146,7 @@ const ContactForm = () => {
               type="button"
               variant="whatsapp" 
               className="w-full"
-              onClick={() => window.open('https://wa.me/5516996008849?text=Olá!', '_blank')}
+              onClick={() => window.open('https://api.whatsapp.com/send?phone=5516996008849&text=Olá!', '_blank')}
               disabled={isLoading}
             >
               <MessageCircle className="w-5 h-5" />

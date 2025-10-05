@@ -5,7 +5,7 @@ import { Calendar, Users, Heart, MessageSquare, Instagram, MapPin, Clock, Trophy
 
 const Comunidade = () => {
   const handleWhatsApp = () => {
-    window.open("https://wa.me/5516996008849?text=Olá!", "_blank");
+    window.open("https://api.whatsapp.com/send?phone=5516996008849&text=Olá!", "_blank");
   };
 
   const eventos = [

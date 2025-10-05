@@ -217,7 +217,7 @@ const Contato = () => {
             Estamos aqui para entender seus objetivos e mostrar como podemos ajudar você a construir uma base sólida.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button variant="warm" size="lg" onClick={() => window.open('https://wa.me/5516996008849?text=Olá!', '_blank')}>
+            <Button variant="warm" size="lg" onClick={() => window.open('https://api.whatsapp.com/send?phone=5516996008849&text=Olá!', '_blank')}>
               <MessageCircle className="w-5 h-5" />
               WhatsApp agora
             </Button>

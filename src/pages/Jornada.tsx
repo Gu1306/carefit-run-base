@@ -113,7 +113,7 @@ const Jornada = () => {
             Uma transformação estruturada que vai além do físico. Cada semana é um passo na construção da sua melhor versão como corredor.
           </p>
           
-          <Button size="lg" className="hover-scale bg-gradient-to-r from-primary to-accent text-white px-8 py-4 text-lg" onClick={() => window.open("https://wa.me/5516996008849?text=Olá!", "_blank")}>
+          <Button size="lg" className="hover-scale bg-gradient-to-r from-primary to-accent text-white px-8 py-4 text-lg" onClick={() => window.open("https://api.whatsapp.com/send?phone=5516996008849&text=Olá!", "_blank")}>
             Quero começar minha jornada
           </Button>
         </div>
@@ -298,7 +298,7 @@ const Jornada = () => {
             Agende sua avaliação inicial agora mesmo.
           </p>
           
-          <Button size="lg" className="hover-scale bg-gradient-to-r from-primary to-accent text-white px-8 py-4 text-lg" onClick={() => window.open("https://wa.me/5516996008849?text=Olá!", "_blank")}>
+          <Button size="lg" className="hover-scale bg-gradient-to-r from-primary to-accent text-white px-8 py-4 text-lg" onClick={() => window.open("https://api.whatsapp.com/send?phone=5516996008849&text=Olá!", "_blank")}>
             Falar no WhatsApp
           </Button>
         </div>

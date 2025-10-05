@@ -6,7 +6,7 @@ import { Heart, Zap, Target, Users, MapPin, Calendar, Star, Award, Clock, CheckC
 const Index = () => {
   const navigate = useNavigate();
   const handleWhatsApp = () => {
-    window.open("https://wa.me/5516996008849?text=Olá!", "_blank");
+    window.open("https://api.whatsapp.com/send?phone=5516996008849&text=Olá!", "_blank");
   };
   const pilares = [{
     icon: Heart,
