@@ -174,15 +174,15 @@ Viva com equilíbrio.</span>
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
             <Card className="bg-white border-0 shadow-lg overflow-hidden">
               <CardContent className="p-8 text-center">
                 <div className="w-32 h-32 bg-gradient-to-br from-primary to-secondary rounded-full mx-auto mb-6 flex items-center justify-center">
-                  <span className="text-4xl font-montserrat font-bold text-white">G</span>
+                  <span className="text-4xl font-montserrat font-bold text-white">GR</span>
                 </div>
-                <h3 className="text-2xl font-montserrat font-bold text-primary mb-2">Gustavo</h3>
-                <p className="text-secondary font-montserrat font-semibold mb-4">Fundador & Ultramaratonista</p>
-                <p className="text-primary/70 font-poppins italic">"A vivência que inspira"</p>
+                <h3 className="text-2xl font-montserrat font-bold text-primary mb-2">Gustavo Rosa</h3>
+                <p className="text-secondary font-montserrat font-semibold mb-4">Fundador</p>
+                <p className="text-primary/70 font-poppins">Com mais de 20 Ultramaratonas e Maratonas. Criador da metodologia CareFit e especialista em transformação de corredores.</p>
               </CardContent>
             </Card>
 
@@ -191,9 +191,31 @@ Viva com equilíbrio.</span>
                 <div className="w-32 h-32 bg-gradient-to-br from-primary to-secondary rounded-full mx-auto mb-6 flex items-center justify-center">
                   <span className="text-4xl font-montserrat font-bold text-white">L</span>
                 </div>
-                <h3 className="text-2xl font-montserrat font-bold text-primary mb-2">Livia</h3>
+                <h3 className="text-2xl font-montserrat font-bold text-primary mb-2">Lívia</h3>
                 <p className="text-secondary font-montserrat font-semibold mb-4">Fisioterapeuta & Agente da Performance</p>
-                <p className="text-primary/70 font-poppins italic">"A ciência que transforma"</p>
+                <p className="text-primary/70 font-poppins">Especialista em prevenção e recovery, corredora apaixonada que une ciência e sensibilidade no cuidado de cada atleta.</p>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-white border-0 shadow-lg overflow-hidden">
+              <CardContent className="p-8 text-center">
+                <div className="w-32 h-32 bg-gradient-to-br from-primary to-secondary rounded-full mx-auto mb-6 flex items-center justify-center">
+                  <span className="text-4xl font-montserrat font-bold text-white">GC</span>
+                </div>
+                <h3 className="text-2xl font-montserrat font-bold text-primary mb-2">Guilherme Coelho</h3>
+                <p className="text-secondary font-montserrat font-semibold mb-4">Educador Físico</p>
+                <p className="text-primary/70 font-poppins">Corredor dos rápidos e especialista em fortalecimento funcional para corredores, focado em construir a base que sustenta cada quilômetro da jornada.</p>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-white border-0 shadow-lg overflow-hidden">
+              <CardContent className="p-8 text-center">
+                <div className="w-32 h-32 bg-gradient-to-br from-primary to-secondary rounded-full mx-auto mb-6 flex items-center justify-center">
+                  <span className="text-4xl font-montserrat font-bold text-white">AA</span>
+                </div>
+                <h3 className="text-2xl font-montserrat font-bold text-primary mb-2">Arthur Angelotti</h3>
+                <p className="text-secondary font-montserrat font-semibold mb-4">Nutricionista Esportivo</p>
+                <p className="text-primary/70 font-poppins">Maratonista e especialista em nutrição para performance, desenvolvendo estratégias alimentares que transformam treinos em conquistas.</p>
               </CardContent>
             </Card>
           </div>
