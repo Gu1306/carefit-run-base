@@ -8,6 +8,7 @@ import Index from "./pages/Index";
 import Manifesto from "./pages/Manifesto";
 import Servicos from "./pages/Servicos";
 import Jornada from "./pages/Jornada";
+import TodaJornada from "./pages/TodaJornada";
 import Historia from "./pages/Historia";
 import Espaco from "./pages/Espaco";
 import Comunidade from "./pages/Comunidade";
@@ -29,6 +30,7 @@ const App = () => (
           <Route path="/manifesto" element={<Manifesto />} />
           <Route path="/servicos" element={<Servicos />} />
           <Route path="/jornada" element={<Jornada />} />
+          <Route path="/toda-jornada" element={<TodaJornada />} />
           <Route path="/historia" element={<Historia />} />
           <Route path="/espaco" element={<Espaco />} />
           <Route path="/comunidade" element={<Comunidade />} />
