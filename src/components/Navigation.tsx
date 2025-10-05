@@ -7,15 +7,25 @@ const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
   const isActive = (path: string) => location.pathname === path;
-
-  const navigation = [
-    { name: "Início", href: "/" },
-    { name: "Nossa Jornada", href: "/historia" },
-    { name: "Jornada Propósito", href: "/jornada" },
-    { name: "Novo Espaço", href: "/espaco" },
-    { name: "Comunidade", href: "/comunidade" },
-    { name: "Contato", href: "/contato" },
-  ];
+  const navigation = [{
+    name: "Início",
+    href: "/"
+  }, {
+    name: "Nossa Jornada",
+    href: "/historia"
+  }, {
+    name: "Jornada Propósito",
+    href: "/jornada"
+  }, {
+    name: "Novo Espaço",
+    href: "/espaco"
+  }, {
+    name: "Comunidade",
+    href: "/comunidade"
+  }, {
+    name: "Contato",
+    href: "/contato"
+  }];
   return <>
       <nav className="fixed top-0 w-full bg-background/95 backdrop-blur-sm border-b border-border z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-[4px]">
@@ -23,25 +33,17 @@ const Navigation = () => {
             {/* Logo */}
             <Link to="/" className="flex items-center space-x-3">
               <CareFitLogo size={58} />
-              <div className="text-xl font-bold text-primary">
+              <div className="text-xl font-bold text-primary px-[11px]">
                 <span>CAREFIT</span> <span className="text-accent">Run Base</span>
-                <div className="text-xs text-muted-foreground font-normal">
-                  Seu desafio começa na base. A gente caminha junto até o topo.
-                </div>
+                <div className="text-xs text-muted-foreground font-normal mx-0">Centro de Transformação do Corredor.</div>
               </div>
             </Link>
 
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center space-x-8">
-              {navigation.map((item) => (
-                <Link 
-                  key={item.name}
-                  to={item.href} 
-                  className={`text-sm font-medium transition-colors hover:text-accent ${isActive(item.href) ? "text-accent" : "text-foreground"}`}
-                >
+              {navigation.map(item => <Link key={item.name} to={item.href} className={`text-sm font-medium transition-colors hover:text-accent ${isActive(item.href) ? "text-accent" : "text-foreground"}`}>
                   {item.name}
-                </Link>
-              ))}
+                </Link>)}
             </div>
 
             {/* Mobile Menu Button */}
@@ -54,30 +56,21 @@ const Navigation = () => {
         </div>
 
         {/* Mobile Navigation */}
-        {isOpen && (
-          <div className="md:hidden">
+        {isOpen && <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 bg-background border-t border-border">
-              {navigation.map((item) => (
-                <Link 
-                  key={item.name}
-                  to={item.href} 
-                  className={`block px-3 py-2 text-base font-medium transition-colors hover:text-accent ${isActive(item.href) ? "text-accent" : "text-foreground"}`} 
-                  onClick={() => setIsOpen(false)}
-                >
+              {navigation.map(item => <Link key={item.name} to={item.href} className={`block px-3 py-2 text-base font-medium transition-colors hover:text-accent ${isActive(item.href) ? "text-accent" : "text-foreground"}`} onClick={() => setIsOpen(false)}>
                   {item.name}
-                </Link>
-              ))}
+                </Link>)}
             </div>
-          </div>
-        )}
+          </div>}
       </nav>
 
       {/* WhatsApp Floating Button */}
       <div className="fixed bottom-6 right-6 z-50">
         <Button variant="whatsapp" size="icon" className="w-14 h-14 rounded-full shadow-2xl" onClick={() => {
-          console.log('Floating WhatsApp button clicked: https://wa.me/5516996008849');
-          window.open('https://wa.me/5516996008849?text=Olá!', '_blank');
-        }}>
+        console.log('Floating WhatsApp button clicked: https://wa.me/5516996008849');
+        window.open('https://wa.me/5516996008849?text=Olá!', '_blank');
+      }}>
           <MessageCircle className="w-6 h-6" />
         </Button>
       </div>

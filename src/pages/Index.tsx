@@ -3,63 +3,57 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { useNavigate } from "react-router-dom";
 import { Heart, Zap, Target, Users, MapPin, Calendar, Star, Award, Clock, CheckCircle } from "lucide-react";
-
 const Index = () => {
   const navigate = useNavigate();
-
   const handleWhatsApp = () => {
     window.open("https://wa.me/5516996008849?text=Olá!", "_blank");
   };
-
-  const pilares = [
-    {
-      icon: Heart,
-      title: "Recovery",
-      subtitle: "Recuperar também é treinar",
-      description: "Técnicas avançadas de recuperação muscular e prevenção de lesões para manter você sempre em movimento."
-    },
-    {
-      icon: Zap,
-      title: "Fortalecimento",
-      subtitle: "Base forte, corrida sem dor",
-      description: "Fortalecimento específico para corredores, focando nos grupos musculares essenciais para performance."
-    },
-    {
-      icon: Target,
-      title: "Nutrição",
-      subtitle: "Combustível para a performance",
-      description: "Orientação nutricional especializada para otimizar seu rendimento e acelerar a recuperação."
-    },
-    {
-      icon: Users,
-      title: "Mente",
-      subtitle: "Foco, consistência, superação",
-      description: "Suporte psicológico e mental para desenvolver a mentalidade vencedora do corredor de alta performance."
-    }
-  ];
-
-  const numeros = [
-    { numero: "100+", texto: "Corredores transformados" },
-    { numero: "20+", texto: "Maratonistas" },
-    { numero: "4+", texto: "Ultramaratonistas" },
-    { numero: "3", texto: "Anos de jornada" }
-  ];
-
-  return (
-    <div className="min-h-screen bg-background">
+  const pilares = [{
+    icon: Heart,
+    title: "Recovery",
+    subtitle: "Recuperar também é treinar",
+    description: "Técnicas avançadas de recuperação muscular e prevenção de lesões para manter você sempre em movimento."
+  }, {
+    icon: Zap,
+    title: "Fortalecimento",
+    subtitle: "Base forte, corrida sem dor",
+    description: "Fortalecimento específico para corredores, focando nos grupos musculares essenciais para performance."
+  }, {
+    icon: Target,
+    title: "Nutrição",
+    subtitle: "Combustível para a performance",
+    description: "Orientação nutricional especializada para otimizar seu rendimento e acelerar a recuperação."
+  }, {
+    icon: Users,
+    title: "Mente",
+    subtitle: "Foco, consistência, superação",
+    description: "Suporte psicológico e mental para desenvolver a mentalidade vencedora do corredor de alta performance."
+  }];
+  const numeros = [{
+    numero: "100+",
+    texto: "Corredores transformados"
+  }, {
+    numero: "20+",
+    texto: "Maratonistas"
+  }, {
+    numero: "4+",
+    texto: "Ultramaratonistas"
+  }, {
+    numero: "3",
+    texto: "Anos de jornada"
+  }];
+  return <div className="min-h-screen bg-background">
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage: `url('/src/assets/hero-runners.jpg')`,
-          }}
-        />
+        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{
+        backgroundImage: `url('/src/assets/hero-runners.jpg')`
+      }} />
         <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/70 to-transparent" />
         
         <div className="relative z-10 container mx-auto px-4 text-center text-white">
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-montserrat font-bold mb-6 leading-tight">
-            Corra com propósito. Evolua com ciência. <span className="text-earth">Viva com equilíbrio.</span>
+            Corra com propósito. Evolua com ciência. <span className="text-earth">
+Viva com equilíbrio.</span>
           </h1>
           
           <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto leading-relaxed font-poppins font-light">
@@ -67,11 +61,7 @@ const Index = () => {
           </p>
           
           <div className="flex justify-center">
-            <Button 
-              size="lg"
-              className="bg-secondary hover:bg-secondary/90 text-secondary-foreground px-8 py-4 text-lg font-montserrat font-semibold"
-              onClick={handleWhatsApp}
-            >
+            <Button size="lg" className="bg-secondary hover:bg-secondary/90 text-secondary-foreground px-8 py-4 text-lg font-montserrat font-semibold" onClick={handleWhatsApp}>
               Comece sua Jornada Propósito
             </Button>
           </div>
@@ -91,13 +81,27 @@ const Index = () => {
           </div>
 
           <div className="grid md:grid-cols-4 gap-8">
-            {[
-              { ano: "2022", titulo: "O Despertar", descricao: "Gustavo percebe a fragmentação do cuidado", icon: Star },
-              { ano: "2023", titulo: "Os Primeiros Passos", descricao: "Nasce a CareFit Recovery", icon: CheckCircle },
-              { ano: "2024", titulo: "Crescimento e Validação", descricao: "Mais de 100 corredores transformados", icon: Award },
-              { ano: "2025", titulo: "O HUB DO CORREDOR", descricao: "Espaço 100% preparado para sua Jornada", icon: MapPin }
-            ].map((marco, index) => (
-              <Card key={index} className="bg-white border-0 shadow-lg hover:shadow-xl transition-all duration-300">
+            {[{
+            ano: "2022",
+            titulo: "O Despertar",
+            descricao: "Gustavo percebe a fragmentação do cuidado",
+            icon: Star
+          }, {
+            ano: "2023",
+            titulo: "Os Primeiros Passos",
+            descricao: "Nasce a CareFit Recovery",
+            icon: CheckCircle
+          }, {
+            ano: "2024",
+            titulo: "Crescimento e Validação",
+            descricao: "Mais de 100 corredores transformados",
+            icon: Award
+          }, {
+            ano: "2025",
+            titulo: "O HUB DO CORREDOR",
+            descricao: "Espaço 100% preparado para sua Jornada",
+            icon: MapPin
+          }].map((marco, index) => <Card key={index} className="bg-white border-0 shadow-lg hover:shadow-xl transition-all duration-300">
                 <CardContent className="p-8 text-center">
                   <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
                     <marco.icon className="h-8 w-8 text-white" />
@@ -106,8 +110,7 @@ const Index = () => {
                   <h3 className="text-xl font-montserrat font-semibold text-primary mb-3">{marco.titulo}</h3>
                   <p className="text-primary/70 font-poppins">{marco.descricao}</p>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>)}
           </div>
         </div>
       </section>
@@ -125,8 +128,7 @@ const Index = () => {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {pilares.map((pilar, index) => (
-              <Card key={index} className="group bg-white border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+            {pilares.map((pilar, index) => <Card key={index} className="group bg-white border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
                 <CardContent className="p-8 text-center">
                   <div className="w-20 h-20 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
                     <pilar.icon className="h-10 w-10 text-white" />
@@ -135,8 +137,7 @@ const Index = () => {
                   <p className="text-secondary font-montserrat font-semibold mb-4">{pilar.subtitle}</p>
                   <p className="text-primary/70 font-poppins leading-relaxed">{pilar.description}</p>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>)}
           </div>
         </div>
       </section>
@@ -154,14 +155,12 @@ const Index = () => {
           </div>
 
           <div className="grid md:grid-cols-4 gap-8">
-            {numeros.map((item, index) => (
-              <div key={index} className="text-center">
+            {numeros.map((item, index) => <div key={index} className="text-center">
                 <div className="text-5xl md:text-6xl font-montserrat font-bold text-earth mb-4">
                   {item.numero}
                 </div>
                 <p className="text-lg font-poppins opacity-90">{item.texto}</p>
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
       </section>
@@ -214,18 +213,11 @@ const Index = () => {
             Todo passo conta. Cuidar não é parar, é evoluir.<br />
             Sua jornada de transformação começa aqui.
           </p>
-          <Button 
-            size="lg"
-            variant="outline"
-            className="border-2 border-white text-white hover:bg-white hover:text-primary px-8 py-4 text-lg font-montserrat font-semibold"
-            onClick={handleWhatsApp}
-          >
+          <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-primary px-8 py-4 text-lg font-montserrat font-semibold" onClick={handleWhatsApp}>
             Agende sua Primeira Sessão
           </Button>
         </div>
       </section>
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
