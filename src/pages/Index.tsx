@@ -190,7 +190,7 @@ Viva com equilíbrio.</span>
                   <span className="text-4xl font-montserrat font-bold text-white">GR</span>
                 </div>
                 <h3 className="text-2xl font-montserrat font-bold text-primary mb-2">Gustavo Rosa</h3>
-                <p className="text-secondary font-montserrat font-semibold mb-4">Fundador</p>
+                <p className="text-secondary font-montserrat font-semibold mb-4">Fundador e Head Coach</p>
                 <p className="text-primary/70 font-poppins">Com mais de 20 Ultramaratonas e Maratonas. Criador da metodologia CareFit e especialista em transformação de corredores.</p>
               </CardContent>
             </Card>
@@ -198,10 +198,10 @@ Viva com equilíbrio.</span>
             <Card className="bg-white border-0 shadow-lg overflow-hidden">
               <CardContent className="p-8 text-center">
                 <div className="w-32 h-32 bg-gradient-to-br from-primary to-secondary rounded-full mx-auto mb-6 flex items-center justify-center">
-                  <span className="text-4xl font-montserrat font-bold text-white">L</span>
+                  <span className="text-4xl font-montserrat font-bold text-white">LD</span>
                 </div>
                 <h3 className="text-2xl font-montserrat font-bold text-primary mb-2">Lívia Dias</h3>
-                <p className="text-secondary font-montserrat font-semibold mb-4">Fisioterapeuta & Agente da Performance</p>
+                <p className="text-secondary font-montserrat font-semibold mb-4">Fisioterapeuta Esportiva & Agente de Performance</p>
                 <p className="text-primary/70 font-poppins">Especialista em prevenção e recovery, corredora apaixonada que une ciência e sensibilidade no cuidado de cada atleta.</p>
               </CardContent>
             </Card>
