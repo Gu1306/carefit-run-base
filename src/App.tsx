@@ -10,7 +10,7 @@ import Servicos from "./pages/Servicos";
 import Jornada from "./pages/Jornada";
 import TodaJornada from "./pages/TodaJornada";
 import Historia from "./pages/Historia";
-import Espaco from "./pages/Espaco";
+
 import Comunidade from "./pages/Comunidade";
 import Contato from "./pages/Contato";
 import Agendar from "./pages/Agendar";
@@ -32,7 +32,7 @@ const App = () => (
           <Route path="/jornada" element={<Jornada />} />
           <Route path="/toda-jornada" element={<TodaJornada />} />
           <Route path="/historia" element={<Historia />} />
-          <Route path="/espaco" element={<Espaco />} />
+          
           <Route path="/comunidade" element={<Comunidade />} />
           <Route path="/contato" element={<Contato />} />
           <Route path="/agendar" element={<Agendar />} />
