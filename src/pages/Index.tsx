@@ -162,13 +162,9 @@ Viva com equilíbrio.</span>
 
           <div className="grid md:grid-cols-4 gap-8">
             {numeros.map((item, index) => <div key={index} className="text-center">
-                {item.animated ? (
-                  <AnimatedCounter end={item.numero} suffix={item.suffix} duration={2500} />
-                ) : (
-                  <div className="text-5xl md:text-6xl font-montserrat font-bold text-earth mb-4">
+                {item.animated ? <AnimatedCounter end={item.numero} suffix={item.suffix} duration={2500} /> : <div className="text-5xl md:text-6xl font-montserrat font-bold text-earth mb-4">
                     {item.numero}
-                  </div>
-                )}
+                  </div>}
                 <p className="text-lg font-poppins opacity-90">{item.texto}</p>
               </div>)}
           </div>
@@ -204,7 +200,7 @@ Viva com equilíbrio.</span>
                 <div className="w-32 h-32 bg-gradient-to-br from-primary to-secondary rounded-full mx-auto mb-6 flex items-center justify-center">
                   <span className="text-4xl font-montserrat font-bold text-white">L</span>
                 </div>
-                <h3 className="text-2xl font-montserrat font-bold text-primary mb-2">Lívia</h3>
+                <h3 className="text-2xl font-montserrat font-bold text-primary mb-2">Lívia Dias</h3>
                 <p className="text-secondary font-montserrat font-semibold mb-4">Fisioterapeuta & Agente da Performance</p>
                 <p className="text-primary/70 font-poppins">Especialista em prevenção e recovery, corredora apaixonada que une ciência e sensibilidade no cuidado de cada atleta.</p>
               </CardContent>
