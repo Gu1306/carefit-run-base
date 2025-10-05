@@ -62,7 +62,7 @@ Viva com equilíbrio.</span>
           
           <div className="flex justify-center">
             <Button size="lg" className="bg-secondary hover:bg-secondary/90 text-secondary-foreground px-8 py-4 text-lg font-montserrat font-semibold" onClick={handleWhatsApp}>
-              Comece sua Jornada Propósito
+              Agende sua Primeira Sessão
             </Button>
           </div>
         </div>
