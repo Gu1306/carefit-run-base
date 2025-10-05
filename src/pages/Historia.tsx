@@ -280,7 +280,7 @@ const Historia = () => {
             <p className="text-xl text-muted-foreground mb-8">
               Estamos prontos para cuidar da sua jornada e fazer você parte desta comunidade especial.
             </p>
-            <Button variant="hero" size="lg" onClick={() => window.open('https://api.whatsapp.com/send?phone=5516996008849&text=Olá!', '_blank')}>
+            <Button variant="hero" size="lg" onClick={() => window.open('https://api.whatsapp.com/send?phone=5516996008849', '_blank')}>
               Comece sua jornada conosco
             </Button>
           </div>
