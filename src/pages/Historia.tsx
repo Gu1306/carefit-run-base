@@ -34,7 +34,7 @@ const Historia = () => {
     nome: "Fisioterapeuta",
     papel: "Líder de Reabilitação",
     descricao: "Especializado em reabilitação e tratamento específico para corredores, focando na recuperação completa e retorno seguro aos treinos.",
-    especialidade: "Reabilitação e fisioterapia esportiva", 
+    especialidade: "Reabilitação e fisioterapia esportiva",
     icon: Heart,
     color: "from-earth to-warm"
   }];
@@ -84,19 +84,18 @@ const Historia = () => {
                 <p>
                   Tudo começou com uma pergunta simples: <strong className="text-accent">"Por que esperar a dor chegar?"</strong>
                 </p>
-                <p>Gustavo, maratonista e ultramaratonista apaixonado, conhecia intimamente os desafios do corpo em longas distâncias. Cada quilômetro percorrido era uma lição sobre limites, recuperação e a importância de uma base sólida.</p>
-                <p>
-                  Em 2020, nasceu a CareFit Recovery, com uma proposta diferente: <strong className="text-primary">cuidar antes de precisar tratar</strong>. 
-                  Não era apenas mais uma clínica – era um conceito revolucionário.
-                </p>
-                <p>
-                  Com a chegada da Lívia, o projeto ganhou dimensões científicas e humanas que transformaram 
-                  completamente a experiência do atleta. Fisioterapeutas deixaram de ser apenas profissionais de tratamento 
-                  para se tornarem <strong className="text-accent">parceiros de performance</strong>.
-                </p>
-                <p>
-                  A soma do conhecimento de Gustavo — com mais de 20 maratonas e ultramaratonas no currículo, vivência em inúmeros ciclos de preparação e a criação do mapa mental como forma de acompanhamento — com a visão da Lívia, que através de ferramentas da fisioterapia desenvolveu metodologias de prevenção de lesões, redução da fadiga e entendimento profundo da corrida, estruturou a base única que hoje sustenta a CareFit Run Base.
-                </p>
+                <p>Gustavo, maratonista e ultramaratonista, percebeu nas longas distâncias a importância de cuidar do corpo antes que ele pedisse socorro. Em 2022, nasceu a CareFit Recovery, com a proposta de cuidar antes de precisar tratar — e transformar o recovery em parte essencial da performance.
+
+
+Com a chegada da Lívia, fisioterapeuta especializada em corrida, a CareFit ganhou base científica e humana. O projeto se expandiu com a entrada de Guilherme Coelho, educador físico e corredor, responsável por toda a preparação de força e treinos específicos, ajudando atletas a correr com mais eficiência e menos lesões.</p>
+                
+                
+                <p>Na sequência, Arthur Angelotti, nutricionista e maratonista, trouxe o olhar que faltava: a nutrição como combustível da performance e da recuperação.
+
+Hoje, Gustavo, Lívia, Guilherme e Arthur formam o núcleo da CareFit Run Base — um hub de transformação que une ciência, propósito e experiência real de quem vive a corrida na pele.
+Aqui, o cuidado é a base, a constância é o caminho e a performance é a consequência.
+
+              </p>
               </div>
             </div>
             <div className="flex justify-center">
@@ -122,27 +121,8 @@ const Historia = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {equipe.map((membro, index) => <Card key={index} className="text-center hover:shadow-xl transition-all duration-500 transform hover:scale-105 border-0">
-                <CardHeader>
-                  <div className={`w-24 h-24 bg-gradient-to-br ${membro.color} rounded-full flex items-center justify-center mx-auto mb-4`}>
-                    <membro.icon className="w-12 h-12 text-white" />
-                  </div>
-                  <CardTitle className="text-2xl text-primary">
-                    {membro.nome}
-                  </CardTitle>
-                  <p className="text-accent font-medium">
-                    {membro.papel}
-                  </p>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground leading-relaxed mb-4">
-                    {membro.descricao}
-                  </p>
-                  <div className="bg-gradient-to-r from-accent/10 to-earth/10 rounded-lg p-3">
-                    <p className="text-sm font-medium text-primary">
-                      {membro.especialidade}
-                    </p>
-                  </div>
-                </CardContent>
+                
+                
               </Card>)}
           </div>
         </div>
