@@ -3,6 +3,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { useNavigate } from "react-router-dom";
 import { Heart, Zap, Target, Users, MapPin, Calendar, Star, Award, Clock, CheckCircle } from "lucide-react";
+import { AnimatedCounter } from "@/components/AnimatedCounter";
 const Index = () => {
   const navigate = useNavigate();
   const handleWhatsApp = () => {
@@ -30,17 +31,25 @@ const Index = () => {
     description: "Suporte psicológico e mental para desenvolver a mentalidade vencedora do corredor de alta performance."
   }];
   const numeros = [{
-    numero: "100+",
-    texto: "Corredores transformados"
+    numero: 167,
+    suffix: "+",
+    texto: "Corredores transformados",
+    animated: true
   }, {
-    numero: "20+",
-    texto: "Maratonistas"
+    numero: 29,
+    suffix: "+",
+    texto: "Maratonistas",
+    animated: true
   }, {
-    numero: "4+",
-    texto: "Ultramaratonistas"
+    numero: 7,
+    suffix: "+",
+    texto: "Ultramaratonistas",
+    animated: true
   }, {
-    numero: "3",
-    texto: "Anos de jornada"
+    numero: 3,
+    suffix: "",
+    texto: "Anos de jornada",
+    animated: false
   }];
   return <div className="min-h-screen bg-background">
       {/* Hero Section */}
@@ -153,9 +162,13 @@ Viva com equilíbrio.</span>
 
           <div className="grid md:grid-cols-4 gap-8">
             {numeros.map((item, index) => <div key={index} className="text-center">
-                <div className="text-5xl md:text-6xl font-montserrat font-bold text-earth mb-4">
-                  {item.numero}
-                </div>
+                {item.animated ? (
+                  <AnimatedCounter end={item.numero} suffix={item.suffix} duration={2500} />
+                ) : (
+                  <div className="text-5xl md:text-6xl font-montserrat font-bold text-earth mb-4">
+                    {item.numero}
+                  </div>
+                )}
                 <p className="text-lg font-poppins opacity-90">{item.texto}</p>
               </div>)}
           </div>
