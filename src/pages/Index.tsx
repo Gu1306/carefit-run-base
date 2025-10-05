@@ -58,18 +58,12 @@ const Index = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/70 to-transparent" />
         
         <div className="relative z-10 container mx-auto px-4 text-center text-white">
-          <Badge className="mb-6 bg-secondary hover:bg-secondary/90 text-secondary-foreground text-sm px-4 py-2">
-            A Evolução Nunca Para
-          </Badge>
-          
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-montserrat font-bold mb-6 leading-tight">
-            Cuidamos da sua corrida.<br />
-            <span className="text-earth">Transformamos a sua vida.</span>
+            Corra com propósito. Evolua com ciência. <span className="text-earth">Viva com equilíbrio.</span>
           </h1>
           
           <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto leading-relaxed font-poppins font-light">
-            Somos o HUB completo para corredores em Ribeirão Preto.<br />
-            Onde a ciência encontra o coração, e a performance anda de mãos dadas com o propósito.
+            Com planos de 12 semanas, transformamos corredores vulneráveis em atletas resilientes — com a ciência, o cuidado e o propósito de quem vive essa jornada na pele.
           </p>
           
           <div className="flex justify-center">
@@ -78,7 +72,7 @@ const Index = () => {
               className="bg-secondary hover:bg-secondary/90 text-secondary-foreground px-8 py-4 text-lg font-montserrat font-semibold"
               onClick={handleWhatsApp}
             >
-              Marque sua Sessão
+              Comece sua Jornada Propósito
             </Button>
           </div>
         </div>
