@@ -72,12 +72,9 @@ Viva com equilíbrio.</span>
       <section className="py-20 bg-warm">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-montserrat font-bold text-primary mb-6">
-              De uma pequena sala ao nosso lar
-            </h2>
+            <h2 className="text-4xl md:text-5xl font-montserrat font-bold text-primary mb-6">A Jornada que nos trouxe até aqui:</h2>
             <p className="text-xl text-primary/80 max-w-3xl mx-auto font-poppins">
-              A jornada que nos trouxe até aqui
-            </p>
+          </p>
           </div>
 
           <div className="grid md:grid-cols-4 gap-8">
