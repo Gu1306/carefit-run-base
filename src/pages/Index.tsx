@@ -4,6 +4,10 @@ import { Badge } from "@/components/ui/badge";
 import { useNavigate } from "react-router-dom";
 import { Heart, Zap, Target, Users, MapPin, Calendar, Star, Award, Clock, CheckCircle } from "lucide-react";
 import { AnimatedCounter } from "@/components/AnimatedCounter";
+import gustavoFoto from "@/assets/gustavo_foto.jpg";
+import liviaFoto from "@/assets/livia_foto.jpg";
+import guilhermeFoto from "@/assets/guilherme_foto.jpg";
+import arthurFoto from "@/assets/arthur_foto.jpg";
 const Index = () => {
   const navigate = useNavigate();
   const handleWhatsApp = () => {
@@ -186,8 +190,12 @@ Viva com equilíbrio.</span>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
             <Card className="bg-white border-0 shadow-lg overflow-hidden">
               <CardContent className="p-8 text-center">
-                <div className="w-32 h-32 bg-gradient-to-br from-primary to-secondary rounded-full mx-auto mb-6 flex items-center justify-center">
-                  <span className="text-4xl font-montserrat font-bold text-white">GR</span>
+                <div className="w-32 h-32 rounded-full mx-auto mb-6 overflow-hidden">
+                  <img 
+                    src={gustavoFoto} 
+                    alt="Gustavo Rosa" 
+                    className="w-full h-full object-cover object-top"
+                  />
                 </div>
                 <h3 className="text-2xl font-montserrat font-bold text-primary mb-2">Gustavo Rosa</h3>
                 <p className="text-secondary font-montserrat font-semibold mb-4">Fundador e Head Coach</p>
@@ -197,8 +205,12 @@ Viva com equilíbrio.</span>
 
             <Card className="bg-white border-0 shadow-lg overflow-hidden">
               <CardContent className="p-8 text-center">
-                <div className="w-32 h-32 bg-gradient-to-br from-primary to-secondary rounded-full mx-auto mb-6 flex items-center justify-center">
-                  <span className="text-4xl font-montserrat font-bold text-white">LD</span>
+                <div className="w-32 h-32 rounded-full mx-auto mb-6 overflow-hidden">
+                  <img 
+                    src={liviaFoto} 
+                    alt="Lívia Dias" 
+                    className="w-full h-full object-cover object-top"
+                  />
                 </div>
                 <h3 className="text-2xl font-montserrat font-bold text-primary mb-2">Lívia Dias</h3>
                 <p className="text-secondary font-montserrat font-semibold mb-4">Fisioterapeuta Esportiva & Agente de Performance</p>
@@ -208,8 +220,12 @@ Viva com equilíbrio.</span>
 
             <Card className="bg-white border-0 shadow-lg overflow-hidden">
               <CardContent className="p-8 text-center">
-                <div className="w-32 h-32 bg-gradient-to-br from-primary to-secondary rounded-full mx-auto mb-6 flex items-center justify-center">
-                  <span className="text-4xl font-montserrat font-bold text-white">GC</span>
+                <div className="w-32 h-32 rounded-full mx-auto mb-6 overflow-hidden">
+                  <img 
+                    src={guilhermeFoto} 
+                    alt="Guilherme Coelho" 
+                    className="w-full h-full object-cover object-top"
+                  />
                 </div>
                 <h3 className="text-2xl font-montserrat font-bold text-primary mb-2">Guilherme Coelho</h3>
                 <p className="text-secondary font-montserrat font-semibold mb-4">Educador Físico</p>
@@ -219,8 +235,12 @@ Viva com equilíbrio.</span>
 
             <Card className="bg-white border-0 shadow-lg overflow-hidden">
               <CardContent className="p-8 text-center">
-                <div className="w-32 h-32 bg-gradient-to-br from-primary to-secondary rounded-full mx-auto mb-6 flex items-center justify-center">
-                  <span className="text-4xl font-montserrat font-bold text-white">AA</span>
+                <div className="w-32 h-32 rounded-full mx-auto mb-6 overflow-hidden">
+                  <img 
+                    src={arthurFoto} 
+                    alt="Arthur Angelotti" 
+                    className="w-full h-full object-cover object-top"
+                  />
                 </div>
                 <h3 className="text-2xl font-montserrat font-bold text-primary mb-2">Arthur Angelotti</h3>
                 <p className="text-secondary font-montserrat font-semibold mb-4">Nutricionista Esportivo</p>
