@@ -120,13 +120,76 @@ Viva com equilíbrio.</span>
             </p>
           </div>
 
-          <div className="grid md:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-4 gap-8 mb-16">
             {numeros.map((item, index) => <div key={index} className="text-center">
                 {item.animated ? <AnimatedCounter end={item.numero} suffix={item.suffix} duration={2500} /> : <div className="text-5xl md:text-6xl font-montserrat font-bold text-earth mb-4">
                     {item.numero}
                   </div>}
                 <p className="text-lg font-poppins opacity-90">{item.texto}</p>
               </div>)}
+          </div>
+
+          {/* Depoimentos de Atletas */}
+          <div className="border-t border-white/20 pt-16">
+            <h3 className="text-2xl md:text-3xl font-montserrat font-bold mb-12 text-center">
+              Depoimentos de quem viveu a transformação
+            </h3>
+            
+            <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+              {/* Thais */}
+              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 hover:bg-white/20 transition-all duration-300">
+                <div className="aspect-video w-full mb-4 rounded-xl overflow-hidden shadow-lg">
+                  <iframe
+                    src="https://www.youtube.com/embed/62WMUc35hbo"
+                    title="Thais - Desafio Disney Wine & Dine"
+                    className="w-full h-full"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  />
+                </div>
+                <h4 className="text-xl font-montserrat font-bold text-earth mb-2">Thais</h4>
+                <p className="text-lg font-montserrat font-semibold mb-3">Desafio Disney Wine & Dine</p>
+                <p className="text-white/80 font-poppins text-sm leading-relaxed">
+                  A jornada de Thais rumo ao desafio Disney Wine & Dine, superando limites com o suporte da CAREFIT.
+                </p>
+              </div>
+
+              {/* Talita */}
+              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 hover:bg-white/20 transition-all duration-300">
+                <div className="aspect-video w-full mb-4 rounded-xl overflow-hidden shadow-lg">
+                  <iframe
+                    src="https://www.youtube.com/embed/lbfcs-QlmDE"
+                    title="Talita - Meia Maratona de Lisboa 2025"
+                    className="w-full h-full"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  />
+                </div>
+                <h4 className="text-xl font-montserrat font-bold text-earth mb-2">Talita</h4>
+                <p className="text-lg font-montserrat font-semibold mb-3">Meia Maratona de Lisboa 2025</p>
+                <p className="text-white/80 font-poppins text-sm leading-relaxed">
+                  Talita conquistou as ruas de Lisboa na Meia Maratona 2025, uma jornada de preparação e superação.
+                </p>
+              </div>
+
+              {/* Léo Andrade */}
+              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 hover:bg-white/20 transition-all duration-300">
+                <div className="aspect-video w-full mb-4 rounded-xl overflow-hidden shadow-lg">
+                  <iframe
+                    src="https://www.youtube.com/embed/XF8N96nULVg"
+                    title="Léo Andrade - Meia Maratona do Rio 2025"
+                    className="w-full h-full"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  />
+                </div>
+                <h4 className="text-xl font-montserrat font-bold text-earth mb-2">Léo Andrade</h4>
+                <p className="text-lg font-montserrat font-semibold mb-3">Meia Maratona do Rio 2025</p>
+                <p className="text-white/80 font-poppins text-sm leading-relaxed">
+                  Léo compartilha sua experiência na Meia Maratona do Rio 2025, transformando desafios em conquistas.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
