@@ -121,53 +121,6 @@ const TodaJornada = () => {
         </div>
       </section>
 
-      {/* Vídeos */}
-      <section className="py-20 bg-sand">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-primary mb-12 text-center">
-            🎬 HISTÓRIAS QUE INSPIRAM
-          </h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-6xl mx-auto">
-            <div className="aspect-[9/16] rounded-xl overflow-hidden shadow-lg">
-              <iframe
-                src="https://www.youtube.com/embed/GVK59sOcLa8"
-                title="CareFit Video 1"
-                className="w-full h-full"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              />
-            </div>
-            <div className="aspect-[9/16] rounded-xl overflow-hidden shadow-lg">
-              <iframe
-                src="https://www.youtube.com/embed/LexNeth1JUg"
-                title="CareFit Video 2"
-                className="w-full h-full"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              />
-            </div>
-            <div className="aspect-[9/16] rounded-xl overflow-hidden shadow-lg">
-              <iframe
-                src="https://www.youtube.com/embed/APHus0GVmiQ"
-                title="CareFit Video 3"
-                className="w-full h-full"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              />
-            </div>
-            <div className="aspect-[9/16] rounded-xl overflow-hidden shadow-lg">
-              <iframe
-                src="https://www.youtube.com/embed/NzhSs3Ej7i8"
-                title="CareFit Video 4"
-                className="w-full h-full"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Call to Action */}
       <section className="py-20 bg-gradient-to-r from-earth to-accent">
         <div className="container mx-auto px-4 text-center">

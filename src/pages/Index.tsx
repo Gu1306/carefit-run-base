@@ -4,13 +4,10 @@ import { Badge } from "@/components/ui/badge";
 import { useNavigate } from "react-router-dom";
 import { Heart, Zap, Target, Users, MapPin, Calendar, Star, Award, Clock, CheckCircle } from "lucide-react";
 import { AnimatedCounter } from "@/components/AnimatedCounter";
-import gustavoFoto from "@/assets/gustavo_foto.jpg";
-import liviaFoto from "@/assets/livia_foto.jpg";
-import guilhermeFoto from "@/assets/guilherme_foto.jpg";
-import arthurFoto from "@/assets/arthur_foto.jpg";
 import espaco1 from "@/assets/espaco-1.jpg";
 import espaco2 from "@/assets/espaco-2.jpg";
 import espaco8 from "@/assets/espaco-8.jpg";
+
 const Index = () => {
   const navigate = useNavigate();
   const handleWhatsApp = () => {
@@ -192,62 +189,70 @@ Viva com equilíbrio.</span>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
             <Card className="bg-white border-0 shadow-lg overflow-hidden">
-              <CardContent className="p-8 text-center">
-                <div className="w-32 h-32 rounded-full mx-auto mb-6 overflow-hidden">
-                  <img 
-                    src={gustavoFoto} 
-                    alt="Gustavo Rosa" 
-                    className="w-full h-full object-cover object-top"
+              <CardContent className="p-6 text-center">
+                <div className="aspect-[9/16] w-full max-w-[200px] mx-auto mb-6 rounded-xl overflow-hidden shadow-md">
+                  <iframe
+                    src="https://www.youtube.com/embed/NzhSs3Ej7i8"
+                    title="Gustavo Rosa"
+                    className="w-full h-full"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
                   />
                 </div>
                 <h3 className="text-2xl font-montserrat font-bold text-primary mb-2">Gustavo Rosa</h3>
                 <p className="text-secondary font-montserrat font-semibold mb-4">Fundador e Head Coach</p>
-                <p className="text-primary/70 font-poppins">Com mais de 20 Ultramaratonas e Maratonas. Criador da metodologia CareFit e especialista em transformação de corredores.</p>
+                <p className="text-primary/70 font-poppins text-sm">Com mais de 20 Ultramaratonas e Maratonas. Criador da metodologia CareFit e especialista em transformação de corredores.</p>
               </CardContent>
             </Card>
 
             <Card className="bg-white border-0 shadow-lg overflow-hidden">
-              <CardContent className="p-8 text-center">
-                <div className="w-32 h-32 rounded-full mx-auto mb-6 overflow-hidden">
-                  <img 
-                    src={liviaFoto} 
-                    alt="Lívia Dias" 
-                    className="w-full h-full object-cover object-top"
+              <CardContent className="p-6 text-center">
+                <div className="aspect-[9/16] w-full max-w-[200px] mx-auto mb-6 rounded-xl overflow-hidden shadow-md">
+                  <iframe
+                    src="https://www.youtube.com/embed/APHus0GVmiQ"
+                    title="Lívia Dias"
+                    className="w-full h-full"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
                   />
                 </div>
                 <h3 className="text-2xl font-montserrat font-bold text-primary mb-2">Lívia Dias</h3>
                 <p className="text-secondary font-montserrat font-semibold mb-4">Fisioterapeuta Esportiva & Agente de Performance</p>
-                <p className="text-primary/70 font-poppins">Especialista em prevenção e recovery, corredora apaixonada que une ciência e sensibilidade no cuidado de cada atleta.</p>
+                <p className="text-primary/70 font-poppins text-sm">Especialista em prevenção e recovery, corredora apaixonada que une ciência e sensibilidade no cuidado de cada atleta.</p>
               </CardContent>
             </Card>
 
             <Card className="bg-white border-0 shadow-lg overflow-hidden">
-              <CardContent className="p-8 text-center">
-                <div className="w-32 h-32 rounded-full mx-auto mb-6 overflow-hidden">
-                  <img 
-                    src={guilhermeFoto} 
-                    alt="Guilherme Coelho" 
-                    className="w-full h-full object-cover object-top"
+              <CardContent className="p-6 text-center">
+                <div className="aspect-[9/16] w-full max-w-[200px] mx-auto mb-6 rounded-xl overflow-hidden shadow-md">
+                  <iframe
+                    src="https://www.youtube.com/embed/GVK59sOcLa8"
+                    title="Guilherme Coelho"
+                    className="w-full h-full"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
                   />
                 </div>
                 <h3 className="text-2xl font-montserrat font-bold text-primary mb-2">Guilherme Coelho</h3>
                 <p className="text-secondary font-montserrat font-semibold mb-4">Educador Físico</p>
-                <p className="text-primary/70 font-poppins">Corredor dos rápidos e especialista em fortalecimento funcional para corredores, focado em construir a base que sustenta cada quilômetro da jornada.</p>
+                <p className="text-primary/70 font-poppins text-sm">Corredor dos rápidos e especialista em fortalecimento funcional para corredores, focado em construir a base que sustenta cada quilômetro da jornada.</p>
               </CardContent>
             </Card>
 
             <Card className="bg-white border-0 shadow-lg overflow-hidden">
-              <CardContent className="p-8 text-center">
-                <div className="w-32 h-32 rounded-full mx-auto mb-6 overflow-hidden">
-                  <img 
-                    src={arthurFoto} 
-                    alt="Arthur Angelotti" 
-                    className="w-full h-full object-cover object-top"
+              <CardContent className="p-6 text-center">
+                <div className="aspect-[9/16] w-full max-w-[200px] mx-auto mb-6 rounded-xl overflow-hidden shadow-md">
+                  <iframe
+                    src="https://www.youtube.com/embed/LexNeth1JUg"
+                    title="Arthur Angelotti"
+                    className="w-full h-full"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
                   />
                 </div>
                 <h3 className="text-2xl font-montserrat font-bold text-primary mb-2">Arthur Angelotti</h3>
                 <p className="text-secondary font-montserrat font-semibold mb-4">Nutricionista Esportivo</p>
-                <p className="text-primary/70 font-poppins">Maratonista e especialista em nutrição para performance, desenvolvendo estratégias alimentares que transformam treinos em conquistas.</p>
+                <p className="text-primary/70 font-poppins text-sm">Maratonista e especialista em nutrição para performance, desenvolvendo estratégias alimentares que transformam treinos em conquistas.</p>
               </CardContent>
             </Card>
           </div>
