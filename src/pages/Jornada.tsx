@@ -7,56 +7,56 @@ import { CheckCircle2, Users, Heart, Trophy, Target, Zap } from "lucide-react";
 // Dados das 12 semanas
 const semanas = [{
   numero: 1,
-  titulo: "O Primeiro Passo",
-  descricao: "Início da jornada, ritual de entrada, definição do propósito e primeiros ajustes."
+  titulo: "Largada",
+  descricao: "Começa o ciclo: propósito claro, avaliação inicial e plano. Você sai do \"vou tentar\" para o \"eu tenho um caminho\"."
 }, {
   numero: 2,
-  titulo: "Constância",
-  descricao: "Construção de rotina, fortalecimento da disciplina e primeiros checkpoints de cuidado."
+  titulo: "Ritmo",
+  descricao: "Ajustamos a rotina e o básico bem feito. Constância vira treino invisível: você entra no ritmo certo para evoluir sem quebrar."
 }, {
   numero: 3,
-  titulo: "Reconexão",
-  descricao: "Escuta do corpo, percepção das respostas iniciais, ajustes de treino e nutrição."
+  titulo: "Fôlego",
+  descricao: "Construção aeróbica e controle de esforço. Você aprende a respirar a jornada: menos ansiedade, mais presença e consistência semana após semana."
 }, {
   numero: 4,
-  titulo: "Força Real ⭐",
-  descricao: "Ênfase em fortalecimento, introdução de cargas progressivas e foco no corpo que sustenta a corrida.",
+  titulo: "Base Forte ⭐",
+  descricao: "Fortalecimento específico do corredor. O corpo ganha estrutura: estabilidade, técnica e força para sustentar volume e intensidade com menos risco.",
   destaque: true
 }, {
   numero: 5,
-  titulo: "Cuidado Ativo",
-  descricao: "Recovery mais intenso, prevenção de lesões e ajustes de dores/tensões."
+  titulo: "Subida",
+  descricao: "O treino exige mais e o cuidado também. Entram progressões, ajustes finos e recovery estratégico para subir sem sobrecarga."
 }, {
   numero: 6,
-  titulo: "Pirâmide da Performance 🟤",
-  descricao: "Marco simbólico com entrega de peça representando evolução. 50% do caminho já foi!",
+  titulo: "Meio da Jornada 🟤",
+  descricao: "Checkpoint do ciclo: revisamos métricas, dores, evolução e mental. Você enxerga o quanto já construiu e renova o compromisso.",
   ritual: true
 }, {
   numero: 7,
-  titulo: "Potência",
-  descricao: "Treinos mais desafiadores, evolução física e mental."
+  titulo: "Aceleração",
+  descricao: "Hora de ganhar velocidade com controle. Potência, pliometria e estímulos certos: você corre mais forte sem perder eficiência."
 }, {
   numero: 8,
-  titulo: "Propósito",
-  descricao: "Reforço do 'porquê', conexão emocional e alinhamento corpo + mente."
+  titulo: "Sentido",
+  descricao: "Reforço do \"porquê\" (StoryBrand): você é o herói, a corrida é o caminho. Alinhamos mente, disciplina e identidade de corredor."
 }, {
   numero: 9,
-  titulo: "Quebra de Pedra 🪨 ⭐",
-  descricao: "Desafio simbólico de superação de limites pessoais. Reta Final!",
+  titulo: "Transformação 🪨 ⭐",
+  descricao: "O novo atleta aparece. Desafio simbólico e evolução real: mais confiança, mais autonomia e menos medo do próximo passo.",
   ritual: true,
   destaque: true
 }, {
   numero: 10,
-  titulo: "Orgulho",
-  descricao: "Revisão dos ganhos, percepção das mudanças e autoestima fortalecida."
+  titulo: "Ápice",
+  descricao: "Pico de performance do ciclo. Você colhe a consistência: melhores treinos, mais maturidade corporal e mental, com suporte completo do time."
 }, {
   numero: 11,
-  titulo: "Clareza",
-  descricao: "Preparação final, revisão de metas e integração das conquistas."
+  titulo: "Polimento",
+  descricao: "Tiramos excessos, mantemos qualidade. Refinamos detalhes: sono, mobilidade, nutrição e recuperação para chegar leve, pronto e inteiro."
 }, {
   numero: 12,
-  titulo: "A Linha de Chegada 🎉",
-  descricao: "Celebração, kit conquista, mural dos corredores e convite para o próximo ciclo.",
+  titulo: "Linha de Chegada 🎉",
+  descricao: "Semana de entrega e celebração. Você finaliza forte, reconhece a jornada e registra a conquista: seu resultado vira história e próximo ciclo.",
   ritual: true
 }];
 
