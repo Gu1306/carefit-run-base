@@ -81,50 +81,6 @@ Viva com equilíbrio.</span>
         </div>
       </section>
 
-      {/* Nossa Jornada de Crescimento */}
-      <section className="py-20 bg-warm">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-montserrat font-bold text-primary mb-6">A Jornada que nos trouxe até aqui:</h2>
-            <p className="text-xl text-primary/80 max-w-3xl mx-auto font-poppins">
-          </p>
-          </div>
-
-          <div className="grid md:grid-cols-4 gap-8">
-            {[{
-            ano: "2022",
-            titulo: "O Despertar",
-            descricao: "Gustavo percebe a fragmentação do cuidado",
-            icon: Star
-          }, {
-            ano: "2023",
-            titulo: "Os Primeiros Passos",
-            descricao: "Nasce a CareFit Recovery",
-            icon: CheckCircle
-          }, {
-            ano: "2024",
-            titulo: "Crescimento e Validação",
-            descricao: "Mais de 100 corredores transformados",
-            icon: Award
-          }, {
-            ano: "2025",
-            titulo: "O HUB DO CORREDOR",
-            descricao: "Espaço 100% preparado para sua Jornada",
-            icon: MapPin
-          }].map((marco, index) => <Card key={index} className="bg-white border-0 shadow-lg hover:shadow-xl transition-all duration-300">
-                <CardContent className="p-8 text-center">
-                  <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
-                    <marco.icon className="h-8 w-8 text-white" />
-                  </div>
-                  <div className="text-3xl font-montserrat font-bold text-earth mb-2">{marco.ano}</div>
-                  <h3 className="text-xl font-montserrat font-semibold text-primary mb-3">{marco.titulo}</h3>
-                  <p className="text-primary/70 font-poppins">{marco.descricao}</p>
-                </CardContent>
-              </Card>)}
-          </div>
-        </div>
-      </section>
-
       {/* Pilares de Cuidado */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
@@ -291,6 +247,50 @@ Viva com equilíbrio.</span>
             >
               Conheça Nosso Espaço
             </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* Nossa Jornada de Crescimento */}
+      <section className="py-20 bg-warm">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-montserrat font-bold text-primary mb-6">A Jornada que nos trouxe até aqui:</h2>
+            <p className="text-xl text-primary/80 max-w-3xl mx-auto font-poppins">
+          </p>
+          </div>
+
+          <div className="grid md:grid-cols-4 gap-8">
+            {[{
+            ano: "2022",
+            titulo: "O Despertar",
+            descricao: "Gustavo percebe a fragmentação do cuidado",
+            icon: Star
+          }, {
+            ano: "2023",
+            titulo: "Os Primeiros Passos",
+            descricao: "Nasce a CareFit Recovery",
+            icon: CheckCircle
+          }, {
+            ano: "2024",
+            titulo: "Crescimento e Validação",
+            descricao: "Mais de 100 corredores transformados",
+            icon: Award
+          }, {
+            ano: "2025",
+            titulo: "O HUB DO CORREDOR",
+            descricao: "Espaço 100% preparado para sua Jornada",
+            icon: MapPin
+          }].map((marco, index) => <Card key={index} className="bg-white border-0 shadow-lg hover:shadow-xl transition-all duration-300">
+                <CardContent className="p-8 text-center">
+                  <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                    <marco.icon className="h-8 w-8 text-white" />
+                  </div>
+                  <div className="text-3xl font-montserrat font-bold text-earth mb-2">{marco.ano}</div>
+                  <h3 className="text-xl font-montserrat font-semibold text-primary mb-3">{marco.titulo}</h3>
+                  <p className="text-primary/70 font-poppins">{marco.descricao}</p>
+                </CardContent>
+              </Card>)}
           </div>
         </div>
       </section>
