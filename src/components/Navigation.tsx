@@ -20,6 +20,9 @@ const Navigation = () => {
     name: "Jornada Propósito",
     href: "/jornada"
   }, {
+    name: "Nosso Espaço",
+    href: "/espaco"
+  }, {
     name: "Comunidade",
     href: "/comunidade"
   }, {
