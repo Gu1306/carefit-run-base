@@ -8,6 +8,9 @@ import gustavoFoto from "@/assets/gustavo_foto.jpg";
 import liviaFoto from "@/assets/livia_foto.jpg";
 import guilhermeFoto from "@/assets/guilherme_foto.jpg";
 import arthurFoto from "@/assets/arthur_foto.jpg";
+import espaco1 from "@/assets/espaco-1.jpg";
+import espaco2 from "@/assets/espaco-2.jpg";
+import espaco8 from "@/assets/espaco-8.jpg";
 const Index = () => {
   const navigate = useNavigate();
   const handleWhatsApp = () => {
@@ -247,6 +250,42 @@ Viva com equilíbrio.</span>
                 <p className="text-primary/70 font-poppins">Maratonista e especialista em nutrição para performance, desenvolvendo estratégias alimentares que transformam treinos em conquistas.</p>
               </CardContent>
             </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Nosso Espaço Preview */}
+      <section className="py-20 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-montserrat font-bold text-primary mb-6">
+              CareFit Run Base
+            </h2>
+            <p className="text-xl text-primary/80 max-w-3xl mx-auto font-poppins">
+              Um espaço 100% preparado para a jornada do corredor
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto mb-10">
+            <div className="aspect-[4/3] rounded-xl overflow-hidden shadow-lg">
+              <img src={espaco1} alt="Visão geral do espaço" className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+            </div>
+            <div className="aspect-[4/3] rounded-xl overflow-hidden shadow-lg">
+              <img src={espaco2} alt="Área de treino" className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+            </div>
+            <div className="aspect-[4/3] rounded-xl overflow-hidden shadow-lg">
+              <img src={espaco8} alt="Crioterapia" className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+            </div>
+          </div>
+
+          <div className="text-center">
+            <Button 
+              size="lg" 
+              className="bg-primary hover:bg-primary/90 text-white px-8 py-4 text-lg font-montserrat font-semibold"
+              onClick={() => navigate("/espaco")}
+            >
+              Conheça Nosso Espaço
+            </Button>
           </div>
         </div>
       </section>
