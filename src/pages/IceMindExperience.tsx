@@ -275,6 +275,34 @@ const IceMindExperience = () => {
         </div>
       </section>
 
+      {/* Seção de Agendamento com Calendário Integrado */}
+      <section className="py-20 md:py-32 bg-gray-50">
+        <div className="container mx-auto px-6">
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-5xl font-bold text-[#3D3D3D] mb-4">
+                Agende Sua <span className="text-[#E8933D]">Imersão</span>
+              </h2>
+              <p className="text-xl text-[#3D3D3D]/70">
+                Escolha a data e horário que melhor se encaixa na sua agenda.
+              </p>
+            </div>
+            
+            {/* Google Calendar Iframe */}
+            <div className="bg-white rounded-2xl shadow-xl p-4 md:p-8">
+              <iframe 
+                src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ2npLe6qCUpbwJTGStwst0pzCITxu_FuSzFO5QwrZ7_iP4JlY5pVfxbZ-prFUTT_moZve7sqC00?gv=true" 
+                style={{ border: 0 }}
+                width="100%" 
+                height="600" 
+                frameBorder="0"
+                title="Agendamento Ice Mind Experience"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Section 7: CTA Final */}
       <section className="py-20 md:py-32 bg-gradient-to-br from-[#2C5F6F] via-[#1e4a58] to-[#163842] relative overflow-hidden">
         {/* Background Pattern */}
