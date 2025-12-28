@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Brain, Snowflake, Users, CheckCircle, AlertTriangle, Target, Heart, Zap, ArrowRight } from "lucide-react";
 
 const IceMindExperience = () => {
-  const agendamentoLink = "https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0h_dW-Tg2-qpfLc5K-WVHfbWLXbXSEFGQXGz1uQ7xQN9FgT2vB4V5Jc3mK8rL0sP1dN6wA9xY";
+  const agendamentoLink = "https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2npLe6qCUpbwJTGStwst0pzCITxu_FuSzFO5QwrZ7_iP4JlY5pVfxbZ-prFUTT_moZve7sqC00";
 
   return (
     <div className="min-h-screen">
