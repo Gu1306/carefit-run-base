@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Brain, Snowflake, Users, CheckCircle, AlertTriangle, Target, Heart, Zap, ArrowRight } from "lucide-react";
 
 const IceMindExperience = () => {
-  const agendamentoLink = "https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2npLe6qCUpbwJTGStwst0pzCITxu_FuSzFO5QwrZ7_iP4JlY5pVfxbZ-prFUTT_moZve7sqC00";
+  const agendamentoLink = "https://calendar.google.com/calendar/appointments/schedules/AcZssZ2npLe6qCUpbwJTGStwst0pzCITxu_FuSzFO5QwrZ7_iP4JlY5pVfxbZ-prFUTT_moZve7sqC00?gv=true";
 
   return (
     <div className="min-h-screen">
@@ -39,10 +39,18 @@ const IceMindExperience = () => {
             <Button 
               size="lg"
               className="bg-[#E8933D] hover:bg-[#d4832f] text-white text-lg px-10 py-6 rounded-full font-bold shadow-lg shadow-[#E8933D]/30 transition-all hover:scale-105"
-              onClick={() => window.open(agendamentoLink, '_blank')}
+              asChild
             >
-              AGENDAR MINHA IMERSÃO
-              <ArrowRight className="ml-2 h-5 w-5" />
+              <a
+                href="#agendamento"
+                onClick={(e) => {
+                  e.preventDefault();
+                  document.getElementById("agendamento")?.scrollIntoView({ behavior: "smooth", block: "start" });
+                }}
+              >
+                AGENDAR MINHA IMERSÃO
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </a>
             </Button>
           </div>
         </div>
@@ -276,7 +284,7 @@ const IceMindExperience = () => {
       </section>
 
       {/* Seção de Agendamento com Calendário Integrado */}
-      <section className="py-20 md:py-32 bg-gray-50">
+      <section id="agendamento" className="py-20 md:py-32 bg-gray-50">
         <div className="container mx-auto px-6">
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-12">
@@ -291,7 +299,7 @@ const IceMindExperience = () => {
             {/* Google Calendar Iframe */}
             <div className="bg-white rounded-2xl shadow-xl p-4 md:p-8">
               <iframe 
-                src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ2npLe6qCUpbwJTGStwst0pzCITxu_FuSzFO5QwrZ7_iP4JlY5pVfxbZ-prFUTT_moZve7sqC00?gv=true" 
+                src={agendamentoLink}
                 style={{ border: 0 }}
                 width="100%" 
                 height="600" 
@@ -343,14 +351,22 @@ const IceMindExperience = () => {
             <Button 
               size="lg"
               className="bg-[#E8933D] hover:bg-[#d4832f] text-white text-xl px-12 py-7 rounded-full font-bold shadow-lg shadow-[#E8933D]/30 transition-all hover:scale-105"
-              onClick={() => window.open(agendamentoLink, '_blank')}
+              asChild
             >
-              GARANTIR MINHA VAGA
-              <ArrowRight className="ml-2 h-6 w-6" />
+              <a
+                href="#agendamento"
+                onClick={(e) => {
+                  e.preventDefault();
+                  document.getElementById("agendamento")?.scrollIntoView({ behavior: "smooth", block: "start" });
+                }}
+              >
+                GARANTIR MINHA VAGA
+                <ArrowRight className="ml-2 h-6 w-6" />
+              </a>
             </Button>
             
             <p className="text-white/50 mt-6 text-sm">
-              Ao clicar, você será redirecionado para agendar sua experiência.
+              Role para agendar diretamente no calendário abaixo.
             </p>
           </div>
         </div>
