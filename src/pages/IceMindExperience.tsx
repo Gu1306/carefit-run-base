@@ -23,7 +23,7 @@ const IceMindExperience = () => {
             </div>
             
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-              Onde a Mente Encontra Seu Limite. <span className="text-[#E8933D]">E o Ultrapassa.</span>
+              Onde a Mente Encontra <span className="whitespace-nowrap">Seu Limite. <span className="text-[#E8933D]">E o Ultrapassa.</span></span>
             </h1>
             
             <p className="text-xl md:text-2xl text-white/80 mb-8 max-w-3xl mx-auto leading-relaxed">
