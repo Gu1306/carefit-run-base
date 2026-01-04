@@ -14,11 +14,8 @@ const Navigation = () => {
     name: "Nossa História",
     href: "/nossa-historia"
   }, {
-    name: "Nossa Jornada",
-    href: "/historia"
-  }, {
-    name: "Toda Jornada Importa",
-    href: "/toda-jornada"
+    name: "Jornada Propósito",
+    href: "/jornada"
   }, {
     name: "Jornada Propósito",
     href: "/jornada"
