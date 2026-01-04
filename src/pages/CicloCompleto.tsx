@@ -1,7 +1,13 @@
 import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { ChevronDown, MessageCircle, Link2, Compass, BarChart3, Check, Pyramid, Mountain, Trophy, Quote, Footprints, Shield, TrendingUp, Heart, ClipboardList, Map, Settings, Award, ArrowRight } from "lucide-react";
+import { ChevronDown, MessageCircle, Link2, Compass, BarChart3, Check, Pyramid, Mountain, Trophy, Quote, Footprints, Shield, TrendingUp, Heart, ClipboardList, Map, Settings, Award, ArrowRight, CheckCircle, AlertCircle, XCircle } from "lucide-react";
+
+// Importar fotos da equipe
+import gustavoFoto from "@/assets/gustavo_foto.jpg";
+import liviaFoto from "@/assets/livia_foto.jpg";
+import guilhermeFoto from "@/assets/guilherme_foto.jpg";
+import arthurFoto from "@/assets/arthur_foto.jpg";
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -933,6 +939,488 @@ const Section8ComoFunciona = () => {
   );
 };
 
+// SEÇÃO 9: COMPARAÇÃO
+const Section9Comparacao = () => {
+  const { ref, isInView } = useInView(0.1);
+
+  const comparacaoData = [
+    {
+      aspecto: "Especialização em Corrida",
+      sozinho: "nao",
+      clinica: "parcial",
+      carefit: "sim",
+    },
+    {
+      aspecto: "Equipe Integrada",
+      sozinho: "nao",
+      clinica: "nao",
+      carefit: "sim",
+    },
+    {
+      aspecto: "Personalização",
+      sozinho: "parcial",
+      clinica: "parcial",
+      carefit: "sim",
+    },
+    {
+      aspecto: "Acompanhamento Semanal",
+      sozinho: "nao",
+      clinica: "parcial",
+      carefit: "sim",
+    },
+    {
+      aspecto: "Prevenção de Lesões",
+      sozinho: "parcial",
+      clinica: "parcial",
+      carefit: "sim",
+    },
+    {
+      aspecto: "Resultados Mensuráveis",
+      sozinho: "parcial",
+      clinica: "parcial",
+      carefit: "sim",
+    },
+    {
+      aspecto: "Comunidade",
+      sozinho: "nao",
+      clinica: "parcial",
+      carefit: "sim",
+    },
+    {
+      aspecto: "Suporte Emocional",
+      sozinho: "nao",
+      clinica: "nao",
+      carefit: "sim",
+    },
+  ];
+
+  const renderStatus = (status: string, isCareFit = false) => {
+    if (status === "sim") {
+      return <CheckCircle className="w-5 h-5 mx-auto" style={{ color: isCareFit ? "#e67e22" : "#1a7a7a" }} />;
+    } else if (status === "parcial") {
+      return <AlertCircle className="w-5 h-5 mx-auto text-amber-500" />;
+    } else {
+      return <XCircle className="w-5 h-5 mx-auto text-gray-400" />;
+    }
+  };
+
+  const getStatusLabel = (status: string) => {
+    if (status === "sim") return "100%";
+    if (status === "parcial") return "Parcial";
+    return "Não";
+  };
+
+  return (
+    <section 
+      ref={ref}
+      className="py-16 md:py-20 lg:py-24"
+      style={{ backgroundColor: "rgba(26, 122, 122, 0.1)" }}
+    >
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Section Header */}
+        <div className={`text-center mb-12 md:mb-16 transition-all duration-700 ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-[#1a1a1a] mb-4" style={{ fontFamily: "'Poppins', sans-serif" }}>
+            Por Que o Ciclo Completo é a Melhor Escolha
+          </h2>
+          <p className="text-lg md:text-xl text-[#1a1a1a]/70">
+            Comparação com outras abordagens
+          </p>
+        </div>
+
+        {/* Desktop Table */}
+        <div className={`hidden md:block transition-all duration-700 delay-200 ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+          <div className="overflow-x-auto rounded-lg shadow-lg">
+            <table className="w-full">
+              <thead>
+                <tr>
+                  <th className="py-4 px-6 text-left font-semibold" style={{ fontFamily: "'Poppins', sans-serif", backgroundColor: "#f8f8f8" }}>
+                    Aspecto
+                  </th>
+                  <th className="py-4 px-6 text-center font-semibold" style={{ fontFamily: "'Poppins', sans-serif", backgroundColor: "#e0e0e0" }}>
+                    Treinar Sozinho
+                  </th>
+                  <th className="py-4 px-6 text-center font-semibold" style={{ fontFamily: "'Poppins', sans-serif", backgroundColor: "#f0f0f0" }}>
+                    Clínica Genérica
+                  </th>
+                  <th className="py-4 px-6 text-center font-semibold text-white" style={{ fontFamily: "'Poppins', sans-serif", backgroundColor: "#1a7a7a" }}>
+                    CAREFIT - Ciclo Completo
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                {comparacaoData.map((row, index) => (
+                  <tr key={row.aspecto} className="border-b border-gray-100">
+                    <td className="py-4 px-6 font-medium text-[#1a1a1a]" style={{ backgroundColor: "#f8f8f8" }}>
+                      {row.aspecto}
+                    </td>
+                    <td className="py-4 px-6 text-center" style={{ backgroundColor: "#e0e0e0" }}>
+                      <div className="flex flex-col items-center gap-1">
+                        {renderStatus(row.sozinho)}
+                        <span className="text-xs text-gray-600">{getStatusLabel(row.sozinho)}</span>
+                      </div>
+                    </td>
+                    <td className="py-4 px-6 text-center" style={{ backgroundColor: "#f0f0f0" }}>
+                      <div className="flex flex-col items-center gap-1">
+                        {renderStatus(row.clinica)}
+                        <span className="text-xs text-gray-600">{getStatusLabel(row.clinica)}</span>
+                      </div>
+                    </td>
+                    <td className="py-4 px-6 text-center text-white" style={{ backgroundColor: "#1a7a7a" }}>
+                      <div className="flex flex-col items-center gap-1">
+                        {renderStatus(row.carefit, true)}
+                        <span className="text-xs text-white/90">{getStatusLabel(row.carefit)}</span>
+                      </div>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        {/* Mobile Cards */}
+        <div className="md:hidden space-y-4">
+          {comparacaoData.map((row, index) => (
+            <div
+              key={row.aspecto}
+              className={`
+                bg-white rounded-lg shadow-md p-4
+                transition-all duration-500
+                ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}
+              `}
+              style={{ transitionDelay: isInView ? `${index * 50}ms` : '0ms' }}
+            >
+              <h3 className="font-semibold text-[#1a1a1a] mb-3" style={{ fontFamily: "'Poppins', sans-serif" }}>
+                {row.aspecto}
+              </h3>
+              <div className="grid grid-cols-3 gap-2 text-center text-xs">
+                <div className="bg-gray-100 rounded p-2">
+                  <p className="text-gray-500 mb-1">Sozinho</p>
+                  {renderStatus(row.sozinho)}
+                </div>
+                <div className="bg-gray-50 rounded p-2">
+                  <p className="text-gray-500 mb-1">Clínica</p>
+                  {renderStatus(row.clinica)}
+                </div>
+                <div className="rounded p-2 text-white" style={{ backgroundColor: "#1a7a7a" }}>
+                  <p className="text-white/80 mb-1">CareFit</p>
+                  {renderStatus(row.carefit, true)}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+// SEÇÃO 10: INVESTIMENTO
+const Section10Investimento = () => {
+  const { ref, isInView } = useInView(0.2);
+
+  const beneficios = [
+    "Atendimento semanal (12 semanas)",
+    "Equipe de 4 especialistas",
+    "4 avaliações físicas completas",
+    "Plano 100% personalizado",
+    "Rituais simbólicos exclusivos",
+    "Comunidade de corredores",
+    "Acesso vitalício aos materiais",
+  ];
+
+  return (
+    <section 
+      ref={ref}
+      className="py-16 md:py-20 lg:py-24"
+      style={{ 
+        background: "linear-gradient(135deg, #1a7a7a 0%, #0E3C41 50%, #C8643D 100%)"
+      }}
+    >
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Section Header */}
+        <div className={`text-center mb-10 md:mb-12 transition-all duration-700 ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-white mb-4" style={{ fontFamily: "'Poppins', sans-serif" }}>
+            Seu Investimento em Transformação
+          </h2>
+          <p className="text-lg md:text-xl text-white/80">
+            Tudo que você precisa para se transformar
+          </p>
+        </div>
+
+        {/* Investment Card */}
+        <div 
+          className={`
+            bg-white/10 backdrop-blur-md rounded-2xl p-8 md:p-12 lg:p-16
+            border border-white/20 shadow-2xl
+            transition-all duration-700 delay-200
+            hover:shadow-3xl hover:bg-white/15
+            ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}
+          `}
+        >
+          {/* Price Section */}
+          <div className="text-center mb-8">
+            <p className="text-white/70 text-sm mb-2 uppercase tracking-wider">
+              Investimento Total
+            </p>
+            <div className="flex items-baseline justify-center gap-2 mb-2">
+              <span className="text-4xl md:text-5xl lg:text-6xl font-bold text-white" style={{ fontFamily: "'Poppins', sans-serif" }}>
+                R$ ---.--
+              </span>
+            </div>
+            <p className="text-white/70 text-sm">
+              ou em até <span className="text-white font-semibold">12x de R$ ---.--</span>
+            </p>
+            <p className="text-[#d4af37] text-xs mt-2 font-medium">
+              * Valores a serem definidos
+            </p>
+          </div>
+
+          {/* Divider */}
+          <div className="w-full h-px bg-white/20 my-8" />
+
+          {/* Benefits Section */}
+          <div className="text-center">
+            <h3 className="text-xl font-semibold text-white mb-6" style={{ fontFamily: "'Poppins', sans-serif" }}>
+              O Que Está Incluído
+            </h3>
+            
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-left max-w-2xl mx-auto">
+              {beneficios.map((beneficio, index) => (
+                <div 
+                  key={beneficio}
+                  className={`
+                    flex items-center gap-3
+                    transition-all duration-500
+                    ${isInView ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-4'}
+                  `}
+                  style={{ transitionDelay: isInView ? `${300 + index * 80}ms` : '0ms' }}
+                >
+                  <Check className="w-5 h-5 flex-shrink-0" style={{ color: "#d4af37" }} />
+                  <span className="text-white/90 text-sm">{beneficio}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* CTA Button */}
+          <div className="text-center mt-10">
+            <Button
+              size="lg"
+              onClick={() => window.open("https://api.whatsapp.com/send?phone=5516996008849", "_blank")}
+              className="px-10 py-6 text-lg font-semibold transition-all duration-300 hover:scale-105 hover:shadow-xl"
+              style={{ 
+                backgroundColor: "white",
+                color: "#1a7a7a"
+              }}
+            >
+              Quero Começar Minha Transformação
+            </Button>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+// SEÇÃO 11: DEPOIMENTOS DE EQUIPE
+const Section11EquipeDepoimentos = () => {
+  const { ref, isInView } = useInView(0.1);
+
+  const equipe = [
+    {
+      foto: gustavoFoto,
+      nome: "Gustavo Rosa",
+      titulo: "Fundador e Head Coach",
+      citacao: "Cada corredor que passa por esse ciclo se torna parte da nossa história. Vemos a transformação acontecer semana a semana.",
+      cor: "#1a7a7a",
+    },
+    {
+      foto: liviaFoto,
+      nome: "Lívia Dias",
+      titulo: "Fisioterapeuta Esportiva",
+      citacao: "O que mais me move é quando o corredor percebe que cuidado não é fraqueza. É inteligência. É amor pelo esporte que ama.",
+      cor: "#e67e22",
+    },
+    {
+      foto: guilhermeFoto,
+      nome: "Guilherme Coelho",
+      titulo: "Educador Físico",
+      citacao: "Fortalecimento não é sobre ficar grande. É sobre construir a base que sustenta cada quilômetro. Vejo isso acontecer toda semana.",
+      cor: "#1a7a7a",
+    },
+    {
+      foto: arthurFoto,
+      nome: "Arthur Angelotti",
+      titulo: "Nutricionista Esportivo",
+      citacao: "Nutrição é o combustível. Quando o corredor entende isso, tudo muda. Performance, recuperação, disposição — tudo melhora.",
+      cor: "#e67e22",
+    },
+  ];
+
+  return (
+    <section 
+      ref={ref}
+      className="py-16 md:py-20 lg:py-24 bg-white"
+    >
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Section Header */}
+        <div className={`text-center mb-12 md:mb-16 transition-all duration-700 ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-[#1a1a1a] mb-4" style={{ fontFamily: "'Poppins', sans-serif" }}>
+            O Que a Equipe Diz
+          </h2>
+          <p className="text-lg md:text-xl text-[#1a1a1a]/70">
+            Profissionais que vivem o que ensinam
+          </p>
+        </div>
+
+        {/* Team Cards */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {equipe.map((membro, index) => (
+            <div
+              key={membro.nome}
+              className={`
+                bg-white rounded-lg p-6 shadow-md
+                transition-all duration-500 ease-out
+                hover:-translate-y-2 hover:shadow-xl
+                ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}
+              `}
+              style={{ transitionDelay: isInView ? `${index * 100}ms` : '0ms' }}
+            >
+              {/* Photo */}
+              <div className="flex justify-center mb-4">
+                <div 
+                  className="w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden"
+                  style={{ border: `3px solid ${membro.cor}` }}
+                >
+                  <img 
+                    src={membro.foto} 
+                    alt={membro.nome}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+
+              {/* Name & Title */}
+              <div className="text-center mb-4">
+                <h3 className="font-semibold text-[#1a1a1a]" style={{ fontFamily: "'Poppins', sans-serif" }}>
+                  {membro.nome}
+                </h3>
+                <p className="text-xs" style={{ color: membro.cor }}>
+                  {membro.titulo}
+                </p>
+              </div>
+
+              {/* Quote */}
+              <div className="relative">
+                <Quote className="w-5 h-5 absolute -top-1 -left-1 opacity-20" style={{ color: membro.cor }} />
+                <p className="text-sm text-[#1a1a1a]/70 italic leading-relaxed pl-4">
+                  "{membro.citacao}"
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+// SEÇÃO 12: CTA FINAL
+const Section12CTAFinal = () => {
+  const { ref, isInView } = useInView(0.2);
+
+  const openWhatsApp = () => {
+    window.open("https://api.whatsapp.com/send?phone=5516996008849", "_blank");
+  };
+
+  return (
+    <section 
+      ref={ref}
+      className="py-16 md:py-20 lg:py-24"
+      style={{ 
+        background: "linear-gradient(135deg, #1a7a7a 0%, #0E3C41 40%, #C8643D 100%)"
+      }}
+    >
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        {/* Headline */}
+        <h2 
+          className={`
+            text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-white mb-4 md:mb-6
+            transition-all duration-700
+            ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}
+          `}
+          style={{ fontFamily: "'Poppins', sans-serif" }}
+        >
+          Sua Transformação Começa Agora
+        </h2>
+
+        {/* Description */}
+        <p 
+          className={`
+            text-base sm:text-lg md:text-xl text-white/85 max-w-2xl mx-auto mb-8 md:mb-10 leading-relaxed
+            transition-all duration-700 delay-100
+            ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}
+          `}
+        >
+          Não espere mais dor. Não espere mais lesão. Não espere mais incerteza.
+          <br className="hidden sm:block" />
+          Você tem uma equipe de especialistas pronta para construir a base que falta.
+        </p>
+
+        {/* CTA Buttons */}
+        <div 
+          className={`
+            flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-5
+            transition-all duration-700 delay-200
+            ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}
+          `}
+        >
+          {/* Primary Button */}
+          <Button
+            size="lg"
+            onClick={openWhatsApp}
+            className="w-full sm:w-auto px-8 py-6 text-base md:text-lg font-semibold transition-all duration-300 hover:scale-105 hover:shadow-xl"
+            style={{ 
+              backgroundColor: "white",
+              color: "#1a7a7a"
+            }}
+          >
+            Agendar Avaliação Inicial
+          </Button>
+
+          {/* Secondary Button */}
+          <Button
+            size="lg"
+            variant="outline"
+            onClick={openWhatsApp}
+            className="w-full sm:w-auto px-8 py-6 text-base md:text-lg font-semibold border-2 border-white text-white bg-transparent hover:bg-white hover:text-[#1a7a7a] transition-all duration-300 hover:scale-105"
+          >
+            <MessageCircle className="w-5 h-5 mr-2" />
+            Falar no WhatsApp
+          </Button>
+        </div>
+
+        {/* Trust Badge */}
+        <div 
+          className={`
+            mt-10 md:mt-12
+            transition-all duration-700 delay-300
+            ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}
+          `}
+        >
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20">
+            <span className="w-2 h-2 rounded-full bg-[#d4af37] animate-pulse" />
+            <span className="text-white/90 text-sm font-medium">
+              Vagas limitadas por ciclo
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
 const CicloCompleto = () => {
   useEffect(() => {
     // SEO Meta Tags
@@ -1126,21 +1614,21 @@ const CicloCompleto = () => {
       {/* SEÇÃO 8: COMO FUNCIONA */}
       <Section8ComoFunciona />
       
-      {/* SEÇÃO 9: COMPARAÇÃO (será adicionada aqui) */}
+      {/* SEÇÃO 9, 10, 11 e 12: COMPARAÇÃO + INVESTIMENTO + EQUIPE + CTA FINAL ✅ COMPLETA */}
       
-      {/* SEÇÃO 10: INVESTIMENTO (será adicionada aqui) */}
+      {/* SEÇÃO 9: COMPARAÇÃO */}
+      <Section9Comparacao />
       
-      {/* SEÇÃO 11: DEPOIMENTOS DE EQUIPE (será adicionada aqui) */}
+      {/* SEÇÃO 10: INVESTIMENTO */}
+      <Section10Investimento />
       
-      {/* SEÇÃO 12: CTA FINAL (será adicionada aqui) */}
+      {/* SEÇÃO 11: DEPOIMENTOS DE EQUIPE */}
+      <Section11EquipeDepoimentos />
+      
+      {/* SEÇÃO 12: CTA FINAL */}
+      <Section12CTAFinal />
 
-      {/* Placeholder Section - Para visualização do scroll */}
-      <section className="py-20 bg-background flex items-center justify-center">
-        <div className="text-center text-muted-foreground">
-          <p className="text-2xl font-semibold mb-4">Próximas seções em desenvolvimento...</p>
-          <p className="text-lg">Continue para ver a transformação completa</p>
-        </div>
-      </section>
+      {/* PÁGINA COMPLETA ✅ PRONTA PARA PRODUÇÃO */}
     </main>
   );
 };
