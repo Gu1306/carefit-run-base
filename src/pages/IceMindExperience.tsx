@@ -648,15 +648,45 @@ const IceMindExperience = () => {
 
 
       {/* Footer Section */}
-      <section className="py-10 bg-[#1e4a58]">
-        <div className="container mx-auto px-6 text-center">
-          <p className="text-white/60 text-sm">
-            Ice Mind Experience é uma experiência da{" "}
-            <span className="text-[#E8933D] font-semibold">CareFit RunBase</span>.
-          </p>
-          <p className="text-white/40 text-xs mt-2">
-            A evolução nunca para.
-          </p>
+      <section className="py-8 bg-[#1e4a58]">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-6">
+            <p className="text-white/60 text-sm">
+              Ice Mind Experience é uma experiência da{" "}
+              <span className="text-[#E8933D] font-semibold">CareFit RunBase</span>.
+            </p>
+            <p className="text-white/40 text-xs mt-1">
+              A evolução nunca para.
+            </p>
+          </div>
+          
+          <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8 text-white/40 text-xs">
+            <a 
+              href="https://www.instagram.com/carefitrunbase/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="flex items-center gap-1 hover:text-[#E8933D] transition-colors"
+            >
+              <Instagram className="w-3 h-3" />
+              @carefitrunbase
+            </a>
+            
+            <a 
+              href="mailto:gustavo@coutorosa.com"
+              className="hover:text-[#E8933D] transition-colors"
+            >
+              gustavo@coutorosa.com
+            </a>
+            
+            <a 
+              href="https://www.google.com/maps/search/?api=1&query=Av.+%C3%81urea+Aparecida+Bragheto+Machado,+241,+City+Ribeir%C3%A3o,+Ribeir%C3%A3o+Preto+-+SP"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-[#E8933D] transition-colors text-center"
+            >
+              Av. Áurea Aparecida Bragheto Machado, 241 - Ribeirão Preto, SP
+            </a>
+          </div>
         </div>
       </section>
     </div>
