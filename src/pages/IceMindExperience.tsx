@@ -133,8 +133,8 @@ const IceMindExperience = () => {
         </div>
       </section>
 
-      {/* Section 3: O Plano */}
-      <section className="py-20 md:py-32 bg-white">
+      {/* Section 3: O Plano - Timeline Visual */}
+      <section className="py-20 md:py-32 bg-white overflow-hidden">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold text-[#3D3D3D] mb-4">
@@ -145,53 +145,151 @@ const IceMindExperience = () => {
             </p>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {/* Preparação */}
-            <div className="relative">
-              <div className="bg-gradient-to-br from-[#2C5F6F] to-[#1e4a58] rounded-2xl p-8 h-full shadow-xl">
-                <div className="text-6xl font-bold text-[#E8933D] mb-4">01</div>
-                <div className="w-14 h-14 bg-white/10 rounded-xl flex items-center justify-center mb-4">
+          {/* Timeline Container */}
+          <div className="relative max-w-5xl mx-auto">
+            {/* Timeline Line - Desktop */}
+            <div className="hidden md:block absolute top-1/2 left-0 right-0 h-1 bg-gradient-to-r from-[#2C5F6F] via-[#E8933D] to-[#2C5F6F] transform -translate-y-1/2 rounded-full" />
+            
+            {/* Timeline Line - Mobile */}
+            <div className="md:hidden absolute left-8 top-0 bottom-0 w-1 bg-gradient-to-b from-[#2C5F6F] via-[#E8933D] to-[#2C5F6F] rounded-full" />
+            
+            <div className="grid md:grid-cols-3 gap-8 md:gap-4 relative">
+              {/* Step 1 */}
+              <div className="relative pl-20 md:pl-0">
+                {/* Mobile Circle */}
+                <div className="md:hidden absolute left-4 top-0 w-8 h-8 bg-[#2C5F6F] rounded-full border-4 border-white shadow-lg flex items-center justify-center">
+                  <span className="text-white text-xs font-bold">1</span>
+                </div>
+                
+                {/* Desktop Circle */}
+                <div className="hidden md:flex absolute left-1/2 top-0 transform -translate-x-1/2 -translate-y-8 w-16 h-16 bg-[#2C5F6F] rounded-full border-4 border-white shadow-xl items-center justify-center z-10">
                   <Brain className="w-7 h-7 text-white" />
                 </div>
-                <span className="text-[#E8933D] text-sm font-semibold">45 MINUTOS</span>
-                <h3 className="text-2xl font-bold text-white mt-2 mb-4">A MENTE SOBRE A MATÉRIA</h3>
-                <p className="text-white/70 leading-relaxed">
-                  Natalia e Gustavo integram ciência e experiência para te ensinar sobre o modelo mental da TCC, 
-                  crenças limitantes e como a respiração é sua ferramenta de controle.
-                </p>
+                
+                {/* Desktop Time Badge */}
+                <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 -top-20">
+                  <span className="bg-[#E8933D] text-white text-xs font-bold px-3 py-1 rounded-full">
+                    45 MIN
+                  </span>
+                </div>
+                
+                <div className="bg-gradient-to-br from-[#2C5F6F] to-[#1e4a58] rounded-2xl p-6 md:pt-12 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
+                  <div className="md:hidden flex items-center gap-3 mb-4">
+                    <div className="w-10 h-10 bg-white/10 rounded-xl flex items-center justify-center">
+                      <Brain className="w-5 h-5 text-white" />
+                    </div>
+                    <span className="bg-[#E8933D] text-white text-xs font-bold px-3 py-1 rounded-full">45 MIN</span>
+                  </div>
+                  
+                  <h3 className="text-xl md:text-2xl font-bold text-white mb-3">
+                    A MENTE SOBRE<br className="hidden md:block" /> A MATÉRIA
+                  </h3>
+                  <p className="text-white/70 text-sm md:text-base leading-relaxed">
+                    Natalia e Gustavo integram ciência e experiência para te ensinar sobre o modelo mental da TCC, 
+                    crenças limitantes e como a respiração é sua ferramenta de controle.
+                  </p>
+                  
+                  <div className="mt-4 flex flex-wrap gap-2">
+                    <span className="bg-white/10 text-white/80 text-xs px-3 py-1 rounded-full">TCC</span>
+                    <span className="bg-white/10 text-white/80 text-xs px-3 py-1 rounded-full">Respiração</span>
+                    <span className="bg-white/10 text-white/80 text-xs px-3 py-1 rounded-full">Crenças</span>
+                  </div>
+                </div>
               </div>
-            </div>
-            
-            {/* Imersão */}
-            <div className="relative md:mt-8">
-              <div className="bg-gradient-to-br from-[#E8933D] to-[#d4832f] rounded-2xl p-8 h-full shadow-xl">
-                <div className="text-6xl font-bold text-white/30 mb-4">02</div>
-                <div className="w-14 h-14 bg-white/20 rounded-xl flex items-center justify-center mb-4">
+              
+              {/* Step 2 */}
+              <div className="relative pl-20 md:pl-0">
+                {/* Mobile Circle */}
+                <div className="md:hidden absolute left-4 top-0 w-8 h-8 bg-[#E8933D] rounded-full border-4 border-white shadow-lg flex items-center justify-center">
+                  <span className="text-white text-xs font-bold">2</span>
+                </div>
+                
+                {/* Desktop Circle */}
+                <div className="hidden md:flex absolute left-1/2 top-0 transform -translate-x-1/2 -translate-y-8 w-16 h-16 bg-[#E8933D] rounded-full border-4 border-white shadow-xl items-center justify-center z-10">
                   <Snowflake className="w-7 h-7 text-white" />
                 </div>
-                <span className="text-white/80 text-sm font-semibold">45 MINUTOS</span>
-                <h3 className="text-2xl font-bold text-white mt-2 mb-4">A PRÁTICA DA RESILIÊNCIA</h3>
-                <p className="text-white/80 leading-relaxed">
-                  Guiado por Gustavo e ancorado por Natalia, você aplicará as técnicas de respiração e mentalidade 
-                  para navegar a experiência da imersão em gelo. Você vai descobrir sua força interior.
-                </p>
+                
+                {/* Desktop Time Badge */}
+                <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 -top-20">
+                  <span className="bg-[#2C5F6F] text-white text-xs font-bold px-3 py-1 rounded-full">
+                    45 MIN
+                  </span>
+                </div>
+                
+                <div className="bg-gradient-to-br from-[#E8933D] to-[#d4832f] rounded-2xl p-6 md:pt-12 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
+                  <div className="md:hidden flex items-center gap-3 mb-4">
+                    <div className="w-10 h-10 bg-white/20 rounded-xl flex items-center justify-center">
+                      <Snowflake className="w-5 h-5 text-white" />
+                    </div>
+                    <span className="bg-[#2C5F6F] text-white text-xs font-bold px-3 py-1 rounded-full">45 MIN</span>
+                  </div>
+                  
+                  <h3 className="text-xl md:text-2xl font-bold text-white mb-3">
+                    A PRÁTICA DA<br className="hidden md:block" /> RESILIÊNCIA
+                  </h3>
+                  <p className="text-white/80 text-sm md:text-base leading-relaxed">
+                    Guiado por Gustavo e ancorado por Natalia, você aplicará as técnicas de respiração e mentalidade 
+                    para navegar a experiência da imersão em gelo.
+                  </p>
+                  
+                  <div className="mt-4 flex flex-wrap gap-2">
+                    <span className="bg-white/20 text-white/90 text-xs px-3 py-1 rounded-full">Imersão</span>
+                    <span className="bg-white/20 text-white/90 text-xs px-3 py-1 rounded-full">Gelo</span>
+                    <span className="bg-white/20 text-white/90 text-xs px-3 py-1 rounded-full">Superação</span>
+                  </div>
+                </div>
               </div>
-            </div>
-            
-            {/* Integração */}
-            <div className="relative">
-              <div className="bg-gradient-to-br from-[#2C5F6F] to-[#1e4a58] rounded-2xl p-8 h-full shadow-xl">
-                <div className="text-6xl font-bold text-[#E8933D] mb-4">03</div>
-                <div className="w-14 h-14 bg-white/10 rounded-xl flex items-center justify-center mb-4">
+              
+              {/* Step 3 */}
+              <div className="relative pl-20 md:pl-0">
+                {/* Mobile Circle */}
+                <div className="md:hidden absolute left-4 top-0 w-8 h-8 bg-[#2C5F6F] rounded-full border-4 border-white shadow-lg flex items-center justify-center">
+                  <span className="text-white text-xs font-bold">3</span>
+                </div>
+                
+                {/* Desktop Circle */}
+                <div className="hidden md:flex absolute left-1/2 top-0 transform -translate-x-1/2 -translate-y-8 w-16 h-16 bg-[#2C5F6F] rounded-full border-4 border-white shadow-xl items-center justify-center z-10">
                   <Users className="w-7 h-7 text-white" />
                 </div>
-                <span className="text-[#E8933D] text-sm font-semibold">30 MINUTOS</span>
-                <h3 className="text-2xl font-bold text-white mt-2 mb-4">DA SUPERAÇÃO À VIDA REAL</h3>
-                <p className="text-white/70 leading-relaxed">
-                  Em uma discussão em grupo, você vai conectar os pontos entre a experiência no gelo e os desafios 
-                  da sua vida. A superação se torna uma ferramenta prática.
-                </p>
+                
+                {/* Desktop Time Badge */}
+                <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 -top-20">
+                  <span className="bg-[#E8933D] text-white text-xs font-bold px-3 py-1 rounded-full">
+                    30 MIN
+                  </span>
+                </div>
+                
+                <div className="bg-gradient-to-br from-[#2C5F6F] to-[#1e4a58] rounded-2xl p-6 md:pt-12 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
+                  <div className="md:hidden flex items-center gap-3 mb-4">
+                    <div className="w-10 h-10 bg-white/10 rounded-xl flex items-center justify-center">
+                      <Users className="w-5 h-5 text-white" />
+                    </div>
+                    <span className="bg-[#E8933D] text-white text-xs font-bold px-3 py-1 rounded-full">30 MIN</span>
+                  </div>
+                  
+                  <h3 className="text-xl md:text-2xl font-bold text-white mb-3">
+                    DA SUPERAÇÃO<br className="hidden md:block" /> À VIDA REAL
+                  </h3>
+                  <p className="text-white/70 text-sm md:text-base leading-relaxed">
+                    Em uma discussão em grupo, você vai conectar os pontos entre a experiência no gelo e os desafios 
+                    da sua vida. A superação se torna uma ferramenta prática.
+                  </p>
+                  
+                  <div className="mt-4 flex flex-wrap gap-2">
+                    <span className="bg-white/10 text-white/80 text-xs px-3 py-1 rounded-full">Grupo</span>
+                    <span className="bg-white/10 text-white/80 text-xs px-3 py-1 rounded-full">Integração</span>
+                    <span className="bg-white/10 text-white/80 text-xs px-3 py-1 rounded-full">Prática</span>
+                  </div>
+                </div>
               </div>
+            </div>
+          </div>
+          
+          {/* Total Time */}
+          <div className="text-center mt-12">
+            <div className="inline-flex items-center gap-3 bg-gray-100 rounded-full px-6 py-3">
+              <span className="text-[#3D3D3D]/60 text-sm">Tempo total:</span>
+              <span className="text-[#2C5F6F] font-bold text-lg">2 HORAS DE TRANSFORMAÇÃO</span>
             </div>
           </div>
         </div>
