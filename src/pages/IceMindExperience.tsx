@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Brain, Snowflake, Users, CheckCircle, AlertTriangle, Target, Heart, Zap, ArrowRight, Instagram, MessageCircle, HelpCircle } from "lucide-react";
+import { Brain, Snowflake, Users, CheckCircle, AlertTriangle, Target, Heart, Zap, ArrowRight, Instagram, MessageCircle, HelpCircle, Calendar, Clock } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import nataliaFoto from "@/assets/natalia_foto.jpg";
 import gustavoFoto from "@/assets/gustavo_foto.jpg";
@@ -66,7 +66,23 @@ const IceMindExperience = () => {
             
             <CountdownTimer targetDate={eventDate} />
             
-            <Button 
+            {/* Event Info Badges */}
+            <div className="flex flex-wrap items-center justify-center gap-3 md:gap-4 mb-8">
+              <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2">
+                <Calendar className="w-4 h-4 md:w-5 md:h-5 text-[#E8933D]" />
+                <span className="text-white text-sm md:text-base font-medium">18 de Janeiro de 2026</span>
+              </div>
+              <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2">
+                <Clock className="w-4 h-4 md:w-5 md:h-5 text-[#E8933D]" />
+                <span className="text-white text-sm md:text-base font-medium">2 Horas de Imersão</span>
+              </div>
+              <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2">
+                <Users className="w-4 h-4 md:w-5 md:h-5 text-[#E8933D]" />
+                <span className="text-white text-sm md:text-base font-medium">Máximo 10 Participantes</span>
+              </div>
+            </div>
+            
+            <Button
               size="lg"
               className="bg-[#E8933D] hover:bg-[#d4832f] text-white text-sm md:text-lg px-6 md:px-10 py-5 md:py-6 rounded-full font-bold shadow-lg shadow-[#E8933D]/30 transition-all hover:scale-105"
               asChild
@@ -629,6 +645,39 @@ const IceMindExperience = () => {
               <p className="text-xl text-[#3D3D3D]/70">
                 Escolha a data e horário que melhor se encaixa na sua agenda.
               </p>
+            </div>
+            
+            {/* Event Info Cards */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+              <div className="bg-white rounded-xl p-5 shadow-lg flex items-center gap-4 border-l-4 border-[#E8933D]">
+                <div className="w-12 h-12 bg-[#E8933D]/10 rounded-full flex items-center justify-center flex-shrink-0">
+                  <Calendar className="w-6 h-6 text-[#E8933D]" />
+                </div>
+                <div>
+                  <p className="text-sm text-[#3D3D3D]/60 font-medium">Data do Evento</p>
+                  <p className="text-lg font-bold text-[#3D3D3D]">18 de Janeiro de 2026</p>
+                </div>
+              </div>
+              
+              <div className="bg-white rounded-xl p-5 shadow-lg flex items-center gap-4 border-l-4 border-[#2C5F6F]">
+                <div className="w-12 h-12 bg-[#2C5F6F]/10 rounded-full flex items-center justify-center flex-shrink-0">
+                  <Clock className="w-6 h-6 text-[#2C5F6F]" />
+                </div>
+                <div>
+                  <p className="text-sm text-[#3D3D3D]/60 font-medium">Duração</p>
+                  <p className="text-lg font-bold text-[#3D3D3D]">2 Horas de Imersão</p>
+                </div>
+              </div>
+              
+              <div className="bg-white rounded-xl p-5 shadow-lg flex items-center gap-4 border-l-4 border-[#E8933D]">
+                <div className="w-12 h-12 bg-[#E8933D]/10 rounded-full flex items-center justify-center flex-shrink-0">
+                  <Users className="w-6 h-6 text-[#E8933D]" />
+                </div>
+                <div>
+                  <p className="text-sm text-[#3D3D3D]/60 font-medium">Vagas Limitadas</p>
+                  <p className="text-lg font-bold text-[#3D3D3D]">Máximo 10 Pessoas</p>
+                </div>
+              </div>
             </div>
             
             {/* Google Calendar Iframe */}
