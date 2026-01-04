@@ -3,6 +3,12 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ChevronDown, ChevronRight, Home, Lightbulb, Handshake, Dumbbell, PersonStanding } from "lucide-react";
 
+// Team member photos
+import gustavoFoto from "@/assets/gustavo_foto.jpg";
+import liviaFoto from "@/assets/livia_foto.jpg";
+import guilhermeFoto from "@/assets/guilherme_foto.jpg";
+import arthurFoto from "@/assets/arthur_foto.jpg";
+
 // Timeline Item Component
 interface TimelineItemProps {
   year: string;
@@ -119,6 +125,80 @@ const TimelineItem = ({ year, title, description, icon, variant, position, delay
             </div>
           )}
         </div>
+      </div>
+    </div>
+  );
+};
+
+// Team Card Component
+interface TeamCardProps {
+  photo: string;
+  initials: string;
+  name: string;
+  title: string;
+  specialty: string;
+  bio: string;
+  delay: number;
+}
+
+const TeamCard = ({ photo, initials, name, title, specialty, bio, delay }: TeamCardProps) => {
+  const [isVisible, setIsVisible] = useState(false);
+  const cardRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => setIsVisible(true), delay);
+        }
+      },
+      { threshold: 0.2 }
+    );
+
+    if (cardRef.current) {
+      observer.observe(cardRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, [delay]);
+
+  return (
+    <div 
+      ref={cardRef}
+      className={`group relative bg-background rounded-xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 hover:-translate-y-3 cursor-pointer border-t-4 border-earth ${
+        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+      }`}
+    >
+      {/* Photo Container */}
+      <div className="relative w-full aspect-square overflow-hidden">
+        <img 
+          src={photo} 
+          alt={`Foto de ${name}`}
+          className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 group-hover:scale-105"
+        />
+        
+        {/* Initials Badge */}
+        <div className="absolute top-4 left-4 w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 rounded-full bg-primary flex items-center justify-center shadow-lg">
+          <span className="text-white font-bold text-lg sm:text-xl lg:text-2xl font-poppins">
+            {initials}
+          </span>
+        </div>
+      </div>
+
+      {/* Content */}
+      <div className="p-5 sm:p-6">
+        <h3 className="text-lg sm:text-xl font-semibold text-foreground font-poppins mb-1">
+          {name}
+        </h3>
+        <p className="text-sm text-primary font-poppins mb-2">
+          {title}
+        </p>
+        <span className="inline-block text-xs font-semibold text-earth bg-earth/10 px-3 py-1 rounded-full mb-3 font-poppins">
+          {specialty}
+        </span>
+        <p className="text-sm text-muted-foreground font-poppins leading-relaxed">
+          {bio}
+        </p>
       </div>
     </div>
   );
@@ -341,7 +421,73 @@ const NossaHistoria = () => {
         </div>
       </section>
       
-      {/* SEÇÃO 3: EQUIPE (será adicionada aqui) */}
+      {/* SEÇÃO 3: EQUIPE ESPECIALIZADA */}
+      <section 
+        className="py-20 lg:py-28 bg-background"
+        aria-labelledby="team-heading"
+      >
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Section Header */}
+          <div className="text-center mb-16 animate-fade-in">
+            <h2 
+              id="team-heading"
+              className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-foreground mb-4 font-poppins"
+            >
+              Especialistas em Corrida Cuidando de Corredores
+            </h2>
+            <p className="text-lg text-muted-foreground font-poppins max-w-2xl mx-auto">
+              Conheça o time que transforma a jornada de cada corredor
+            </p>
+          </div>
+
+          {/* Team Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+            {/* Gustavo Rosa */}
+            <TeamCard
+              photo={gustavoFoto}
+              initials="GR"
+              name="Gustavo Rosa"
+              title="Fundador e Head Coach"
+              specialty="Transformação de Corredores"
+              bio="Com mais de 20 Ultramaratonas e Maratonas. Criador da metodologia CareFit e especialista em transformação de corredores. Vive na pele cada desafio que o corredor enfrenta."
+              delay={0}
+            />
+
+            {/* Lívia Dias */}
+            <TeamCard
+              photo={liviaFoto}
+              initials="LD"
+              name="Lívia Dias"
+              title="Fisioterapeuta Esportiva & Agente de Performance"
+              specialty="Prevenção e Recovery"
+              bio="Especialista em prevenção de lesões e recovery. Corredora apaixonada que une ciência e sensibilidade no cuidado de cada atleta. Seu conhecimento em fisiologia transforma vidas."
+              delay={100}
+            />
+
+            {/* Guilherme Coelho */}
+            <TeamCard
+              photo={guilhermeFoto}
+              initials="GC"
+              name="Guilherme Coelho"
+              title="Educador Físico"
+              specialty="Fortalecimento Funcional"
+              bio="Corredor e especialista em fortalecimento funcional para corredores. Focado em construir a base que sustenta cada quilômetro da jornada. Economia de energia e potência em cada treino."
+              delay={200}
+            />
+
+            {/* Arthur Angelotti */}
+            <TeamCard
+              photo={arthurFoto}
+              initials="AA"
+              name="Arthur Angelotti"
+              title="Nutricionista Esportivo"
+              specialty="Nutrição para Performance"
+              bio="Maratonista e especialista em nutrição para performance. Desenvolve estratégias alimentares que transformam treinos em conquistas. Combustível certo para cada jornada."
+              delay={300}
+            />
+          </div>
+        </div>
+      </section>
       
       {/* SEÇÃO 4: VALORES (será adicionada aqui) */}
       
