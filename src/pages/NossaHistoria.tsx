@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { ChevronDown, ChevronRight, Home, Lightbulb, Handshake, Dumbbell, PersonStanding, Target, Eye, Bird, Scale, Microscope, Brain, RefreshCw } from "lucide-react";
+import { ChevronDown, ChevronRight, Home, Lightbulb, Handshake, Dumbbell, PersonStanding, Target, Eye, Bird, Scale, Microscope, Brain, RefreshCw, Check, X, MessageCircle } from "lucide-react";
 
 // Team member photos
 import gustavoFoto from "@/assets/gustavo_foto.jpg";
@@ -254,6 +254,120 @@ const ValueCard = ({ icon, title, description, variant, delay, large = false }: 
       <p className={`${large ? 'text-base' : 'text-sm'} text-muted-foreground font-poppins leading-relaxed`}>
         {description}
       </p>
+    </div>
+  );
+};
+
+// Comparison Row Component (Desktop)
+interface ComparisonRowProps {
+  aspect: string;
+  generic: string;
+  carefit: string;
+  delay: number;
+}
+
+const ComparisonRow = ({ aspect, generic, carefit, delay }: ComparisonRowProps) => {
+  const [isVisible, setIsVisible] = useState(false);
+  const rowRef = useRef<HTMLTableRowElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => setIsVisible(true), delay);
+        }
+      },
+      { threshold: 0.2 }
+    );
+
+    if (rowRef.current) {
+      observer.observe(rowRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, [delay]);
+
+  return (
+    <tr 
+      ref={rowRef}
+      className={`border-b border-border/50 transition-all duration-500 ${
+        isVisible ? "opacity-100" : "opacity-0"
+      }`}
+    >
+      <td className="bg-muted/30 text-foreground font-medium p-4 font-poppins">
+        {aspect}
+      </td>
+      <td className="bg-muted/50 text-center p-4">
+        <div className="flex items-center justify-center gap-2 text-muted-foreground font-poppins">
+          <X className="w-4 h-4 text-red-400" />
+          <span>{generic}</span>
+        </div>
+      </td>
+      <td className="bg-primary/90 text-center p-4">
+        <div className="flex items-center justify-center gap-2 text-white font-poppins">
+          <Check className="w-4 h-4 text-earth" />
+          <span>{carefit}</span>
+        </div>
+      </td>
+    </tr>
+  );
+};
+
+// Mobile Comparison Card Component
+interface MobileComparisonCardProps {
+  aspect: string;
+  generic: string;
+  carefit: string;
+  delay: number;
+}
+
+const MobileComparisonCard = ({ aspect, generic, carefit, delay }: MobileComparisonCardProps) => {
+  const [isVisible, setIsVisible] = useState(false);
+  const cardRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => setIsVisible(true), delay);
+        }
+      },
+      { threshold: 0.2 }
+    );
+
+    if (cardRef.current) {
+      observer.observe(cardRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, [delay]);
+
+  return (
+    <div 
+      ref={cardRef}
+      className={`bg-background rounded-xl overflow-hidden shadow-md transition-all duration-500 ${
+        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
+      }`}
+    >
+      <div className="bg-muted/50 px-4 py-3 font-semibold text-foreground font-poppins">
+        {aspect}
+      </div>
+      <div className="grid grid-cols-2">
+        <div className="bg-muted/30 p-4 text-center border-r border-border/50">
+          <p className="text-xs text-muted-foreground mb-1 font-poppins">Clínica Genérica</p>
+          <div className="flex items-center justify-center gap-1 text-muted-foreground font-poppins text-sm">
+            <X className="w-3 h-3 text-red-400" />
+            <span>{generic}</span>
+          </div>
+        </div>
+        <div className="bg-primary/90 p-4 text-center">
+          <p className="text-xs text-white/70 mb-1 font-poppins">CareFit Run Base</p>
+          <div className="flex items-center justify-center gap-1 text-white font-poppins text-sm">
+            <Check className="w-3 h-3 text-earth" />
+            <span>{carefit}</span>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
@@ -647,9 +761,143 @@ const NossaHistoria = () => {
         </div>
       </section>
       
-      {/* SEÇÃO 5: DIFERENCIAL (será adicionada aqui) */}
-      
-      {/* SEÇÃO 6: CTA FINAL (será adicionada aqui) */}
+      {/* SEÇÃO 5: DIFERENCIAL ✅ COMPLETA */}
+      <section 
+        className="py-20 lg:py-28 bg-background"
+        aria-labelledby="diferencial-heading"
+      >
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Section Header */}
+          <div className="text-center mb-16 animate-fade-in">
+            <h2 
+              id="diferencial-heading"
+              className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-foreground mb-4 font-poppins"
+            >
+              Por Que Somos Diferentes
+            </h2>
+            <p className="text-lg text-muted-foreground font-poppins max-w-2xl mx-auto">
+              Conheça o que nos diferencia de clínicas genéricas
+            </p>
+          </div>
+
+          {/* Comparison Table - Desktop */}
+          <div className="hidden md:block overflow-hidden rounded-2xl shadow-xl">
+            <table className="w-full">
+              <thead>
+                <tr>
+                  <th className="bg-muted/50 text-foreground font-semibold text-left p-4 font-poppins w-1/3">
+                    Aspecto
+                  </th>
+                  <th className="bg-muted text-muted-foreground font-semibold text-center p-4 font-poppins w-1/3">
+                    Clínica Genérica
+                  </th>
+                  <th className="bg-primary text-white font-semibold text-center p-4 font-poppins w-1/3">
+                    CareFit Run Base
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <ComparisonRow
+                  aspect="Foco"
+                  generic="Qualquer pessoa"
+                  carefit="Só corredores"
+                  delay={0}
+                />
+                <ComparisonRow
+                  aspect="Especialização"
+                  generic="Generalista"
+                  carefit="100% corrida"
+                  delay={50}
+                />
+                <ComparisonRow
+                  aspect="Equipe"
+                  generic="Profissionais"
+                  carefit="Corredores que vivem isso"
+                  delay={100}
+                />
+                <ComparisonRow
+                  aspect="Abordagem"
+                  generic="Reativa (trata lesão)"
+                  carefit="Preventiva (evita lesão)"
+                  delay={150}
+                />
+                <ComparisonRow
+                  aspect="Integração"
+                  generic="Isolada"
+                  carefit="Integrada (4 pilares)"
+                  delay={200}
+                />
+                <ComparisonRow
+                  aspect="Propósito"
+                  generic="Lucro"
+                  carefit="Transformação"
+                  delay={250}
+                />
+              </tbody>
+            </table>
+          </div>
+
+          {/* Comparison Cards - Mobile */}
+          <div className="md:hidden space-y-4">
+            {[
+              { aspect: "Foco", generic: "Qualquer pessoa", carefit: "Só corredores" },
+              { aspect: "Especialização", generic: "Generalista", carefit: "100% corrida" },
+              { aspect: "Equipe", generic: "Profissionais", carefit: "Corredores que vivem isso" },
+              { aspect: "Abordagem", generic: "Reativa (trata lesão)", carefit: "Preventiva (evita lesão)" },
+              { aspect: "Integração", generic: "Isolada", carefit: "Integrada (4 pilares)" },
+              { aspect: "Propósito", generic: "Lucro", carefit: "Transformação" },
+            ].map((item, index) => (
+              <MobileComparisonCard
+                key={item.aspect}
+                aspect={item.aspect}
+                generic={item.generic}
+                carefit={item.carefit}
+                delay={index * 50}
+              />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* SEÇÃO 6: CTA FINAL ✅ COMPLETA */}
+      <section 
+        className="py-16 lg:py-24 bg-gradient-to-r from-primary via-primary/90 to-earth"
+        aria-labelledby="cta-heading"
+      >
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center animate-fade-in">
+          <h2 
+            id="cta-heading"
+            className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-white mb-6 font-poppins"
+          >
+            Você não precisa correr sozinho
+          </h2>
+          <p className="text-base sm:text-lg lg:text-xl text-white/90 mb-10 font-poppins max-w-3xl mx-auto leading-relaxed">
+            Cada passo importa. Cada história é única. Você tem uma equipe de especialistas em corrida 
+            pronta para construir a base que falta. Sua jornada de transformação começa aqui.
+          </p>
+          
+          <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center">
+            <Button 
+              size="lg"
+              className="bg-white text-primary hover:bg-earth hover:text-white px-8 py-6 text-lg font-poppins font-semibold shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl"
+              onClick={() => window.open('https://api.whatsapp.com/send?phone=5516996008849', '_blank')}
+            >
+              Descubra Sua Solução Ideal
+            </Button>
+            <Button 
+              size="lg"
+              variant="outline"
+              className="border-2 border-white text-white hover:bg-white hover:text-primary bg-transparent px-8 py-6 text-lg font-poppins font-semibold shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl"
+              onClick={() => window.open('https://api.whatsapp.com/send?phone=5516996008849', '_blank')}
+            >
+              <MessageCircle className="w-5 h-5 mr-2" />
+              Fale com um Especialista
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* PÁGINA COMPLETA ✅ PRONTA PARA PRODUÇÃO */}
     </main>
   );
 };
