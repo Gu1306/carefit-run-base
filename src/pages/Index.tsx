@@ -510,18 +510,10 @@ Viva com equilíbrio.</span>
             Quer você esteja começando, reabilitando, recuperando ou fortalecendo, temos a solução perfeita para você.<br />
             Sua jornada de transformação começa aqui.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex justify-center">
             <Button 
               size="lg" 
               className="bg-earth hover:bg-earth/90 text-white px-8 py-4 text-lg font-montserrat font-semibold"
-              onClick={handleWhatsApp}
-            >
-              Descubra Qual Produto é Para Você
-            </Button>
-            <Button 
-              size="lg" 
-              variant="outline"
-              className="border-2 border-white text-white hover:bg-white hover:text-primary px-8 py-4 text-lg font-montserrat font-semibold"
               onClick={handleWhatsApp}
             >
               Fale com um Especialista
