@@ -1,5 +1,7 @@
 import { Button } from "@/components/ui/button";
-import { Brain, Snowflake, Users, CheckCircle, AlertTriangle, Target, Heart, Zap, ArrowRight } from "lucide-react";
+import { Brain, Snowflake, Users, CheckCircle, AlertTriangle, Target, Heart, Zap, ArrowRight, Instagram } from "lucide-react";
+import nataliaFoto from "@/assets/natalia_foto.jpg";
+import gustavoFoto from "@/assets/gustavo_foto.jpg";
 
 const IceMindExperience = () => {
   const agendamentoLink = "https://calendar.google.com/calendar/appointments/schedules/AcZssZ2npLe6qCUpbwJTGStwst0pzCITxu_FuSzFO5QwrZ7_iP4JlY5pVfxbZ-prFUTT_moZve7sqC00?gv=true";
@@ -78,30 +80,48 @@ const IceMindExperience = () => {
           <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             {/* Natalia Card */}
             <div className="bg-white rounded-2xl p-8 shadow-2xl transform hover:-translate-y-2 transition-all duration-300">
-              <div className="w-20 h-20 bg-gradient-to-br from-[#E8933D] to-[#d4832f] rounded-full flex items-center justify-center mb-6 mx-auto">
-                <Brain className="w-10 h-10 text-white" />
+              <div className="w-24 h-24 rounded-full overflow-hidden mb-6 mx-auto ring-4 ring-[#E8933D]/20">
+                <img src={nataliaFoto} alt="Natalia Garcia" className="w-full h-full object-cover" />
               </div>
               <h3 className="text-2xl font-bold text-[#3D3D3D] mb-2 text-center">Natalia Garcia</h3>
               <p className="text-[#E8933D] font-semibold text-center mb-2">PSICÓLOGA | A CIÊNCIA DA MENTE</p>
               <p className="text-sm text-gray-500 text-center mb-4">CRP 06/155025 | Especialista em TCC</p>
-              <p className="text-[#3D3D3D]/80 text-center leading-relaxed">
+              <p className="text-[#3D3D3D]/80 text-center leading-relaxed mb-4">
                 Natalia traz o "porquê". Ela vai te dar o mapa da sua mente, mostrando como seus pensamentos 
                 e crenças moldam sua realidade, especialmente sob pressão. A ciência por trás da transformação.
               </p>
+              <a 
+                href="https://www.instagram.com/psico.nataliagarcia/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="flex items-center justify-center gap-2 text-[#E8933D] hover:text-[#d4832f] transition-colors font-semibold"
+              >
+                <Instagram className="w-5 h-5" />
+                @psico.nataliagarcia
+              </a>
             </div>
             
             {/* Gustavo Card */}
             <div className="bg-white rounded-2xl p-8 shadow-2xl transform hover:-translate-y-2 transition-all duration-300">
-              <div className="w-20 h-20 bg-gradient-to-br from-[#2C5F6F] to-[#1e4a58] rounded-full flex items-center justify-center mb-6 mx-auto">
-                <Snowflake className="w-10 h-10 text-white" />
+              <div className="w-24 h-24 rounded-full overflow-hidden mb-6 mx-auto ring-4 ring-[#2C5F6F]/20">
+                <img src={gustavoFoto} alt="Gustavo Rosa" className="w-full h-full object-cover" />
               </div>
               <h3 className="text-2xl font-bold text-[#3D3D3D] mb-2 text-center">Gustavo Rosa</h3>
               <p className="text-[#E8933D] font-semibold text-center mb-2">ULTRAMARATONISTA | A PRÁTICA DA RESILIÊNCIA</p>
               <p className="text-sm text-gray-500 text-center mb-4">130km | 20+ Ultramaratonas | Fundador CareFit</p>
-              <p className="text-[#3D3D3D]/80 text-center leading-relaxed">
+              <p className="text-[#3D3D3D]/80 text-center leading-relaxed mb-4">
                 Gustavo traz o "como". Ele viveu na pele o poder do gelo e da respiração para superar limites 
                 que pareciam impossíveis. A experiência que valida a ciência.
               </p>
+              <a 
+                href="https://www.instagram.com/gustavorosa/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="flex items-center justify-center gap-2 text-[#2C5F6F] hover:text-[#1e4a58] transition-colors font-semibold"
+              >
+                <Instagram className="w-5 h-5" />
+                @gustavorosa
+              </a>
             </div>
           </div>
         </div>
