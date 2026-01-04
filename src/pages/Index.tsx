@@ -329,25 +329,25 @@ Viva com equilíbrio.</span>
           </div>
 
           <div className="grid md:grid-cols-4 gap-8">
-            {[{
+          {[{
             ano: "2022",
             titulo: "O Despertar",
-            descricao: "Gustavo percebe a fragmentação do cuidado",
+            descricao: "Gustavo percebe a fragmentação do cuidado e imagina uma solução integrada",
             icon: Star
           }, {
             ano: "2023",
             titulo: "Os Primeiros Passos",
-            descricao: "Nasce a CareFit Recovery",
+            descricao: "Nasce a CareFit Recovery, o primeiro produto focado em recuperação",
             icon: CheckCircle
           }, {
             ano: "2024",
             titulo: "Crescimento e Validação",
-            descricao: "Mais de 100 corredores transformados",
+            descricao: "Expandimos para 4 soluções complementares. Mais de 165 corredores transformados",
             icon: Award
           }, {
             ano: "2025",
             titulo: "O HUB DO CORREDOR",
-            descricao: "Espaço 100% preparado para sua Jornada",
+            descricao: "Consolidamos como o ecossistema completo para o corredor. Espaço 100% preparado, equipe especializada, tudo integrado: nutrição, fortalecimento, recovery e trabalho da mente",
             icon: MapPin
           }].map((marco, index) => <Card key={index} className="bg-white border-0 shadow-lg hover:shadow-xl transition-all duration-300">
                 <CardContent className="p-8 text-center">
