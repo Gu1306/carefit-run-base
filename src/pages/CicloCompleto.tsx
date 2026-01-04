@@ -1224,13 +1224,10 @@ const Section10Investimento = () => {
             {/* Contexto de Investimento */}
             <div className="mt-8 pt-6 border-t border-white/20 text-center max-w-2xl mx-auto">
               <p className="text-white/90 text-sm leading-relaxed">
-                Você vai gastar <strong className="text-white">R$ 20 mil</strong> em uma prova internacional (passagem, hospedagem, alimentação, tênis, roupa).
-              </p>
-              <p className="text-white/90 text-sm leading-relaxed mt-2">
-                Invista <strong className="text-[#d4af37]">R$ 5.400</strong> em cuidado integral para chegar 100% preparado.
+                Você investiu meses de treino, dedicação, sacrifício. Uma lesão séria tira tudo.
               </p>
               <p className="text-white font-semibold text-base mt-4">
-                Isso é inteligência. Isso é segurança. Isso é performance.
+                Nós cuidamos de você integralmente para que você chegue 100%, curta cada passo e deixe seu legado.
               </p>
             </div>
           </div>
