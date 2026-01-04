@@ -48,6 +48,12 @@ const Section2Diferenciais = () => {
 
   const diferenciais = [
     {
+      icon: Shield,
+      title: "Segurança em Grandes Projetos",
+      description: "Você investiu R$ 20 mil em uma prova internacional. Não deixe sua preparação ao acaso. Ciclo Completo = seguro de performance. Você chega preparado, sem lesão, com confiança.",
+      color: "#e67e22",
+    },
+    {
       icon: Link2,
       title: "Equipe Integrada",
       description: "Não você com 3 profissionais isolados. Você com 1 equipe que conversa, alinha e trabalha junto. Fisioterapia, fortalecimento, nutrição e mente em sintonia.",
@@ -85,7 +91,7 @@ const Section2Diferenciais = () => {
         </div>
 
         {/* Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {diferenciais.map((item, index) => {
             const IconComponent = item.icon;
             return (
@@ -865,6 +871,16 @@ const Section8ComoFunciona = () => {
           </p>
         </div>
 
+        {/* Contexto Adicional */}
+        <div className={`text-center mb-10 transition-all duration-700 delay-100 ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+          <h3 className="text-xl sm:text-2xl font-semibold text-[#1a1a1a] mb-3" style={{ fontFamily: "'Poppins', sans-serif" }}>
+            Seu Ciclo Começa Agora
+          </h3>
+          <p className="text-base md:text-lg text-[#1a1a1a]/70 max-w-2xl mx-auto">
+            Você tem um grande projeto em vista. Aqui está como a gente te prepara para chegar 100%:
+          </p>
+        </div>
+
         {/* Passos Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
           {passos.map((passo, index) => {
@@ -1525,26 +1541,29 @@ const CicloCompleto = () => {
 
           {/* Headline H1 */}
           <h1 
-            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight"
             style={{ fontFamily: "'Playfair Display', serif" }}
           >
-            De Lesionado a Invencível
+            Grandes Projetos Exigem
             <br />
-            <span className="text-[#d4af37]">em 12 Semanas</span>
+            <span className="text-[#d4af37]">Preparação Completa</span>
           </h1>
 
-          {/* Subheadline */}
-          <p className="text-xl sm:text-2xl md:text-3xl text-white/90 font-semibold mb-6">
-            Transformação Estruturada com Especialistas em Corrida
-          </p>
-
           {/* Description */}
-          <p className="text-base sm:text-lg md:text-xl text-white/80 max-w-3xl mx-auto mb-10 leading-relaxed">
-            Não é treino. Não é fisioterapia isolada. É a <strong className="text-white">integração completa</strong> de 
-            fisioterapia, fortalecimento, nutrição e mentalidade. 
-            <br className="hidden sm:block" />
-            Você corre com <span className="text-[#d4af37] font-semibold">segurança</span>, <span className="text-[#d4af37] font-semibold">performance</span> e <span className="text-[#d4af37] font-semibold">propósito</span>.
-          </p>
+          <div className="text-base sm:text-lg md:text-xl text-white/90 max-w-3xl mx-auto mb-10 leading-relaxed space-y-4">
+            <p>
+              Você vai investir <strong className="text-white">R$ 20 mil</strong> em uma prova internacional. 
+              Você vai dedicar meses de treino. Você vai abrir mão de coisas. 
+              <span className="text-[#d4af37] font-semibold"> Não abra mão de cuidado.</span>
+            </p>
+            <p>
+              <strong className="text-[#d4af37]">R$ 5.400</strong> em 12 semanas de acompanhamento integral com especialistas em corrida. 
+              Integração completa de fisioterapia, fortalecimento, nutrição e mentalidade.
+            </p>
+            <p className="text-xl sm:text-2xl font-semibold text-white">
+              Chegar 100% preparado é tudo.
+            </p>
+          </div>
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
