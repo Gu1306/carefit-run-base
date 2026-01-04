@@ -748,8 +748,8 @@ const Section6Depoimentos = () => {
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-[#1a1a1a] mb-4" style={{ fontFamily: "'Poppins', sans-serif" }}>
             Histórias de Transformação Real
           </h2>
-          <p className="text-base md:text-lg text-[#1a1a1a]/70 max-w-2xl mx-auto">
-            Corredores que tinham grandes projetos. Que investiram em cuidado. Que chegaram preparados.
+          <p className="text-sm md:text-base text-[#1a1a1a]/70 max-w-2xl mx-auto">
+            Corredores que tinham grandes projetos. Que investiram em proteção. Que chegaram 100% e deixaram seu legado.
           </p>
         </div>
 
@@ -1127,8 +1127,8 @@ const Section9Comparacao = () => {
           <p className="text-lg md:text-xl text-[#1a1a1a]/70 mb-4">
             Comparação com outras abordagens
           </p>
-          <p className="text-sm md:text-base text-[#1a1a1a]/70 max-w-3xl mx-auto mb-2">
-            Você pode treinar sozinho. Você pode ir a uma clínica genérica. Ou você pode ter uma equipe integrada de especialistas em corrida, focada em preparar você para seus maiores desafios.
+          <p className="text-xs md:text-sm text-[#1a1a1a]/70 max-w-3xl mx-auto mb-2">
+            Você pode treinar sozinho. Você pode ir a uma clínica genérica. Ou você pode ter uma equipe integrada de especialistas em corrida, focada em proteger seu maior investimento pessoal.
           </p>
           <p className="text-base font-semibold text-[#1a1a1a]">
             Veja a diferença:
@@ -1474,31 +1474,34 @@ const Section12CTAFinal = () => {
         {/* Headline */}
         <h2 
           className={`
-            text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-white mb-4 md:mb-6
+            text-2xl md:text-4xl font-semibold text-white mb-4 md:mb-6
             transition-all duration-700
             ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}
           `}
           style={{ fontFamily: "'Poppins', sans-serif" }}
         >
-          Seu Grande Projeto Merece Preparação Completa
+          Seu Legado Merece Proteção Completa
         </h2>
 
         {/* Description */}
         <div 
           className={`
-            text-base sm:text-lg md:text-xl text-white/90 max-w-2xl mx-auto mb-8 md:mb-10 leading-relaxed space-y-4
+            text-sm md:text-base text-white/90 max-w-2xl mx-auto mb-8 md:mb-10 leading-relaxed space-y-4
             transition-all duration-700 delay-100
             ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}
           `}
         >
           <p>
-            Você vai investir <strong className="text-white">R$ 20 mil</strong> em uma prova. Você vai dedicar meses de treino. Você vai abrir mão de coisas. <span className="text-[#d4af37] font-semibold">Não abra mão de cuidado.</span>
+            Você investiu meses. Você se dedicou. Você abriu mão de coisas. <span className="text-[#d4af37] font-semibold">Você merece chegar 100%.</span>
           </p>
           <p>
-            <strong className="text-[#d4af37]">R$ 5.400</strong> em 12 semanas de acompanhamento integral. Equipe de especialistas. Segurança máxima. Performance máxima.
+            Não deixe sua jornada ao acaso. Não corra o risco de uma lesão séria. Não perca as férias que sua esposa tirou. Não deixe seu legado incompleto.
           </p>
-          <p className="text-xl font-semibold">
-            Seu projeto merece você 100% preparado.
+          <p>
+            <strong className="text-[#d4af37]">R$ 5.400</strong> em 12 semanas de proteção integral. Equipe de especialistas. Segurança máxima. Legado garantido.
+          </p>
+          <p className="text-lg md:text-xl font-semibold">
+            Você merece curtir cada passo e deixar sua marca.
           </p>
         </div>
 
