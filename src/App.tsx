@@ -7,7 +7,8 @@ import Navigation from "./components/Navigation";
 import Index from "./pages/Index";
 import Manifesto from "./pages/Manifesto";
 import Servicos from "./pages/Servicos";
-import Jornada from "./pages/Jornada";
+import CicloCompleto from "./pages/CicloCompleto";
+// import Jornada from "./pages/Jornada"; // SUBSTITUÍDO por CicloCompleto
 // import TodaJornada from "./pages/TodaJornada"; // DESATIVADO
 import Historia from "./pages/Historia";
 import Espaco from "./pages/Espaco";
@@ -31,7 +32,7 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/manifesto" element={<Manifesto />} />
           <Route path="/servicos" element={<Servicos />} />
-          <Route path="/jornada" element={<Jornada />} />
+          <Route path="/jornada" element={<CicloCompleto />} />
           {/* <Route path="/toda-jornada" element={<TodaJornada />} /> DESATIVADO */}
           <Route path="/historia" element={<Historia />} />
           <Route path="/espaco" element={<Espaco />} />
