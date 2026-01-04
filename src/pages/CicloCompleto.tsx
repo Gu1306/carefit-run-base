@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { ChevronDown, MessageCircle, Link2, Compass, BarChart3, Check, Pyramid, Mountain, Trophy, Quote, Footprints, Shield, TrendingUp, Heart, ClipboardList, Map, Settings, Award, ArrowRight, CheckCircle, AlertCircle, XCircle } from "lucide-react";
+import { ChevronDown, MessageCircle, Link2, Compass, BarChart3, Check, Pyramid, Mountain, Trophy, Quote, Footprints, Shield, TrendingUp, Heart, ClipboardList, Map, Settings, Award, ArrowRight, CheckCircle, AlertCircle, XCircle, Target } from "lucide-react";
 
 // Importar fotos da equipe
 import gustavoFoto from "@/assets/gustavo_foto.jpg";
@@ -727,6 +727,12 @@ const Section7ParaQuem = () => {
 
   const perfis = [
     {
+      icon: Target,
+      titulo: "Você tem um Grande Projeto",
+      descricao: "Prova internacional, maratona importante, meta pessoal ambiciosa? Esse ciclo garante que você chegue 100% preparado. Sem dor, com performance, com segurança. Investimento em você mesmo.",
+      cor: "#e67e22",
+    },
+    {
       icon: Footprints,
       titulo: "Você está começando",
       descricao: "Quer correr com segurança desde o início? Esse ciclo constrói sua base sólida para evitar lesões comuns de iniciantes.",
@@ -736,18 +742,12 @@ const Section7ParaQuem = () => {
       icon: Shield,
       titulo: "Você sofre com lesões",
       descricao: "Cansado de ciclos de dor? Esse ciclo reabilita, fortalece e previne. Você volta a correr sem medo.",
-      cor: "#e67e22",
+      cor: "#1a7a7a",
     },
     {
       icon: TrendingUp,
       titulo: "Você quer evoluir",
       descricao: "Pronto para 10K, 21K ou 42K? Esse ciclo prepara seu corpo e mente para o próximo nível.",
-      cor: "#1a7a7a",
-    },
-    {
-      icon: Heart,
-      titulo: "Você busca equilíbrio",
-      descricao: "Performance sem sacrificar saúde? Esse ciclo alinha corpo, mente e propósito. Você corre melhor porque vive melhor.",
       cor: "#e67e22",
     },
   ];
@@ -1181,14 +1181,11 @@ const Section10Investimento = () => {
             </p>
             <div className="flex items-baseline justify-center gap-2 mb-2">
               <span className="text-4xl md:text-5xl lg:text-6xl font-bold text-white" style={{ fontFamily: "'Poppins', sans-serif" }}>
-                R$ ---.--
+                R$ 5.400,00
               </span>
             </div>
             <p className="text-white/70 text-sm">
-              ou em até <span className="text-white font-semibold">12x de R$ ---.--</span>
-            </p>
-            <p className="text-[#d4af37] text-xs mt-2 font-medium">
-              * Valores a serem definidos
+              ou em até <span className="text-white font-semibold">6x de R$ 900,00</span>
             </p>
           </div>
 
@@ -1216,6 +1213,19 @@ const Section10Investimento = () => {
                   <span className="text-white/90 text-sm">{beneficio}</span>
                 </div>
               ))}
+            </div>
+
+            {/* Contexto de Investimento */}
+            <div className="mt-8 pt-6 border-t border-white/20 text-center max-w-2xl mx-auto">
+              <p className="text-white/90 text-sm leading-relaxed">
+                Você vai gastar <strong className="text-white">R$ 20 mil</strong> em uma prova internacional (passagem, hospedagem, alimentação, tênis, roupa).
+              </p>
+              <p className="text-white/90 text-sm leading-relaxed mt-2">
+                Invista <strong className="text-[#d4af37]">R$ 5.400</strong> em cuidado integral para chegar 100% preparado.
+              </p>
+              <p className="text-white font-semibold text-base mt-4">
+                Isso é inteligência. Isso é segurança. Isso é performance.
+              </p>
             </div>
           </div>
 
@@ -1247,14 +1257,14 @@ const Section11EquipeDepoimentos = () => {
     {
       foto: gustavoFoto,
       nome: "Gustavo Rosa",
-      titulo: "Fundador e Head Coach",
+      titulo: "Ultramaratonista e Fundador",
       citacao: "Cada corredor que passa por esse ciclo se torna parte da nossa história. Vemos a transformação acontecer semana a semana.",
       cor: "#1a7a7a",
     },
     {
       foto: liviaFoto,
       nome: "Lívia Dias",
-      titulo: "Fisioterapeuta Esportiva",
+      titulo: "Fisioterapeuta",
       citacao: "O que mais me move é quando o corredor percebe que cuidado não é fraqueza. É inteligência. É amor pelo esporte que ama.",
       cor: "#e67e22",
     },
@@ -1268,7 +1278,7 @@ const Section11EquipeDepoimentos = () => {
     {
       foto: arthurFoto,
       nome: "Arthur Angelotti",
-      titulo: "Nutricionista Esportivo",
+      titulo: "Nutricionista",
       citacao: "Nutrição é o combustível. Quando o corredor entende isso, tudo muda. Performance, recuperação, disposição — tudo melhora.",
       cor: "#e67e22",
     },
