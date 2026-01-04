@@ -503,13 +503,30 @@ Viva com equilíbrio.</span>
       <section className="py-20 bg-gradient-to-r from-primary via-secondary to-primary text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl md:text-5xl font-montserrat font-bold mb-6">
-            Você não precisa correr sozinho
+            Você não precisa correr sozinho. Escolha Sua Solução Ideal
           </h2>
           <p className="text-xl mb-8 max-w-3xl mx-auto font-poppins opacity-90">
             Todo passo conta. Cuidar não é parar, é evoluir.<br />
+            Quer você esteja começando, reabilitando, recuperando ou fortalecendo, temos a solução perfeita para você.<br />
             Sua jornada de transformação começa aqui.
           </p>
-          
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button 
+              size="lg" 
+              className="bg-earth hover:bg-earth/90 text-white px-8 py-4 text-lg font-montserrat font-semibold"
+              onClick={handleWhatsApp}
+            >
+              Descubra Qual Produto é Para Você
+            </Button>
+            <Button 
+              size="lg" 
+              variant="outline"
+              className="border-2 border-white text-white hover:bg-white hover:text-primary px-8 py-4 text-lg font-montserrat font-semibold"
+              onClick={handleWhatsApp}
+            >
+              Fale com um Especialista
+            </Button>
+          </div>
         </div>
       </section>
     </div>;
