@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Brain, Snowflake, Users, CheckCircle, AlertTriangle, Target, Heart, Zap, ArrowRight, Instagram } from "lucide-react";
+import { Brain, Snowflake, Users, CheckCircle, AlertTriangle, Target, Heart, Zap, ArrowRight, Instagram, MessageCircle, HelpCircle } from "lucide-react";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import nataliaFoto from "@/assets/natalia_foto.jpg";
 import gustavoFoto from "@/assets/gustavo_foto.jpg";
 import { CountdownTimer } from "@/components/CountdownTimer";
@@ -527,6 +528,91 @@ const IceMindExperience = () => {
                   <p className="text-[#3D3D3D]">{item}</p>
                 </div>
               ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-20 md:py-32 bg-[#2C5F6F]">
+        <div className="container mx-auto px-6">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-12">
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-[#E8933D]/20 rounded-full mb-6">
+                <HelpCircle className="w-8 h-8 text-[#E8933D]" />
+              </div>
+              <h2 className="text-3xl md:text-5xl font-bold text-white mb-4">
+                Perguntas <span className="text-[#E8933D]">Frequentes</span>
+              </h2>
+              <p className="text-xl text-white/70">
+                Tire suas dúvidas sobre a experiência
+              </p>
+            </div>
+            
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 md:p-8">
+              <Accordion type="single" collapsible className="space-y-4">
+                <AccordionItem value="item-1" className="border-white/20 border-b">
+                  <AccordionTrigger className="text-white text-left hover:no-underline hover:text-[#E8933D] transition-colors py-5">
+                    <span className="text-lg font-semibold">Preciso ter alguma experiência prévia com imersão no gelo?</span>
+                  </AccordionTrigger>
+                  <AccordionContent className="text-white/80 text-base pb-5">
+                    Não precisa. A experiência é guiada do começo ao fim, com orientação de respiração, preparação mental e acompanhamento dentro e fora do gelo. Você vai fazer no seu ritmo, com segurança e suporte total da equipe.
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="item-2" className="border-white/20 border-b">
+                  <AccordionTrigger className="text-white text-left hover:no-underline hover:text-[#E8933D] transition-colors py-5">
+                    <span className="text-lg font-semibold">E se eu não aguentar o frio?</span>
+                  </AccordionTrigger>
+                  <AccordionContent className="text-white/80 text-base pb-5">
+                    Tudo bem — e isso faz parte do processo. Aqui, o objetivo não é "provar resistência" nem "aguentar 2 minutos a 2°C". O foco é viver, de forma voluntária e segura, um desconforto controlado para observar como corpo e mente reagem (respiração, ansiedade, pensamentos, impulsos) e aprender estratégias para levar essa autorregulação para o dia a dia. Você pode sair quando quiser, e ainda assim a experiência continua completa.
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="item-3" className="border-white/20 border-b">
+                  <AccordionTrigger className="text-white text-left hover:no-underline hover:text-[#E8933D] transition-colors py-5">
+                    <span className="text-lg font-semibold">O que eu preciso levar no dia?</span>
+                  </AccordionTrigger>
+                  <AccordionContent className="text-white/80 text-base pb-5">
+                    Só uma troca de roupa seca. O restante a gente cuida: toalhas, estrutura, chás e um café da manhã especial para todos os participantes.
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="item-4" className="border-white/20 border-b">
+                  <AccordionTrigger className="text-white text-left hover:no-underline hover:text-[#E8933D] transition-colors py-5">
+                    <span className="text-lg font-semibold">Qual é a política de cancelamento/reembolso?</span>
+                  </AccordionTrigger>
+                  <AccordionContent className="text-white/80 text-base pb-5">
+                    Como é um evento pequeno e exclusivo (até 10 participantes), conseguimos cancelar e reembolsar integralmente pedidos feitos com até 3 dias de antecedência. Com menos de 3 dias, não temos tempo hábil para repor a vaga — nesse caso, fazemos reembolso de 25% do valor.
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="item-5" className="border-white/20 border-b-0">
+                  <AccordionTrigger className="text-white text-left hover:no-underline hover:text-[#E8933D] transition-colors py-5">
+                    <span className="text-lg font-semibold">Existem contraindicações médicas?</span>
+                  </AccordionTrigger>
+                  <AccordionContent className="text-white/80 text-base pb-5">
+                    A imersão é segura para a grande maioria das pessoas quando feita com orientação, mas existem, sim, situações em que é preciso avaliação prévia. Se você tem hipertensão não controlada, histórico de arritmia, doença cardíaca, desmaios, epilepsia, gestação ou qualquer condição relevante, fale com a gente antes para alinharmos a melhor forma de participar com segurança.
+                  </AccordionContent>
+                </AccordionItem>
+              </Accordion>
+            </div>
+
+            <div className="text-center mt-10">
+              <p className="text-white/70 mb-4">Ainda tem dúvidas?</p>
+              <Button 
+                className="bg-green-500 hover:bg-green-600 text-white px-8 py-6 rounded-full font-semibold shadow-lg transition-all hover:scale-105"
+                asChild
+              >
+                <a 
+                  href="https://api.whatsapp.com/send?phone=5516996008849" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                >
+                  <MessageCircle className="mr-2 h-5 w-5" />
+                  Fale Conosco pelo WhatsApp
+                </a>
+              </Button>
             </div>
           </div>
         </div>
