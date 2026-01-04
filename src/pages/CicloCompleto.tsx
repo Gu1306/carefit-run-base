@@ -49,27 +49,27 @@ const Section2Diferenciais = () => {
   const diferenciais = [
     {
       icon: Shield,
-      title: "Segurança em Grandes Projetos",
-      description: "Você investiu R$ 20 mil em uma prova internacional. Não deixe sua preparação ao acaso. Ciclo Completo = seguro de performance. Você chega preparado, sem lesão, com confiança.",
+      title: "Proteção do Seu Legado",
+      description: "Você investiu meses, dedicação, sacrifício. Uma lesão séria tira tudo. Nós cuidamos de você integralmente para que você chegue 100% e deixe seu legado.",
       color: "#e67e22",
     },
     {
-      icon: Link2,
-      title: "Equipe Integrada",
-      description: "Não você com 3 profissionais isolados. Você com 1 equipe que conversa, alinha e trabalha junto. Fisioterapia, fortalecimento, nutrição e mente em sintonia.",
+      icon: Heart,
+      title: "Equipe Interdisciplinar",
+      description: "Não você sozinho. Você com fisioterapeuta, educador físico, nutricionista e especialista em mentalidade. Todos conversando, alinhados, trabalhando para você.",
       color: "#1a7a7a",
     },
     {
-      icon: Compass,
-      title: "100% Customizado",
-      description: "Cada corredor é único. Seu ciclo é feito para VOCÊ. Ajustes semanais, avaliações contínuas, planos que evoluem com você.",
+      icon: ClipboardList,
+      title: "Cuidado Integral",
+      description: "Não é apenas treino. É prevenção, recuperação, nutrição, mentalidade. Tudo integrado. Você não corre o risco de chegar lesionado ou medicado.",
+      color: "#1a7a7a",
+    },
+    {
+      icon: Trophy,
+      title: "Legado Duradouro",
+      description: "Você não apenas completa seu projeto. Você constrói uma base sólida para continuar correndo, evoluindo e deixando seu legado pessoal.",
       color: "#e67e22",
-    },
-    {
-      icon: BarChart3,
-      title: "Resultados Mensuráveis",
-      description: "4 avaliações físicas, métricas claras, evolução visível. Você não apenas sente a mudança — você a vê, mede e celebra.",
-      color: "#1a7a7a",
     },
   ];
 
@@ -131,6 +131,92 @@ const Section2Diferenciais = () => {
               </div>
             );
           })}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+// NOVA SEÇÃO: O RISCO DE NÃO TER PROTEÇÃO
+const SectionRiscos = () => {
+  const { ref, isInView } = useInView(0.2);
+
+  const riscos = [
+    {
+      icon: "🚫",
+      title: "Lesão Séria",
+      description: "Você treinou meses. Uma lesão séria tira tudo. Você perde seu projeto, suas férias, seu investimento.",
+    },
+    {
+      icon: "💊",
+      title: "Correndo Medicado",
+      description: "Você chega na prova, mas não é você. Você corre medicado, sem performance, sem alegria. Seu legado fica comprometido.",
+    },
+    {
+      icon: "🏖️",
+      title: "Férias Perdidas",
+      description: "Sua esposa tirou férias para te acompanhar. Uma lesão tira tudo. Você perde o momento que planejou juntos.",
+    },
+    {
+      icon: "❌",
+      title: "Legado Incompleto",
+      description: "Você não completa seu projeto. Você não deixa sua marca. Você fica com a sensação de 'e se eu tivesse cuidado melhor?'",
+    },
+  ];
+
+  return (
+    <section 
+      ref={ref}
+      className="py-10 md:py-20"
+      style={{ backgroundColor: "#1a1a1a" }}
+    >
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Section Header */}
+        <div className={`text-center mb-12 md:mb-16 transition-all duration-700 ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+          <h2 className="text-2xl md:text-[32px] font-semibold text-white mb-4" style={{ fontFamily: "'Poppins', sans-serif" }}>
+            O Risco de Não Ter Proteção
+          </h2>
+          <p className="text-sm md:text-base text-white/70">
+            Grandes projetos sem cuidado integral
+          </p>
+        </div>
+
+        {/* Risk Cards Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {riscos.map((risco, index) => (
+            <div
+              key={risco.title}
+              className={`
+                rounded-lg p-8 shadow-md
+                transition-all duration-500 ease-out
+                hover:-translate-y-2 hover:shadow-xl
+                ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}
+              `}
+              style={{
+                borderTop: "3px solid #d32f2f",
+                backgroundColor: "#fff3e0",
+                transitionDelay: isInView ? `${index * 100}ms` : '0ms',
+              }}
+            >
+              {/* Icon */}
+              <div className="text-3xl mb-4">
+                {risco.icon}
+              </div>
+
+              {/* Title */}
+              <h3 
+                className="text-lg font-semibold text-[#1a1a1a] mb-3"
+                style={{ fontFamily: "'Poppins', sans-serif" }}
+              >
+                {risco.title}
+              </h3>
+
+              {/* Description */}
+              <p className="text-sm text-[#1a1a1a]/70 leading-relaxed">
+                {risco.description}
+              </p>
+            </div>
+          ))}
         </div>
       </div>
     </section>
@@ -1560,27 +1646,38 @@ const CicloCompleto = () => {
 
           {/* Headline H1 */}
           <h1 
-            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight"
+            className="text-[32px] md:text-[48px] font-bold text-white mb-4 leading-tight"
             style={{ fontFamily: "'Playfair Display', serif" }}
           >
-            Grandes Projetos Exigem
+            Grandes Projetos Merecem
             <br />
-            <span className="text-[#d4af37]">Preparação Completa</span>
+            Proteção Completa
           </h1>
 
+          {/* Subheadline */}
+          <p 
+            className="text-lg md:text-2xl font-semibold mb-6"
+            style={{ fontFamily: "'Poppins', sans-serif", color: "#d4af37" }}
+          >
+            Sua Jornada é Seu Legado
+          </p>
+
           {/* Description */}
-          <div className="text-base sm:text-lg md:text-xl text-white/90 max-w-3xl mx-auto mb-10 leading-relaxed space-y-4">
+          <div className="text-sm md:text-base text-white/90 max-w-3xl mx-auto mb-10 leading-relaxed space-y-4">
             <p>
-              Você vai investir <strong className="text-white">R$ 20 mil</strong> em uma prova internacional. 
-              Você vai dedicar meses de treino. Você vai abrir mão de coisas. 
-              <span className="text-[#d4af37] font-semibold"> Não abra mão de cuidado.</span>
+              Você treinou meses. Você se dedicou. Você abriu mão de coisas. 
+              Você investiu tempo, esforço e emoção em um grande projeto pessoal.
             </p>
             <p>
-              <strong className="text-[#d4af37]">R$ 5.400</strong> em 12 semanas de acompanhamento integral com especialistas em corrida. 
-              Integração completa de fisioterapia, fortalecimento, nutrição e mentalidade.
+              <strong className="text-white">Uma lesão séria tira tudo.</strong> Você perde as férias que sua esposa tirou. 
+              Você corre medicado. Você perde o que construiu.
             </p>
-            <p className="text-xl sm:text-2xl font-semibold text-white">
-              Chegar 100% preparado é tudo.
+            <p>
+              Nós cuidamos de você integralmente. Fisioterapia, fortalecimento, nutrição e mentalidade integrados. 
+              <strong className="text-[#d4af37]"> 12 semanas de proteção completa.</strong>
+            </p>
+            <p className="text-lg md:text-xl font-semibold text-white">
+              Você chega 100%. Você curte cada passo. Você deixa seu legado.
             </p>
           </div>
 
@@ -1629,6 +1726,9 @@ const CicloCompleto = () => {
       
       {/* SEÇÃO 2: PROMESSA + DIFERENCIAL */}
       <Section2Diferenciais />
+      
+      {/* NOVA SEÇÃO: O RISCO DE NÃO TER PROTEÇÃO */}
+      <SectionRiscos />
       
       {/* SEÇÃO 3: O QUE VOCÊ RECEBE */}
       <Section3OQueRecebe />
