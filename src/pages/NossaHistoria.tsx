@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { ChevronDown, ChevronRight, Home, Lightbulb, Handshake, Dumbbell, PersonStanding } from "lucide-react";
+import { ChevronDown, ChevronRight, Home, Lightbulb, Handshake, Dumbbell, PersonStanding, Target, Eye, Bird, Scale, Microscope, Brain, RefreshCw } from "lucide-react";
 
 // Team member photos
 import gustavoFoto from "@/assets/gustavo_foto.jpg";
@@ -200,6 +200,60 @@ const TeamCard = ({ photo, initials, name, title, specialty, bio, delay }: TeamC
           {bio}
         </p>
       </div>
+    </div>
+  );
+};
+
+// Value Card Component
+interface ValueCardProps {
+  icon: React.ReactNode;
+  title: string;
+  description: string;
+  variant: "primary" | "accent";
+  delay: number;
+  large?: boolean;
+}
+
+const ValueCard = ({ icon, title, description, variant, delay, large = false }: ValueCardProps) => {
+  const [isVisible, setIsVisible] = useState(false);
+  const cardRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => setIsVisible(true), delay);
+        }
+      },
+      { threshold: 0.2 }
+    );
+
+    if (cardRef.current) {
+      observer.observe(cardRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, [delay]);
+
+  const iconColorClass = variant === "primary" ? "text-primary" : "text-earth";
+  const borderColorClass = variant === "primary" ? "border-l-primary" : "border-t-earth";
+
+  return (
+    <div 
+      ref={cardRef}
+      className={`group bg-background rounded-xl ${large ? 'p-6 sm:p-8 border-l-4' : 'p-5 sm:p-6 border-t-4'} ${borderColorClass} shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-2 cursor-pointer hover:bg-earth/5 ${
+        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+      }`}
+    >
+      <div className={`${iconColorClass} mb-4 transition-all duration-300 group-hover:scale-110`}>
+        {icon}
+      </div>
+      <h3 className={`${large ? 'text-xl sm:text-2xl' : 'text-lg'} font-semibold text-foreground font-poppins mb-3`}>
+        {title}
+      </h3>
+      <p className={`${large ? 'text-base' : 'text-sm'} text-muted-foreground font-poppins leading-relaxed`}>
+        {description}
+      </p>
     </div>
   );
 };
@@ -489,7 +543,109 @@ const NossaHistoria = () => {
         </div>
       </section>
       
-      {/* SEÇÃO 4: VALORES (será adicionada aqui) */}
+      {/* SEÇÃO 4: VALORES & FILOSOFIA ✅ COMPLETA */}
+      <section 
+        className="py-20 lg:py-28 bg-gradient-to-b from-muted/50 to-background"
+        aria-labelledby="values-heading"
+      >
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Section Header */}
+          <div className="text-center mb-16 animate-fade-in">
+            <h2 
+              id="values-heading"
+              className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-foreground mb-4 font-poppins"
+            >
+              Valores & Filosofia
+            </h2>
+            <p className="text-lg text-muted-foreground font-poppins max-w-2xl mx-auto">
+              Os princípios que guiam cada passo da nossa jornada
+            </p>
+          </div>
+
+          {/* Two Column Layout */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16">
+            {/* Left Column: Mission & Vision */}
+            <div className="space-y-8">
+              {/* Mission */}
+              <ValueCard
+                icon={<Target className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12" />}
+                title="Nossa Missão"
+                description="Transformar a relação dos corredores com o cuidado, provando que prevenção é a estratégia mais inteligente para uma performance duradoura e consciente."
+                variant="primary"
+                delay={0}
+                large
+              />
+
+              {/* Vision */}
+              <ValueCard
+                icon={<Eye className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12" />}
+                title="Nossa Visão"
+                description="Ser a base fundamental que fortalece cada corredor para realizar seus sonhos, entendendo que cuidar não é parar, mas sim a forma mais inteligente de seguir em frente."
+                variant="primary"
+                delay={100}
+                large
+              />
+            </div>
+
+            {/* Right Column: 6 Values */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              {/* Value 1 */}
+              <ValueCard
+                icon={<Bird className="w-6 h-6 sm:w-8 sm:h-8 lg:w-10 lg:h-10" />}
+                title="Toda jornada importa"
+                description="Cada pessoa tem uma história, um ritmo, uma distância e um motivo. Não comparamos jornadas — celebramos cada passo dado com consciência."
+                variant="accent"
+                delay={0}
+              />
+
+              {/* Value 2 */}
+              <ValueCard
+                icon={<Scale className="w-6 h-6 sm:w-8 sm:h-8 lg:w-10 lg:h-10" />}
+                title="O cuidado vem antes da dor"
+                description="Acreditamos que prevenir é cuidar com amor e ciência. Performance é consequência de constância, não de pressa."
+                variant="accent"
+                delay={100}
+              />
+
+              {/* Value 3 */}
+              <ValueCard
+                icon={<Handshake className="w-6 h-6 sm:w-8 sm:h-8 lg:w-10 lg:h-10" />}
+                title="Respeito e parceria"
+                description="A relação treinador–atleta é sagrada. Nós somos a base de suporte — corpo, mente e nutrição — para que o atleta realize seu sonho com seu treinador."
+                variant="accent"
+                delay={200}
+              />
+
+              {/* Value 4 */}
+              <ValueCard
+                icon={<Microscope className="w-6 h-6 sm:w-8 sm:h-8 lg:w-10 lg:h-10" />}
+                title="Ciência com propósito"
+                description="Tudo o que fazemos é embasado em fisiologia, movimento e estudo, mas guiado por propósito e empatia. Cuidar é ciência com alma."
+                variant="accent"
+                delay={300}
+              />
+
+              {/* Value 5 */}
+              <ValueCard
+                icon={<Brain className="w-6 h-6 sm:w-8 sm:h-8 lg:w-10 lg:h-10" />}
+                title="Transformação individual"
+                description="Cada jornada é única e profundamente pessoal. O que transforma um, pode não tocar o outro — e está tudo bem. Respeitamos a singularidade de cada trajetória."
+                variant="accent"
+                delay={400}
+              />
+
+              {/* Value 6 */}
+              <ValueCard
+                icon={<RefreshCw className="w-6 h-6 sm:w-8 sm:h-8 lg:w-10 lg:h-10" />}
+                title="Constância acima da perfeição"
+                description="Nem todos os ciclos serão perfeitos, e isso é humano. O progresso acontece quando fazemos o possível — com consciência e amor ao processo."
+                variant="accent"
+                delay={500}
+              />
+            </div>
+          </div>
+        </div>
+      </section>
       
       {/* SEÇÃO 5: DIFERENCIAL (será adicionada aqui) */}
       
