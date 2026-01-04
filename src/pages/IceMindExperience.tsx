@@ -646,66 +646,6 @@ const IceMindExperience = () => {
         </div>
       </section>
 
-      {/* Section 7: CTA Final */}
-      <section className="py-20 md:py-32 bg-gradient-to-br from-[#2C5F6F] via-[#1e4a58] to-[#163842] relative overflow-hidden">
-        {/* Background Pattern */}
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-10 right-20 w-72 h-72 bg-[#E8933D] rounded-full blur-3xl" />
-          <div className="absolute bottom-10 left-20 w-96 h-96 bg-white rounded-full blur-3xl" />
-        </div>
-        
-        <div className="container mx-auto px-6 relative z-10">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
-              Sua Jornada de Transformação Mental{" "}
-              <span className="text-[#E8933D]">Começa Aqui.</span>
-            </h2>
-            
-            <p className="text-xl text-white/70 mb-8">
-              Vagas limitadas para garantir uma experiência íntima e profunda. 
-              Não é sobre coragem, é sobre decisão.
-            </p>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 mb-10">
-              <div className="grid md:grid-cols-3 gap-6 text-center">
-                <div>
-                  <p className="text-white/60 text-sm mb-1">DURAÇÃO</p>
-                  <p className="text-2xl font-bold text-white">2 Horas</p>
-                </div>
-                <div>
-                  <p className="text-white/60 text-sm mb-1">FORMATO</p>
-                  <p className="text-2xl font-bold text-white">Presencial</p>
-                </div>
-                <div>
-                  <p className="text-white/60 text-sm mb-1">VAGAS</p>
-                  <p className="text-2xl font-bold text-[#E8933D]">Limitadas</p>
-                </div>
-              </div>
-            </div>
-            
-            <Button 
-              size="lg"
-              className="bg-[#E8933D] hover:bg-[#d4832f] text-white text-xl px-12 py-7 rounded-full font-bold shadow-lg shadow-[#E8933D]/30 transition-all hover:scale-105"
-              asChild
-            >
-              <a
-                href="#agendamento"
-                onClick={(e) => {
-                  e.preventDefault();
-                  document.getElementById("agendamento")?.scrollIntoView({ behavior: "smooth", block: "start" });
-                }}
-              >
-                GARANTIR MINHA VAGA
-                <ArrowRight className="ml-2 h-6 w-6" />
-              </a>
-            </Button>
-            
-            <p className="text-white/50 mt-6 text-sm">
-              Role para agendar diretamente no calendário abaixo.
-            </p>
-          </div>
-        </div>
-      </section>
 
       {/* Footer Section */}
       <section className="py-10 bg-[#1e4a58]">
