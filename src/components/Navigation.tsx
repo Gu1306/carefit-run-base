@@ -17,9 +17,6 @@ const Navigation = () => {
     name: "Ciclo Completo",
     href: "/jornada"
   }, {
-    name: "Jornada Propósito",
-    href: "/jornada"
-  }, {
     name: "Ice Mind",
     href: "/ice-mind-experience"
   }, {
