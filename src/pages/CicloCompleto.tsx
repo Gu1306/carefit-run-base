@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { ChevronDown, MessageCircle, Link2, Compass, BarChart3, Check, Pyramid, Mountain, Trophy } from "lucide-react";
+import { ChevronDown, MessageCircle, Link2, Compass, BarChart3, Check, Pyramid, Mountain, Trophy, Quote, Footprints, Shield, TrendingUp, Heart, ClipboardList, Map, Settings, Award, ArrowRight } from "lucide-react";
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -611,6 +611,328 @@ const Section5Rituais = () => {
   );
 };
 
+// SEÇÃO 6: DEPOIMENTOS + TRANSFORMAÇÃO
+const Section6Depoimentos = () => {
+  const { ref, isInView } = useInView(0.2);
+
+  const depoimentos = [
+    {
+      nome: "Carlos Silva",
+      resultado: "Corria com dor nas costas. Agora corro 21K sem medo.",
+      citacao: "A equipe me mostrou que cuidado não é fraqueza, é inteligência.",
+      especialista: "Liderado por Lívia (Fisioterapia)",
+      iniciais: "CS",
+    },
+    {
+      nome: "Marina Santos",
+      resultado: "Voltei a correr após 2 anos parada por lesão.",
+      citacao: "Cada semana eu sentia a mudança. Não era só treino, era transformação.",
+      especialista: "Liderado por Gustavo (Transformação)",
+      iniciais: "MS",
+    },
+    {
+      nome: "Roberto Almeida",
+      resultado: "Melhorei meu tempo em 8 minutos no 10K.",
+      citacao: "Nunca imaginei que fortalecimento e nutrição fariam tanta diferença.",
+      especialista: "Liderado por Guilherme e Arthur (Força + Nutrição)",
+      iniciais: "RA",
+    },
+  ];
+
+  return (
+    <section 
+      ref={ref}
+      className="py-16 md:py-20 lg:py-24 bg-white"
+    >
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Section Header */}
+        <div className={`text-center mb-12 md:mb-16 transition-all duration-700 ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-[#1a1a1a] mb-4" style={{ fontFamily: "'Poppins', sans-serif" }}>
+            Histórias de Transformação Real
+          </h2>
+          <p className="text-lg md:text-xl text-[#1a1a1a]/70">
+            Corredores que mudaram de vida
+          </p>
+        </div>
+
+        {/* Depoimentos Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {depoimentos.map((depo, index) => (
+            <div
+              key={depo.nome}
+              className={`
+                bg-white rounded-xl p-6 shadow-md border-2 border-[#e67e22]/30
+                transition-all duration-500 ease-out
+                hover:-translate-y-2 hover:shadow-xl hover:border-[#e67e22]
+                ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}
+              `}
+              style={{ transitionDelay: isInView ? `${index * 150}ms` : '0ms' }}
+            >
+              {/* Avatar Placeholder */}
+              <div className="flex items-center gap-4 mb-5">
+                <div 
+                  className="w-16 h-16 rounded-full flex items-center justify-center text-white font-bold text-xl"
+                  style={{ backgroundColor: "#1a7a7a" }}
+                >
+                  {depo.iniciais}
+                </div>
+                <div>
+                  <h3 
+                    className="font-semibold text-[#1a1a1a]"
+                    style={{ fontFamily: "'Poppins', sans-serif" }}
+                  >
+                    {depo.nome}
+                  </h3>
+                  <p className="text-sm font-semibold" style={{ color: "#1a7a7a" }}>
+                    {depo.resultado}
+                  </p>
+                </div>
+              </div>
+
+              {/* Citação */}
+              <div className="relative mb-4">
+                <Quote className="w-8 h-8 text-[#e67e22]/20 absolute -top-2 -left-1" />
+                <p className="text-sm text-[#1a1a1a]/70 italic pl-6 leading-relaxed">
+                  "{depo.citacao}"
+                </p>
+              </div>
+
+              {/* Especialista */}
+              <p className="text-xs font-medium" style={{ color: "#e67e22" }}>
+                {depo.especialista}
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+// SEÇÃO 7: PARA QUEM É
+const Section7ParaQuem = () => {
+  const { ref, isInView } = useInView(0.2);
+
+  const perfis = [
+    {
+      icon: Footprints,
+      titulo: "Você está começando",
+      descricao: "Quer correr com segurança desde o início? Esse ciclo constrói sua base sólida para evitar lesões comuns de iniciantes.",
+      cor: "#1a7a7a",
+    },
+    {
+      icon: Shield,
+      titulo: "Você sofre com lesões",
+      descricao: "Cansado de ciclos de dor? Esse ciclo reabilita, fortalece e previne. Você volta a correr sem medo.",
+      cor: "#e67e22",
+    },
+    {
+      icon: TrendingUp,
+      titulo: "Você quer evoluir",
+      descricao: "Pronto para 10K, 21K ou 42K? Esse ciclo prepara seu corpo e mente para o próximo nível.",
+      cor: "#1a7a7a",
+    },
+    {
+      icon: Heart,
+      titulo: "Você busca equilíbrio",
+      descricao: "Performance sem sacrificar saúde? Esse ciclo alinha corpo, mente e propósito. Você corre melhor porque vive melhor.",
+      cor: "#e67e22",
+    },
+  ];
+
+  return (
+    <section 
+      ref={ref}
+      className="py-16 md:py-20 lg:py-24"
+      style={{ backgroundColor: "#f5f5f5" }}
+    >
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Section Header */}
+        <div className={`text-center mb-12 md:mb-16 transition-all duration-700 ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-[#1a1a1a] mb-4" style={{ fontFamily: "'Poppins', sans-serif" }}>
+            Para Quem é o Ciclo Completo?
+          </h2>
+          <p className="text-lg md:text-xl text-[#1a1a1a]/70">
+            Qualquer corredor pode se transformar
+          </p>
+        </div>
+
+        {/* Perfis Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {perfis.map((perfil, index) => {
+            const IconComponent = perfil.icon;
+            return (
+              <div
+                key={perfil.titulo}
+                className={`
+                  bg-white rounded-xl p-8 shadow-md
+                  transition-all duration-500 ease-out
+                  hover:-translate-y-2 hover:shadow-xl hover:bg-gray-50
+                  ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}
+                `}
+                style={{
+                  borderTop: `3px solid ${perfil.cor}`,
+                  transitionDelay: isInView ? `${index * 100}ms` : '0ms',
+                }}
+              >
+                {/* Icon */}
+                <div 
+                  className="w-14 h-14 rounded-full flex items-center justify-center mb-6"
+                  style={{ backgroundColor: `${perfil.cor}15` }}
+                >
+                  <IconComponent className="w-7 h-7" style={{ color: perfil.cor }} />
+                </div>
+
+                {/* Title */}
+                <h3 
+                  className="text-lg font-semibold text-[#1a1a1a] mb-3"
+                  style={{ fontFamily: "'Poppins', sans-serif" }}
+                >
+                  {perfil.titulo}
+                </h3>
+
+                {/* Description */}
+                <p className="text-sm text-[#1a1a1a]/70 leading-relaxed">
+                  {perfil.descricao}
+                </p>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+// SEÇÃO 8: COMO FUNCIONA
+const Section8ComoFunciona = () => {
+  const { ref, isInView } = useInView(0.2);
+
+  const passos = [
+    {
+      numero: 1,
+      icon: ClipboardList,
+      titulo: "Avaliação Inicial",
+      descricao: "Você faz uma avaliação completa com a equipe. Entendemos seu corpo, sua história, suas limitações e sonhos.",
+      tempo: "1 sessão",
+      cor: "#1a7a7a",
+    },
+    {
+      numero: 2,
+      icon: Map,
+      titulo: "Plano Personalizado",
+      descricao: "A equipe cria seu plano de 12 semanas. Treino, nutrição, recovery e mentalidade — tudo integrado para VOCÊ.",
+      tempo: "Pronto em 3 dias",
+      cor: "#e67e22",
+    },
+    {
+      numero: 3,
+      icon: Settings,
+      titulo: "Execução + Ajustes",
+      descricao: "Você executa a jornada com suporte semanal. Cada semana ajustamos conforme sua evolução.",
+      tempo: "12 semanas",
+      cor: "#1a7a7a",
+    },
+    {
+      numero: 4,
+      icon: Award,
+      titulo: "Transformação + Celebração",
+      descricao: "Você chega à linha de chegada transformado. Seu nome entra no Mural dos Corredores. Próximo ciclo começa.",
+      tempo: "Semana 12",
+      cor: "#e67e22",
+    },
+  ];
+
+  return (
+    <section 
+      ref={ref}
+      className="py-16 md:py-20 lg:py-24 bg-white"
+    >
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Section Header */}
+        <div className={`text-center mb-12 md:mb-16 transition-all duration-700 ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-[#1a1a1a] mb-4" style={{ fontFamily: "'Poppins', sans-serif" }}>
+            Como Funciona o Ciclo Completo
+          </h2>
+          <p className="text-lg md:text-xl text-[#1a1a1a]/70">
+            4 passos simples para sua transformação
+          </p>
+        </div>
+
+        {/* Passos Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          {passos.map((passo, index) => {
+            const IconComponent = passo.icon;
+            const isLast = index === passos.length - 1;
+            
+            return (
+              <div
+                key={passo.numero}
+                className={`
+                  relative bg-white rounded-xl p-6 shadow-md border border-gray-100
+                  transition-all duration-500 ease-out
+                  hover:-translate-y-2 hover:shadow-xl
+                  ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}
+                `}
+                style={{ transitionDelay: isInView ? `${index * 150}ms` : '0ms' }}
+              >
+                {/* Arrow (desktop, not on last item) */}
+                {!isLast && (
+                  <div className="hidden lg:flex absolute -right-3 top-1/2 -translate-y-1/2 z-10">
+                    <ArrowRight className="w-6 h-6 text-gray-300" />
+                  </div>
+                )}
+
+                {/* Número */}
+                <div 
+                  className="w-14 h-14 rounded-full flex items-center justify-center mb-4"
+                  style={{ backgroundColor: passo.cor }}
+                >
+                  <span 
+                    className="text-white font-bold text-2xl"
+                    style={{ fontFamily: "'Poppins', sans-serif" }}
+                  >
+                    {passo.numero}
+                  </span>
+                </div>
+
+                {/* Icon */}
+                <div 
+                  className="w-12 h-12 rounded-lg flex items-center justify-center mb-4"
+                  style={{ backgroundColor: `${passo.cor}10` }}
+                >
+                  <IconComponent className="w-6 h-6" style={{ color: passo.cor }} />
+                </div>
+
+                {/* Title */}
+                <h3 
+                  className="text-lg font-semibold text-[#1a1a1a] mb-2"
+                  style={{ fontFamily: "'Poppins', sans-serif" }}
+                >
+                  {passo.titulo}
+                </h3>
+
+                {/* Description */}
+                <p className="text-sm text-[#1a1a1a]/70 leading-relaxed mb-3">
+                  {passo.descricao}
+                </p>
+
+                {/* Tempo */}
+                <p 
+                  className="text-xs font-medium"
+                  style={{ color: passo.cor }}
+                >
+                  ⏱ {passo.tempo}
+                </p>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+  );
+};
+
 const CicloCompleto = () => {
   useEffect(() => {
     // SEO Meta Tags
@@ -792,14 +1114,17 @@ const CicloCompleto = () => {
       
       {/* SEÇÃO 5: RITUAIS SIMBÓLICOS */}
       <Section5Rituais />
+
+      {/* SEÇÃO 6, 7 e 8: DEPOIMENTOS + PARA QUEM + COMO FUNCIONA ✅ COMPLETA */}
       
-      {/* SEÇÃO 6: DEPOIMENTOS + TRANSFORMAÇÃO (será adicionada aqui) */}
+      {/* SEÇÃO 6: DEPOIMENTOS + TRANSFORMAÇÃO */}
+      <Section6Depoimentos />
       
-      {/* SEÇÃO 6: DEPOIMENTOS + TRANSFORMAÇÃO (será adicionada aqui) */}
+      {/* SEÇÃO 7: PARA QUEM É */}
+      <Section7ParaQuem />
       
-      {/* SEÇÃO 7: PARA QUEM É (será adicionada aqui) */}
-      
-      {/* SEÇÃO 8: COMO FUNCIONA (será adicionada aqui) */}
+      {/* SEÇÃO 8: COMO FUNCIONA */}
+      <Section8ComoFunciona />
       
       {/* SEÇÃO 9: COMPARAÇÃO (será adicionada aqui) */}
       
