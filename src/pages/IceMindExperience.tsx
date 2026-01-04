@@ -624,7 +624,7 @@ const IceMindExperience = () => {
                 asChild
               >
                 <a 
-                  href="https://api.whatsapp.com/send?phone=5516996008849" 
+                  href="https://api.whatsapp.com/send?phone=5516996008849&text=Ol%C3%A1!%20Quero%20mais%20informa%C3%A7%C3%B5es%20sobre%20o%20Ice%20Mind%20Experience" 
                   target="_blank" 
                   rel="noopener noreferrer"
                 >
