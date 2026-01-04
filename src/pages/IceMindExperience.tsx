@@ -92,6 +92,110 @@ const IceMindExperience = () => {
         </div>
       </section>
 
+      {/* Seção: Relatos Pessoais do Instagram */}
+      <section className="py-20 md:py-32 bg-gray-50">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-5xl font-bold text-[#3D3D3D] mb-4">
+              Quem Já Viveu, <span className="text-[#E8933D]">Recomenda.</span>
+            </h2>
+            <p className="text-xl text-[#3D3D3D]/70">
+              Relatos reais de quem passou pela experiência Ice Mind.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            {/* Instagram Embed 1 */}
+            <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
+              <blockquote 
+                className="instagram-media w-full" 
+                data-instgrm-permalink="https://www.instagram.com/reel/DEaTTV8xfED/"
+                data-instgrm-version="14"
+                style={{ 
+                  background: '#FFF', 
+                  border: 0, 
+                  borderRadius: '16px', 
+                  margin: 0, 
+                  maxWidth: '100%', 
+                  minWidth: '280px', 
+                  padding: 0, 
+                  width: '100%' 
+                }}
+              >
+                <a 
+                  href="https://www.instagram.com/reel/DEaTTV8xfED/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center p-8 text-[#2C5F6F] hover:text-[#E8933D] transition-colors"
+                >
+                  <Instagram className="w-8 h-8 mr-2" />
+                  Ver no Instagram
+                </a>
+              </blockquote>
+            </div>
+
+            {/* Instagram Embed 2 */}
+            <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
+              <blockquote 
+                className="instagram-media w-full" 
+                data-instgrm-permalink="https://www.instagram.com/reel/DGaiAB1xgt4/"
+                data-instgrm-version="14"
+                style={{ 
+                  background: '#FFF', 
+                  border: 0, 
+                  borderRadius: '16px', 
+                  margin: 0, 
+                  maxWidth: '100%', 
+                  minWidth: '280px', 
+                  padding: 0, 
+                  width: '100%' 
+                }}
+              >
+                <a 
+                  href="https://www.instagram.com/reel/DGaiAB1xgt4/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center p-8 text-[#2C5F6F] hover:text-[#E8933D] transition-colors"
+                >
+                  <Instagram className="w-8 h-8 mr-2" />
+                  Ver no Instagram
+                </a>
+              </blockquote>
+            </div>
+
+            {/* Instagram Embed 3 */}
+            <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
+              <blockquote 
+                className="instagram-media w-full" 
+                data-instgrm-permalink="https://www.instagram.com/reel/DCehwwgRx_I/"
+                data-instgrm-version="14"
+                style={{ 
+                  background: '#FFF', 
+                  border: 0, 
+                  borderRadius: '16px', 
+                  margin: 0, 
+                  maxWidth: '100%', 
+                  minWidth: '280px', 
+                  padding: 0, 
+                  width: '100%' 
+                }}
+              >
+                <a 
+                  href="https://www.instagram.com/reel/DCehwwgRx_I/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center p-8 text-[#2C5F6F] hover:text-[#E8933D] transition-colors"
+                >
+                  <Instagram className="w-8 h-8 mr-2" />
+                  Ver no Instagram
+                </a>
+              </blockquote>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
       {/* Section 2: Os Guias */}
       <section className="py-20 md:py-32 bg-[#2C5F6F]">
         <div className="container mx-auto px-6">
@@ -425,139 +529,6 @@ const IceMindExperience = () => {
               ))}
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* Seção: Relatos Pessoais do Instagram */}
-      <section className="py-20 md:py-32 bg-gray-50">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold text-[#3D3D3D] mb-4">
-              Quem Já Viveu, <span className="text-[#E8933D]">Recomenda.</span>
-            </h2>
-            <p className="text-xl text-[#3D3D3D]/70">
-              Relatos reais de quem passou pela experiência Ice Mind.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
-            {/* Instagram Embed 1 */}
-            <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
-              <blockquote 
-                className="instagram-media w-full" 
-                data-instgrm-permalink="https://www.instagram.com/p/DHRAzBbRQwV/"
-                data-instgrm-version="14"
-                style={{ 
-                  background: '#FFF', 
-                  border: 0, 
-                  borderRadius: '16px', 
-                  margin: 0, 
-                  maxWidth: '100%', 
-                  minWidth: '280px', 
-                  padding: 0, 
-                  width: '100%' 
-                }}
-              >
-                <a 
-                  href="https://www.instagram.com/p/DHRAzBbRQwV/" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="flex items-center justify-center p-8 text-[#2C5F6F] hover:text-[#E8933D] transition-colors"
-                >
-                  <Instagram className="w-8 h-8 mr-2" />
-                  Ver no Instagram
-                </a>
-              </blockquote>
-            </div>
-
-            {/* Instagram Embed 2 */}
-            <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
-              <blockquote 
-                className="instagram-media w-full" 
-                data-instgrm-permalink="https://www.instagram.com/reel/DIWbaBqxEdS/"
-                data-instgrm-version="14"
-                style={{ 
-                  background: '#FFF', 
-                  border: 0, 
-                  borderRadius: '16px', 
-                  margin: 0, 
-                  maxWidth: '100%', 
-                  minWidth: '280px', 
-                  padding: 0, 
-                  width: '100%' 
-                }}
-              >
-                <a 
-                  href="https://www.instagram.com/reel/DIWbaBqxEdS/" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="flex items-center justify-center p-8 text-[#2C5F6F] hover:text-[#E8933D] transition-colors"
-                >
-                  <Instagram className="w-8 h-8 mr-2" />
-                  Ver no Instagram
-                </a>
-              </blockquote>
-            </div>
-
-            {/* Instagram Embed 3 */}
-            <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
-              <blockquote 
-                className="instagram-media w-full" 
-                data-instgrm-permalink="https://www.instagram.com/reel/DGaiAB1xgt4/"
-                data-instgrm-version="14"
-                style={{ 
-                  background: '#FFF', 
-                  border: 0, 
-                  borderRadius: '16px', 
-                  margin: 0, 
-                  maxWidth: '100%', 
-                  minWidth: '280px', 
-                  padding: 0, 
-                  width: '100%' 
-                }}
-              >
-                <a 
-                  href="https://www.instagram.com/reel/DGaiAB1xgt4/" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="flex items-center justify-center p-8 text-[#2C5F6F] hover:text-[#E8933D] transition-colors"
-                >
-                  <Instagram className="w-8 h-8 mr-2" />
-                  Ver no Instagram
-                </a>
-              </blockquote>
-            </div>
-
-            {/* Instagram Embed 4 */}
-            <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
-              <blockquote 
-                className="instagram-media w-full" 
-                data-instgrm-permalink="https://www.instagram.com/reel/DGZBkS3yPqy/"
-                data-instgrm-version="14"
-                style={{ 
-                  background: '#FFF', 
-                  border: 0, 
-                  borderRadius: '16px', 
-                  margin: 0, 
-                  maxWidth: '100%', 
-                  minWidth: '280px', 
-                  padding: 0, 
-                  width: '100%' 
-                }}
-              >
-                <a 
-                  href="https://www.instagram.com/reel/DGZBkS3yPqy/" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="flex items-center justify-center p-8 text-[#2C5F6F] hover:text-[#E8933D] transition-colors"
-                >
-                  <Instagram className="w-8 h-8 mr-2" />
-                  Ver no Instagram
-                </a>
-              </blockquote>
-            </div>
-          </div>
-
         </div>
       </section>
 
