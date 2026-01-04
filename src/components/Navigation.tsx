@@ -14,6 +14,9 @@ const Navigation = () => {
     name: "Nossa História",
     href: "/nossa-historia"
   }, {
+    name: "Ciclo Completo",
+    href: "/jornada"
+  }, {
     name: "Jornada Propósito",
     href: "/jornada"
   }, {
