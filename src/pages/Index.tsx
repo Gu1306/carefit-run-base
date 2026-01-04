@@ -70,12 +70,12 @@ Viva com equilíbrio.</span>
           </h1>
           
           <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto leading-relaxed font-poppins font-light">
-            Com planos de 12 semanas, transformamos corredores vulneráveis em atletas resilientes — com a ciência, o cuidado e o propósito de quem vive essa jornada na pele.
+            CareFit Run Base é o HUB completo para o corredor. Quer você esteja buscando transformação, reabilitação, recuperação acelerada ou fortalecimento, temos a solução perfeita para sua jornada. Corredores de todos os níveis confiam em nós.
           </p>
           
           <div className="flex justify-center">
             <Button size="lg" className="bg-secondary hover:bg-secondary/90 text-secondary-foreground px-8 py-4 text-lg font-montserrat font-semibold" onClick={handleWhatsApp}>
-              Agende sua Primeira Sessão
+              Descubra Sua Solução Ideal
             </Button>
           </div>
         </div>
