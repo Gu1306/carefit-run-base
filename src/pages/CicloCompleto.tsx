@@ -1471,39 +1471,65 @@ const Section12CTAFinal = () => {
       }}
     >
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        {/* Headline */}
-        <h2 
+        {/* BLOCO 1: Headline + Gancho Emocional */}
+        <div 
           className={`
-            text-2xl md:text-4xl font-semibold text-white mb-4 md:mb-6
+            mb-8 md:mb-12
             transition-all duration-700
             ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}
           `}
-          style={{ fontFamily: "'Poppins', sans-serif" }}
         >
-          Seu Legado Merece Proteção Completa
-        </h2>
+          <h2 
+            className="text-2xl sm:text-3xl md:text-4xl font-semibold text-white mb-4 md:mb-6"
+            style={{ fontFamily: "'Poppins', sans-serif" }}
+          >
+            Seu Legado Merece Proteção Completa
+          </h2>
+          <p className="text-base md:text-lg text-white/90 max-w-2xl mx-auto leading-relaxed">
+            Você investiu meses de treino, dedicação e sacrifício.<br />
+            <span className="text-white font-medium">Uma lesão séria pode tirar tudo isso de você.</span>
+          </p>
+        </div>
 
-        {/* Description */}
+        {/* BLOCO 2: Card de Preço */}
         <div 
           className={`
-            text-sm md:text-base text-white/90 max-w-2xl mx-auto mb-8 md:mb-10 leading-relaxed space-y-4
+            bg-black/20 backdrop-blur-sm rounded-2xl p-6 md:p-10 max-w-xl mx-auto mb-8 md:mb-12 border border-white/10
             transition-all duration-700 delay-100
             ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}
           `}
         >
-          <p>
-            Você investiu meses. Você se dedicou. Você abriu mão de coisas. <span className="text-[#d4af37] font-semibold">Você merece chegar 100%.</span>
+          <p 
+            className="text-4xl md:text-5xl font-bold text-[#d4af37] mb-2"
+            style={{ fontFamily: "'Poppins', sans-serif" }}
+          >
+            R$ 5.400
           </p>
-          <p>
-            Não deixe sua jornada ao acaso. Não corra o risco de uma lesão séria. Não perca as férias que sua esposa tirou. Não deixe seu legado incompleto.
+          <p className="text-base md:text-lg text-white mb-6">
+            em até 6x de R$ 900
           </p>
-          <p>
-            <strong className="text-[#d4af37]">R$ 5.400</strong> em 12 semanas de proteção integral. Equipe de especialistas. Segurança máxima. Legado garantido.
-          </p>
-          <p className="text-lg md:text-xl font-semibold">
-            Você merece curtir cada passo e deixar sua marca.
-          </p>
+          
+          <div className="border-t border-white/20 pt-6 space-y-3">
+            <p className="text-white font-medium text-base md:text-lg">
+              12 semanas de proteção integral
+            </p>
+            <p className="text-white/70 text-sm md:text-base">
+              Equipe de 4 especialistas • Segurança máxima • Legado garantido
+            </p>
+          </div>
         </div>
+
+        {/* BLOCO 3: Frase de Fechamento */}
+        <p 
+          className={`
+            text-lg md:text-2xl font-semibold text-white italic max-w-2xl mx-auto mb-10 md:mb-12
+            transition-all duration-700 delay-150
+            ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}
+          `}
+          style={{ fontFamily: "'Poppins', sans-serif" }}
+        >
+          "Você merece curtir cada passo e deixar sua marca."
+        </p>
 
         {/* CTA Buttons */}
         <div 
