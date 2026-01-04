@@ -68,9 +68,12 @@ const IceMindExperience = () => {
             
             {/* Event Info Badges */}
             <div className="flex flex-wrap items-center justify-center gap-3 md:gap-4 mb-8">
-              <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2">
-                <Calendar className="w-4 h-4 md:w-5 md:h-5 text-[#E8933D]" />
-                <span className="text-white text-sm md:text-base font-medium">18 de Janeiro de 2026</span>
+              <div className="flex flex-col items-center gap-1 bg-white/10 backdrop-blur-sm rounded-2xl px-4 py-3">
+                <div className="flex items-center gap-2">
+                  <Calendar className="w-4 h-4 md:w-5 md:h-5 text-[#E8933D]" />
+                  <span className="text-white text-sm md:text-base font-medium">18 de Janeiro de 2026</span>
+                </div>
+                <span className="text-white/70 text-xs md:text-sm">Domingo! Venha começar um domingo diferente</span>
               </div>
               <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2">
                 <Clock className="w-4 h-4 md:w-5 md:h-5 text-[#E8933D]" />
@@ -656,6 +659,7 @@ const IceMindExperience = () => {
                 <div>
                   <p className="text-sm text-[#3D3D3D]/60 font-medium">Data do Evento</p>
                   <p className="text-lg font-bold text-[#3D3D3D]">18 de Janeiro de 2026</p>
+                  <p className="text-sm text-[#E8933D] font-medium">Domingo! Venha começar um domingo diferente</p>
                 </div>
               </div>
               
