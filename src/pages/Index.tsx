@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { useNavigate } from "react-router-dom";
-import { Heart, Zap, Target, Users, MapPin, Calendar, Star, Award, Clock, CheckCircle } from "lucide-react";
+import { Heart, Zap, Target, Users, MapPin, Calendar, Star, Award, Clock, CheckCircle, Sparkles, Activity, Utensils, Dumbbell, Timer, Stethoscope } from "lucide-react";
 import { AnimatedCounter } from "@/components/AnimatedCounter";
 import espaco1 from "@/assets/espaco-1.jpg";
 import espaco2 from "@/assets/espaco-2.jpg";
@@ -109,6 +109,142 @@ Viva com equilíbrio.</span>
                   <p className="text-earth font-poppins text-sm font-medium">{pilar.produtos}</p>
                 </CardContent>
               </Card>)}
+          </div>
+        </div>
+      </section>
+
+      {/* Nossas 6 Soluções */}
+      <section className="py-20 bg-warm">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-montserrat font-bold text-primary mb-6">
+              Nossas 6 Soluções Complementares para Cada Etapa da Sua Jornada
+            </h2>
+            <p className="text-xl text-primary/80 max-w-4xl mx-auto font-poppins">
+              Na CareFit Run Base, entendemos que cada corredor tem necessidades únicas. Por isso, desenvolvemos um portfólio de produtos que trabalham juntos para sua transformação completa.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Jornada Propósito */}
+            <Card className="group bg-white border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 flex flex-col">
+              <CardContent className="p-8 flex flex-col flex-1">
+                <div className="w-16 h-16 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <Sparkles className="h-8 w-8 text-white" />
+                </div>
+                <h3 className="text-2xl font-montserrat font-bold text-primary mb-4">Jornada Propósito</h3>
+                <p className="text-primary/70 font-poppins leading-relaxed mb-4 flex-1">
+                  Uma imersão de 12 semanas para redefinir sua corrida. Transformação completa com metodologia exclusiva, acompanhamento integrado e suporte em todos os 4 pilares.
+                </p>
+                <div className="space-y-2 mb-6">
+                  <p className="text-secondary font-montserrat font-semibold text-sm">✓ Transformação completa e estruturada</p>
+                  <p className="text-primary/60 font-poppins text-sm">Ideal para: Corredores que buscam mudança profunda e duradoura</p>
+                </div>
+                <Button className="w-full bg-primary hover:bg-primary/90 text-white font-montserrat font-semibold" onClick={handleWhatsApp}>
+                  Iniciar Jornada Propósito
+                </Button>
+              </CardContent>
+            </Card>
+
+            {/* Reabilitação */}
+            <Card className="group bg-white border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 flex flex-col">
+              <CardContent className="p-8 flex flex-col flex-1">
+                <div className="w-16 h-16 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <Stethoscope className="h-8 w-8 text-white" />
+                </div>
+                <h3 className="text-2xl font-montserrat font-bold text-primary mb-4">Reabilitação</h3>
+                <p className="text-primary/70 font-poppins leading-relaxed mb-4 flex-1">
+                  Lesionado? Nossa equipe de fisioterapeutas especializados em corrida cria planos personalizados de reabilitação focados em sua recuperação rápida e segura, voltando a correr sem dor.
+                </p>
+                <div className="space-y-2 mb-6">
+                  <p className="text-secondary font-montserrat font-semibold text-sm">✓ Recuperação de lesões com especialistas</p>
+                  <p className="text-primary/60 font-poppins text-sm">Ideal para: Corredores em processo de reabilitação</p>
+                </div>
+                <Button className="w-full bg-primary hover:bg-primary/90 text-white font-montserrat font-semibold" onClick={handleWhatsApp}>
+                  Agendar Avaliação de Reabilitação
+                </Button>
+              </CardContent>
+            </Card>
+
+            {/* Jornada Recovery */}
+            <Card className="group bg-white border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 flex flex-col">
+              <CardContent className="p-8 flex flex-col flex-1">
+                <div className="w-16 h-16 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <Heart className="h-8 w-8 text-white" />
+                </div>
+                <h3 className="text-2xl font-montserrat font-bold text-primary mb-4">Jornada Recovery</h3>
+                <p className="text-primary/70 font-poppins leading-relaxed mb-4 flex-1">
+                  Sessão de 60 minutos 100% acompanhado por nossos fisioterapeutas. Utilizamos todas as técnicas disponíveis: imersão no gelo, ofuro quente, exercícios terapêuticos, eletroterapia, dry needling, liberação miofascial, ventosas, ultrassom, laserterapia e eletroestimulação.
+                </p>
+                <div className="space-y-2 mb-6">
+                  <p className="text-secondary font-montserrat font-semibold text-sm">✓ Recuperação completa e personalizada</p>
+                  <p className="text-primary/60 font-poppins text-sm">Ideal para: Corredores que buscam recuperação profunda e customizada</p>
+                </div>
+                <Button className="w-full bg-primary hover:bg-primary/90 text-white font-montserrat font-semibold" onClick={handleWhatsApp}>
+                  Agendar Jornada Recovery
+                </Button>
+              </CardContent>
+            </Card>
+
+            {/* Fast Recovery */}
+            <Card className="group bg-white border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 flex flex-col">
+              <CardContent className="p-8 flex flex-col flex-1">
+                <div className="w-16 h-16 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <Timer className="h-8 w-8 text-white" />
+                </div>
+                <h3 className="text-2xl font-montserrat font-bold text-primary mb-4">Fast Recovery</h3>
+                <p className="text-primary/70 font-poppins leading-relaxed mb-4 flex-1">
+                  Protocolo padrão de 50 minutos: 10 min de imersão em água gelada (10-15°C), 10 min em ofuro quente (36°C), 15 min de liberação miofascial e 15 min de botinha de compressão. Máxima eficiência em mínimo tempo.
+                </p>
+                <div className="space-y-2 mb-6">
+                  <p className="text-secondary font-montserrat font-semibold text-sm">✓ Recuperação acelerada em 50 minutos</p>
+                  <p className="text-primary/60 font-poppins text-sm">Ideal para: Corredores com agenda apertada que precisam de resultados rápidos</p>
+                </div>
+                <Button className="w-full bg-primary hover:bg-primary/90 text-white font-montserrat font-semibold" onClick={handleWhatsApp}>
+                  Conhecer Fast Recovery
+                </Button>
+              </CardContent>
+            </Card>
+
+            {/* Nutrição para Corredores */}
+            <Card className="group bg-white border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 flex flex-col">
+              <CardContent className="p-8 flex flex-col flex-1">
+                <div className="w-16 h-16 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <Utensils className="h-8 w-8 text-white" />
+                </div>
+                <h3 className="text-2xl font-montserrat font-bold text-primary mb-4">Nutrição para Corredores</h3>
+                <p className="text-primary/70 font-poppins leading-relaxed mb-4 flex-1">
+                  Consultas com nutricionistas especializados em corrida. Plano nutricional personalizado com acompanhamento contínuo via bioimpedância a cada sessão, ajustando sua alimentação conforme sua evolução.
+                </p>
+                <div className="space-y-2 mb-6">
+                  <p className="text-secondary font-montserrat font-semibold text-sm">✓ Nutrição personalizada com acompanhamento contínuo</p>
+                  <p className="text-primary/60 font-poppins text-sm">Ideal para: Corredores que querem otimizar rendimento através da alimentação</p>
+                </div>
+                <Button className="w-full bg-primary hover:bg-primary/90 text-white font-montserrat font-semibold" onClick={handleWhatsApp}>
+                  Agendar Consulta Nutricional
+                </Button>
+              </CardContent>
+            </Card>
+
+            {/* Fortalecimento para Corredores */}
+            <Card className="group bg-white border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 flex flex-col">
+              <CardContent className="p-8 flex flex-col flex-1">
+                <div className="w-16 h-16 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <Dumbbell className="h-8 w-8 text-white" />
+                </div>
+                <h3 className="text-2xl font-montserrat font-bold text-primary mb-4">Fortalecimento para Corredores</h3>
+                <p className="text-primary/70 font-poppins leading-relaxed mb-4 flex-1">
+                  Programa com avaliação presencial completa, testes de evolução a cada 30 dias e planilhas de treino atualizadas semanalmente via app. Base sólida para corrida sem lesões e com mais performance.
+                </p>
+                <div className="space-y-2 mb-6">
+                  <p className="text-secondary font-montserrat font-semibold text-sm">✓ Fortalecimento com acompanhamento científico</p>
+                  <p className="text-primary/60 font-poppins text-sm">Ideal para: Corredores que querem construir força funcional com resultados comprovados</p>
+                </div>
+                <Button className="w-full bg-primary hover:bg-primary/90 text-white font-montserrat font-semibold" onClick={handleWhatsApp}>
+                  Iniciar Programa de Fortalecimento
+                </Button>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
