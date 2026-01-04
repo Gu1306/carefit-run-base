@@ -67,7 +67,7 @@ const IceMindExperience = () => {
             
             <Button 
               size="lg"
-              className="bg-[#E8933D] hover:bg-[#d4832f] text-white text-lg px-10 py-6 rounded-full font-bold shadow-lg shadow-[#E8933D]/30 transition-all hover:scale-105"
+              className="bg-[#E8933D] hover:bg-[#d4832f] text-white text-sm md:text-lg px-6 md:px-10 py-5 md:py-6 rounded-full font-bold shadow-lg shadow-[#E8933D]/30 transition-all hover:scale-105"
               asChild
             >
               <a
@@ -78,7 +78,7 @@ const IceMindExperience = () => {
                 }}
               >
                 GARANTIR MINHA VAGA POR R$299
-                <ArrowRight className="ml-2 h-5 w-5" />
+                <ArrowRight className="ml-2 h-4 w-4 md:h-5 md:w-5" />
               </a>
             </Button>
           </div>
