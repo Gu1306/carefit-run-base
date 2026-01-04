@@ -17,22 +17,26 @@ const Index = () => {
     icon: Heart,
     title: "Recovery",
     subtitle: "Recuperar também é treinar",
-    description: "Técnicas avançadas de recuperação muscular e prevenção de lesões para manter você sempre em movimento."
+    description: "Técnicas avançadas de recuperação muscular e prevenção de lesões para manter você sempre em movimento.",
+    produtos: "Presente em: Jornada Recovery, Fast Recovery, Imersão no Gelo"
   }, {
     icon: Zap,
     title: "Fortalecimento",
     subtitle: "Base forte, corrida sem dor",
-    description: "Fortalecimento específico para corredores, focando nos grupos musculares essenciais para performance."
+    description: "Fortalecimento específico para corredores, focando nos grupos musculares essenciais para performance.",
+    produtos: "Presente em: Fortalecimento para Corredores, Jornada Propósito"
   }, {
     icon: Target,
     title: "Nutrição",
     subtitle: "Combustível para a performance",
-    description: "Orientação nutricional especializada para otimizar seu rendimento e acelerar a recuperação."
+    description: "Orientação nutricional especializada para otimizar seu rendimento e acelerar a recuperação.",
+    produtos: "Presente em: Todos os produtos"
   }, {
     icon: Users,
     title: "Mente",
     subtitle: "Foco, consistência, superação",
-    description: "Suporte psicológico e mental para desenvolver a mentalidade vencedora do corredor de alta performance."
+    description: "Suporte psicológico e mental para desenvolver a mentalidade vencedora do corredor de alta performance.",
+    produtos: "Presente em: Jornada Propósito"
   }];
   const numeros = [{
     numero: 167,
@@ -86,10 +90,10 @@ Viva com equilíbrio.</span>
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-montserrat font-bold text-primary mb-6">
-              Onde prevenção encontra performance
+              Os 4 Pilares que Sustentam Todos os Nossos Produtos
             </h2>
             <p className="text-xl text-primary/80 max-w-3xl mx-auto font-poppins">
-              Nossos 4 pilares de cuidado integrado para corredores
+              Cada solução que oferecemos é construída sobre estes pilares fundamentais. Independentemente do produto escolhido, você recebe cuidado integrado em todas as dimensões.
             </p>
           </div>
 
@@ -101,7 +105,8 @@ Viva com equilíbrio.</span>
                   </div>
                   <h3 className="text-2xl font-montserrat font-bold text-primary mb-2">{pilar.title}</h3>
                   <p className="text-secondary font-montserrat font-semibold mb-4">{pilar.subtitle}</p>
-                  <p className="text-primary/70 font-poppins leading-relaxed">{pilar.description}</p>
+                  <p className="text-primary/70 font-poppins leading-relaxed mb-3">{pilar.description}</p>
+                  <p className="text-earth font-poppins text-sm font-medium">{pilar.produtos}</p>
                 </CardContent>
               </Card>)}
           </div>
