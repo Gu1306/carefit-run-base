@@ -814,26 +814,26 @@ const Section7ParaQuem = () => {
   const perfis = [
     {
       icon: Target,
-      titulo: "Você tem um Grande Projeto",
-      descricao: "Prova internacional, maratona importante, meta pessoal ambiciosa? Esse ciclo garante que você chegue 100% preparado. Sem dor, com performance, com segurança. Investimento em você mesmo.",
+      titulo: "Você Tem um Grande Projeto",
+      descricao: "Maratona, ultramaratona, prova importante, meta pessoal ambiciosa. Você investiu meses. Você merece proteção completa para chegar 100% e deixar seu legado.",
       cor: "#e67e22",
     },
     {
-      icon: Footprints,
-      titulo: "Você está começando",
-      descricao: "Quer correr com segurança desde o início? Esse ciclo constrói sua base sólida para evitar lesões comuns de iniciantes.",
+      icon: Heart,
+      titulo: "Você Quer Curtir a Jornada",
+      descricao: "Não é apenas chegar. É aproveitar cada passo, cada treino, cada momento. Cuidado integral garante que você curta sem dor, sem medo, sem lesão.",
       cor: "#1a7a7a",
     },
     {
       icon: Shield,
-      titulo: "Você sofre com lesões",
-      descricao: "Cansado de ciclos de dor? Esse ciclo reabilita, fortalece e previne. Você volta a correr sem medo.",
+      titulo: "Você Não Quer Perder Tudo",
+      descricao: "Você investiu tempo, esforço, dedicação. Uma lesão séria tira tudo. Você merece uma equipe que cuida de você integralmente.",
       cor: "#1a7a7a",
     },
     {
-      icon: TrendingUp,
-      titulo: "Você quer evoluir",
-      descricao: "Pronto para 10K, 21K ou 42K? Esse ciclo prepara seu corpo e mente para o próximo nível.",
+      icon: Trophy,
+      titulo: "Você Busca Legado",
+      descricao: "Não é apenas uma prova. É uma realização pessoal que marca sua vida. Você merece chegar completo, saudável, pronto para deixar sua marca.",
       cor: "#e67e22",
     },
   ];
@@ -959,11 +959,11 @@ const Section8ComoFunciona = () => {
 
         {/* Contexto Adicional */}
         <div className={`text-center mb-10 transition-all duration-700 delay-100 ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-          <h3 className="text-xl sm:text-2xl font-semibold text-[#1a1a1a] mb-3" style={{ fontFamily: "'Poppins', sans-serif" }}>
-            Seu Ciclo Começa Agora
+          <h3 className="text-lg md:text-2xl font-semibold text-[#1a1a1a] mb-3" style={{ fontFamily: "'Poppins', sans-serif" }}>
+            Seu Ciclo de Proteção
           </h3>
-          <p className="text-base md:text-lg text-[#1a1a1a]/70 max-w-2xl mx-auto">
-            Você tem um grande projeto em vista. Aqui está como a gente te prepara para chegar 100%:
+          <p className="text-sm md:text-base text-[#1a1a1a]/70 max-w-2xl mx-auto">
+            Você tem um grande projeto. Aqui está como a gente te protege para que você chegue 100%, curta cada passo e deixe seu legado:
           </p>
         </div>
 
@@ -1248,11 +1248,11 @@ const Section10Investimento = () => {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className={`text-center mb-10 md:mb-12 transition-all duration-700 ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-white mb-4" style={{ fontFamily: "'Poppins', sans-serif" }}>
-            Seu Investimento em Transformação
+          <h2 className="text-2xl md:text-[32px] font-semibold text-white mb-4" style={{ fontFamily: "'Poppins', sans-serif" }}>
+            Seu Investimento em Proteção
           </h2>
-          <p className="text-lg md:text-xl text-white/80">
-            Tudo que você precisa para se transformar
+          <p className="text-sm md:text-base text-white/80">
+            Proteção integral para seu maior investimento pessoal
           </p>
         </div>
 
@@ -1308,12 +1308,25 @@ const Section10Investimento = () => {
             </div>
 
             {/* Contexto de Investimento */}
-            <div className="mt-8 pt-6 border-t border-white/20 text-center max-w-2xl mx-auto">
+            <div className="mt-8 pt-6 border-t border-white/20 text-center max-w-2xl mx-auto space-y-3">
               <p className="text-white/90 text-sm leading-relaxed">
-                Você investiu meses de treino, dedicação, sacrifício. Uma lesão séria tira tudo.
+                Você investiu meses de treino.
+              </p>
+              <p className="text-white/90 text-sm leading-relaxed">
+                Você investiu dedicação e sacrifício.
+              </p>
+              <p className="text-white/90 text-sm leading-relaxed">
+                Você investiu emoção e esperança.
               </p>
               <p className="text-white font-semibold text-base mt-4">
-                Nós cuidamos de você integralmente para que você chegue 100%, curta cada passo e deixe seu legado.
+                R$ 5.400 não é um custo. É proteção.
+              </p>
+              <p className="text-white/80 text-sm leading-relaxed mt-2">
+                É a garantia de que você chega 100% preparado. Sem lesão séria. Sem medicação. 
+                Sem perder as férias que sua esposa tirou. Sem deixar seu legado incompleto.
+              </p>
+              <p className="text-[#d4af37] font-semibold text-base mt-4">
+                R$ 5.400 é o preço de curtir sua jornada e deixar sua marca.
               </p>
             </div>
           </div>
