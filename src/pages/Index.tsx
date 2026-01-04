@@ -147,10 +147,10 @@ Viva com equilíbrio.</span>
                     allowFullScreen
                   />
                 </div>
-                <h4 className="text-xl font-montserrat font-bold text-earth mb-2">Thais</h4>
+                <h4 className="text-xl font-montserrat font-bold text-earth mb-2">Thais Vignini</h4>
                 <p className="text-lg font-montserrat font-semibold mb-3">Desafio Disney Wine & Dine</p>
                 <p className="text-white/80 font-poppins text-sm leading-relaxed">
-                  A jornada de Thais rumo ao desafio Disney Wine & Dine, superando limites com o suporte da CAREFIT.
+                  A jornada de Thais Vignini rumo ao desafio Disney Wine & Dine, superando limites com o suporte da CAREFIT.
                 </p>
               </div>
 
@@ -165,10 +165,10 @@ Viva com equilíbrio.</span>
                     allowFullScreen
                   />
                 </div>
-                <h4 className="text-xl font-montserrat font-bold text-earth mb-2">Talita</h4>
+                <h4 className="text-xl font-montserrat font-bold text-earth mb-2">Talita Kriunas</h4>
                 <p className="text-lg font-montserrat font-semibold mb-3">Meia Maratona de Lisboa 2025</p>
                 <p className="text-white/80 font-poppins text-sm leading-relaxed">
-                  Talita conquistou as ruas de Lisboa na Meia Maratona 2025, uma jornada de preparação e superação.
+                  Talita Kriunas conquistou as ruas de Lisboa na Meia Maratona 2025, uma jornada de preparação e superação.
                 </p>
               </div>
 
