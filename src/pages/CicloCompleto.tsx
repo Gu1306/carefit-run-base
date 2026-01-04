@@ -272,7 +272,7 @@ const Section4Semanas = () => {
       isRitual: false,
       descricao: "O início da sua transformação. Avaliação completa, definição de metas e preparação do corpo para o que vem pela frente.",
       atividades: "Avaliação física completa, análise de pisada, definição do plano personalizado",
-      especialista: "Gustavo (Fisioterapeuta)",
+      especialista: "Gustavo (Ultramaratonista e Fundador)",
       resultado: "Baseline definido, metas claras, corpo preparado para evoluir",
     },
     {
@@ -290,7 +290,7 @@ const Section4Semanas = () => {
       isRitual: false,
       descricao: "Expandindo sua capacidade respiratória e resistência. Foco em eficiência cardiorrespiratória.",
       atividades: "Treinos intervalados, técnicas de respiração, nutrição para performance",
-      especialista: "Lívia (Nutricionista)",
+      especialista: "Lívia (Fisioterapeuta)",
       resultado: "Maior resistência, recuperação mais rápida entre esforços",
     },
     {
@@ -328,7 +328,7 @@ const Section4Semanas = () => {
       isRitual: false,
       descricao: "Aumentando a intensidade. Seu corpo está pronto para desafios maiores.",
       atividades: "Treinos de velocidade, recovery intensivo, ajuste nutricional",
-      especialista: "Gustavo (Fisioterapeuta)",
+      especialista: "Gustavo (Ultramaratonista e Fundador)",
       resultado: "Velocidade aumentada, técnica aprimorada",
     },
     {
@@ -365,7 +365,7 @@ const Section4Semanas = () => {
       isRitual: false,
       descricao: "Refinando os detalhes. Ajustes finais para garantir que você cruze a linha de chegada no seu melhor.",
       atividades: "Tapering, ajustes técnicos, preparação mental final",
-      especialista: "Gustavo (Fisioterapeuta)",
+      especialista: "Gustavo (Ultramaratonista e Fundador)",
       resultado: "Detalhes refinados, pronto para a conquista",
     },
     {
@@ -530,7 +530,7 @@ const Section5Rituais = () => {
       icon: Trophy,
       titulo: "Mural dos Corredores",
       semana: "Semana 12 - Linha de Chegada",
-      descricao: "Seu nome é eternizado. Kit conquista que marca o fim de um ciclo e o início de outro.",
+      descricao: "Seu nome é eternizado. Kit Conquista que marca o fim de um ciclo e o início de outro.",
       significado: "Celebração. Comunidade. Legado.",
       cor: "#1a7a7a",
     },
@@ -662,8 +662,8 @@ const Section6Depoimentos = () => {
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-[#1a1a1a] mb-4" style={{ fontFamily: "'Poppins', sans-serif" }}>
             Histórias de Transformação Real
           </h2>
-          <p className="text-lg md:text-xl text-[#1a1a1a]/70">
-            Corredores que mudaram de vida
+          <p className="text-base md:text-lg text-[#1a1a1a]/70 max-w-2xl mx-auto">
+            Corredores que tinham grandes projetos. Que investiram em cuidado. Que chegaram preparados.
           </p>
         </div>
 
@@ -1038,8 +1038,14 @@ const Section9Comparacao = () => {
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-[#1a1a1a] mb-4" style={{ fontFamily: "'Poppins', sans-serif" }}>
             Por Que o Ciclo Completo é a Melhor Escolha
           </h2>
-          <p className="text-lg md:text-xl text-[#1a1a1a]/70">
+          <p className="text-lg md:text-xl text-[#1a1a1a]/70 mb-4">
             Comparação com outras abordagens
+          </p>
+          <p className="text-sm md:text-base text-[#1a1a1a]/70 max-w-3xl mx-auto mb-2">
+            Você pode treinar sozinho. Você pode ir a uma clínica genérica. Ou você pode ter uma equipe integrada de especialistas em corrida, focada em preparar você para seus maiores desafios.
+          </p>
+          <p className="text-base font-semibold text-[#1a1a1a]">
+            Veja a diferença:
           </p>
         </div>
 
@@ -1378,21 +1384,27 @@ const Section12CTAFinal = () => {
           `}
           style={{ fontFamily: "'Poppins', sans-serif" }}
         >
-          Sua Transformação Começa Agora
+          Seu Grande Projeto Merece Preparação Completa
         </h2>
 
         {/* Description */}
-        <p 
+        <div 
           className={`
-            text-base sm:text-lg md:text-xl text-white/85 max-w-2xl mx-auto mb-8 md:mb-10 leading-relaxed
+            text-base sm:text-lg md:text-xl text-white/90 max-w-2xl mx-auto mb-8 md:mb-10 leading-relaxed space-y-4
             transition-all duration-700 delay-100
             ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}
           `}
         >
-          Não espere mais dor. Não espere mais lesão. Não espere mais incerteza.
-          <br className="hidden sm:block" />
-          Você tem uma equipe de especialistas pronta para construir a base que falta.
-        </p>
+          <p>
+            Você vai investir <strong className="text-white">R$ 20 mil</strong> em uma prova. Você vai dedicar meses de treino. Você vai abrir mão de coisas. <span className="text-[#d4af37] font-semibold">Não abra mão de cuidado.</span>
+          </p>
+          <p>
+            <strong className="text-[#d4af37]">R$ 5.400</strong> em 12 semanas de acompanhamento integral. Equipe de especialistas. Segurança máxima. Performance máxima.
+          </p>
+          <p className="text-xl font-semibold">
+            Seu projeto merece você 100% preparado.
+          </p>
+        </div>
 
         {/* CTA Buttons */}
         <div 
