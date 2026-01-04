@@ -60,17 +60,15 @@ const Espaco = () => {
             </p>
           </div>
           
-          <div className="max-w-4xl mx-auto">
-            <div className="relative aspect-video bg-primary/10 rounded-2xl overflow-hidden shadow-xl flex items-center justify-center">
-              {/* Placeholder para vídeo - substitua pelo embed real */}
-              <div className="text-center">
-                <div className="w-20 h-20 bg-secondary rounded-full flex items-center justify-center mx-auto mb-4 cursor-pointer hover:scale-110 transition-transform">
-                  <Play className="w-10 h-10 text-secondary-foreground ml-1" />
-                </div>
-                <p className="text-primary/70 font-poppins">
-                  Vídeo em breve
-                </p>
-              </div>
+          <div className="max-w-md mx-auto">
+            <div className="relative aspect-[9/16] bg-primary/10 rounded-2xl overflow-hidden shadow-xl">
+              <iframe
+                src="https://www.youtube.com/embed/xMb880cHHM0"
+                title="Conheça o CareFit Run Base"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="w-full h-full"
+              />
             </div>
           </div>
         </div>
