@@ -2,9 +2,13 @@ import { Button } from "@/components/ui/button";
 import { Brain, Snowflake, Users, CheckCircle, AlertTriangle, Target, Heart, Zap, ArrowRight, Instagram } from "lucide-react";
 import nataliaFoto from "@/assets/natalia_foto.jpg";
 import gustavoFoto from "@/assets/gustavo_foto.jpg";
+import { CountdownTimer } from "@/components/CountdownTimer";
 
 const IceMindExperience = () => {
   const agendamentoLink = "https://calendar.google.com/calendar/appointments/schedules/AcZssZ2npLe6qCUpbwJTGStwst0pzCITxu_FuSzFO5QwrZ7_iP4JlY5pVfxbZ-prFUTT_moZve7sqC00?gv=true";
+  
+  // Data do evento: 18 de Janeiro de 2026 às 08:00
+  const eventDate = new Date("2026-01-18T08:00:00");
 
   return (
     <div className="min-h-screen">
@@ -33,10 +37,12 @@ const IceMindExperience = () => {
               para destravar seu verdadeiro potencial mental. Porque a evolução nunca para.
             </p>
             
-            <p className="text-lg text-white/60 mb-10 max-w-2xl mx-auto">
+            <p className="text-lg text-white/60 mb-8 max-w-2xl mx-auto">
               Você já sentiu que sua mente é o seu maior limitador? Que o estresse te controla? 
               Que você tem potencial mas não consegue acessá-lo? Você não está sozinho. E há um caminho.
             </p>
+            
+            <CountdownTimer targetDate={eventDate} />
             
             <Button 
               size="lg"
@@ -50,7 +56,7 @@ const IceMindExperience = () => {
                   document.getElementById("agendamento")?.scrollIntoView({ behavior: "smooth", block: "start" });
                 }}
               >
-                AGENDAR MINHA IMERSÃO
+                GARANTIR MINHA VAGA POR R$299
                 <ArrowRight className="ml-2 h-5 w-5" />
               </a>
             </Button>
