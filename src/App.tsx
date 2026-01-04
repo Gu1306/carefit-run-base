@@ -15,6 +15,7 @@ import Comunidade from "./pages/Comunidade";
 import Contato from "./pages/Contato";
 import Agendar from "./pages/Agendar";
 import IceMindExperience from "./pages/IceMindExperience";
+import NossaHistoria from "./pages/NossaHistoria";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -38,6 +39,7 @@ const App = () => (
           <Route path="/contato" element={<Contato />} />
           <Route path="/agendar" element={<Agendar />} />
           <Route path="/ice-mind-experience" element={<IceMindExperience />} />
+          <Route path="/nossa-historia" element={<NossaHistoria />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
