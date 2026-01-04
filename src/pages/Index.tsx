@@ -18,7 +18,7 @@ const Index = () => {
     title: "Recovery",
     subtitle: "Recuperar também é treinar",
     description: "Técnicas avançadas de recuperação muscular e prevenção de lesões para manter você sempre em movimento.",
-    produtos: "Presente em: Jornada Recovery, Fast Recovery, Imersão no Gelo"
+    produtos: "Presente em: Todos os produtos"
   }, {
     icon: Zap,
     title: "Fortalecimento",
@@ -30,7 +30,7 @@ const Index = () => {
     title: "Nutrição",
     subtitle: "Combustível para a performance",
     description: "Orientação nutricional especializada para otimizar seu rendimento e acelerar a recuperação.",
-    produtos: "Presente em: Todos os produtos"
+    produtos: "Presente em: Nutrição, Jornada Propósito"
   }, {
     icon: Users,
     title: "Mente",
