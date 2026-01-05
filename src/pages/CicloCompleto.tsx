@@ -709,98 +709,87 @@ const Section5Rituais = () => {
   );
 };
 
-// SEÇÃO 6: DEPOIMENTOS + TRANSFORMAÇÃO
+// SEÇÃO 6: DEPOIMENTOS DE QUEM VIVEU A TRANSFORMAÇÃO
 const Section6Depoimentos = () => {
   const { ref, isInView } = useInView(0.2);
-
-  const depoimentos = [
-    {
-      nome: "Carlos Silva",
-      resultado: "Corria com dor nas costas. Agora corro 21K sem medo.",
-      citacao: "A equipe me mostrou que cuidado não é fraqueza, é inteligência.",
-      especialista: "Liderado por Lívia (Fisioterapia)",
-      iniciais: "CS",
-    },
-    {
-      nome: "Marina Santos",
-      resultado: "Voltei a correr após 2 anos parada por lesão.",
-      citacao: "Cada semana eu sentia a mudança. Não era só treino, era transformação.",
-      especialista: "Liderado por Gustavo (Transformação)",
-      iniciais: "MS",
-    },
-    {
-      nome: "Roberto Almeida",
-      resultado: "Melhorei meu tempo em 8 minutos no 10K.",
-      citacao: "Nunca imaginei que fortalecimento e nutrição fariam tanta diferença.",
-      especialista: "Liderado por Guilherme e Arthur (Força + Nutrição)",
-      iniciais: "RA",
-    },
-  ];
 
   return (
     <section 
       ref={ref}
-      className="py-16 md:py-20 lg:py-24 bg-white"
+      className="py-16 md:py-20 lg:py-24 bg-primary text-white"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className={`text-center mb-12 md:mb-16 transition-all duration-700 ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-[#1a1a1a] mb-4" style={{ fontFamily: "'Poppins', sans-serif" }}>
-            Histórias de Transformação Real
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-montserrat font-bold mb-4">
+            Depoimentos de quem viveu a transformação
           </h2>
-          <p className="text-sm md:text-base text-[#1a1a1a]/70 max-w-2xl mx-auto">
-            Corredores que tinham grandes projetos. Que investiram em proteção. Que chegaram 100% e deixaram seu legado.
-          </p>
         </div>
 
-        {/* Depoimentos Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {depoimentos.map((depo, index) => (
-            <div
-              key={depo.nome}
-              className={`
-                bg-white rounded-xl p-6 shadow-md border-2 border-[#e67e22]/30
-                transition-all duration-500 ease-out
-                hover:-translate-y-2 hover:shadow-xl hover:border-[#e67e22]
-                ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}
-              `}
-              style={{ transitionDelay: isInView ? `${index * 150}ms` : '0ms' }}
-            >
-              {/* Avatar Placeholder */}
-              <div className="flex items-center gap-4 mb-5">
-                <div 
-                  className="w-16 h-16 rounded-full flex items-center justify-center text-white font-bold text-xl"
-                  style={{ backgroundColor: "#1a7a7a" }}
-                >
-                  {depo.iniciais}
-                </div>
-                <div>
-                  <h3 
-                    className="font-semibold text-[#1a1a1a]"
-                    style={{ fontFamily: "'Poppins', sans-serif" }}
-                  >
-                    {depo.nome}
-                  </h3>
-                  <p className="text-sm font-semibold" style={{ color: "#1a7a7a" }}>
-                    {depo.resultado}
-                  </p>
-                </div>
-              </div>
-
-              {/* Citação */}
-              <div className="relative mb-4">
-                <Quote className="w-8 h-8 text-[#e67e22]/20 absolute -top-2 -left-1" />
-                <p className="text-sm text-[#1a1a1a]/70 italic pl-6 leading-relaxed">
-                  "{depo.citacao}"
-                </p>
-              </div>
-
-              {/* Especialista */}
-              <p className="text-xs font-medium" style={{ color: "#e67e22" }}>
-                {depo.especialista}
-              </p>
+        {/* Depoimentos Grid com Vídeos */}
+        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          {/* Thais */}
+          <div 
+            className={`bg-white/10 backdrop-blur-sm rounded-2xl p-6 hover:bg-white/20 transition-all duration-300 ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+            style={{ transitionDelay: isInView ? '0ms' : '0ms' }}
+          >
+            <div className="aspect-video w-full mb-4 rounded-xl overflow-hidden shadow-lg">
+              <iframe
+                src="https://www.youtube.com/embed/62WMUc35hbo"
+                title="Thais - Desafio Disney Wine & Dine"
+                className="w-full h-full"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
             </div>
-          ))}
+            <h4 className="text-xl font-montserrat font-bold text-earth mb-2">Thais Vignini</h4>
+            <p className="text-lg font-montserrat font-semibold mb-3">Desafio Disney Wine & Dine</p>
+            <p className="text-white/80 font-poppins text-sm leading-relaxed">
+              A jornada de Thais Vignini rumo ao desafio Disney Wine & Dine, superando limites com o suporte da CAREFIT.
+            </p>
+          </div>
+
+          {/* Talita */}
+          <div 
+            className={`bg-white/10 backdrop-blur-sm rounded-2xl p-6 hover:bg-white/20 transition-all duration-300 ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+            style={{ transitionDelay: isInView ? '150ms' : '0ms' }}
+          >
+            <div className="aspect-video w-full mb-4 rounded-xl overflow-hidden shadow-lg">
+              <iframe
+                src="https://www.youtube.com/embed/lbfcs-QlmDE"
+                title="Talita - Meia Maratona de Lisboa 2025"
+                className="w-full h-full"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
+            </div>
+            <h4 className="text-xl font-montserrat font-bold text-earth mb-2">Talita Kriunas</h4>
+            <p className="text-lg font-montserrat font-semibold mb-3">Meia Maratona de Lisboa 2025</p>
+            <p className="text-white/80 font-poppins text-sm leading-relaxed">
+              Talita Kriunas conquistou as ruas de Lisboa na Meia Maratona 2025, uma jornada de preparação e superação.
+            </p>
+          </div>
+
+          {/* Léo Andrade */}
+          <div 
+            className={`bg-white/10 backdrop-blur-sm rounded-2xl p-6 hover:bg-white/20 transition-all duration-300 ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+            style={{ transitionDelay: isInView ? '300ms' : '0ms' }}
+          >
+            <div className="aspect-video w-full mb-4 rounded-xl overflow-hidden shadow-lg">
+              <iframe
+                src="https://www.youtube.com/embed/XF8N96nULVg"
+                title="Léo Andrade - Meia Maratona do Rio 2025"
+                className="w-full h-full"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
+            </div>
+            <h4 className="text-xl font-montserrat font-bold text-earth mb-2">Léo Andrade</h4>
+            <p className="text-lg font-montserrat font-semibold mb-3">Meia Maratona do Rio 2025</p>
+            <p className="text-white/80 font-poppins text-sm leading-relaxed">
+              Léo compartilha sua experiência na Meia Maratona do Rio 2025, transformando desafios em conquistas.
+            </p>
+          </div>
         </div>
       </div>
     </section>
