@@ -1704,24 +1704,47 @@ const CicloCompleto = () => {
             Sua Jornada é Seu Legado
           </p>
 
-          {/* Description */}
-          <div className="text-sm md:text-base text-white/90 max-w-3xl mx-auto mb-10 leading-relaxed space-y-4">
-            <p>
-              Você treinou meses. Você se dedicou. Você abriu mão de coisas. 
-              Você investiu tempo, esforço e emoção em um grande projeto pessoal.
+          {/* BLOCO 1: Contexto Emocional */}
+          <p className="text-sm md:text-base text-white/85 max-w-xl mx-auto mb-6 leading-relaxed animate-fade-in">
+            Você treinou meses. Você se dedicou. Você abriu mão de coisas. 
+            Você investiu tempo, esforço e emoção em um grande projeto pessoal.
+          </p>
+
+          {/* BLOCO 2: Alerta - Card Semi-Transparente */}
+          <div 
+            className="bg-black/25 backdrop-blur-sm rounded-lg px-5 py-4 md:px-6 md:py-5 max-w-xl mx-auto mb-6 border-l-[3px] animate-fade-in"
+            style={{ 
+              borderLeftColor: "#e67e22",
+              animationDelay: "100ms"
+            }}
+          >
+            <p className="text-white font-semibold text-base md:text-lg mb-2">
+              Uma lesão séria tira tudo.
             </p>
-            <p>
-              <strong className="text-white">Uma lesão séria tira tudo.</strong> Você perde as férias que sua esposa tirou. 
-              Você corre medicado. Você perde o que construiu.
-            </p>
-            <p>
-              Nós cuidamos de você integralmente. Fisioterapia, fortalecimento, nutrição e mentalidade integrados. 
-              <strong className="text-[#d4af37]"> 12 semanas de proteção completa.</strong>
-            </p>
-            <p className="text-lg md:text-xl font-semibold text-white">
-              Você chega 100%. Você curte cada passo. Você deixa seu legado.
+            <p className="text-white/80 text-sm md:text-base leading-relaxed">
+              Você perde as férias que sua esposa tirou. Você corre medicado. Você perde o que construiu.
             </p>
           </div>
+
+          {/* BLOCO 3: Solução */}
+          <p 
+            className="text-sm md:text-base text-white/85 max-w-xl mx-auto mb-8 leading-relaxed animate-fade-in"
+            style={{ animationDelay: "200ms" }}
+          >
+            Nós cuidamos de você integralmente. Fisioterapia, fortalecimento, nutrição e mentalidade integrados.{" "}
+            <strong className="text-[#d4af37] font-semibold">12 semanas de proteção completa.</strong>
+          </p>
+
+          {/* BLOCO 4: Frase de Impacto */}
+          <p 
+            className="text-base md:text-xl font-semibold text-white max-w-md mx-auto mb-10 leading-snug animate-fade-in"
+            style={{ 
+              fontFamily: "'Poppins', sans-serif",
+              animationDelay: "300ms"
+            }}
+          >
+            Você chega 100%. Você curte cada passo. Você deixa seu legado.
+          </p>
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
