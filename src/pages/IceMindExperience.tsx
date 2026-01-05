@@ -45,7 +45,8 @@ const IceMindExperience = () => {
               </span>
             </div>
             
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">Onde a Mente Encontra Seu Limite - e o Ultrapassa.<span className="text-[#E8933D]">E o Ultrapassa.</span>
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
+              Onde a Mente Encontra Seu Limite - <span className="text-[#E8933D]">e o Ultrapassa.</span>
             </h1>
             
             <p className="text-xl md:text-2xl text-white/80 mb-8 max-w-3xl mx-auto leading-relaxed">
@@ -53,7 +54,7 @@ const IceMindExperience = () => {
               para destravar seu verdadeiro potencial mental. Porque a evolução nunca para.
             </p>
             
-            <p className="text-lg text-white/60 mb-8 max-w-2xl mx-auto">Você já sentiu que sua mente é o seu maior limitador? Que o estresse te controla? Que você tem potencial mas não consegue acessá-lo? Você não está sozinho - e existe um caminho. Um caminho de volta para o controle, para a presença e para a sua melhor versão.
+            <p className="text-lg text-white/60 mb-8 max-w-2xl mx-auto">Você já sentiu que sua mente é o seu maior limitador? Que o estresse te controla? Que você tem potencial mas não consegue acessá-lo? Você não está sozinho - e existe um caminho. Um caminho de volta para o controle, para a presença e para a sua melhor versão.
 
           </p>
             
