@@ -2099,7 +2099,7 @@ const CicloCompleto = () => {
               Uma lesão séria tira tudo.
             </p>
             <p className="text-white/80 text-sm md:text-base leading-relaxed">
-              Você perde as férias que sua esposa tirou. Você corre medicado. Você perde o que construiu.
+              Você se frustra por ter lesionado no final do ciclo. Você corre medicado. Você perde o que construiu.
             </p>
           </div>
 
