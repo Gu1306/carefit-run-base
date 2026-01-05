@@ -56,7 +56,7 @@ const Section2Diferenciais = () => {
     {
       icon: Heart,
       title: "Equipe Interdisciplinar",
-      description: "Não você sozinho. Você com fisioterapeuta, educador físico, nutricionista e especialista em mentalidade. Todos conversando, alinhados, trabalhando para você.",
+      description: "Você não estará sozinho. Você estará com fisioterapeuta, educador físico, nutricionista e especialista em mentalidade. Todos conversando, alinhados, trabalhando para você.",
       color: "#1a7a7a",
     },
     {
