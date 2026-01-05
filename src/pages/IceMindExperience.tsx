@@ -5,10 +5,9 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import nataliaFoto from "@/assets/natalia_foto.jpg";
 import gustavoFoto from "@/assets/gustavo_foto.jpg";
 import { CountdownTimer } from "@/components/CountdownTimer";
-
 const IceMindExperience = () => {
   const agendamentoLink = "https://calendar.google.com/calendar/appointments/schedules/AcZssZ2npLe6qCUpbwJTGStwst0pzCITxu_FuSzFO5QwrZ7_iP4JlY5pVfxbZ-prFUTT_moZve7sqC00?gv=true";
-  
+
   // Data do evento: 18 de Janeiro de 2026 às 08:00
   const eventDate = new Date("2026-01-18T08:00:00");
 
@@ -18,22 +17,18 @@ const IceMindExperience = () => {
     script.src = "https://www.instagram.com/embed.js";
     script.async = true;
     document.body.appendChild(script);
-    
     script.onload = () => {
       if ((window as any).instgrm) {
         (window as any).instgrm.Embeds.process();
       }
     };
-
     return () => {
       if (document.body.contains(script)) {
         document.body.removeChild(script);
       }
     };
   }, []);
-
-  return (
-    <div className="min-h-screen">
+  return <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-[#2C5F6F] via-[#1e4a58] to-[#163842] overflow-hidden">
         {/* Background Pattern */}
@@ -50,8 +45,7 @@ const IceMindExperience = () => {
               </span>
             </div>
             
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-              Onde a Mente Encontra Seu Limite. <span className="text-[#E8933D]">E o Ultrapassa.</span>
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">Onde a Mente Encontra Seu Limite - E o Ultrapassa.<span className="text-[#E8933D]">E o Ultrapassa.</span>
             </h1>
             
             <p className="text-xl md:text-2xl text-white/80 mb-8 max-w-3xl mx-auto leading-relaxed">
@@ -59,10 +53,9 @@ const IceMindExperience = () => {
               para destravar seu verdadeiro potencial mental. Porque a evolução nunca para.
             </p>
             
-            <p className="text-lg text-white/60 mb-8 max-w-2xl mx-auto">
-              Você já sentiu que sua mente é o seu maior limitador? Que o estresse te controla? 
-              Que você tem potencial mas não consegue acessá-lo? Você não está sozinho. E há um caminho.
-            </p>
+            <p className="text-lg text-white/60 mb-8 max-w-2xl mx-auto">Você já sentiu que sua mente é o seu maior limitador? Que o estresse te controla? Que você tem potencial mas não consegue acessá-lo? Você não está sozinho - e existe um caminho. Um caminho de volta para o controle, para a presença e para a sua melhor versão.
+
+          </p>
             
             <CountdownTimer targetDate={eventDate} />
             
@@ -85,18 +78,14 @@ const IceMindExperience = () => {
               </div>
             </div>
             
-            <Button
-              size="lg"
-              className="bg-[#E8933D] hover:bg-[#d4832f] text-white text-sm md:text-lg px-6 md:px-10 py-5 md:py-6 rounded-full font-bold shadow-lg shadow-[#E8933D]/30 transition-all hover:scale-105"
-              asChild
-            >
-              <a
-                href="#agendamento"
-                onClick={(e) => {
-                  e.preventDefault();
-                  document.getElementById("agendamento")?.scrollIntoView({ behavior: "smooth", block: "start" });
-                }}
-              >
+            <Button size="lg" className="bg-[#E8933D] hover:bg-[#d4832f] text-white text-sm md:text-lg px-6 md:px-10 py-5 md:py-6 rounded-full font-bold shadow-lg shadow-[#E8933D]/30 transition-all hover:scale-105" asChild>
+              <a href="#agendamento" onClick={e => {
+              e.preventDefault();
+              document.getElementById("agendamento")?.scrollIntoView({
+                behavior: "smooth",
+                block: "start"
+              });
+            }}>
                 GARANTIR MINHA VAGA POR R$299
                 <ArrowRight className="ml-2 h-4 w-4 md:h-5 md:w-5" />
               </a>
@@ -127,27 +116,17 @@ const IceMindExperience = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
             {/* Instagram Embed 1 */}
             <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
-              <blockquote 
-                className="instagram-media w-full" 
-                data-instgrm-permalink="https://www.instagram.com/reel/DEaTTV8xfED/"
-                data-instgrm-version="14"
-                style={{ 
-                  background: '#FFF', 
-                  border: 0, 
-                  borderRadius: '16px', 
-                  margin: 0, 
-                  maxWidth: '100%', 
-                  minWidth: '280px', 
-                  padding: 0, 
-                  width: '100%' 
-                }}
-              >
-                <a 
-                  href="https://www.instagram.com/reel/DEaTTV8xfED/" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="flex items-center justify-center p-8 text-[#2C5F6F] hover:text-[#E8933D] transition-colors"
-                >
+              <blockquote className="instagram-media w-full" data-instgrm-permalink="https://www.instagram.com/reel/DEaTTV8xfED/" data-instgrm-version="14" style={{
+              background: '#FFF',
+              border: 0,
+              borderRadius: '16px',
+              margin: 0,
+              maxWidth: '100%',
+              minWidth: '280px',
+              padding: 0,
+              width: '100%'
+            }}>
+                <a href="https://www.instagram.com/reel/DEaTTV8xfED/" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center p-8 text-[#2C5F6F] hover:text-[#E8933D] transition-colors">
                   <Instagram className="w-8 h-8 mr-2" />
                   Ver no Instagram
                 </a>
@@ -156,27 +135,17 @@ const IceMindExperience = () => {
 
             {/* Instagram Embed 2 */}
             <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
-              <blockquote 
-                className="instagram-media w-full" 
-                data-instgrm-permalink="https://www.instagram.com/reel/DGaiAB1xgt4/"
-                data-instgrm-version="14"
-                style={{ 
-                  background: '#FFF', 
-                  border: 0, 
-                  borderRadius: '16px', 
-                  margin: 0, 
-                  maxWidth: '100%', 
-                  minWidth: '280px', 
-                  padding: 0, 
-                  width: '100%' 
-                }}
-              >
-                <a 
-                  href="https://www.instagram.com/reel/DGaiAB1xgt4/" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="flex items-center justify-center p-8 text-[#2C5F6F] hover:text-[#E8933D] transition-colors"
-                >
+              <blockquote className="instagram-media w-full" data-instgrm-permalink="https://www.instagram.com/reel/DGaiAB1xgt4/" data-instgrm-version="14" style={{
+              background: '#FFF',
+              border: 0,
+              borderRadius: '16px',
+              margin: 0,
+              maxWidth: '100%',
+              minWidth: '280px',
+              padding: 0,
+              width: '100%'
+            }}>
+                <a href="https://www.instagram.com/reel/DGaiAB1xgt4/" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center p-8 text-[#2C5F6F] hover:text-[#E8933D] transition-colors">
                   <Instagram className="w-8 h-8 mr-2" />
                   Ver no Instagram
                 </a>
@@ -185,27 +154,17 @@ const IceMindExperience = () => {
 
             {/* Instagram Embed 3 */}
             <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
-              <blockquote 
-                className="instagram-media w-full" 
-                data-instgrm-permalink="https://www.instagram.com/reel/DCehwwgRx_I/"
-                data-instgrm-version="14"
-                style={{ 
-                  background: '#FFF', 
-                  border: 0, 
-                  borderRadius: '16px', 
-                  margin: 0, 
-                  maxWidth: '100%', 
-                  minWidth: '280px', 
-                  padding: 0, 
-                  width: '100%' 
-                }}
-              >
-                <a 
-                  href="https://www.instagram.com/reel/DCehwwgRx_I/" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="flex items-center justify-center p-8 text-[#2C5F6F] hover:text-[#E8933D] transition-colors"
-                >
+              <blockquote className="instagram-media w-full" data-instgrm-permalink="https://www.instagram.com/reel/DCehwwgRx_I/" data-instgrm-version="14" style={{
+              background: '#FFF',
+              border: 0,
+              borderRadius: '16px',
+              margin: 0,
+              maxWidth: '100%',
+              minWidth: '280px',
+              padding: 0,
+              width: '100%'
+            }}>
+                <a href="https://www.instagram.com/reel/DCehwwgRx_I/" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center p-8 text-[#2C5F6F] hover:text-[#E8933D] transition-colors">
                   <Instagram className="w-8 h-8 mr-2" />
                   Ver no Instagram
                 </a>
@@ -241,12 +200,7 @@ const IceMindExperience = () => {
                 Natalia traz o "porquê". Ela vai te dar o mapa da sua mente, mostrando como seus pensamentos 
                 e crenças moldam sua realidade, especialmente sob pressão. A ciência por trás da transformação.
               </p>
-              <a 
-                href="https://www.instagram.com/psico.nataliagarcia/" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2 text-[#E8933D] hover:text-[#d4832f] transition-colors font-semibold"
-              >
+              <a href="https://www.instagram.com/psico.nataliagarcia/" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 text-[#E8933D] hover:text-[#d4832f] transition-colors font-semibold">
                 <Instagram className="w-5 h-5" />
                 @psico.nataliagarcia
               </a>
@@ -264,12 +218,7 @@ const IceMindExperience = () => {
                 Gustavo traz o "como". Ele viveu na pele o poder do gelo e da respiração para superar limites 
                 que pareciam impossíveis. A experiência que valida a ciência.
               </p>
-              <a 
-                href="https://www.instagram.com/gustavorosa/" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2 text-[#2C5F6F] hover:text-[#1e4a58] transition-colors font-semibold"
-              >
+              <a href="https://www.instagram.com/gustavorosa/" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 text-[#2C5F6F] hover:text-[#1e4a58] transition-colors font-semibold">
                 <Instagram className="w-5 h-5" />
                 @gustavorosa
               </a>
@@ -534,19 +483,10 @@ const IceMindExperience = () => {
             </div>
             
             <div className="grid md:grid-cols-2 gap-6">
-              {[
-                "Atleta buscando o próximo nível de performance mental.",
-                "Profissional que vive sob alta pressão e quer dominar o estresse.",
-                "Pessoa curiosa em busca de autoconhecimento e superação de limites.",
-                "Corredor que sabe que a mente é tão importante quanto o corpo.",
-                "Alguém que quer sair da zona de conforto de forma guiada e segura.",
-                "Quem busca ferramentas práticas para lidar com ansiedade e pressão."
-              ].map((item, index) => (
-                <div key={index} className="flex items-start gap-4 p-4 bg-gray-50 rounded-xl">
+              {["Atleta buscando o próximo nível de performance mental.", "Profissional que vive sob alta pressão e quer dominar o estresse.", "Pessoa curiosa em busca de autoconhecimento e superação de limites.", "Corredor que sabe que a mente é tão importante quanto o corpo.", "Alguém que quer sair da zona de conforto de forma guiada e segura.", "Quem busca ferramentas práticas para lidar com ansiedade e pressão."].map((item, index) => <div key={index} className="flex items-start gap-4 p-4 bg-gray-50 rounded-xl">
                   <CheckCircle className="w-6 h-6 text-[#E8933D] flex-shrink-0 mt-0.5" />
                   <p className="text-[#3D3D3D]">{item}</p>
-                </div>
-              ))}
+                </div>)}
             </div>
           </div>
         </div>
@@ -619,15 +559,8 @@ const IceMindExperience = () => {
 
             <div className="text-center mt-10">
               <p className="text-white/70 mb-4">Ainda tem dúvidas?</p>
-              <Button 
-                className="bg-green-500 hover:bg-green-600 text-white px-8 py-6 rounded-full font-semibold shadow-lg transition-all hover:scale-105"
-                asChild
-              >
-                <a 
-                  href="https://api.whatsapp.com/send?phone=5516996008849&text=Ol%C3%A1!%20Quero%20mais%20informa%C3%A7%C3%B5es%20sobre%20o%20Ice%20Mind%20Experience" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                >
+              <Button className="bg-green-500 hover:bg-green-600 text-white px-8 py-6 rounded-full font-semibold shadow-lg transition-all hover:scale-105" asChild>
+                <a href="https://api.whatsapp.com/send?phone=5516996008849&text=Ol%C3%A1!%20Quero%20mais%20informa%C3%A7%C3%B5es%20sobre%20o%20Ice%20Mind%20Experience" target="_blank" rel="noopener noreferrer">
                   <MessageCircle className="mr-2 h-5 w-5" />
                   Fale Conosco pelo WhatsApp
                 </a>
@@ -686,14 +619,9 @@ const IceMindExperience = () => {
             
             {/* Google Calendar Iframe */}
             <div className="bg-white rounded-2xl shadow-xl p-4 md:p-8">
-              <iframe 
-                src={agendamentoLink}
-                style={{ border: 0 }}
-                width="100%" 
-                height="600" 
-                frameBorder="0"
-                title="Agendamento Ice Mind Experience"
-              />
+              <iframe src={agendamentoLink} style={{
+              border: 0
+            }} width="100%" height="600" frameBorder="0" title="Agendamento Ice Mind Experience" />
             </div>
           </div>
         </div>
@@ -714,36 +642,21 @@ const IceMindExperience = () => {
           </div>
           
           <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8 text-white/40 text-xs">
-            <a 
-              href="https://www.instagram.com/carefitrunbase/" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="flex items-center gap-1 hover:text-[#E8933D] transition-colors"
-            >
+            <a href="https://www.instagram.com/carefitrunbase/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 hover:text-[#E8933D] transition-colors">
               <Instagram className="w-3 h-3" />
               @carefitrunbase
             </a>
             
-            <a 
-              href="mailto:gustavo@coutorosa.com"
-              className="hover:text-[#E8933D] transition-colors"
-            >
+            <a href="mailto:gustavo@coutorosa.com" className="hover:text-[#E8933D] transition-colors">
               gustavo@coutorosa.com
             </a>
             
-            <a 
-              href="https://www.google.com/maps/search/?api=1&query=Av.+%C3%81urea+Aparecida+Bragheto+Machado,+241,+City+Ribeir%C3%A3o,+Ribeir%C3%A3o+Preto+-+SP"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-[#E8933D] transition-colors text-center"
-            >
+            <a href="https://www.google.com/maps/search/?api=1&query=Av.+%C3%81urea+Aparecida+Bragheto+Machado,+241,+City+Ribeir%C3%A3o,+Ribeir%C3%A3o+Preto+-+SP" target="_blank" rel="noopener noreferrer" className="hover:text-[#E8933D] transition-colors text-center">
               Av. Áurea Aparecida Bragheto Machado, 241 - Ribeirão Preto, SP
             </a>
           </div>
         </div>
       </section>
-    </div>
-  );
+    </div>;
 };
-
 export default IceMindExperience;
