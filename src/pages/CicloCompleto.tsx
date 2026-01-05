@@ -1454,8 +1454,396 @@ const Section11EquipeDepoimentos = () => {
   );
 };
 
-// SEÇÃO 12: CTA FINAL
-const Section12CTAFinal = () => {
+// SEÇÃO 12: CIÊNCIA POR TRÁS DA JORNADA
+const Section12Ciencia = () => {
+  const { ref, isInView } = useInView(0.1);
+
+  const statsCards = [
+    {
+      number: "90%",
+      description: "De corredores se lesionam durante preparação",
+      reference: "[1] Franke et al., 2019",
+      link: "https://pubmed.ncbi.nlm.nih.gov/31213161/",
+      borderColor: "#e67e22",
+      bgColor: "#fff8f0",
+    },
+    {
+      number: "1 em 7",
+      description: "Corredores desenvolvem nova lesão",
+      reference: "[1] Franke et al., 2019",
+      link: "https://pubmed.ncbi.nlm.nih.gov/31213161/",
+      borderColor: "#d32f2f",
+      bgColor: "#ffebee",
+    },
+    {
+      number: "40%",
+      description: "De maratonistas se lesionam durante ciclo",
+      reference: "[2] Toresdahl et al., 2023",
+      link: "https://pubmed.ncbi.nlm.nih.gov/36113976/",
+      borderColor: "#e67e22",
+      bgColor: "#fff8f0",
+    },
+    {
+      number: "31,3%",
+      description: "Se lesionam nas 4 últimas semanas",
+      reference: "[3] Gajardo-Burgos et al., 2021",
+      link: "https://pmc.ncbi.nlm.nih.gov/articles/PMC8160869/",
+      borderColor: "#d32f2f",
+      bgColor: "#ffebee",
+    },
+  ];
+
+  const referencias = [
+    {
+      num: "[1]",
+      titulo: "Running Themselves Into the Ground? Incidence, Prevalence, and Impact of Injury and Illness in Runners Preparing for a Half or Full Marathon",
+      periodico: "Journal of Orthopaedic & Sports Physical Therapy",
+      volume: "2019 Jul;49(7):518-528",
+      doi: "10.2519/jospt.2019.8473",
+      pubmed: "https://pubmed.ncbi.nlm.nih.gov/31213161/",
+      doiLink: "https://doi.org/10.2519/jospt.2019.8473",
+      achado: "9 em cada 10 corredores relataram lesão ou sintoma de doença durante 16 semanas pré-prova",
+    },
+    {
+      num: "[2]",
+      titulo: "Injury incidence during marathon training and racing: A prospective study of 1,075 marathon runners using Strava",
+      periodico: "British Journal of Sports Medicine",
+      volume: "2023",
+      doi: "10.1136/bjsports-2022-105670",
+      pubmed: "https://pubmed.ncbi.nlm.nih.gov/36113976/",
+      doiLink: "https://doi.org/10.1136/bjsports-2022-105670",
+      achado: "40% de incidência de lesão durante ciclo; 16% durante ou imediatamente após maratona",
+    },
+    {
+      num: "[3]",
+      titulo: "Injury Incidence and Risk Factors in Trail Runners: A Prospective Cohort Study",
+      periodico: "International Journal of Environmental Research and Public Health",
+      volume: "2021",
+      doi: "10.3390/ijerph18105431",
+      pubmed: "https://pmc.ncbi.nlm.nih.gov/articles/PMC8160869/",
+      doiLink: "https://doi.org/10.3390/ijerph18105431",
+      achado: "31,3% de corredores relataram lesão nas 4 últimas semanas pré-prova",
+    },
+    {
+      num: "[4]",
+      titulo: "The Association Between Changes in Weekly Running Distance and Running-Related Injury: Preparing for a Half Marathon",
+      periodico: "Journal of Orthopaedic & Sports Physical Therapy",
+      volume: "2019 Apr;49(4):230-238",
+      doi: "10.2519/jospt.2019.8541",
+      pubmed: "https://pubmed.ncbi.nlm.nih.gov/30526231/",
+      doiLink: "https://doi.org/10.2519/jospt.2019.8541",
+      achado: "Aumentos de 20-60% na quilometragem semanal aumentam risco; diferença observada em 21 dias",
+    },
+    {
+      num: "[5]",
+      titulo: "Prospective study on training errors as a risk factor for running-related injuries",
+      periodico: "Journal of Orthopaedic & Sports Physical Therapy",
+      volume: "2014",
+      doi: "10.2519/jospt.2014.5164",
+      pubmed: "https://pubmed.ncbi.nlm.nih.gov/25155475/",
+      doiLink: "https://doi.org/10.2519/jospt.2014.5164",
+      achado: "Progressões agressivas em corredores iniciantes aumentam vulnerabilidade a lesões",
+    },
+  ];
+
+  return (
+    <section 
+      ref={ref}
+      className="py-10 md:py-20"
+      style={{ backgroundColor: "#f5f5f5" }}
+    >
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Header */}
+        <div className={`text-center mb-10 md:mb-12 transition-all duration-700 ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+          <h2 
+            className="text-2xl md:text-[32px] font-semibold mb-4"
+            style={{ fontFamily: "'Poppins', sans-serif", color: "#1a1a1a" }}
+          >
+            Ciência por Trás da Jornada
+          </h2>
+          <p className="text-sm md:text-base" style={{ color: "#666666" }}>
+            Estudos comprovam: grandes projetos precisam de proteção integral
+          </p>
+        </div>
+
+        {/* BLOCO 1: O RISCO REAL DE LESÃO */}
+        <div className={`mb-10 md:mb-12 transition-all duration-700 delay-100 ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
+            {/* Coluna Esquerda - Texto */}
+            <div>
+              <h3 
+                className="text-lg md:text-2xl font-semibold mb-4"
+                style={{ fontFamily: "'Poppins', sans-serif", color: "#1a1a1a" }}
+              >
+                9 em cada 10 corredores se lesionam antes da prova
+              </h3>
+              
+              <p className="text-sm mb-4 leading-relaxed" style={{ color: "#333333" }}>
+                Pesquisas científicas mostram que correr para uma maratona ou meia-maratona envolve risco significativo de lesão. Um estudo prospectivo com 161 corredores durante 16 semanas pré-prova revelou dados alarmantes:
+              </p>
+              
+              <ul className="space-y-2 mb-6 text-sm" style={{ color: "#333333" }}>
+                <li className="flex items-start gap-2">
+                  <span className="text-[#1a7a7a] mt-1">•</span>
+                  <span>9 em cada 10 corredores (90%) relataram alguma lesão ou sintoma de doença durante o período de preparação<sup>[1]</sup></span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-[#1a7a7a] mt-1">•</span>
+                  <span>Em qualquer período de 2 semanas, até 1 em 7 corredores (14,8%) desenvolveu uma nova lesão<sup>[1]</sup></span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-[#1a7a7a] mt-1">•</span>
+                  <span>40% dos maratonistas desenvolvem lesão durante o ciclo de preparação<sup>[2]</sup></span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-[#1a7a7a] mt-1">•</span>
+                  <span>31,3% dos corredores relatam lesão nas 4 últimas semanas antes da prova<sup>[3]</sup></span>
+                </li>
+              </ul>
+              
+              {/* Citação */}
+              <blockquote 
+                className="pl-4 py-3 text-sm italic rounded-r-lg"
+                style={{ 
+                  borderLeft: "3px solid #1a7a7a",
+                  backgroundColor: "#f9f9f9",
+                  color: "#555555"
+                }}
+              >
+                "Nine out of every 10 runners reported an RRI or illness symptom in the lead-up to a half or full marathon. In any 2-week period, up to 1 in 7 runners reported a new RRI or illness symptom."
+                <span className="block mt-2 not-italic text-xs" style={{ color: "#1a7a7a" }}>
+                  — Franke et al., 2019<sup>[1]</sup>
+                </span>
+              </blockquote>
+            </div>
+
+            {/* Coluna Direita - 4 Cards */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {statsCards.map((card, index) => (
+                <a
+                  key={card.number}
+                  href={card.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`
+                    block rounded-lg p-6 shadow-sm
+                    transition-all duration-300
+                    hover:-translate-y-1 hover:shadow-lg
+                    ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}
+                  `}
+                  style={{
+                    borderTop: `3px solid ${card.borderColor}`,
+                    backgroundColor: card.bgColor,
+                    transitionDelay: isInView ? `${(index + 1) * 100}ms` : '0ms',
+                  }}
+                >
+                  <p 
+                    className="text-4xl md:text-5xl font-bold mb-2"
+                    style={{ fontFamily: "'Poppins', sans-serif", color: card.borderColor }}
+                  >
+                    {card.number}
+                  </p>
+                  <p className="text-[13px] mb-3" style={{ color: "#1a1a1a" }}>
+                    {card.description}
+                  </p>
+                  <p className="text-[11px] underline" style={{ color: "#1a7a7a" }}>
+                    {card.reference}
+                  </p>
+                </a>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* BLOCO 2: POR QUE AS LESÕES ACONTECEM */}
+        <div className={`mb-10 md:mb-12 transition-all duration-700 delay-200 ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+          <h3 
+            className="text-lg md:text-2xl font-semibold mb-4"
+            style={{ fontFamily: "'Poppins', sans-serif", color: "#1a1a1a" }}
+          >
+            Mudanças no volume de treino aumentam risco de lesão
+          </h3>
+          
+          <p className="text-sm mb-4 leading-relaxed" style={{ color: "#333333" }}>
+            A causa principal de lesões em corredores está relacionada a mudanças inadequadas no volume de treino. Estudos demonstram que aumentos progressivos mal controlados são um fator de risco crítico:
+          </p>
+          
+          <ul className="space-y-2 mb-6 text-sm" style={{ color: "#333333" }}>
+            <li className="flex items-start gap-2">
+              <span className="text-[#1a7a7a] mt-1">•</span>
+              <span>Aumentos de 20-60% na quilometragem semanal aumentam significativamente o risco de lesão<sup>[4]</sup></span>
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="text-[#1a7a7a] mt-1">•</span>
+              <span>A diferença é observada em apenas 21 dias após o aumento inadequado<sup>[4]</sup></span>
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="text-[#1a7a7a] mt-1">•</span>
+              <span>Progressões agressivas em corredores iniciantes aumentam vulnerabilidade a lesões relacionadas à distância<sup>[5]</sup></span>
+            </li>
+          </ul>
+          
+          {/* Citação */}
+          <blockquote 
+            className="pl-4 py-3 text-sm italic rounded-r-lg mb-6"
+            style={{ 
+              borderLeft: "3px solid #1a7a7a",
+              backgroundColor: "#f9f9f9",
+              color: "#555555"
+            }}
+          >
+            "More injuries occurred when the distance increased 20–60% (difference observed already with 21 days)."
+            <span className="block mt-2 not-italic text-xs" style={{ color: "#1a7a7a" }}>
+              — Damsted et al., 2019<sup>[4]</sup>
+            </span>
+          </blockquote>
+          
+          <p className="text-sm font-semibold" style={{ color: "#d32f2f" }}>
+            O Problema: Muitos corredores treinam sozinhos ou com acompanhamento genérico, sem monitoramento semanal de volume, recuperação e ajustes individualizados.
+          </p>
+        </div>
+
+        {/* BLOCO 3: COMO O CICLO COMPLETO PROTEGE VOCÊ */}
+        <div className={`mb-10 md:mb-12 transition-all duration-700 delay-300 ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+          <h3 
+            className="text-lg md:text-2xl font-semibold mb-4"
+            style={{ fontFamily: "'Poppins', sans-serif", color: "#1a1a1a" }}
+          >
+            Como o Ciclo Completo Protege Você
+          </h3>
+          
+          <p className="text-sm mb-6 leading-relaxed" style={{ color: "#333333" }}>
+            O Ciclo Completo implementa práticas baseadas em evidências científicas para minimizar risco de lesão:
+          </p>
+          
+          {/* 3 Subseções */}
+          <div className="space-y-6">
+            {/* Subseção 1 */}
+            <div className="flex gap-3">
+              <span className="text-2xl">👁️</span>
+              <div>
+                <h4 
+                  className="text-base font-semibold mb-2"
+                  style={{ fontFamily: "'Poppins', sans-serif", color: "#1a1a1a" }}
+                >
+                  1. Monitoramento Semanal (Prevenção)
+                </h4>
+                <p className="text-sm leading-relaxed" style={{ color: "#333333" }}>
+                  Avaliações físicas contínuas detectam sinais de sobrecarga antes de lesão grave. Ajustes semanais no plano de treino baseados em resposta individual. Controle rigoroso de progressão de volume.
+                </p>
+              </div>
+            </div>
+            
+            {/* Subseção 2 */}
+            <div className="flex gap-3">
+              <span className="text-2xl">🤝</span>
+              <div>
+                <h4 
+                  className="text-base font-semibold mb-2"
+                  style={{ fontFamily: "'Poppins', sans-serif", color: "#1a1a1a" }}
+                >
+                  2. Equipe Interdisciplinar (Integração)
+                </h4>
+                <ul className="text-sm space-y-1.5" style={{ color: "#333333" }}>
+                  <li><strong>Fisioterapeuta:</strong> Detecta e trata compensações e desequilíbrios</li>
+                  <li><strong>Educador Físico:</strong> Garante progressão segura e periodização adequada</li>
+                  <li><strong>Nutricionista:</strong> Otimiza recuperação e resiliência do corpo</li>
+                  <li><strong>Especialista em Mentalidade:</strong> Gerencia fadiga psicológica e stress</li>
+                </ul>
+              </div>
+            </div>
+            
+            {/* Subseção 3 */}
+            <div className="flex gap-3">
+              <span className="text-2xl">💪</span>
+              <div>
+                <h4 
+                  className="text-base font-semibold mb-2"
+                  style={{ fontFamily: "'Poppins', sans-serif", color: "#1a1a1a" }}
+                >
+                  3. Recovery Estratégico (Recuperação)
+                </h4>
+                <p className="text-sm leading-relaxed" style={{ color: "#333333" }}>
+                  12 sessões de recovery personalizadas durante as 12 semanas. Técnicas de liberação miofascial, crioterapia, compressão. Protocolos adaptados ao estado de fadiga individual.
+                </p>
+              </div>
+            </div>
+          </div>
+          
+          <p 
+            className="text-sm font-semibold mt-6"
+            style={{ fontFamily: "'Poppins', sans-serif", color: "#1a7a7a" }}
+          >
+            Resultado Esperado: Redução significativa de risco de lesão séria, permitindo que você chegue 100% preparado na prova.
+          </p>
+        </div>
+
+        {/* REFERÊNCIAS CIENTÍFICAS */}
+        <div className={`transition-all duration-700 delay-400 ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+          <h4 
+            className="text-lg font-semibold mb-6"
+            style={{ fontFamily: "'Poppins', sans-serif", color: "#1a1a1a" }}
+          >
+            Referências Científicas
+          </h4>
+          
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+            {referencias.map((ref, index) => (
+              <div 
+                key={ref.num}
+                className="p-4 rounded-lg bg-white shadow-sm"
+              >
+                <div className="flex items-start gap-2 mb-2">
+                  <span 
+                    className="text-sm font-semibold"
+                    style={{ fontFamily: "'Poppins', sans-serif", color: "#1a7a7a" }}
+                  >
+                    {ref.num}
+                  </span>
+                  <p 
+                    className="text-[13px] font-semibold leading-tight"
+                    style={{ color: "#1a1a1a" }}
+                  >
+                    {ref.titulo}
+                  </p>
+                </div>
+                <p className="text-xs mb-2" style={{ color: "#666666" }}>
+                  {ref.periodico} • {ref.volume}
+                </p>
+                <div className="flex flex-wrap gap-3 mb-2">
+                  <a 
+                    href={ref.pubmed}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[11px] underline hover:opacity-70 transition-opacity"
+                    style={{ color: "#1a7a7a" }}
+                  >
+                    PubMed
+                  </a>
+                  <a 
+                    href={ref.doiLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[11px] underline hover:opacity-70 transition-opacity"
+                    style={{ color: "#1a7a7a" }}
+                  >
+                    DOI: {ref.doi}
+                  </a>
+                </div>
+                <p className="text-xs italic" style={{ color: "#333333" }}>
+                  {ref.achado}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+// SEÇÃO 13: CTA FINAL
+const Section13CTAFinal = () => {
   const { ref, isInView } = useInView(0.2);
 
   const openWhatsApp = () => {
@@ -1828,8 +2216,11 @@ const CicloCompleto = () => {
       {/* SEÇÃO 11: DEPOIMENTOS DE EQUIPE */}
       <Section11EquipeDepoimentos />
       
-      {/* SEÇÃO 12: CTA FINAL */}
-      <Section12CTAFinal />
+      {/* SEÇÃO 12: CIÊNCIA POR TRÁS DA JORNADA */}
+      <Section12Ciencia />
+      
+      {/* SEÇÃO 13: CTA FINAL */}
+      <Section13CTAFinal />
 
       {/* PÁGINA COMPLETA ✅ PRONTA PARA PRODUÇÃO */}
     </main>
