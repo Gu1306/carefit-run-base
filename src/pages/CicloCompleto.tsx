@@ -155,7 +155,7 @@ const SectionRiscos = () => {
     {
       icon: "🏖️",
       title: "Férias Perdidas",
-      description: "Sua esposa tirou férias para te acompanhar. Uma lesão tira tudo. Você perde o momento que planejou juntos.",
+      description: "Você e sua família tiraram férias para viajar, correr e te acompanhar. Uma lesão tira tudo. Você perde o momento que planejaram juntos.",
     },
     {
       icon: "❌",
