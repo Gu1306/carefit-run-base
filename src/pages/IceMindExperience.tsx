@@ -45,7 +45,7 @@ const IceMindExperience = () => {
               </span>
             </div>
             
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">Onde a Mente Encontra Seu Limite - E o Ultrapassa.<span className="text-[#E8933D]">E o Ultrapassa.</span>
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">Onde a Mente Encontra Seu Limite - e o Ultrapassa.<span className="text-[#E8933D]">E o Ultrapassa.</span>
             </h1>
             
             <p className="text-xl md:text-2xl text-white/80 mb-8 max-w-3xl mx-auto leading-relaxed">
@@ -85,9 +85,7 @@ const IceMindExperience = () => {
                 behavior: "smooth",
                 block: "start"
               });
-            }}>
-                GARANTIR MINHA VAGA POR R$299
-                <ArrowRight className="ml-2 h-4 w-4 md:h-5 md:w-5" />
+            }}>GARANTIR MINHA VAGA POR R$349<ArrowRight className="ml-2 h-4 w-4 md:h-5 md:w-5" />
               </a>
             </Button>
           </div>
