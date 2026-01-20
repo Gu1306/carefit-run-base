@@ -8,8 +8,8 @@ import { CountdownTimer } from "@/components/CountdownTimer";
 const IceMindExperience = () => {
   const agendamentoLink = "https://calendar.google.com/calendar/appointments/schedules/AcZssZ2npLe6qCUpbwJTGStwst0pzCITxu_FuSzFO5QwrZ7_iP4JlY5pVfxbZ-prFUTT_moZve7sqC00?gv=true";
 
-  // Data do evento: 18 de Janeiro de 2026 às 08:00
-  const eventDate = new Date("2026-01-18T08:00:00");
+  // Data do evento: 08 de Fevereiro de 2026 às 08:15
+  const eventDate = new Date("2026-02-08T08:15:00");
 
   // Carrega o script do Instagram para embeds
   useEffect(() => {
@@ -65,13 +65,13 @@ const IceMindExperience = () => {
               <div className="flex flex-col items-center gap-1 bg-white/10 backdrop-blur-sm rounded-2xl px-4 py-3">
                 <div className="flex items-center gap-2">
                   <Calendar className="w-4 h-4 md:w-5 md:h-5 text-[#E8933D]" />
-                  <span className="text-white text-sm md:text-base font-medium">18 de Janeiro de 2026</span>
+                  <span className="text-white text-sm md:text-base font-medium">08 de Fevereiro de 2026</span>
                 </div>
                 <span className="text-white/70 text-xs md:text-sm">Domingo! Venha começar um domingo diferente</span>
               </div>
               <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2">
                 <Clock className="w-4 h-4 md:w-5 md:h-5 text-[#E8933D]" />
-                <span className="text-white text-sm md:text-base font-medium">2 Horas de Imersão</span>
+                <span className="text-white text-sm md:text-base font-medium">08:15 às 10:30 (2h15 de Imersão)</span>
               </div>
               <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2">
                 <Users className="w-4 h-4 md:w-5 md:h-5 text-[#E8933D]" />
