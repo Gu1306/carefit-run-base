@@ -18,6 +18,7 @@ import Agendar from "./pages/Agendar";
 import IceMindExperience from "./pages/IceMindExperience";
 import NossaHistoria from "./pages/NossaHistoria";
 import EnvioResultados from "./pages/EnvioResultados";
+import CareFitCast from "./pages/CareFitCast";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
