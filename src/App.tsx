@@ -44,6 +44,7 @@ const App = () => (
           <Route path="/ice-mind-experience" element={<IceMindExperience />} />
           <Route path="/nossa-historia" element={<NossaHistoria />} />
           <Route path="/envio-resultados" element={<EnvioResultados />} />
+          <Route path="/carefit-cast" element={<CareFitCast />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

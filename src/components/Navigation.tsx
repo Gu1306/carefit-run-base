@@ -26,6 +26,9 @@ const Navigation = () => {
     name: "Comunidade",
     href: "/comunidade"
   }, {
+    name: "CareFit Cast",
+    href: "/carefit-cast"
+  }, {
     name: "Contato",
     href: "/contato"
   }];
