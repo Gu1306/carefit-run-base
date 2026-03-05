@@ -15,47 +15,63 @@ type Episode = {
 };
 
 const episodes: Episode[] = [
+  // ↓ O PRIMEIRO da lista é sempre o destaque. Para adicionar um novo episódio,
+  //   basta colar um novo objeto aqui no TOPO do array.
   {
-    youtubeId: "yrBfsMZm8cU",
-    title: "Episódio 1 — Anderson Varejão e a jornada do esporte",
-    guest: "Anderson Varejão",
+    youtubeId: "3WPQLAiSl1w",
+    title: "EP 08 — Série Assessorias de RP – Triple Assessoria com Murilo Bredariol",
+    guest: "Murilo Bredariol",
     description:
-      "Uma conversa inspiradora com o atleta Anderson Varejão sobre disciplina, superação e a importância da recuperação no esporte de alto rendimento.",
+      "Uma conversa profunda sobre triathlon, ciência do treinamento e construção de performance. Murilo Bredariol, fundador da Triple Assessoria, compartilha sua jornada desde a natação até a criação de uma das assessorias mais respeitadas de Ribeirão Preto.",
   },
   {
-    youtubeId: "LjpRmaiBn6E",
-    title: "Episódio 2 — Marcos Paulo e a corrida de rua",
-    guest: "Marcos Paulo",
+    youtubeId: "OpRJlI_ZMgA",
+    title: "EP 07 — Série Assessorias de RP – EBTT Team",
+    guest: "Ronaldo Pereira, Miguel Junio e Lilian Vidal",
     description:
-      "Marcos Paulo compartilha sua experiência como corredor e treinador, falando sobre treino inteligente, prevenção de lesões e mentalidade.",
+      "Uma conversa sobre triathlon, treinamento, mentalidade e a construção de performance no esporte de endurance.",
   },
   {
-    youtubeId: "4fndeDfaWCg",
-    title: "Episódio 3 — Nutrição para corredores de endurance",
-    guest: "Especialista em Nutrição",
+    youtubeId: "_r-g3onMDpk",
+    title: "EP 06 — Correr por tempo vs correr para terminar",
+    guest: "Livia Dias, Rafael Paiva e Gustavo Garbelline",
     description:
-      "Tudo sobre alimentação estratégica para quem corre: periodização nutricional, suplementação e hidratação.",
+      "Uma reflexão profunda sobre propósito na corrida e o equilíbrio entre performance e prazer no esporte.",
   },
   {
-    youtubeId: "7uEBuOP1maI",
-    title: "Episódio 4 — Recovery: por que recuperar é treinar",
-    guest: "Equipe CareFit",
+    youtubeId: "nFXn32dLPcs",
+    title: "EP 05 — Série Assessorias de RP – Fun Sports com Eduardo Visentini",
+    guest: "Eduardo Visentini",
     description:
-      "Entenda como crioterapia, botas de compressão e liberação miofascial impactam diretamente na sua performance.",
+      "A história da criação da Fun Sports e a filosofia de treinamento que já impactou mais de mil corredores em Ribeirão Preto.",
   },
   {
-    youtubeId: "sRh5TfVVmKY",
-    title: "Episódio 5 — Fortalecimento específico para corredores",
-    guest: "Profissional de Educação Física",
+    youtubeId: "3VLhoyIVGYs",
+    title: "EP 04 — Jornada Propósito – Como 3 profissionais transformam corredores em 12 semanas",
+    guest: "Time CareFit — Lívia Dias, Guilherme Coelho, Artur Angelotti e Gustavo Rosa",
     description:
-      "Quais exercícios realmente fazem diferença para o corredor? Descubra neste episódio focado em fortalecimento.",
+      "Um episódio especial explicando como nutrição, fortalecimento e fisioterapia integrados transformam a jornada de corredores.",
   },
   {
-    youtubeId: "r-BLalDe1LY",
-    title: "Episódio 6 — Mentalidade e consistência na corrida",
-    guest: "Psicólogo Esportivo",
+    youtubeId: "tyI3dm4QJJc",
+    title: "EP 03 — Da aversão ao esporte às 3 maratonas em 1 ano – Juliana Vinha",
+    guest: "Juliana Vinha",
     description:
-      "O papel da mente na performance: foco, motivação e como lidar com os altos e baixos do treino.",
+      "A incrível transformação de Juliana Vinha, que passou de evitar educação física na escola a completar três maratonas em menos de um ano.",
+  },
+  {
+    youtubeId: "y7Ok9CbQlxg",
+    title: "EP 02 — Da luta contra o câncer à ultramaratona – Leonardo Rosa",
+    guest: "Leonardo Rosa",
+    description:
+      "Uma das histórias mais impactantes do CareFit Cast. Leonardo Rosa compartilha sua jornada do diagnóstico de câncer aos 26 anos até conquistas épicas nas ultramaratonas.",
+  },
+  {
+    youtubeId: "o745w19TQeo",
+    title: "EP 01 — Paulo Galvão – Da infância em Bonfim Paulista ao top 6 da La Mission Brasil 100km",
+    guest: "Paulo Galvão",
+    description:
+      "Uma jornada inspiradora de superação, disciplina e força mental que levou Paulo Galvão a se tornar um dos grandes nomes do trail running nacional.",
   },
 ];
 
