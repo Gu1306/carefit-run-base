@@ -6,7 +6,7 @@ import { Label } from "@/components/ui/label";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
-import { Upload, CheckCircle, ArrowLeft, X, Loader2 } from "lucide-react";
+import { Upload, CheckCircle, X, Loader2 } from "lucide-react";
 import logoCareFit from "@/assets/logocarefitclub.png";
 
 const TIPOS_ATIVIDADE = [
@@ -87,7 +87,6 @@ const EnvioResultados = () => {
     }
 
     setFiles((prev) => [...prev, ...newFiles]);
-    // Reset input
     if (fileInputRef.current) fileInputRef.current.value = "";
   };
 
@@ -112,19 +111,6 @@ const EnvioResultados = () => {
     return true;
   };
 
-  const fileToBase64 = (file: File): Promise<string> => {
-    return new Promise((resolve, reject) => {
-      const reader = new FileReader();
-      reader.onload = () => {
-        const result = reader.result as string;
-        // Remove data URL prefix to get pure base64
-        resolve(result.split(",")[1]);
-      };
-      reader.onerror = reject;
-      reader.readAsDataURL(file);
-    });
-  };
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!validateForm()) return;
@@ -132,23 +118,55 @@ const EnvioResultados = () => {
     setIsSubmitting(true);
 
     try {
-      // Convert files to base64
-      const attachments = await Promise.all(
-        files.map(async (f) => ({
-          filename: f.file.name,
-          content: await fileToBase64(f.file),
-          type: f.file.type,
-        }))
-      );
+      // 1) Upload files to Storage
+      const submissionId = crypto.randomUUID();
+      const arquivos: Array<{ path: string; mime: string; size: number; originalName: string }> = [];
 
+      for (const f of files) {
+        const ext = f.file.name.split(".").pop() || "bin";
+        const storagePath = `${submissionId}/${crypto.randomUUID()}.${ext}`;
+
+        const { error: uploadError } = await supabase.storage
+          .from("resultados-atletas")
+          .upload(storagePath, f.file, { contentType: f.file.type });
+
+        if (uploadError) throw uploadError;
+
+        arquivos.push({
+          path: storagePath,
+          mime: f.file.type,
+          size: f.file.size,
+          originalName: f.file.name,
+        });
+      }
+
+      // 2) Insert record into DB
       const tempo = `${tempoHH.padStart(2, "0")}:${tempoMM.padStart(2, "0")}:${tempoSS.padStart(2, "0")}`;
       const tipoFinal = tipo === "Outro" ? tipoOutro : tipo;
 
-      // Format date for display
+      const { error: dbError } = await supabase
+        .from("envio_resultados" as any)
+        .insert({
+          id: submissionId,
+          nome: nome.trim(),
+          prova: prova.trim(),
+          data_prova: dataProva,
+          distancia: distancia.trim(),
+          tipo: tipoFinal,
+          tempo,
+          avaliacao: Number(avaliacao),
+          rpe: Number(rpe),
+          observacoes: observacoes.trim() || null,
+          arquivos,
+        } as any);
+
+      if (dbError) throw dbError;
+
+      // 3) Send email notification via edge function
       const [year, month, day] = dataProva.split("-");
       const dataFormatada = `${day}/${month}/${year}`;
 
-      const { data, error } = await supabase.functions.invoke("enviar-resultado", {
+      await supabase.functions.invoke("enviar-resultado", {
         body: {
           nome: nome.trim(),
           prova: prova.trim(),
@@ -159,11 +177,9 @@ const EnvioResultados = () => {
           avaliacao: Number(avaliacao),
           rpe: Number(rpe),
           observacoes: observacoes.trim(),
-          attachments,
+          num_arquivos: arquivos.length,
         },
       });
-
-      if (error) throw error;
 
       setIsSubmitted(true);
     } catch (error: any) {
@@ -196,7 +212,6 @@ const EnvioResultados = () => {
     setIsSubmitted(false);
   };
 
-  // Confirmation screen
   if (isSubmitted) {
     return (
       <div className="min-h-screen bg-muted flex items-center justify-center px-4 py-20">
@@ -228,7 +243,6 @@ const EnvioResultados = () => {
 
   return (
     <div className="min-h-screen bg-muted">
-
       {/* Header */}
       <div className="bg-primary py-12 md:py-16">
         <div className="container mx-auto px-4 text-center">

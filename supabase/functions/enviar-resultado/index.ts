@@ -36,10 +36,10 @@ serve(async (req) => {
       avaliacao,
       rpe,
       observacoes,
-      attachments,
+      num_arquivos,
     } = body;
 
-    // Build email HTML
+    // Build email HTML (notification only, no attachments)
     const html = `
       <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
         <div style="background: #0E3C41; padding: 24px; text-align: center; border-radius: 12px 12px 0 0;">
@@ -59,7 +59,10 @@ serve(async (req) => {
           </table>
           <hr style="margin: 16px 0; border: none; border-top: 1px solid #ddd;">
           <p style="color: #666; font-size: 13px;">
-            📎 ${attachments?.length || 0} arquivo(s) anexado(s)
+            📎 ${num_arquivos || 0} arquivo(s) salvos no Storage (bucket: resultados-atletas)
+          </p>
+          <p style="color: #666; font-size: 13px;">
+            Acesse o <a href="https://supabase.com/dashboard/project/tmkoxpzrjzwccahzaedf/storage/buckets/resultados-atletas" style="color: #0E3C41;">Supabase Storage</a> para ver os arquivos.
           </p>
           <p style="color: #999; font-size: 11px; margin-top: 16px;">
             Enviado em ${new Date().toLocaleString("pt-BR", { timeZone: "America/Sao_Paulo" })}
@@ -68,28 +71,6 @@ serve(async (req) => {
       </div>
     `;
 
-    // Prepare attachments for Resend (max ~37MB for Resend)
-    const emailAttachments: Array<{ filename: string; content: string }> = [];
-    const skippedFiles: string[] = [];
-    let totalSize = 0;
-    const MAX_ATTACHMENT_BYTES = 37 * 1024 * 1024; // ~37MB base64
-
-    if (attachments && Array.isArray(attachments)) {
-      for (const att of attachments) {
-        const fileSize = att.content.length; // base64 length approximation
-        if (totalSize + fileSize < MAX_ATTACHMENT_BYTES) {
-          emailAttachments.push({
-            filename: att.filename,
-            content: att.content,
-          });
-          totalSize += fileSize;
-        } else {
-          skippedFiles.push(att.filename);
-        }
-      }
-    }
-
-    // Send email via Resend
     const resendRes = await fetch("https://api.resend.com/emails", {
       method: "POST",
       headers: {
@@ -101,7 +82,6 @@ serve(async (req) => {
         to: ["gustavo@carefitrunbase.com.br"],
         subject: `Resultado enviado – ${nome} – ${prova}`,
         html,
-        attachments: emailAttachments,
       }),
     });
 
@@ -113,11 +93,7 @@ serve(async (req) => {
     }
 
     return new Response(
-      JSON.stringify({
-        success: true,
-        message: "Resultado enviado com sucesso!",
-        skippedFiles,
-      }),
+      JSON.stringify({ success: true, message: "Notificação enviada!" }),
       { headers: { ...corsHeaders, "Content-Type": "application/json" } }
     );
   } catch (error) {
