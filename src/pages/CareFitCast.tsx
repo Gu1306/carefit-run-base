@@ -147,7 +147,7 @@ const CareFitCast = () => {
       <section className="py-16 md:py-20 bg-warm">
         <div className="container mx-auto px-4 max-w-5xl">
           <h2 className="text-3xl md:text-4xl font-montserrat font-bold text-primary text-center mb-12">
-            Episódio em <span className="text-secondary">Destaque</span>
+            Último <span className="text-secondary">Episódio</span>
           </h2>
 
           <div className="grid md:grid-cols-2 gap-8 items-center">
