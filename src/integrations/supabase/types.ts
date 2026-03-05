@@ -14,7 +14,51 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      envio_resultados: {
+        Row: {
+          arquivos: Json
+          avaliacao: number
+          created_at: string
+          data_prova: string
+          distancia: string
+          id: string
+          nome: string
+          observacoes: string | null
+          prova: string
+          rpe: number
+          tempo: string
+          tipo: string
+        }
+        Insert: {
+          arquivos?: Json
+          avaliacao: number
+          created_at?: string
+          data_prova: string
+          distancia: string
+          id?: string
+          nome: string
+          observacoes?: string | null
+          prova: string
+          rpe: number
+          tempo: string
+          tipo: string
+        }
+        Update: {
+          arquivos?: Json
+          avaliacao?: number
+          created_at?: string
+          data_prova?: string
+          distancia?: string
+          id?: string
+          nome?: string
+          observacoes?: string | null
+          prova?: string
+          rpe?: number
+          tempo?: string
+          tipo?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
