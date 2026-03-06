@@ -62,7 +62,7 @@ const App = () => (
           <Route path="/recovery-corredores-ribeirao-preto" element={<RecoveryCorredores />} />
           <Route path="/avaliacao-do-corredor-ribeirao-preto" element={<AvaliacaoCorredor />} />
           <Route path="/fortalecimento-para-corredores-ribeirao-preto" element={<FortalecimentoCorredores />} />
-          <Route path="/fisioterapia-para-triatletas-ribeirao-preto" element={<PlaceholderPage />} />
+          <Route path="/fisioterapia-para-triatletas-ribeirao-preto" element={<FisioterapiaTriatletas />} />
           <Route path="/lesoes-na-corrida" element={<LesoesNaCorrida />} />
           <Route path="/canelite-ribeirao-preto" element={<Canelite />} />
           <Route path="/fascite-plantar-ribeirao-preto" element={<FascitePlantar />} />
