@@ -11,6 +11,7 @@ import CicloCompleto from "./pages/CicloCompleto";
 import Historia from "./pages/Historia";
 import Espaco from "./pages/Espaco";
 import Comunidade from "./pages/Comunidade";
+import ComunidadeCareFit from "./pages/ComunidadeCareFit";
 import Contato from "./pages/Contato";
 import Agendar from "./pages/Agendar";
 import IceMindExperience from "./pages/IceMindExperience";
@@ -53,6 +54,7 @@ const App = () => (
           <Route path="/historia" element={<Historia />} />
           <Route path="/espaco" element={<Espaco />} />
           <Route path="/comunidade" element={<Comunidade />} />
+          <Route path="/comunidade-carefit" element={<ComunidadeCareFit />} />
           <Route path="/contato" element={<Contato />} />
           <Route path="/agendar" element={<Agendar />} />
           <Route path="/ice-mind-experience" element={<IceMindExperience />} />

@@ -133,12 +133,17 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Conteúdo */}
+          {/* Comunidade */}
           <div>
             <h3 className="font-montserrat font-bold text-sm uppercase tracking-wider mb-4 text-accent">
-              Conteúdo
+              Comunidade
             </h3>
             <ul className="space-y-2">
+              <li>
+                <Link to="/comunidade-carefit" className="text-sm text-primary-foreground/70 hover:text-accent transition-colors">
+                  Comunidade CareFit
+                </Link>
+              </li>
               <li>
                 <Link to="/carefit-cast" className="text-sm text-primary-foreground/70 hover:text-accent transition-colors">
                   CareFit Cast
