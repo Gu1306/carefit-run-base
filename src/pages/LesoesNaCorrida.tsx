@@ -4,6 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { ArrowRight, Shield, Activity, Heart, CheckCircle, AlertTriangle, MessageCircle } from "lucide-react";
 import Footer from "@/components/Footer";
+import salaFisioterapia from "@/assets/sala-fisioterapia.jpg";
 
 const lesoes = [
   {
@@ -71,8 +72,12 @@ const LesoesNaCorrida = () => {
   return (
     <div className="min-h-screen pt-16">
       {/* Hero */}
-      <section className="relative py-20 bg-gradient-to-r from-primary to-secondary">
-        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+      <section className="relative py-20">
+        <div className="absolute inset-0">
+          <img src={salaFisioterapia} alt="Sala de fisioterapia CareFit Run Base em Ribeirão Preto" className="w-full h-full object-cover" />
+          <div className="absolute inset-0 bg-gradient-to-r from-primary/90 to-secondary/85" />
+        </div>
+        <div className="relative max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
             Lesões na Corrida: causas, prevenção e tratamento para corredores em Ribeirão Preto
           </h1>
