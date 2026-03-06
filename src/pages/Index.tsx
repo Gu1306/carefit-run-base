@@ -36,7 +36,7 @@ const Index = () => {
   }, {
     icon: Users,
     title: "Mente",
-    subtitle: "Foco, consistência, superação",
+    subtitle: "Treinamento mental para corredores e atletas de endurance",
     description: "Suporte psicológico e mental para desenvolver a mentalidade vencedora do corredor de alta performance.",
     produtos: "Presente em: Jornada Propósito"
   }];
