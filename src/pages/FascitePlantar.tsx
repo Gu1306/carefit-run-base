@@ -102,6 +102,12 @@ const FascitePlantar = () => {
             <p>
               Na <strong className="text-foreground">CareFit Run Base</strong> tratamos fascite plantar com <Link to="/fisioterapia-para-corredores-ribeirao-preto" className="text-accent hover:underline">fisioterapia esportiva</Link> específica para corrida, focando na redução da dor e na recuperação funcional do atleta.
             </p>
+            <p>
+              Atendemos corredores de 5 km, 10 km, meia maratona, maratona e triatletas que desenvolvem dor no calcanhar durante ou após a corrida.
+            </p>
+            <p>
+              O <Link to="/fortalecimento-para-corredores-ribeirao-preto" className="text-accent hover:underline">fortalecimento específico para corredores</Link> ajuda a reduzir o risco de recidiva, e protocolos de <Link to="/recovery-corredores-ribeirao-preto" className="text-accent hover:underline">recovery</Link> aceleram a recuperação entre sessões de treino.
+            </p>
           </div>
         </div>
       </section>
