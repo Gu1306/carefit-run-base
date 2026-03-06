@@ -39,24 +39,20 @@ const prevencao = [
 
 const faqItems = [
   {
-    question: "O que é fascite plantar?",
-    answer: "É uma inflamação da fáscia plantar, tecido que conecta o calcanhar aos dedos do pé e sustenta o arco plantar. É uma das principais causas de dor no calcanhar em corredores.",
-  },
-  {
     question: "Quanto tempo demora para curar fascite plantar?",
-    answer: "O tempo de recuperação varia. Casos leves podem melhorar em semanas com fisioterapia e ajustes de carga. Casos crônicos podem levar alguns meses de tratamento.",
+    answer: "O tempo de recuperação varia conforme a gravidade da lesão e a carga de treino do corredor. Com fisioterapia adequada, muitos corredores apresentam melhora significativa em algumas semanas.",
   },
   {
     question: "Posso correr com fascite plantar?",
-    answer: "Depende da intensidade dos sintomas. Em muitos casos é possível manter parte do treino com ajustes, mas uma avaliação profissional é fundamental para definir a melhor estratégia.",
+    answer: "Em alguns casos é possível manter parte do treino com redução de impacto e controle de carga. A avaliação fisioterapêutica ajuda a definir a progressão segura.",
   },
   {
     question: "Palmilha ajuda na fascite plantar?",
-    answer: "Palmilhas podem auxiliar no suporte do arco plantar e distribuição da carga, mas devem ser parte de um tratamento completo que inclui fortalecimento e correção biomecânica.",
+    answer: "Palmilhas podem auxiliar no suporte do arco plantar e na redistribuição de carga, mas devem ser avaliadas individualmente.",
   },
   {
     question: "Qual a diferença entre fascite plantar e esporão de calcâneo?",
-    answer: "O esporão é uma calcificação no calcanhar que pode coexistir com a fascite plantar, mas nem sempre é a causa da dor. O tratamento foca na fascite e nos fatores biomecânicos.",
+    answer: "A fascite plantar é a inflamação da fáscia plantar, enquanto o esporão é uma calcificação no osso do calcâneo. Muitas vezes os dois podem coexistir.",
   },
 ];
 
@@ -73,7 +69,7 @@ const FascitePlantar = () => {
       <section className="relative py-20 bg-gradient-to-r from-primary to-secondary">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
-            Fascite Plantar em Corredores: tratamento em Ribeirão Preto
+            Fascite Plantar em Corredores: tratamento da dor no calcanhar em Ribeirão Preto
           </h1>
           <p className="text-xl text-white/90 max-w-2xl mx-auto mb-8">
             Fisioterapia esportiva especializada no tratamento de fascite plantar para corredores em Ribeirão Preto.
@@ -101,6 +97,12 @@ const FascitePlantar = () => {
             </p>
             <p>
               Na <strong className="text-foreground">CareFit Run Base</strong> tratamos fascite plantar com <Link to="/fisioterapia-para-corredores-ribeirao-preto" className="text-accent hover:underline">fisioterapia esportiva</Link> específica para corrida, focando na redução da dor e na recuperação funcional do atleta.
+            </p>
+            <p>
+              Atendemos corredores de 5 km, 10 km, meia maratona, maratona e triatletas que desenvolvem dor no calcanhar durante ou após a corrida.
+            </p>
+            <p>
+              O <Link to="/fortalecimento-para-corredores-ribeirao-preto" className="text-accent hover:underline">fortalecimento específico para corredores</Link> ajuda a reduzir o risco de recidiva, e protocolos de <Link to="/recovery-corredores-ribeirao-preto" className="text-accent hover:underline">recovery</Link> aceleram a recuperação entre sessões de treino.
             </p>
           </div>
         </div>
@@ -204,8 +206,11 @@ const FascitePlantar = () => {
       <section className="py-20 bg-gradient-to-r from-primary to-secondary">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-bold text-white mb-6">Agende sua Avaliação na CareFit Run Base</h2>
+          <p className="text-lg text-white/80 mb-6 max-w-2xl mx-auto">
+            A CareFit Run Base é um centro especializado em fisioterapia esportiva para corredores em Ribeirão Preto, com foco no tratamento de lesões causadas pela corrida e no retorno seguro ao treino.
+          </p>
           <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-            Se você está com dor no calcanhar e suspeita de fascite plantar, nossa equipe de fisioterapia esportiva em Ribeirão Preto pode ajudar.
+            Se você está com dor no calcanhar e suspeita de fascite plantar, nossa equipe pode ajudar.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button variant="hero" size="lg" className="text-lg px-8 py-4" onClick={handleAgendar}>Agendar avaliação</Button>
