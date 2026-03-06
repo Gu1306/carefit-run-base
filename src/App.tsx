@@ -20,6 +20,7 @@ import CareFitCast from "./pages/CareFitCast";
 import FisioterapiaCorredores from "./pages/FisioterapiaCorredores";
 import NutricaoCorredores from "./pages/NutricaoCorredores";
 import PlaceholderPage from "./pages/PlaceholderPage";
+import LesoesNaCorrida from "./pages/LesoesNaCorrida";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
