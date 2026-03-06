@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { CheckCircle, Shield, Activity, MessageCircle, MapPin, AlertTriangle, Dumbbell, TrendingUp, Eye, Heart, Stethoscope } from "lucide-react";
 import Footer from "@/components/Footer";
-import { Helmet } from "react-helmet-async";
+
 
 const PrevencaoLesoes = () => {
   const handleWhatsApp = () => {
