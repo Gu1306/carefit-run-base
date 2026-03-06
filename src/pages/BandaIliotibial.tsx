@@ -97,10 +97,13 @@ const BandaIliotibial = () => {
           </div>
           <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
             <p>
-              A síndrome da banda iliotibial é uma <Link to="/lesoes-na-corrida" className="text-accent hover:underline">lesão comum em corredores</Link> que causa dor na lateral do joelho, especialmente em treinos longos ou descidas.
+              A síndrome da banda iliotibial é uma das <Link to="/lesoes-na-corrida" className="text-accent hover:underline">lesões mais comuns entre corredores</Link> e causa dor na lateral do joelho, especialmente em treinos longos ou descidas.
             </p>
             <p>
-              Na <strong className="text-foreground">CareFit Run Base</strong>, em Ribeirão Preto, tratamos essa condição com <Link to="/fisioterapia-para-corredores-ribeirao-preto" className="text-accent hover:underline">fisioterapia esportiva</Link> focada na correção biomecânica e no fortalecimento.
+              Na <strong className="text-foreground">CareFit Run Base</strong>, em Ribeirão Preto, tratamos essa condição com <Link to="/fisioterapia-para-corredores-ribeirao-preto" className="text-accent hover:underline">fisioterapia esportiva</Link> focada na correção biomecânica e no fortalecimento. Atendemos corredores de 5 km, 10 km, meia maratona, maratona e triatletas que desenvolvem dor lateral no joelho durante ou após a corrida.
+            </p>
+            <p>
+              O <Link to="/fortalecimento-para-corredores-ribeirao-preto" className="text-accent hover:underline">fortalecimento específico para corredores</Link> é fundamental para reduzir a sobrecarga na banda iliotibial. Além disso, <Link to="/recovery-corredores-ribeirao-preto" className="text-accent hover:underline">protocolos de recovery</Link> ajudam a melhorar a recuperação entre treinos.
             </p>
           </div>
         </div>
