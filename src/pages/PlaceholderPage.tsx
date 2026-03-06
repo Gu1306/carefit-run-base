@@ -3,17 +3,17 @@ import { Button } from "@/components/ui/button";
 import Footer from "@/components/Footer";
 
 const pageTitles: Record<string, string> = {
-  "/recovery-para-corredores": "Recovery para Corredores",
-  "/avaliacao-do-corredor": "Avaliação do Corredor",
-  "/fortalecimento-para-corredores": "Fortalecimento para Corredores",
-  "/fisioterapia-para-triatletas": "Fisioterapia para Triatletas",
+  "/recovery-corredores-ribeirao-preto": "Recovery para Corredores em Ribeirão Preto",
+  "/avaliacao-do-corredor-ribeirao-preto": "Avaliação do Corredor em Ribeirão Preto",
+  "/fortalecimento-para-corredores-ribeirao-preto": "Fortalecimento para Corredores em Ribeirão Preto",
+  "/fisioterapia-para-triatletas-ribeirao-preto": "Fisioterapia para Triatletas em Ribeirão Preto",
   "/lesoes-na-corrida": "Lesões na Corrida",
-  "/canelite": "Canelite",
-  "/fascite-plantar": "Fascite Plantar",
-  "/dor-no-joelho-na-corrida": "Dor no Joelho na Corrida",
-  "/tendinite-do-aquiles": "Tendinite do Aquiles",
-  "/sindrome-da-banda-iliotibial": "Síndrome da Banda Iliotibial",
-  "/fratura-por-estresse": "Fratura por Estresse",
+  "/canelite-ribeirao-preto": "Canelite em Ribeirão Preto",
+  "/fascite-plantar-ribeirao-preto": "Fascite Plantar em Ribeirão Preto",
+  "/dor-no-joelho-corrida-ribeirao-preto": "Dor no Joelho na Corrida em Ribeirão Preto",
+  "/tendinite-aquiles-ribeirao-preto": "Tendinite do Aquiles em Ribeirão Preto",
+  "/banda-iliotibial-ribeirao-preto": "Síndrome da Banda Iliotibial em Ribeirão Preto",
+  "/fratura-por-estresse-ribeirao-preto": "Fratura por Estresse em Ribeirão Preto",
 };
 
 const PlaceholderPage = () => {

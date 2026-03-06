@@ -46,17 +46,17 @@ const App = () => (
           <Route path="/carefit-cast" element={<CareFitCast />} />
           <Route path="/fisioterapia-para-corredores-ribeirao-preto" element={<FisioterapiaCorredores />} />
           {/* Placeholder pages - content coming soon */}
-          <Route path="/recovery-para-corredores" element={<PlaceholderPage />} />
-          <Route path="/avaliacao-do-corredor" element={<PlaceholderPage />} />
-          <Route path="/fortalecimento-para-corredores" element={<PlaceholderPage />} />
-          <Route path="/fisioterapia-para-triatletas" element={<PlaceholderPage />} />
+          <Route path="/recovery-corredores-ribeirao-preto" element={<PlaceholderPage />} />
+          <Route path="/avaliacao-do-corredor-ribeirao-preto" element={<PlaceholderPage />} />
+          <Route path="/fortalecimento-para-corredores-ribeirao-preto" element={<PlaceholderPage />} />
+          <Route path="/fisioterapia-para-triatletas-ribeirao-preto" element={<PlaceholderPage />} />
           <Route path="/lesoes-na-corrida" element={<PlaceholderPage />} />
-          <Route path="/canelite" element={<PlaceholderPage />} />
-          <Route path="/fascite-plantar" element={<PlaceholderPage />} />
-          <Route path="/dor-no-joelho-na-corrida" element={<PlaceholderPage />} />
-          <Route path="/tendinite-do-aquiles" element={<PlaceholderPage />} />
-          <Route path="/sindrome-da-banda-iliotibial" element={<PlaceholderPage />} />
-          <Route path="/fratura-por-estresse" element={<PlaceholderPage />} />
+          <Route path="/canelite-ribeirao-preto" element={<PlaceholderPage />} />
+          <Route path="/fascite-plantar-ribeirao-preto" element={<PlaceholderPage />} />
+          <Route path="/dor-no-joelho-corrida-ribeirao-preto" element={<PlaceholderPage />} />
+          <Route path="/tendinite-aquiles-ribeirao-preto" element={<PlaceholderPage />} />
+          <Route path="/banda-iliotibial-ribeirao-preto" element={<PlaceholderPage />} />
+          <Route path="/fratura-por-estresse-ribeirao-preto" element={<PlaceholderPage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
