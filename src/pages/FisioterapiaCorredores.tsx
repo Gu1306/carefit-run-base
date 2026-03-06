@@ -36,23 +36,23 @@ const lesoes = [
 const faqItems = [
   {
     question: "Quanto tempo leva para tratar uma lesão de corrida?",
-    answer: "O tempo de recuperação depende da lesão, do histórico do atleta e da fase do tratamento. Lesões leves podem melhorar em poucas semanas, enquanto quadros mais complexos podem exigir um processo de reabilitação mais longo.",
+    answer: "O tempo depende do tipo de lesão, do histórico do atleta e da fase da reabilitação. Lesões leves podem melhorar em algumas semanas, enquanto quadros mais complexos exigem acompanhamento mais prolongado.",
   },
   {
     question: "Posso continuar correndo durante o tratamento?",
-    answer: "Em muitos casos é possível manter parte do treino com ajustes de carga, intensidade e volume. O fisioterapeuta avalia cada caso e define a progressão segura.",
+    answer: "Em muitos casos é possível manter parte do treino com ajustes de carga e intensidade. A decisão é sempre baseada na avaliação do fisioterapeuta.",
   },
   {
     question: "Qual a diferença entre fisioterapia comum e fisioterapia para corredores?",
-    answer: "A fisioterapia para corredores considera a biomecânica da corrida, o impacto repetitivo e as demandas específicas do esporte, criando estratégias de tratamento e prevenção voltadas ao gesto da corrida.",
+    answer: "A fisioterapia para corredores considera a biomecânica da corrida, o impacto repetitivo e as demandas específicas do esporte.",
+  },
+  {
+    question: "Preciso estar lesionado para procurar fisioterapia?",
+    answer: "Não. Muitos corredores buscam avaliação preventiva para melhorar mobilidade, força e biomecânica da corrida.",
   },
   {
     question: "A CareFit atende convênio?",
     answer: "A CareFit Run Base trabalha com atendimento especializado e individualizado. Para informações sobre valores e formas de atendimento, entre em contato diretamente com nossa equipe.",
-  },
-  {
-    question: "Preciso estar lesionado para procurar a fisioterapia?",
-    answer: "Não. Muitos corredores procuram a fisioterapia de forma preventiva para melhorar mobilidade, força e biomecânica da corrida, reduzindo o risco de lesões futuras.",
   },
   {
     question: "Como funciona a primeira consulta?",
@@ -99,10 +99,10 @@ const FisioterapiaCorredores = () => {
               A corrida é um dos esportes com maior índice de lesões por repetição. Estudos mostram que <strong className="text-foreground">até 79% dos corredores sofrem pelo menos uma lesão por ano</strong>. A maioria dessas lesões é causada por sobrecarga, desequilíbrios musculares e falta de acompanhamento especializado.
             </p>
             <p>
-              A fisioterapia específica para corredores vai além do tratamento de dores. Ela atua na <strong className="text-foreground">prevenção, na correção biomecânica e na otimização da performance</strong>, considerando as particularidades do gesto da corrida — como impacto repetitivo, cadência, pisada e postura.
+              A fisioterapia esportiva específica para corredores vai além do tratamento da dor. Ela atua na <strong className="text-foreground">prevenção de lesões, na correção biomecânica da corrida e na melhora da performance</strong>.
             </p>
             <p>
-              Na <strong className="text-foreground">CareFit Run Base</strong>, em Ribeirão Preto, a fisioterapia está integrada a um ecossistema completo de cuidado ao corredor: fortalecimento, nutrição, recovery e treinamento mental. Isso garante resultados mais rápidos e duradouros.
+              Na <strong className="text-foreground">CareFit Run Base</strong>, em Ribeirão Preto, a fisioterapia está integrada a um ecossistema completo de cuidado ao corredor: <Link to="/fortalecimento-para-corredores-ribeirao-preto" className="text-accent hover:underline">fortalecimento</Link>, <Link to="/nutricao-para-corredores-ribeirao-preto" className="text-accent hover:underline">nutrição</Link>, <Link to="/recovery-corredores-ribeirao-preto" className="text-accent hover:underline">recovery</Link> e treinamento mental. Isso garante resultados mais rápidos e duradouros.
             </p>
             <p>
               Atendemos corredores de 5 km, 10 km, meia maratona, maratona e também triatletas que buscam tratar lesões, melhorar a biomecânica da corrida e retornar aos treinos com segurança e performance.
@@ -324,9 +324,20 @@ const FisioterapiaCorredores = () => {
             Agende sua Avaliação na CareFit Run Base
           </h2>
           <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-            A CareFit Run Base é um centro especializado em fisioterapia esportiva para corredores em Ribeirão Preto, com foco em prevenção de lesões, recuperação e performance na corrida.
+            Se você é corredor ou triatleta em Ribeirão Preto e quer tratar uma lesão, prevenir problemas futuros ou melhorar sua performance na corrida, agende sua avaliação na CareFit Run Base.
+          </p>
+          <p className="text-lg text-white/80 mb-10 max-w-2xl mx-auto">
+            Nossa equipe especializada em fisioterapia esportiva para corredores está pronta para ajudar você a correr melhor e com mais segurança.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button
+              variant="hero"
+              size="lg"
+              className="text-lg px-8 py-4"
+              onClick={() => window.open('https://api.whatsapp.com/send?phone=5516996008849&text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20de%20fisioterapia%20para%20corrida.', '_blank')}
+            >
+              Agendar avaliação
+            </Button>
             <Button
               variant="whatsapp"
               size="lg"
@@ -334,7 +345,7 @@ const FisioterapiaCorredores = () => {
               onClick={() => window.open('https://api.whatsapp.com/send?phone=5516996008849&text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20de%20fisioterapia%20para%20corrida.', '_blank')}
             >
               <MessageCircle className="w-5 h-5" />
-              Agendar pelo WhatsApp
+              Falar no WhatsApp
             </Button>
           </div>
           <p className="text-white/70 text-sm mt-6">
