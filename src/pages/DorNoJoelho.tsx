@@ -102,6 +102,12 @@ const DorNoJoelho = () => {
             <p>
               Na <strong className="text-foreground">CareFit Run Base</strong> avaliamos biomecânica, força muscular e carga de treino para identificar as causas e tratar o problema com <Link to="/fisioterapia-para-corredores-ribeirao-preto" className="text-accent hover:underline">fisioterapia esportiva especializada</Link>.
             </p>
+            <p>
+              Atendemos corredores de 5 km, 10 km, meia maratona, maratona e triatletas que desenvolvem dor no joelho durante ou após a corrida.
+            </p>
+            <p>
+              O <Link to="/fortalecimento-para-corredores-ribeirao-preto" className="text-accent hover:underline">fortalecimento específico para corredores</Link> é fundamental para reduzir o risco de dor no joelho, e protocolos de <Link to="/recovery-corredores-ribeirao-preto" className="text-accent hover:underline">recovery</Link> ajudam a acelerar a recuperação entre sessões de treino.
+            </p>
           </div>
         </div>
       </section>
