@@ -68,7 +68,7 @@ const App = () => (
           <Route path="/fisioterapia-para-triatletas-ribeirao-preto" element={<FisioterapiaTriatletas />} />
           <Route path="/biomecanica-da-corrida-ribeirao-preto" element={<BiomecanicaCorrida />} />
           <Route path="/treinamento-para-maratona-ribeirao-preto" element={<TreinamentoMaratona />} />
-          <Route path="/prevencao-de-lesoes-na-corrida" element={<PrevencaoLesoes />} />
+          <Route path="/prevencao-de-lesoes-na-corrida-ribeirao-preto" element={<PrevencaoLesoes />} />
           <Route path="/lesoes-na-corrida" element={<LesoesNaCorrida />} />
           <Route path="/canelite-ribeirao-preto" element={<Canelite />} />
           <Route path="/fascite-plantar-ribeirao-preto" element={<FascitePlantar />} />
