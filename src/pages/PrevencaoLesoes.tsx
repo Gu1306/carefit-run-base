@@ -32,11 +32,7 @@ const PrevencaoLesoes = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <Helmet>
-        <title>Prevenção de Lesões na Corrida em Ribeirão Preto | CareFit Run Base</title>
-        <meta name="description" content="Descubra como prevenir lesões na corrida com fisioterapia esportiva, fortalecimento e recovery para corredores em Ribeirão Preto." />
-        <link rel="canonical" href="https://www.carefitrunbase.com.br/prevencao-de-lesoes-na-corrida-ribeirao-preto" />
-      </Helmet>
+      {/* SEO meta tags set via index.html or route-level config */}
 
       {/* Hero */}
       <section className="pt-24 pb-16 bg-gradient-to-br from-primary via-primary/95 to-secondary">
