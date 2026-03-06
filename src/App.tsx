@@ -19,6 +19,7 @@ import IceMindExperience from "./pages/IceMindExperience";
 import NossaHistoria from "./pages/NossaHistoria";
 import EnvioResultados from "./pages/EnvioResultados";
 import CareFitCast from "./pages/CareFitCast";
+import FisioterapiaCorredores from "./pages/FisioterapiaCorredores";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -45,6 +46,7 @@ const App = () => (
           <Route path="/nossa-historia" element={<NossaHistoria />} />
           <Route path="/envio-resultados" element={<EnvioResultados />} />
           <Route path="/carefit-cast" element={<CareFitCast />} />
+          <Route path="/fisioterapia-para-corredores-ribeirao-preto" element={<FisioterapiaCorredores />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
