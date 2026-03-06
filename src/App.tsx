@@ -20,6 +20,7 @@ import CareFitCast from "./pages/CareFitCast";
 import FisioterapiaCorredores from "./pages/FisioterapiaCorredores";
 import NutricaoCorredores from "./pages/NutricaoCorredores";
 import PlaceholderPage from "./pages/PlaceholderPage";
+import RecoveryCorredores from "./pages/RecoveryCorredores";
 import LesoesNaCorrida from "./pages/LesoesNaCorrida";
 import Canelite from "./pages/Canelite";
 import FascitePlantar from "./pages/FascitePlantar";
