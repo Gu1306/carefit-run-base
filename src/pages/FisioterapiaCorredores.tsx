@@ -104,6 +104,9 @@ const FisioterapiaCorredores = () => {
             <p>
               Na <strong className="text-foreground">CareFit Run Base</strong>, em Ribeirão Preto, a fisioterapia está integrada a um ecossistema completo de cuidado ao corredor: fortalecimento, nutrição, recovery e treinamento mental. Isso garante resultados mais rápidos e duradouros.
             </p>
+            <p>
+              Atendemos corredores de 5 km, 10 km, meia maratona, maratona e também triatletas que buscam tratar lesões, melhorar a biomecânica da corrida e retornar aos treinos com segurança e performance.
+            </p>
           </div>
         </div>
       </section>
