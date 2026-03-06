@@ -91,6 +91,16 @@ const Footer = () => {
                   Banda Iliotibial
                 </Link>
               </li>
+              <li>
+                <Link to="/fratura-por-estresse-ribeirao-preto" className="text-sm text-primary-foreground/70 hover:text-accent transition-colors">
+                  Fratura por Estresse
+                </Link>
+              </li>
+              <li>
+                <Link to="/prevencao-de-lesoes-na-corrida" className="text-sm text-primary-foreground/70 hover:text-accent transition-colors">
+                  Prevenção de Lesões
+                </Link>
+              </li>
             </ul>
           </div>
 
