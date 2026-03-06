@@ -39,24 +39,20 @@ const prevencao = [
 
 const faqItems = [
   {
-    question: "O que é fratura por estresse?",
-    answer: "É uma microfratura óssea causada por sobrecarga repetitiva. Ocorre quando o osso não consegue se recuperar do impacto acumulado nos treinos.",
-  },
-  {
     question: "Quanto tempo leva para recuperar de uma fratura por estresse?",
-    answer: "O tempo de recuperação varia de 6 a 12 semanas, dependendo da localização e gravidade da fratura. O retorno à corrida deve ser gradual e supervisionado.",
+    answer: "O tempo de recuperação depende do osso afetado e da gravidade da lesão. Em muitos casos o retorno à corrida pode ocorrer após algumas semanas ou meses de reabilitação adequada.",
   },
   {
     question: "Posso correr com fratura por estresse?",
-    answer: "Não. A corrida deve ser interrompida durante o período de consolidação óssea. Atividades de baixo impacto podem ser mantidas conforme orientação profissional.",
+    answer: "Na maioria dos casos é necessário interromper temporariamente a corrida para permitir a consolidação óssea e evitar agravamento da lesão.",
   },
   {
     question: "Quais ossos são mais afetados em corredores?",
-    answer: "Os ossos mais comuns são a tíbia, os metatarsos, o fêmur e a fíbula. A tíbia é o local mais frequente em corredores.",
+    answer: "Os ossos mais afetados são tíbia, metatarsos, fêmur e calcâneo, devido ao impacto repetitivo da corrida.",
   },
   {
     question: "Como diferenciar fratura por estresse de canelite?",
-    answer: "A canelite causa dor difusa na canela, enquanto a fratura por estresse causa dor pontual e localizada. Exames de imagem ajudam no diagnóstico diferencial.",
+    answer: "A canelite causa dor difusa na canela, enquanto a fratura por estresse costuma apresentar dor localizada em um ponto específico do osso.",
   },
 ];
 
@@ -73,7 +69,7 @@ const FraturaEstresse = () => {
       <section className="relative py-20 bg-gradient-to-r from-primary to-secondary">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
-            Fratura por Estresse em Corredores
+            Fratura por Estresse em Corredores: tratamento e reabilitação em Ribeirão Preto
           </h1>
           <p className="text-xl text-white/90 max-w-2xl mx-auto mb-8">
             Tratamento e reabilitação de fratura por estresse para corredores em Ribeirão Preto.
@@ -97,10 +93,13 @@ const FraturaEstresse = () => {
           </div>
           <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
             <p>
-              A fratura por estresse é uma <Link to="/lesoes-na-corrida" className="text-accent hover:underline">lesão</Link> causada por sobrecarga repetitiva no osso, ocorrendo principalmente em corredores que aumentam o volume de treino rapidamente.
+              A fratura por estresse está entre as <Link to="/lesoes-na-corrida" className="text-accent hover:underline">lesões mais graves relacionadas à sobrecarga na corrida</Link>, ocorrendo principalmente em corredores que aumentam o volume de treino rapidamente.
             </p>
             <p>
-              O tratamento envolve diagnóstico adequado, controle de carga e reabilitação progressiva. Na <strong className="text-foreground">CareFit Run Base</strong> auxiliamos corredores no processo de recuperação e retorno seguro à corrida com <Link to="/fisioterapia-para-corredores-ribeirao-preto" className="text-accent hover:underline">fisioterapia esportiva especializada</Link>.
+              O tratamento envolve diagnóstico adequado, controle de carga e reabilitação progressiva. Na <strong className="text-foreground">CareFit Run Base</strong> auxiliamos corredores no processo de recuperação e retorno seguro à corrida com <Link to="/fisioterapia-para-corredores-ribeirao-preto" className="text-accent hover:underline">fisioterapia esportiva especializada</Link>. Atendemos corredores de 5 km, 10 km, meia maratona, maratona e triatletas que desenvolvem fraturas por estresse devido ao aumento de carga de treino.
+            </p>
+            <p>
+              O <Link to="/fortalecimento-para-corredores-ribeirao-preto" className="text-accent hover:underline">fortalecimento específico para corredores</Link> ajuda a reduzir o risco de lesões ósseas por sobrecarga. A <Link to="/nutricao-para-corredores-ribeirao-preto" className="text-accent hover:underline">nutrição adequada</Link> é essencial para saúde óssea e prevenção de fraturas por estresse.
             </p>
           </div>
         </div>
@@ -198,6 +197,14 @@ const FraturaEstresse = () => {
               </AccordionItem>
             ))}
           </Accordion>
+        </div>
+      </section>
+
+      <section className="py-20 bg-background">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <p className="text-lg text-muted-foreground leading-relaxed text-center">
+            A CareFit Run Base é um centro especializado em fisioterapia esportiva para corredores em Ribeirão Preto, com experiência no tratamento de lesões causadas pela corrida.
+          </p>
         </div>
       </section>
 
