@@ -32,10 +32,10 @@ const Navigation = () => {
       name: "Para Corredores",
       dropdown: [
         { name: "Fisioterapia para Corredores", href: "/fisioterapia-para-corredores-ribeirao-preto" },
-        { name: "Recovery para Corredores", href: "/recovery-para-corredores" },
-        { name: "Avaliação do Corredor", href: "/avaliacao-do-corredor" },
-        { name: "Fortalecimento para Corredores", href: "/fortalecimento-para-corredores" },
-        { name: "Fisioterapia para Triatletas", href: "/fisioterapia-para-triatletas" },
+        { name: "Recovery para Corredores", href: "/recovery-corredores-ribeirao-preto" },
+        { name: "Avaliação do Corredor", href: "/avaliacao-do-corredor-ribeirao-preto" },
+        { name: "Fortalecimento para Corredores", href: "/fortalecimento-para-corredores-ribeirao-preto" },
+        { name: "Fisioterapia para Triatletas", href: "/fisioterapia-para-triatletas-ribeirao-preto" },
       ],
     },
     {
