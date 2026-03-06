@@ -8,8 +8,6 @@ import Index from "./pages/Index";
 import Manifesto from "./pages/Manifesto";
 import Servicos from "./pages/Servicos";
 import CicloCompleto from "./pages/CicloCompleto";
-// import Jornada from "./pages/Jornada"; // SUBSTITUÍDO por CicloCompleto
-// import TodaJornada from "./pages/TodaJornada"; // DESATIVADO
 import Historia from "./pages/Historia";
 import Espaco from "./pages/Espaco";
 import Comunidade from "./pages/Comunidade";
@@ -20,6 +18,7 @@ import NossaHistoria from "./pages/NossaHistoria";
 import EnvioResultados from "./pages/EnvioResultados";
 import CareFitCast from "./pages/CareFitCast";
 import FisioterapiaCorredores from "./pages/FisioterapiaCorredores";
+import PlaceholderPage from "./pages/PlaceholderPage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -36,7 +35,6 @@ const App = () => (
           <Route path="/manifesto" element={<Manifesto />} />
           <Route path="/servicos" element={<Servicos />} />
           <Route path="/jornada" element={<CicloCompleto />} />
-          {/* <Route path="/toda-jornada" element={<TodaJornada />} /> DESATIVADO */}
           <Route path="/historia" element={<Historia />} />
           <Route path="/espaco" element={<Espaco />} />
           <Route path="/comunidade" element={<Comunidade />} />
@@ -47,6 +45,18 @@ const App = () => (
           <Route path="/envio-resultados" element={<EnvioResultados />} />
           <Route path="/carefit-cast" element={<CareFitCast />} />
           <Route path="/fisioterapia-para-corredores-ribeirao-preto" element={<FisioterapiaCorredores />} />
+          {/* Placeholder pages - content coming soon */}
+          <Route path="/recovery-para-corredores" element={<PlaceholderPage />} />
+          <Route path="/avaliacao-do-corredor" element={<PlaceholderPage />} />
+          <Route path="/fortalecimento-para-corredores" element={<PlaceholderPage />} />
+          <Route path="/fisioterapia-para-triatletas" element={<PlaceholderPage />} />
+          <Route path="/lesoes-na-corrida" element={<PlaceholderPage />} />
+          <Route path="/canelite" element={<PlaceholderPage />} />
+          <Route path="/fascite-plantar" element={<PlaceholderPage />} />
+          <Route path="/dor-no-joelho-na-corrida" element={<PlaceholderPage />} />
+          <Route path="/tendinite-do-aquiles" element={<PlaceholderPage />} />
+          <Route path="/sindrome-da-banda-iliotibial" element={<PlaceholderPage />} />
+          <Route path="/fratura-por-estresse" element={<PlaceholderPage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
