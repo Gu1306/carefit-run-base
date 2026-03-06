@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { ArrowRight, Snowflake, Wind, Hand, CheckCircle, Heart, Activity, MessageCircle, MapPin } from "lucide-react";
+import { ArrowRight, Snowflake, Wind, Hand, CheckCircle, Heart, Activity, MessageCircle, MapPin, Users, Zap } from "lucide-react";
 import Footer from "@/components/Footer";
 
 const beneficiosRecovery = [
