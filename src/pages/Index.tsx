@@ -30,7 +30,7 @@ const Index = () => {
   }, {
     icon: Target,
     title: "Nutrição",
-    subtitle: "Combustível para a performance",
+    subtitle: "Nutrição esportiva para corredores e triatletas",
     description: "Nutrição esportiva especializada para corredores, otimizando rendimento e acelerando a recuperação com acompanhamento individualizado.",
     produtos: "Presente em: Nutrição, Jornada Propósito"
   }, {
