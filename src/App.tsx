@@ -54,6 +54,7 @@ const App = () => (
           <Route path="/historia" element={<Historia />} />
           <Route path="/espaco" element={<Espaco />} />
           <Route path="/comunidade" element={<Comunidade />} />
+          <Route path="/comunidade-carefit" element={<ComunidadeCareFit />} />
           <Route path="/contato" element={<Contato />} />
           <Route path="/agendar" element={<Agendar />} />
           <Route path="/ice-mind-experience" element={<IceMindExperience />} />
