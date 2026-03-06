@@ -7,17 +7,17 @@ import Footer from "@/components/Footer";
 
 const lesoes = [
   {
-    title: "Canelite",
+    title: "Canelite em Corredores",
     description: "Dor na região da canela causada por sobrecarga repetitiva.",
     link: "/canelite-ribeirao-preto",
   },
   {
-    title: "Fascite Plantar",
+    title: "Fascite Plantar em Corredores",
     description: "Inflamação na fáscia plantar que gera dor no calcanhar.",
     link: "/fascite-plantar-ribeirao-preto",
   },
   {
-    title: "Tendinite do Aquiles",
+    title: "Tendinite do Aquiles em Corredores",
     description: "Lesão comum em corredores causada por sobrecarga no tendão de Aquiles.",
     link: "/tendinite-aquiles-ribeirao-preto",
   },
@@ -41,15 +41,15 @@ const lesoes = [
 const faqItems = [
   {
     question: "Quais são as lesões mais comuns na corrida?",
-    answer: "As lesões mais comuns incluem canelite, fascite plantar, tendinite do Aquiles, dor no joelho do corredor e síndrome da banda iliotibial.",
+    answer: "As lesões mais comuns entre corredores incluem canelite, fascite plantar, tendinite do Aquiles, síndrome da banda iliotibial e dor no joelho do corredor.",
   },
   {
     question: "É possível continuar correndo com dor?",
-    answer: "Depende do tipo de lesão e da intensidade dos sintomas. Uma avaliação com fisioterapeuta esportivo é fundamental para definir a melhor estratégia.",
+    answer: "Depende da intensidade da dor e do tipo de lesão. Em alguns casos é possível manter parte do treino com ajustes de carga e intensidade, mas é fundamental uma avaliação especializada.",
   },
   {
     question: "Como evitar lesões na corrida?",
-    answer: "O ideal é combinar fortalecimento, controle de carga de treino, recuperação adequada e avaliação periódica.",
+    answer: "A prevenção envolve fortalecimento específico para corredores, controle de carga de treino, recuperação adequada entre sessões e avaliação periódica da biomecânica da corrida.",
   },
 ];
 
@@ -74,7 +74,7 @@ const LesoesNaCorrida = () => {
       <section className="relative py-20 bg-gradient-to-r from-primary to-secondary">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
-            Lesões na Corrida: causas, prevenção e tratamento para corredores
+            Lesões na Corrida: causas, prevenção e tratamento para corredores em Ribeirão Preto
           </h1>
           <p className="text-xl text-white/90 max-w-2xl mx-auto mb-8">
             Conheça as principais lesões na corrida, suas causas e como tratar. Centro especializado em fisioterapia para corredores em Ribeirão Preto.
@@ -111,6 +111,9 @@ const LesoesNaCorrida = () => {
             </p>
             <p>
               Na <strong className="text-foreground">CareFit Run Base</strong>, em Ribeirão Preto, trabalhamos com fisioterapia esportiva especializada em corrida para tratar lesões, prevenir recidivas e ajudar corredores a voltarem aos treinos com segurança.
+            </p>
+            <p>
+              Atendemos corredores de 5 km, 10 km, meia maratona, maratona e também triatletas que buscam tratar lesões, prevenir recidivas e melhorar sua performance na corrida.
             </p>
           </div>
           <div className="grid md:grid-cols-2 gap-4 mt-10">
