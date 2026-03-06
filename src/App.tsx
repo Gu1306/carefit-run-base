@@ -21,6 +21,12 @@ import FisioterapiaCorredores from "./pages/FisioterapiaCorredores";
 import NutricaoCorredores from "./pages/NutricaoCorredores";
 import PlaceholderPage from "./pages/PlaceholderPage";
 import LesoesNaCorrida from "./pages/LesoesNaCorrida";
+import Canelite from "./pages/Canelite";
+import FascitePlantar from "./pages/FascitePlantar";
+import TendiniteAquiles from "./pages/TendiniteAquiles";
+import DorNoJoelho from "./pages/DorNoJoelho";
+import BandaIliotibial from "./pages/BandaIliotibial";
+import FraturaEstresse from "./pages/FraturaEstresse";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
