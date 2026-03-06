@@ -104,6 +104,12 @@ const Canelite = () => {
             <p>
               Na <strong className="text-foreground">CareFit Run Base</strong>, em Ribeirão Preto, tratamos corredores com <Link to="/fisioterapia-para-corredores-ribeirao-preto" className="text-accent hover:underline">fisioterapia esportiva especializada</Link> para reduzir a dor, corrigir fatores de risco e permitir um retorno seguro aos treinos.
             </p>
+            <p>
+              Atendemos corredores de 5 km, 10 km, meia maratona, maratona e triatletas que desenvolvem dor na canela durante ou após a corrida.
+            </p>
+            <p>
+              O <Link to="/fortalecimento-para-corredores-ribeirao-preto" className="text-accent hover:underline">fortalecimento específico para corredores</Link> é um dos principais fatores na prevenção da canelite, assim como a integração com protocolos de <Link to="/recovery-corredores-ribeirao-preto" className="text-accent hover:underline">recovery</Link>.
+            </p>
           </div>
         </div>
       </section>
