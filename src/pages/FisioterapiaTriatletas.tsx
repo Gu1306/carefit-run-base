@@ -277,7 +277,7 @@ const FisioterapiaTriatletas = () => {
             </div>
             <div className="flex items-center gap-4 p-4 bg-background rounded-lg shadow-sm">
               <ArrowRight className="w-5 h-5 text-accent flex-shrink-0" />
-              <Link to="/recovery-corredores-ribeirao-preto" className="text-accent hover:underline font-medium">Protocolos de recovery</Link>
+              <Link to="/recovery-para-corredores-ribeirao-preto" className="text-accent hover:underline font-medium">Protocolos de recovery</Link>
             </div>
             <div className="flex items-center gap-4 p-4 bg-background rounded-lg shadow-sm">
               <ArrowRight className="w-5 h-5 text-accent flex-shrink-0" />
