@@ -39,24 +39,20 @@ const prevencao = [
 
 const faqItems = [
   {
-    question: "O que é tendinite do Aquiles?",
-    answer: "É uma lesão por sobrecarga no tendão de Aquiles, que conecta a panturrilha ao calcanhar. Causa dor, rigidez e pode limitar a capacidade de correr.",
-  },
-  {
     question: "Quanto tempo leva para tratar tendinite do Aquiles?",
-    answer: "O tratamento pode levar de algumas semanas a alguns meses, dependendo da gravidade. O protocolo de exercícios excêntricos costuma mostrar resultados significativos em 6 a 12 semanas.",
+    answer: "O tempo de recuperação depende da gravidade da lesão e da carga de treino do corredor. Com fisioterapia adequada e controle de carga, muitos atletas apresentam melhora significativa em algumas semanas.",
   },
   {
     question: "Posso correr com tendinite do Aquiles?",
-    answer: "Em muitos casos é possível manter parte do treino com ajustes de carga. A dor deve ser monitorada e o volume ajustado conforme a resposta do tendão.",
+    answer: "Em alguns casos é possível manter parte do treino com redução de impacto e ajustes de volume. A avaliação fisioterapêutica ajuda a determinar a progressão segura.",
   },
   {
     question: "Tendinite do Aquiles pode virar ruptura?",
-    answer: "A tendinopatia crônica não tratada pode enfraquecer o tendão e aumentar o risco de ruptura. Por isso, o tratamento precoce é fundamental.",
+    answer: "Sim. Se a sobrecarga continuar sem tratamento adequado, a tendinopatia pode evoluir para ruptura parcial ou total do tendão.",
   },
   {
     question: "Exercício excêntrico realmente funciona?",
-    answer: "Sim. O protocolo de exercícios excêntricos é o tratamento com maior evidência científica para tendinopatia do Aquiles, promovendo remodelação e fortalecimento do tendão.",
+    answer: "Sim. Exercícios excêntricos para a panturrilha são considerados padrão-ouro no tratamento da tendinopatia do Aquiles.",
   },
 ];
 
@@ -73,7 +69,7 @@ const TendiniteAquiles = () => {
       <section className="relative py-20 bg-gradient-to-r from-primary to-secondary">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
-            Tendinite do Aquiles em Corredores: tratamento em Ribeirão Preto
+            Tendinite do Aquiles em Corredores: tratamento da dor no tendão de Aquiles em Ribeirão Preto
           </h1>
           <p className="text-xl text-white/90 max-w-2xl mx-auto mb-8">
             Fisioterapia esportiva especializada no tratamento de tendinite do Aquiles para corredores em Ribeirão Preto.
@@ -101,6 +97,12 @@ const TendiniteAquiles = () => {
             </p>
             <p>
               Na <strong className="text-foreground">CareFit Run Base</strong> realizamos tratamento com <Link to="/fisioterapia-para-corredores-ribeirao-preto" className="text-accent hover:underline">fisioterapia esportiva</Link> especializada para reduzir dor, restaurar função e permitir retorno progressivo à corrida.
+            </p>
+            <p>
+              Atendemos corredores de 5 km, 10 km, meia maratona, maratona e triatletas que desenvolvem dor no tendão de Aquiles durante ou após a corrida.
+            </p>
+            <p>
+              O <Link to="/fortalecimento-para-corredores-ribeirao-preto" className="text-accent hover:underline">fortalecimento específico para corredores</Link> é fundamental para reduzir o risco de sobrecarga no tendão, e protocolos de <Link to="/recovery-corredores-ribeirao-preto" className="text-accent hover:underline">recovery</Link> ajudam a melhorar a recuperação entre sessões de treino.
             </p>
           </div>
         </div>
@@ -204,8 +206,11 @@ const TendiniteAquiles = () => {
       <section className="py-20 bg-gradient-to-r from-primary to-secondary">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-bold text-white mb-6">Agende sua Avaliação na CareFit Run Base</h2>
+          <p className="text-lg text-white/80 mb-6 max-w-2xl mx-auto">
+            A CareFit Run Base é um centro especializado em fisioterapia esportiva para corredores em Ribeirão Preto, com experiência no tratamento de lesões causadas pela corrida.
+          </p>
           <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-            Se você está com dor no tendão de Aquiles, nossa equipe de fisioterapia esportiva em Ribeirão Preto pode ajudar no seu tratamento e retorno à corrida.
+            Se você está com dor no tendão de Aquiles, nossa equipe pode ajudar no seu tratamento e retorno à corrida.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button variant="hero" size="lg" className="text-lg px-8 py-4" onClick={handleAgendar}>Agendar avaliação</Button>
