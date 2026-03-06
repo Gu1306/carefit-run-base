@@ -18,6 +18,7 @@ import NossaHistoria from "./pages/NossaHistoria";
 import EnvioResultados from "./pages/EnvioResultados";
 import CareFitCast from "./pages/CareFitCast";
 import FisioterapiaCorredores from "./pages/FisioterapiaCorredores";
+import NutricaoCorredores from "./pages/NutricaoCorredores";
 import PlaceholderPage from "./pages/PlaceholderPage";
 import NotFound from "./pages/NotFound";
 
