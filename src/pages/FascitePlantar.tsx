@@ -39,24 +39,20 @@ const prevencao = [
 
 const faqItems = [
   {
-    question: "O que é fascite plantar?",
-    answer: "É uma inflamação da fáscia plantar, tecido que conecta o calcanhar aos dedos do pé e sustenta o arco plantar. É uma das principais causas de dor no calcanhar em corredores.",
-  },
-  {
     question: "Quanto tempo demora para curar fascite plantar?",
-    answer: "O tempo de recuperação varia. Casos leves podem melhorar em semanas com fisioterapia e ajustes de carga. Casos crônicos podem levar alguns meses de tratamento.",
+    answer: "O tempo de recuperação varia conforme a gravidade da lesão e a carga de treino do corredor. Com fisioterapia adequada, muitos corredores apresentam melhora significativa em algumas semanas.",
   },
   {
     question: "Posso correr com fascite plantar?",
-    answer: "Depende da intensidade dos sintomas. Em muitos casos é possível manter parte do treino com ajustes, mas uma avaliação profissional é fundamental para definir a melhor estratégia.",
+    answer: "Em alguns casos é possível manter parte do treino com redução de impacto e controle de carga. A avaliação fisioterapêutica ajuda a definir a progressão segura.",
   },
   {
     question: "Palmilha ajuda na fascite plantar?",
-    answer: "Palmilhas podem auxiliar no suporte do arco plantar e distribuição da carga, mas devem ser parte de um tratamento completo que inclui fortalecimento e correção biomecânica.",
+    answer: "Palmilhas podem auxiliar no suporte do arco plantar e na redistribuição de carga, mas devem ser avaliadas individualmente.",
   },
   {
     question: "Qual a diferença entre fascite plantar e esporão de calcâneo?",
-    answer: "O esporão é uma calcificação no calcanhar que pode coexistir com a fascite plantar, mas nem sempre é a causa da dor. O tratamento foca na fascite e nos fatores biomecânicos.",
+    answer: "A fascite plantar é a inflamação da fáscia plantar, enquanto o esporão é uma calcificação no osso do calcâneo. Muitas vezes os dois podem coexistir.",
   },
 ];
 
