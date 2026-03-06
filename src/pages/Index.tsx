@@ -18,7 +18,7 @@ const Index = () => {
   const pilares = [{
     icon: Heart,
     title: "Recovery",
-    subtitle: "Recuperar também é treinar",
+    subtitle: "Recovery para corredores e atletas de endurance",
     description: "Recovery muscular com técnicas avançadas de recuperação e prevenção de lesões na corrida. Mantenha-se sempre em movimento com protocolos científicos.",
     produtos: "Presente em: Todos os produtos"
   }, {
