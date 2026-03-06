@@ -4,6 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { ArrowRight, Shield, Activity, Heart, CheckCircle, AlertTriangle, MessageCircle } from "lucide-react";
 import Footer from "@/components/Footer";
+import salaFisioterapia from "@/assets/sala-fisioterapia.jpg";
 
 const lesoes = [
   {
