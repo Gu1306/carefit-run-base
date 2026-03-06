@@ -77,6 +77,86 @@ const RecoveryCorredores = () => {
         </div>
       </section>
 
+      {/* O Recovery dentro do Ecossistema CareFit */}
+      <section className="py-16 bg-muted/30">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center gap-4 mb-8">
+            <div className="w-14 h-14 bg-gradient-to-br from-accent to-earth rounded-full flex items-center justify-center">
+              <Users className="w-7 h-7 text-white" />
+            </div>
+            <h2 className="text-3xl font-bold text-primary">
+              O Recovery dentro do Ecossistema CareFit
+            </h2>
+          </div>
+          <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
+            <p>
+              Na CareFit Run Base acreditamos que recuperação não é apenas descansar o corpo. <strong className="text-foreground">Recovery é parte de um sistema integrado de cuidado ao corredor.</strong>
+            </p>
+            <p>
+              Nossa equipe é formada por profissionais que trabalham juntos na jornada do atleta:
+            </p>
+          </div>
+          <div className="grid sm:grid-cols-2 gap-4 mt-6 mb-8">
+            <div className="flex items-start gap-3 bg-background p-5 rounded-lg shadow-sm">
+              <ArrowRight className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+              <span className="text-foreground"><Link to="/fisioterapia-para-corredores-ribeirao-preto" className="text-accent hover:underline font-medium">Fisioterapia esportiva</Link>, para tratar e prevenir lesões</span>
+            </div>
+            <div className="flex items-start gap-3 bg-background p-5 rounded-lg shadow-sm">
+              <ArrowRight className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+              <span className="text-foreground"><Link to="/fortalecimento-para-corredores-ribeirao-preto" className="text-accent hover:underline font-medium">Fortalecimento específico para corrida</Link>, para suportar a carga de treino</span>
+            </div>
+            <div className="flex items-start gap-3 bg-background p-5 rounded-lg shadow-sm">
+              <ArrowRight className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+              <span className="text-foreground"><strong>Nutrição esportiva</strong>, para sustentar recuperação e adaptação</span>
+            </div>
+            <div className="flex items-start gap-3 bg-background p-5 rounded-lg shadow-sm">
+              <ArrowRight className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+              <span className="text-foreground"><strong>Protocolos de recovery</strong>, para acelerar a regeneração muscular</span>
+            </div>
+          </div>
+          <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
+            <p>
+              Essa integração é o que permite que corredores treinem com mais consistência, reduzam o risco de <Link to="/lesoes-na-corrida" className="text-accent hover:underline">lesões</Link> e evoluam na performance.
+            </p>
+            <p>
+              É exatamente esse modelo que deu origem à CareFit Run Base: um espaço onde o corredor encontra um time completo trabalhando para sua jornada.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Por que a CareFit existe? */}
+      <section className="py-16 bg-background">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center gap-4 mb-8">
+            <div className="w-14 h-14 bg-gradient-to-br from-secondary to-primary rounded-full flex items-center justify-center">
+              <Heart className="w-7 h-7 text-white" />
+            </div>
+            <h2 className="text-3xl font-bold text-primary">
+              Por que a CareFit existe?
+            </h2>
+          </div>
+          <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
+            <p>
+              A CareFit Run Base nasceu da percepção de que muitos corredores treinam duro, mas não recebem o suporte necessário para recuperar, fortalecer e evoluir com segurança.
+            </p>
+            <p>
+              Nosso time reúne profissionais que também vivem o universo da corrida e do endurance. Isso permite entender profundamente as demandas de quem treina para:
+            </p>
+          </div>
+          <div className="flex flex-wrap gap-3 mt-6 mb-8">
+            {["5 km", "10 km", "Meia maratona", "Maratona", "Triathlon"].map((dist, i) => (
+              <span key={i} className="bg-muted px-5 py-2 rounded-full text-foreground font-medium text-sm">
+                {dist}
+              </span>
+            ))}
+          </div>
+          <p className="text-lg text-muted-foreground leading-relaxed">
+            Mais do que tratar lesões, nosso objetivo é ajudar cada corredor a construir uma <strong className="text-foreground">jornada sustentável no esporte</strong>.
+          </p>
+        </div>
+      </section>
+
       {/* Por que recovery é importante */}
       <section className="py-16 bg-muted/30">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
