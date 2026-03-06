@@ -3,6 +3,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { useNavigate } from "react-router-dom";
 import { Heart, Zap, Target, Users, MapPin, Calendar, Star, Award, Clock, CheckCircle, Sparkles, Activity, Utensils, Dumbbell, Timer, Stethoscope } from "lucide-react";
+import Footer from "@/components/Footer";
 import { AnimatedCounter } from "@/components/AnimatedCounter";
 import espaco1 from "@/assets/espaco-1.jpg";
 import espaco2 from "@/assets/espaco-2.jpg";
