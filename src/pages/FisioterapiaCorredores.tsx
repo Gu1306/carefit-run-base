@@ -36,27 +36,27 @@ const lesoes = [
 const faqItems = [
   {
     question: "Quanto tempo leva para tratar uma lesão de corrida?",
-    answer: "O tempo varia conforme a lesão e o estágio. Lesões leves podem ser resolvidas em 2 a 4 semanas. Casos mais complexos podem levar de 6 a 12 semanas. Na CareFit, o tratamento é integrado ao seu plano de treino para otimizar o retorno.",
+    answer: "O tempo de recuperação depende da lesão, do histórico do atleta e da fase do tratamento. Lesões leves podem melhorar em poucas semanas, enquanto quadros mais complexos podem exigir um processo de reabilitação mais longo.",
   },
   {
     question: "Posso continuar correndo durante o tratamento?",
-    answer: "Depende da lesão. Em muitos casos, ajustamos volume e intensidade para que você continue treinando de forma segura. O objetivo é nunca parar completamente, mas sim correr com inteligência durante a reabilitação.",
+    answer: "Em muitos casos é possível manter parte do treino com ajustes de carga, intensidade e volume. O fisioterapeuta avalia cada caso e define a progressão segura.",
   },
   {
     question: "Qual a diferença entre fisioterapia comum e fisioterapia para corredores?",
-    answer: "A fisioterapia para corredores considera a biomecânica da corrida, a periodização do treino, o tipo de calçado e o histórico de provas. O tratamento é específico para as demandas do esporte, não genérico.",
+    answer: "A fisioterapia para corredores considera a biomecânica da corrida, o impacto repetitivo e as demandas específicas do esporte, criando estratégias de tratamento e prevenção voltadas ao gesto da corrida.",
   },
   {
     question: "A CareFit atende convênio?",
-    answer: "Trabalhamos com atendimento particular, pois oferecemos consultas mais longas e personalizadas, com abordagem multidisciplinar integrada ao seu treino de corrida.",
+    answer: "A CareFit Run Base trabalha com atendimento especializado e individualizado. Para informações sobre valores e formas de atendimento, entre em contato diretamente com nossa equipe.",
   },
   {
     question: "Preciso estar lesionado para procurar a fisioterapia?",
-    answer: "Não! A avaliação preventiva é uma das nossas especialidades. Identificamos fatores de risco antes que se tornem lesões, otimizando sua performance e segurança na corrida.",
+    answer: "Não. Muitos corredores procuram a fisioterapia de forma preventiva para melhorar mobilidade, força e biomecânica da corrida, reduzindo o risco de lesões futuras.",
   },
   {
     question: "Como funciona a primeira consulta?",
-    answer: "A primeira consulta inclui avaliação postural, análise de mobilidade, testes funcionais específicos para corrida e conversa sobre seu histórico e objetivos. A partir daí, montamos um plano de tratamento personalizado.",
+    answer: "Na primeira consulta realizamos uma avaliação completa que inclui histórico de treinos, análise funcional, mobilidade, força muscular e definição de um plano de tratamento personalizado.",
   },
 ];
 
