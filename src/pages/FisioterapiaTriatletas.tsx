@@ -244,7 +244,7 @@ const FisioterapiaTriatletas = () => {
               <Dumbbell className="w-8 h-8 text-accent mx-auto mb-2" />
               <span className="text-accent font-medium">Fortalecimento para Corredores →</span>
             </Link>
-            <Link to="/recovery-corredores-ribeirao-preto" className="block p-5 bg-muted rounded-lg text-center hover:shadow-md transition-shadow">
+            <Link to="/recovery-para-corredores-ribeirao-preto" className="block p-5 bg-muted rounded-lg text-center hover:shadow-md transition-shadow">
               <RotateCcw className="w-8 h-8 text-accent mx-auto mb-2" />
               <span className="text-accent font-medium">Recovery para Corredores →</span>
             </Link>
@@ -277,7 +277,7 @@ const FisioterapiaTriatletas = () => {
             </div>
             <div className="flex items-center gap-4 p-4 bg-background rounded-lg shadow-sm">
               <ArrowRight className="w-5 h-5 text-accent flex-shrink-0" />
-              <Link to="/recovery-corredores-ribeirao-preto" className="text-accent hover:underline font-medium">Protocolos de recovery</Link>
+              <Link to="/recovery-para-corredores-ribeirao-preto" className="text-accent hover:underline font-medium">Protocolos de recovery</Link>
             </div>
             <div className="flex items-center gap-4 p-4 bg-background rounded-lg shadow-sm">
               <ArrowRight className="w-5 h-5 text-accent flex-shrink-0" />
