@@ -99,7 +99,7 @@ const FisioterapiaCorredores = () => {
               A corrida é um dos esportes com maior índice de lesões por repetição. Estudos mostram que <strong className="text-foreground">até 79% dos corredores sofrem pelo menos uma lesão por ano</strong>. A maioria dessas lesões é causada por sobrecarga, desequilíbrios musculares e falta de acompanhamento especializado.
             </p>
             <p>
-              A fisioterapia específica para corredores vai além do tratamento de dores. Ela atua na <strong className="text-foreground">prevenção, na correção biomecânica e na otimização da performance</strong>, considerando as particularidades do gesto da corrida — como impacto repetitivo, cadência, pisada e postura.
+              A fisioterapia esportiva específica para corredores vai além do tratamento da dor. Ela atua na <strong className="text-foreground">prevenção de lesões, na correção biomecânica da corrida e na melhora da performance</strong>.
             </p>
             <p>
               Na <strong className="text-foreground">CareFit Run Base</strong>, em Ribeirão Preto, a fisioterapia está integrada a um ecossistema completo de cuidado ao corredor: <Link to="/fortalecimento-para-corredores-ribeirao-preto" className="text-accent hover:underline">fortalecimento</Link>, <Link to="/nutricao-para-corredores-ribeirao-preto" className="text-accent hover:underline">nutrição</Link>, <Link to="/recovery-corredores-ribeirao-preto" className="text-accent hover:underline">recovery</Link> e treinamento mental. Isso garante resultados mais rápidos e duradouros.
