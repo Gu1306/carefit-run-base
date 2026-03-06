@@ -32,6 +32,7 @@ const Navigation = () => {
       name: "Para Corredores",
       dropdown: [
         { name: "Fisioterapia para Corredores", href: "/fisioterapia-para-corredores-ribeirao-preto" },
+        { name: "Nutrição para Corredores", href: "/nutricao-para-corredores-ribeirao-preto" },
         { name: "Recovery para Corredores", href: "/recovery-corredores-ribeirao-preto" },
         { name: "Avaliação do Corredor", href: "/avaliacao-do-corredor-ribeirao-preto" },
         { name: "Fortalecimento para Corredores", href: "/fortalecimento-para-corredores-ribeirao-preto" },
