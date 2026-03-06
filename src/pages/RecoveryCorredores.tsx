@@ -7,16 +7,16 @@ import Footer from "@/components/Footer";
 
 const beneficiosRecovery = [
   "Acelerar a recuperação muscular",
-  "Reduzir dor pós-treino",
-  "Melhorar circulação sanguínea",
+  "Reduzir dor muscular pós-treino",
+  "Melhorar a circulação sanguínea",
   "Reduzir rigidez muscular",
   "Preparar o corpo para o próximo treino",
   "Diminuir o risco de lesões por sobrecarga",
 ];
 
 const quandoFazer = [
-  "Após treinos longos (longões)",
-  "Após treinos de intensidade",
+  "Após treinos longos",
+  "Após treinos intensos",
   "Após provas",
   "Durante ciclos de treino intenso",
   "Durante preparação para maratona ou triathlon",
@@ -33,51 +33,64 @@ const lesoesPrevenidas = [
 const faqItems = [
   {
     question: "Recovery realmente melhora a performance?",
-    answer: "Sim. A recuperação adequada permite que o corpo se adapte melhor ao treinamento e mantenha consistência de treinos.",
+    answer: "Sim. A recuperação adequada permite que o corpo se adapte melhor ao treinamento e mantenha consistência ao longo das semanas.",
   },
   {
     question: "Com que frequência devo fazer recovery?",
-    answer: "Depende da carga de treino do atleta. Corredores em preparação para provas podem se beneficiar de sessões semanais ou após treinos mais intensos.",
+    answer: "Depende da carga de treino do atleta. Corredores em preparação para provas podem se beneficiar de sessões semanais ou após treinos mais exigentes.",
   },
   {
     question: "Recovery substitui fisioterapia?",
-    answer: "Não. O recovery é um complemento importante para recuperação muscular, enquanto a fisioterapia trata lesões e corrige fatores biomecânicos.",
+    answer: "Não. O recovery é uma estratégia de recuperação muscular. A fisioterapia é necessária quando há dor ou lesão específica.",
   },
 ];
 
 const RecoveryCorredores = () => {
+  const handleWhatsApp = () => {
+    window.open('https://api.whatsapp.com/send?phone=5516996008849&text=Olá! Gostaria de agendar uma sessão de recovery.', '_blank');
+  };
+
   return (
     <div className="min-h-screen bg-background">
-      {/* Hero Section */}
+      {/* Hero */}
       <section className="pt-24 pb-16 bg-gradient-to-br from-primary via-primary/95 to-secondary">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
             Recovery para Corredores em Ribeirão Preto
           </h1>
-          <p className="text-xl text-white/90 max-w-3xl mx-auto">
+          <p className="text-xl text-white/90 max-w-3xl mx-auto mb-8">
             Recuperação muscular especializada para corredores e triatletas na CareFit Run Base.
           </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button variant="hero" size="lg" className="text-lg px-8 py-4" onClick={handleWhatsApp}>
+              Agendar sessão de recovery
+            </Button>
+            <Button variant="whatsapp" size="lg" className="text-lg px-8 py-4" onClick={handleWhatsApp}>
+              <MessageCircle className="w-5 h-5" />
+              Falar no WhatsApp
+            </Button>
+          </div>
         </div>
       </section>
 
-      {/* Intro Section */}
+      {/* Seção 1 — Introdução */}
       <section className="py-16 bg-background">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="prose prose-lg max-w-none space-y-6">
-            <p className="text-lg text-muted-foreground leading-relaxed">
+          <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
+            <p>
               A recuperação muscular é uma parte essencial do treinamento de corrida. Treinar sem recuperar adequadamente aumenta o risco de lesões, queda de performance e fadiga acumulada.
             </p>
-            <p className="text-lg text-muted-foreground leading-relaxed">
+            <p>
               Na CareFit Run Base, em Ribeirão Preto, oferecemos protocolos de recovery especializados para corredores e triatletas, com foco em acelerar a recuperação muscular, reduzir dor pós-treino e melhorar a adaptação ao treinamento.
             </p>
-            <p className="text-lg text-muted-foreground leading-relaxed">
-              Nosso recovery é integrado à <Link to="/fisioterapia-para-corredores-ribeirao-preto" className="text-accent hover:underline">fisioterapia esportiva</Link>, <Link to="/fortalecimento-para-corredores-ribeirao-preto" className="text-accent hover:underline">fortalecimento</Link> e nutrição para garantir que cada atleta se recupere melhor entre sessões de treino.
+            <p>
+              Nosso recovery faz parte de um ecossistema completo de cuidado ao corredor, integrado com <Link to="/fisioterapia-para-corredores-ribeirao-preto" className="text-accent hover:underline">fisioterapia esportiva</Link>, <Link to="/fortalecimento-para-corredores-ribeirao-preto" className="text-accent hover:underline">fortalecimento específico para corrida</Link> e nutrição esportiva.
             </p>
           </div>
         </div>
       </section>
 
-      {/* O Recovery dentro do Ecossistema CareFit */}
+      {/* Seção 2 — O Recovery dentro do Ecossistema CareFit */}
       <section className="py-16 bg-muted/30">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center gap-4 mb-8">
@@ -90,42 +103,40 @@ const RecoveryCorredores = () => {
           </div>
           <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
             <p>
-              Na CareFit Run Base acreditamos que recuperação não é apenas descansar o corpo. <strong className="text-foreground">Recovery é parte de um sistema integrado de cuidado ao corredor.</strong>
+              Na CareFit Run Base acreditamos que recuperação não é apenas descansar o corpo. <strong className="text-foreground">Recovery faz parte de um sistema integrado de cuidado ao corredor.</strong>
             </p>
-            <p>
-              Nossa equipe é formada por profissionais que trabalham juntos na jornada do atleta:
-            </p>
+            <p>Nossa equipe trabalha de forma conjunta na jornada do atleta:</p>
           </div>
           <div className="grid sm:grid-cols-2 gap-4 mt-6 mb-8">
             <div className="flex items-start gap-3 bg-background p-5 rounded-lg shadow-sm">
               <ArrowRight className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
-              <span className="text-foreground"><Link to="/fisioterapia-para-corredores-ribeirao-preto" className="text-accent hover:underline font-medium">Fisioterapia esportiva</Link>, para tratar e prevenir lesões</span>
+              <span className="text-foreground"><Link to="/fisioterapia-para-corredores-ribeirao-preto" className="text-accent hover:underline font-medium">Fisioterapia esportiva</Link> para tratar e prevenir lesões</span>
             </div>
             <div className="flex items-start gap-3 bg-background p-5 rounded-lg shadow-sm">
               <ArrowRight className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
-              <span className="text-foreground"><Link to="/fortalecimento-para-corredores-ribeirao-preto" className="text-accent hover:underline font-medium">Fortalecimento específico para corrida</Link>, para suportar a carga de treino</span>
+              <span className="text-foreground"><Link to="/fortalecimento-para-corredores-ribeirao-preto" className="text-accent hover:underline font-medium">Fortalecimento específico para corrida</Link> para suportar a carga de treino</span>
             </div>
             <div className="flex items-start gap-3 bg-background p-5 rounded-lg shadow-sm">
               <ArrowRight className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
-              <span className="text-foreground"><strong>Nutrição esportiva</strong>, para sustentar recuperação e adaptação</span>
+              <span className="text-foreground"><strong>Nutrição esportiva</strong> para sustentar recuperação e adaptação ao treinamento</span>
             </div>
             <div className="flex items-start gap-3 bg-background p-5 rounded-lg shadow-sm">
               <ArrowRight className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
-              <span className="text-foreground"><strong>Protocolos de recovery</strong>, para acelerar a regeneração muscular</span>
+              <span className="text-foreground"><strong>Protocolos de recovery</strong> para acelerar a regeneração muscular</span>
             </div>
           </div>
           <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
             <p>
-              Essa integração é o que permite que corredores treinem com mais consistência, reduzam o risco de <Link to="/lesoes-na-corrida" className="text-accent hover:underline">lesões</Link> e evoluam na performance.
+              Essa integração permite que corredores treinem com mais consistência, reduzam o risco de <Link to="/lesoes-na-corrida" className="text-accent hover:underline">lesões</Link> e evoluam com segurança na performance.
             </p>
             <p>
-              É exatamente esse modelo que deu origem à CareFit Run Base: um espaço onde o corredor encontra um time completo trabalhando para sua jornada.
+              Esse modelo de cuidado integrado é exatamente o que deu origem à CareFit Run Base.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Por que a CareFit existe? */}
+      {/* Seção 3 — Por que a CareFit existe? */}
       <section className="py-16 bg-background">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center gap-4 mb-8">
@@ -141,7 +152,7 @@ const RecoveryCorredores = () => {
               A CareFit Run Base nasceu da percepção de que muitos corredores treinam duro, mas não recebem o suporte necessário para recuperar, fortalecer e evoluir com segurança.
             </p>
             <p>
-              Nosso time reúne profissionais que também vivem o universo da corrida e do endurance. Isso permite entender profundamente as demandas de quem treina para:
+              Nosso time reúne profissionais que também vivem o universo da corrida e do endurance, o que permite compreender profundamente as demandas de quem treina para:
             </p>
           </div>
           <div className="flex flex-wrap gap-3 mt-6 mb-8">
@@ -157,18 +168,21 @@ const RecoveryCorredores = () => {
         </div>
       </section>
 
-      {/* Por que recovery é importante */}
+      {/* Seção 4 — Por que o recovery é importante */}
       <section className="py-16 bg-muted/30">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-primary mb-6">
-            Por que o recovery é importante para corredores?
-          </h2>
+          <div className="flex items-center gap-4 mb-8">
+            <div className="w-14 h-14 bg-gradient-to-br from-accent to-earth rounded-full flex items-center justify-center">
+              <Activity className="w-7 h-7 text-white" />
+            </div>
+            <h2 className="text-3xl font-bold text-primary">
+              Por que o recovery é importante para corredores?
+            </h2>
+          </div>
           <p className="text-lg text-muted-foreground leading-relaxed mb-8">
             A corrida gera impacto repetitivo sobre músculos, tendões e articulações. Sem recuperação adequada, esse estresse pode se acumular e aumentar o risco de <Link to="/lesoes-na-corrida" className="text-accent hover:underline">lesões</Link>.
           </p>
-          <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-            O recovery ajuda a:
-          </p>
+          <p className="text-lg text-muted-foreground leading-relaxed mb-6">O recovery ajuda a:</p>
           <div className="grid sm:grid-cols-2 gap-4 mb-8">
             {beneficiosRecovery.map((beneficio, index) => (
               <div key={index} className="flex items-center gap-3 bg-background p-4 rounded-lg shadow-sm">
@@ -183,7 +197,7 @@ const RecoveryCorredores = () => {
         </div>
       </section>
 
-      {/* Protocolos de Recovery */}
+      {/* Seção 5 — Protocolos de Recovery */}
       <section className="py-16 bg-background">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-primary mb-12">
@@ -269,7 +283,7 @@ const RecoveryCorredores = () => {
                   <div className="md:w-3/4 p-8">
                     <h3 className="text-2xl font-bold text-primary mb-4">Liberação Miofascial</h3>
                     <p className="text-muted-foreground leading-relaxed mb-6">
-                      Técnicas de liberação miofascial ajudam a reduzir tensão muscular e melhorar a mobilidade.
+                      Técnicas de liberação miofascial ajudam a reduzir tensão muscular e melhorar mobilidade.
                     </p>
                     <div className="space-y-2">
                       <p className="font-semibold text-foreground">Benefícios:</p>
@@ -296,7 +310,7 @@ const RecoveryCorredores = () => {
         </div>
       </section>
 
-      {/* Recovery para quem treina sério */}
+      {/* Seção 6 — Recovery para quem treina sério */}
       <section className="py-16 bg-muted/30">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center gap-4 mb-8">
@@ -316,7 +330,7 @@ const RecoveryCorredores = () => {
               "Estão em preparação para provas",
               "Fazem treinos longos (longões)",
               "Realizam treinos intervalados ou de intensidade",
-              "Participam de maratonas ou triathlons",
+              "Participam de maratonas ou triathlon",
             ].map((item, index) => (
               <div key={index} className="flex items-center gap-3 bg-background p-4 rounded-lg shadow-sm">
                 <CheckCircle className="w-5 h-5 text-accent flex-shrink-0" />
@@ -330,18 +344,23 @@ const RecoveryCorredores = () => {
         </div>
       </section>
 
-      {/* Quando fazer recovery */}
+      {/* Seção 7 — Quando fazer recovery */}
       <section className="py-16 bg-background">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-primary mb-6">
-            Quando o corredor deve fazer recovery?
-          </h2>
+          <div className="flex items-center gap-4 mb-8">
+            <div className="w-14 h-14 bg-gradient-to-br from-secondary to-primary rounded-full flex items-center justify-center">
+              <Activity className="w-7 h-7 text-white" />
+            </div>
+            <h2 className="text-3xl font-bold text-primary">
+              Quando o corredor deve fazer recovery?
+            </h2>
+          </div>
           <p className="text-lg text-muted-foreground leading-relaxed mb-8">
             O recovery é indicado especialmente:
           </p>
           <div className="grid sm:grid-cols-2 gap-4 mb-8">
             {quandoFazer.map((item, index) => (
-              <div key={index} className="flex items-center gap-3 bg-background p-4 rounded-lg shadow-sm">
+              <div key={index} className="flex items-center gap-3 bg-muted p-4 rounded-lg shadow-sm">
                 <Activity className="w-5 h-5 text-accent flex-shrink-0" />
                 <span className="text-foreground">{item}</span>
               </div>
@@ -353,47 +372,32 @@ const RecoveryCorredores = () => {
         </div>
       </section>
 
-      {/* Recovery e prevenção de lesões */}
-      <section className="py-16 bg-background">
+      {/* Seção 8 — Recovery e prevenção de lesões */}
+      <section className="py-16 bg-muted/30">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-primary mb-6">
-            Recovery e prevenção de lesões
-          </h2>
+          <div className="flex items-center gap-4 mb-8">
+            <div className="w-14 h-14 bg-gradient-to-br from-accent to-earth rounded-full flex items-center justify-center">
+              <Heart className="w-7 h-7 text-white" />
+            </div>
+            <h2 className="text-3xl font-bold text-primary">
+              Recovery e prevenção de lesões
+            </h2>
+          </div>
           <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-            A recuperação adequada é um dos fatores mais importantes para prevenir lesões como:
+            A recuperação adequada é um dos fatores mais importantes para prevenir lesões comuns em corredores, como:
           </p>
           <div className="grid sm:grid-cols-2 gap-4 mb-8">
             {lesoesPrevenidas.map((lesao, index) => (
-              <Link key={index} to={lesao.link} className="flex items-center gap-3 bg-muted/50 p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+              <Link key={index} to={lesao.link} className="flex items-center gap-3 bg-background p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow">
                 <Heart className="w-5 h-5 text-accent flex-shrink-0" />
-                <span className="text-accent hover:underline">{lesao.nome}</span>
+                <span className="text-accent hover:underline font-medium">{lesao.nome}</span>
               </Link>
             ))}
           </div>
-          <p className="text-lg text-muted-foreground leading-relaxed mb-4">
-            Na CareFit Run Base integramos recovery com:
-          </p>
-          <ul className="space-y-3 mb-6">
-            <li className="flex items-center gap-3">
-              <ArrowRight className="w-5 h-5 text-accent flex-shrink-0" />
-              <Link to="/fisioterapia-para-corredores-ribeirao-preto" className="text-accent hover:underline">Fisioterapia para corredores</Link>
-            </li>
-            <li className="flex items-center gap-3">
-              <ArrowRight className="w-5 h-5 text-accent flex-shrink-0" />
-              <Link to="/fortalecimento-para-corredores-ribeirao-preto" className="text-accent hover:underline">Fortalecimento específico para corrida</Link>
-            </li>
-            <li className="flex items-center gap-3">
-              <ArrowRight className="w-5 h-5 text-accent flex-shrink-0" />
-              <Link to="/avaliacao-do-corredor-ribeirao-preto" className="text-accent hover:underline">Avaliação biomecânica da corrida</Link>
-            </li>
-          </ul>
-          <p className="text-lg text-muted-foreground leading-relaxed">
-            Isso permite tratar e prevenir lesões com maior eficiência.
-          </p>
         </div>
       </section>
 
-      {/* Um time trabalhando pela sua corrida */}
+      {/* Seção 9 — Um time trabalhando pela sua corrida */}
       <section className="py-16 bg-background">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center gap-4 mb-8">
@@ -420,6 +424,10 @@ const RecoveryCorredores = () => {
               <ArrowRight className="w-5 h-5 text-accent flex-shrink-0" />
               <span className="text-foreground font-medium">Nutrição esportiva para endurance</span>
             </div>
+            <div className="flex items-center gap-4 p-4 bg-muted rounded-lg">
+              <ArrowRight className="w-5 h-5 text-accent flex-shrink-0" />
+              <Link to="/avaliacao-do-corredor-ribeirao-preto" className="text-accent hover:underline font-medium">Avaliação do corredor</Link>
+            </div>
           </div>
           <p className="text-lg text-muted-foreground leading-relaxed">
             Essa integração permite olhar para o corredor de forma completa, considerando treinamento, recuperação, alimentação e prevenção de lesões.
@@ -427,7 +435,7 @@ const RecoveryCorredores = () => {
         </div>
       </section>
 
-      {/* FAQ */}
+      {/* Seção 10 — FAQ */}
       <section className="py-16 bg-muted/30">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-primary mb-8">
@@ -446,7 +454,6 @@ const RecoveryCorredores = () => {
             ))}
           </Accordion>
 
-          {/* JSON-LD FAQ */}
           <script
             type="application/ld+json"
             dangerouslySetInnerHTML={{
@@ -467,7 +474,7 @@ const RecoveryCorredores = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
+      {/* CTA Final */}
       <section className="py-20 bg-gradient-to-r from-accent to-earth">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <p className="text-white/90 text-lg mb-6">
@@ -480,19 +487,15 @@ const RecoveryCorredores = () => {
             Se você é corredor ou triatleta em Ribeirão Preto e quer melhorar sua recuperação entre treinos, nossa equipe pode ajudar.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-            <Button
-              variant="whatsapp"
-              size="lg"
-              onClick={() => window.open('https://api.whatsapp.com/send?phone=5516996008849&text=Olá! Gostaria de agendar uma sessão de recovery.', '_blank')}
-            >
-              <MessageCircle className="w-5 h-5 mr-2" />
+            <Button variant="whatsapp" size="lg" className="text-lg px-8 py-4" onClick={handleWhatsApp}>
+              <MessageCircle className="w-5 h-5" />
               Falar no WhatsApp
             </Button>
             <Button
               variant="outline"
               size="lg"
-              className="bg-white/10 border-white text-white hover:bg-white hover:text-primary"
-              onClick={() => window.open('https://api.whatsapp.com/send?phone=5516996008849&text=Olá! Gostaria de agendar uma sessão de recovery.', '_blank')}
+              className="bg-white/10 border-white text-white hover:bg-white hover:text-primary text-lg px-8 py-4"
+              onClick={handleWhatsApp}
             >
               Agendar sessão de recovery
             </Button>
