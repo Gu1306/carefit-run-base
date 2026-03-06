@@ -44,19 +44,19 @@ const faqItems = [
   },
   {
     question: "Quanto tempo leva para tratar?",
-    answer: "O tempo varia conforme a gravidade. Com fisioterapia e ajustes de treino, muitos corredores melhoram em 4 a 8 semanas.",
+    answer: "O tempo de recuperação depende da intensidade da lesão e da carga de treino do corredor. Com fisioterapia adequada, muitos atletas apresentam melhora em algumas semanas.",
   },
   {
     question: "Posso correr com dor na lateral do joelho?",
-    answer: "Depende da intensidade. Continuar correndo com dor intensa pode agravar o quadro. Uma avaliação especializada define os ajustes necessários no treino.",
+    answer: "Em alguns casos é possível manter parte do treino com ajustes de carga e intensidade. A avaliação fisioterapêutica ajuda a definir a progressão segura.",
   },
   {
     question: "Foam roller ajuda na banda iliotibial?",
-    answer: "O foam roller pode auxiliar na liberação de tensão, mas não trata a causa. O fortalecimento dos glúteos e a correção biomecânica são fundamentais.",
+    answer: "O uso de foam roller pode ajudar a reduzir tensão na musculatura lateral da coxa, mas deve ser associado a fortalecimento e correção biomecânica.",
   },
   {
     question: "A síndrome da banda iliotibial volta?",
-    answer: "Se os fatores de risco não forem corrigidos, sim. O fortalecimento contínuo e a avaliação periódica são essenciais para prevenir recidivas.",
+    answer: "Pode voltar se as causas da lesão não forem tratadas, como fraqueza muscular ou progressão inadequada de treino.",
   },
 ];
 
