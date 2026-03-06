@@ -52,27 +52,27 @@ const Footer = () => {
             </h3>
             <ul className="space-y-2">
               <li>
-                <Link to="/canelite" className="text-sm text-primary-foreground/70 hover:text-accent transition-colors">
+                <Link to="/canelite-ribeirao-preto" className="text-sm text-primary-foreground/70 hover:text-accent transition-colors">
                   Canelite
                 </Link>
               </li>
               <li>
-                <Link to="/fascite-plantar" className="text-sm text-primary-foreground/70 hover:text-accent transition-colors">
+                <Link to="/fascite-plantar-ribeirao-preto" className="text-sm text-primary-foreground/70 hover:text-accent transition-colors">
                   Fascite Plantar
                 </Link>
               </li>
               <li>
-                <Link to="/dor-no-joelho-na-corrida" className="text-sm text-primary-foreground/70 hover:text-accent transition-colors">
+                <Link to="/dor-no-joelho-corrida-ribeirao-preto" className="text-sm text-primary-foreground/70 hover:text-accent transition-colors">
                   Dor no Joelho
                 </Link>
               </li>
               <li>
-                <Link to="/tendinite-do-aquiles" className="text-sm text-primary-foreground/70 hover:text-accent transition-colors">
+                <Link to="/tendinite-aquiles-ribeirao-preto" className="text-sm text-primary-foreground/70 hover:text-accent transition-colors">
                   Tendinite do Aquiles
                 </Link>
               </li>
               <li>
-                <Link to="/sindrome-da-banda-iliotibial" className="text-sm text-primary-foreground/70 hover:text-accent transition-colors">
+                <Link to="/banda-iliotibial-ribeirao-preto" className="text-sm text-primary-foreground/70 hover:text-accent transition-colors">
                   Banda Iliotibial
                 </Link>
               </li>
