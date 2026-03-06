@@ -94,8 +94,8 @@ const ComunidadeCareFit = () => {
             </Button>
             <Button
               size="lg"
-              variant="outline"
-              className="border-2 border-white text-white hover:bg-white hover:text-primary text-lg px-8 py-4"
+              variant="whatsapp"
+              className="text-lg px-8 py-4"
               onClick={handleWhatsApp}
             >
               <MessageCircle className="mr-2 h-5 w-5" />
