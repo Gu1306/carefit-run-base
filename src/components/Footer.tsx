@@ -23,22 +23,22 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/recovery-para-corredores" className="text-sm text-primary-foreground/70 hover:text-accent transition-colors">
+                <Link to="/recovery-corredores-ribeirao-preto" className="text-sm text-primary-foreground/70 hover:text-accent transition-colors">
                   Recovery
                 </Link>
               </li>
               <li>
-                <Link to="/avaliacao-do-corredor" className="text-sm text-primary-foreground/70 hover:text-accent transition-colors">
+                <Link to="/avaliacao-do-corredor-ribeirao-preto" className="text-sm text-primary-foreground/70 hover:text-accent transition-colors">
                   Avaliação do Corredor
                 </Link>
               </li>
               <li>
-                <Link to="/fortalecimento-para-corredores" className="text-sm text-primary-foreground/70 hover:text-accent transition-colors">
+                <Link to="/fortalecimento-para-corredores-ribeirao-preto" className="text-sm text-primary-foreground/70 hover:text-accent transition-colors">
                   Fortalecimento para Corrida
                 </Link>
               </li>
               <li>
-                <Link to="/fisioterapia-para-triatletas" className="text-sm text-primary-foreground/70 hover:text-accent transition-colors">
+                <Link to="/fisioterapia-para-triatletas-ribeirao-preto" className="text-sm text-primary-foreground/70 hover:text-accent transition-colors">
                   Triatletas
                 </Link>
               </li>
