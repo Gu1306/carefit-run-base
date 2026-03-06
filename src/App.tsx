@@ -11,6 +11,7 @@ import CicloCompleto from "./pages/CicloCompleto";
 import Historia from "./pages/Historia";
 import Espaco from "./pages/Espaco";
 import Comunidade from "./pages/Comunidade";
+import ComunidadeCareFit from "./pages/ComunidadeCareFit";
 import Contato from "./pages/Contato";
 import Agendar from "./pages/Agendar";
 import IceMindExperience from "./pages/IceMindExperience";
