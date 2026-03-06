@@ -21,6 +21,12 @@ import FisioterapiaCorredores from "./pages/FisioterapiaCorredores";
 import NutricaoCorredores from "./pages/NutricaoCorredores";
 import PlaceholderPage from "./pages/PlaceholderPage";
 import LesoesNaCorrida from "./pages/LesoesNaCorrida";
+import Canelite from "./pages/Canelite";
+import FascitePlantar from "./pages/FascitePlantar";
+import TendiniteAquiles from "./pages/TendiniteAquiles";
+import DorNoJoelho from "./pages/DorNoJoelho";
+import BandaIliotibial from "./pages/BandaIliotibial";
+import FraturaEstresse from "./pages/FraturaEstresse";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -54,12 +60,12 @@ const App = () => (
           <Route path="/fortalecimento-para-corredores-ribeirao-preto" element={<PlaceholderPage />} />
           <Route path="/fisioterapia-para-triatletas-ribeirao-preto" element={<PlaceholderPage />} />
           <Route path="/lesoes-na-corrida" element={<LesoesNaCorrida />} />
-          <Route path="/canelite-ribeirao-preto" element={<PlaceholderPage />} />
-          <Route path="/fascite-plantar-ribeirao-preto" element={<PlaceholderPage />} />
-          <Route path="/dor-no-joelho-corrida-ribeirao-preto" element={<PlaceholderPage />} />
-          <Route path="/tendinite-aquiles-ribeirao-preto" element={<PlaceholderPage />} />
-          <Route path="/banda-iliotibial-ribeirao-preto" element={<PlaceholderPage />} />
-          <Route path="/fratura-por-estresse-ribeirao-preto" element={<PlaceholderPage />} />
+          <Route path="/canelite-ribeirao-preto" element={<Canelite />} />
+          <Route path="/fascite-plantar-ribeirao-preto" element={<FascitePlantar />} />
+          <Route path="/dor-no-joelho-corrida-ribeirao-preto" element={<DorNoJoelho />} />
+          <Route path="/tendinite-aquiles-ribeirao-preto" element={<TendiniteAquiles />} />
+          <Route path="/banda-iliotibial-ribeirao-preto" element={<BandaIliotibial />} />
+          <Route path="/fratura-por-estresse-ribeirao-preto" element={<FraturaEstresse />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
