@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
@@ -8,21 +9,25 @@ import equipamentosFisio from "@/assets/equipamentos_fisio.jpg";
 const lesoes = [
   {
     title: "Canelite (Síndrome do Estresse Tibial Medial)",
+    link: "/canelite-ribeirao-preto",
     description: "Dor na região da canela causada por sobrecarga repetitiva. Comum em corredores que aumentam volume ou intensidade rapidamente. O tratamento inclui fortalecimento muscular, correção biomecânica e ajuste do plano de treino.",
     icon: AlertTriangle,
   },
   {
     title: "Fascite Plantar",
+    link: "/fascite-plantar-ribeirao-preto",
     description: "Inflamação da fáscia plantar que causa dor intensa no calcanhar, especialmente nos primeiros passos da manhã. A fisioterapia atua com terapia manual, exercícios de alongamento e fortalecimento específicos.",
     icon: AlertTriangle,
   },
   {
     title: "Tendinite do Aquiles",
+    link: "/tendinite-aquiles-ribeirao-preto",
     description: "Lesão no tendão de Aquiles por uso excessivo, gerando dor e rigidez na parte posterior do tornozelo. O tratamento envolve exercícios excêntricos, controle de carga e técnicas de terapia manual.",
     icon: AlertTriangle,
   },
   {
     title: "Dor no Joelho (Síndrome Patelofemoral)",
+    link: "/dor-no-joelho-corrida-ribeirao-preto",
     description: "Dor na região anterior do joelho, frequente em corredores. Causada por desequilíbrios musculares e alterações biomecânicas. A reabilitação foca no fortalecimento de quadríceps, glúteos e estabilidade do quadril.",
     icon: AlertTriangle,
   },
@@ -31,27 +36,27 @@ const lesoes = [
 const faqItems = [
   {
     question: "Quanto tempo leva para tratar uma lesão de corrida?",
-    answer: "O tempo varia conforme a lesão e o estágio. Lesões leves podem ser resolvidas em 2 a 4 semanas. Casos mais complexos podem levar de 6 a 12 semanas. Na CareFit, o tratamento é integrado ao seu plano de treino para otimizar o retorno.",
+    answer: "O tempo de recuperação depende da lesão, do histórico do atleta e da fase do tratamento. Lesões leves podem melhorar em poucas semanas, enquanto quadros mais complexos podem exigir um processo de reabilitação mais longo.",
   },
   {
     question: "Posso continuar correndo durante o tratamento?",
-    answer: "Depende da lesão. Em muitos casos, ajustamos volume e intensidade para que você continue treinando de forma segura. O objetivo é nunca parar completamente, mas sim correr com inteligência durante a reabilitação.",
+    answer: "Em muitos casos é possível manter parte do treino com ajustes de carga, intensidade e volume. O fisioterapeuta avalia cada caso e define a progressão segura.",
   },
   {
     question: "Qual a diferença entre fisioterapia comum e fisioterapia para corredores?",
-    answer: "A fisioterapia para corredores considera a biomecânica da corrida, a periodização do treino, o tipo de calçado e o histórico de provas. O tratamento é específico para as demandas do esporte, não genérico.",
+    answer: "A fisioterapia para corredores considera a biomecânica da corrida, o impacto repetitivo e as demandas específicas do esporte, criando estratégias de tratamento e prevenção voltadas ao gesto da corrida.",
   },
   {
     question: "A CareFit atende convênio?",
-    answer: "Trabalhamos com atendimento particular, pois oferecemos consultas mais longas e personalizadas, com abordagem multidisciplinar integrada ao seu treino de corrida.",
+    answer: "A CareFit Run Base trabalha com atendimento especializado e individualizado. Para informações sobre valores e formas de atendimento, entre em contato diretamente com nossa equipe.",
   },
   {
     question: "Preciso estar lesionado para procurar a fisioterapia?",
-    answer: "Não! A avaliação preventiva é uma das nossas especialidades. Identificamos fatores de risco antes que se tornem lesões, otimizando sua performance e segurança na corrida.",
+    answer: "Não. Muitos corredores procuram a fisioterapia de forma preventiva para melhorar mobilidade, força e biomecânica da corrida, reduzindo o risco de lesões futuras.",
   },
   {
     question: "Como funciona a primeira consulta?",
-    answer: "A primeira consulta inclui avaliação postural, análise de mobilidade, testes funcionais específicos para corrida e conversa sobre seu histórico e objetivos. A partir daí, montamos um plano de tratamento personalizado.",
+    answer: "Na primeira consulta realizamos uma avaliação completa que inclui histórico de treinos, análise funcional, mobilidade, força muscular e definição de um plano de tratamento personalizado.",
   },
 ];
 
@@ -62,7 +67,7 @@ const FisioterapiaCorredores = () => {
       <section className="relative py-20 bg-gradient-to-r from-primary to-secondary">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
-            Fisioterapia para Corredores em Ribeirão Preto
+            Fisioterapia Esportiva para Corredores em Ribeirão Preto
           </h1>
           <p className="text-xl text-white/90 max-w-2xl mx-auto mb-8">
             Centro especializado em tratamento, prevenção de lesões e performance para corrida. Atendimento multidisciplinar integrado ao seu treino.
@@ -99,6 +104,9 @@ const FisioterapiaCorredores = () => {
             <p>
               Na <strong className="text-foreground">CareFit Run Base</strong>, em Ribeirão Preto, a fisioterapia está integrada a um ecossistema completo de cuidado ao corredor: fortalecimento, nutrição, recovery e treinamento mental. Isso garante resultados mais rápidos e duradouros.
             </p>
+            <p>
+              Atendemos corredores de 5 km, 10 km, meia maratona, maratona e também triatletas que buscam tratar lesões, melhorar a biomecânica da corrida e retornar aos treinos com segurança e performance.
+            </p>
           </div>
         </div>
       </section>
@@ -123,7 +131,11 @@ const FisioterapiaCorredores = () => {
                       <lesao.icon className="w-6 h-6 text-white" />
                     </div>
                     <div>
-                      <h3 className="text-xl font-semibold text-primary mb-3">{lesao.title}</h3>
+                      <h3 className="text-xl font-semibold text-primary mb-3">
+                        <Link to={lesao.link} className="hover:text-accent transition-colors">
+                          {lesao.title}
+                        </Link>
+                      </h3>
                       <p className="text-muted-foreground leading-relaxed">{lesao.description}</p>
                     </div>
                   </div>
@@ -312,7 +324,7 @@ const FisioterapiaCorredores = () => {
             Agende sua Avaliação na CareFit Run Base
           </h2>
           <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-            Centro especializado em fisioterapia para corredores em Ribeirão Preto. Cuide do seu corpo, proteja sua corrida.
+            A CareFit Run Base é um centro especializado em fisioterapia esportiva para corredores em Ribeirão Preto, com foco em prevenção de lesões, recuperação e performance na corrida.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
