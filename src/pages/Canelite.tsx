@@ -74,7 +74,7 @@ const Canelite = () => {
       <section className="relative py-20 bg-gradient-to-r from-primary to-secondary">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
-            Canelite em Corredores: tratamento e prevenção em Ribeirão Preto
+            Canelite em Corredores: tratamento em Ribeirão Preto
           </h1>
           <p className="text-xl text-white/90 max-w-2xl mx-auto mb-8">
             Fisioterapia esportiva especializada no tratamento de canelite para corredores em Ribeirão Preto.
