@@ -40,23 +40,23 @@ const prevencao = [
 const faqItems = [
   {
     question: "O que causa dor no joelho na corrida?",
-    answer: "A causa mais comum é a síndrome patelofemoral, causada por desequilíbrios musculares, alterações biomecânicas e sobrecarga na articulação do joelho.",
+    answer: "A dor no joelho pode estar relacionada à síndrome patelofemoral, desequilíbrios musculares, aumento rápido de carga de treino ou alterações biomecânicas da corrida.",
   },
   {
     question: "Posso correr com dor no joelho?",
-    answer: "Depende da intensidade da dor. Uma avaliação com fisioterapeuta esportivo é fundamental para identificar a causa e ajustar o treino de forma segura.",
+    answer: "Em alguns casos é possível manter parte do treino com ajustes de volume e intensidade. A avaliação fisioterapêutica ajuda a determinar a progressão segura.",
   },
   {
     question: "Dor no joelho na corrida é grave?",
-    answer: "Na maioria dos casos não é grave, mas se não tratada pode se tornar crônica e limitar a prática da corrida. O tratamento precoce garante melhores resultados.",
+    answer: "Nem sempre. Muitas vezes é resultado de sobrecarga ou desequilíbrios musculares, mas deve ser avaliada para evitar agravamento.",
   },
   {
     question: "Fortalecer o quadríceps ajuda na dor do joelho?",
-    answer: "Sim. O fortalecimento de quadríceps e glúteos é uma das principais estratégias para tratar e prevenir a síndrome patelofemoral em corredores.",
+    answer: "Sim. O fortalecimento de quadríceps e glúteos melhora a estabilidade da articulação e reduz a sobrecarga patelofemoral.",
   },
   {
     question: "Joelheira ajuda na corrida?",
-    answer: "Joelheiras podem aliviar sintomas temporariamente, mas não tratam a causa. O ideal é um programa de fortalecimento e correção biomecânica.",
+    answer: "Joelheiras podem auxiliar temporariamente, mas o tratamento deve focar na correção das causas da dor.",
   },
 ];
 
@@ -73,7 +73,7 @@ const DorNoJoelho = () => {
       <section className="relative py-20 bg-gradient-to-r from-primary to-secondary">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
-            Dor no Joelho na Corrida: tratamento em Ribeirão Preto
+            Dor no Joelho na Corrida (Joelho do Corredor): tratamento em Ribeirão Preto
           </h1>
           <p className="text-xl text-white/90 max-w-2xl mx-auto mb-8">
             Fisioterapia esportiva especializada no tratamento de dor no joelho para corredores em Ribeirão Preto.
@@ -101,6 +101,12 @@ const DorNoJoelho = () => {
             </p>
             <p>
               Na <strong className="text-foreground">CareFit Run Base</strong> avaliamos biomecânica, força muscular e carga de treino para identificar as causas e tratar o problema com <Link to="/fisioterapia-para-corredores-ribeirao-preto" className="text-accent hover:underline">fisioterapia esportiva especializada</Link>.
+            </p>
+            <p>
+              Atendemos corredores de 5 km, 10 km, meia maratona, maratona e triatletas que desenvolvem dor no joelho durante ou após a corrida.
+            </p>
+            <p>
+              O <Link to="/fortalecimento-para-corredores-ribeirao-preto" className="text-accent hover:underline">fortalecimento específico para corredores</Link> é fundamental para reduzir o risco de dor no joelho, e protocolos de <Link to="/recovery-corredores-ribeirao-preto" className="text-accent hover:underline">recovery</Link> ajudam a acelerar a recuperação entre sessões de treino.
             </p>
           </div>
         </div>
@@ -204,8 +210,11 @@ const DorNoJoelho = () => {
       <section className="py-20 bg-gradient-to-r from-primary to-secondary">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-bold text-white mb-6">Agende sua Avaliação na CareFit Run Base</h2>
+          <p className="text-lg text-white/80 mb-6 max-w-2xl mx-auto">
+            A CareFit Run Base é um centro especializado em fisioterapia esportiva para corredores em Ribeirão Preto, com experiência no tratamento de lesões causadas pela corrida.
+          </p>
           <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-            Se você está com dor no joelho e quer voltar a correr com segurança, nossa equipe de fisioterapia esportiva em Ribeirão Preto pode ajudar.
+            Se você está com dor no joelho e quer voltar a correr com segurança, nossa equipe pode ajudar.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button variant="hero" size="lg" className="text-lg px-8 py-4" onClick={handleAgendar}>Agendar avaliação</Button>
