@@ -41,15 +41,15 @@ const lesoes = [
 const faqItems = [
   {
     question: "Quais são as lesões mais comuns na corrida?",
-    answer: "As lesões mais comuns incluem canelite, fascite plantar, tendinite do Aquiles, dor no joelho do corredor e síndrome da banda iliotibial.",
+    answer: "As lesões mais comuns entre corredores incluem canelite, fascite plantar, tendinite do Aquiles, síndrome da banda iliotibial e dor no joelho do corredor.",
   },
   {
     question: "É possível continuar correndo com dor?",
-    answer: "Depende do tipo de lesão e da intensidade dos sintomas. Uma avaliação com fisioterapeuta esportivo é fundamental para definir a melhor estratégia.",
+    answer: "Depende da intensidade da dor e do tipo de lesão. Em alguns casos é possível manter parte do treino com ajustes de carga e intensidade, mas é fundamental uma avaliação especializada.",
   },
   {
     question: "Como evitar lesões na corrida?",
-    answer: "O ideal é combinar fortalecimento, controle de carga de treino, recuperação adequada e avaliação periódica.",
+    answer: "A prevenção envolve fortalecimento específico para corredores, controle de carga de treino, recuperação adequada entre sessões e avaliação periódica da biomecânica da corrida.",
   },
 ];
 
