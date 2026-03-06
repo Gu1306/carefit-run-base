@@ -73,7 +73,7 @@ const FraturaEstresse = () => {
       <section className="relative py-20 bg-gradient-to-r from-primary to-secondary">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
-            Fratura por Estresse em Corredores
+            Fratura por Estresse em Corredores: tratamento e reabilitação em Ribeirão Preto
           </h1>
           <p className="text-xl text-white/90 max-w-2xl mx-auto mb-8">
             Tratamento e reabilitação de fratura por estresse para corredores em Ribeirão Preto.
