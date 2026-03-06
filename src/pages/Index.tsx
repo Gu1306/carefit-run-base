@@ -522,6 +522,7 @@ Viva com equilíbrio.</span>
           </div>
         </div>
       </section>
+      <Footer />
     </div>;
 };
 export default Index;
