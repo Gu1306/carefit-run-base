@@ -112,6 +112,9 @@ const LesoesNaCorrida = () => {
             <p>
               Na <strong className="text-foreground">CareFit Run Base</strong>, em Ribeirão Preto, trabalhamos com fisioterapia esportiva especializada em corrida para tratar lesões, prevenir recidivas e ajudar corredores a voltarem aos treinos com segurança.
             </p>
+            <p>
+              Atendemos corredores de 5 km, 10 km, meia maratona, maratona e também triatletas que buscam tratar lesões, prevenir recidivas e melhorar sua performance na corrida.
+            </p>
           </div>
           <div className="grid md:grid-cols-2 gap-4 mt-10">
             {[
