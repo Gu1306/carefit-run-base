@@ -50,7 +50,7 @@ const Navigation = () => {
         { name: "Dor no Joelho", href: "/dor-no-joelho-corrida-ribeirao-preto" },
         { name: "Banda Iliotibial", href: "/banda-iliotibial-ribeirao-preto" },
         { name: "Fratura por Estresse", href: "/fratura-por-estresse-ribeirao-preto" },
-        { name: "Prevenção de Lesões", href: "/prevencao-de-lesoes-na-corrida" },
+        { name: "Prevenção de Lesões", href: "/prevencao-de-lesoes-na-corrida-ribeirao-preto" },
       ],
     },
     { name: "CareFit Cast", href: "/carefit-cast" },
