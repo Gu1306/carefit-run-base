@@ -20,6 +20,7 @@ import CareFitCast from "./pages/CareFitCast";
 import FisioterapiaCorredores from "./pages/FisioterapiaCorredores";
 import NutricaoCorredores from "./pages/NutricaoCorredores";
 import PlaceholderPage from "./pages/PlaceholderPage";
+import LesoesNaCorrida from "./pages/LesoesNaCorrida";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -52,7 +53,7 @@ const App = () => (
           <Route path="/avaliacao-do-corredor-ribeirao-preto" element={<PlaceholderPage />} />
           <Route path="/fortalecimento-para-corredores-ribeirao-preto" element={<PlaceholderPage />} />
           <Route path="/fisioterapia-para-triatletas-ribeirao-preto" element={<PlaceholderPage />} />
-          <Route path="/lesoes-na-corrida" element={<PlaceholderPage />} />
+          <Route path="/lesoes-na-corrida" element={<LesoesNaCorrida />} />
           <Route path="/canelite-ribeirao-preto" element={<PlaceholderPage />} />
           <Route path="/fascite-plantar-ribeirao-preto" element={<PlaceholderPage />} />
           <Route path="/dor-no-joelho-corrida-ribeirao-preto" element={<PlaceholderPage />} />
