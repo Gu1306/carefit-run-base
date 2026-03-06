@@ -40,23 +40,23 @@ const prevencao = [
 const faqItems = [
   {
     question: "O que causa dor no joelho na corrida?",
-    answer: "A causa mais comum é a síndrome patelofemoral, causada por desequilíbrios musculares, alterações biomecânicas e sobrecarga na articulação do joelho.",
+    answer: "A dor no joelho pode estar relacionada à síndrome patelofemoral, desequilíbrios musculares, aumento rápido de carga de treino ou alterações biomecânicas da corrida.",
   },
   {
     question: "Posso correr com dor no joelho?",
-    answer: "Depende da intensidade da dor. Uma avaliação com fisioterapeuta esportivo é fundamental para identificar a causa e ajustar o treino de forma segura.",
+    answer: "Em alguns casos é possível manter parte do treino com ajustes de volume e intensidade. A avaliação fisioterapêutica ajuda a determinar a progressão segura.",
   },
   {
     question: "Dor no joelho na corrida é grave?",
-    answer: "Na maioria dos casos não é grave, mas se não tratada pode se tornar crônica e limitar a prática da corrida. O tratamento precoce garante melhores resultados.",
+    answer: "Nem sempre. Muitas vezes é resultado de sobrecarga ou desequilíbrios musculares, mas deve ser avaliada para evitar agravamento.",
   },
   {
     question: "Fortalecer o quadríceps ajuda na dor do joelho?",
-    answer: "Sim. O fortalecimento de quadríceps e glúteos é uma das principais estratégias para tratar e prevenir a síndrome patelofemoral em corredores.",
+    answer: "Sim. O fortalecimento de quadríceps e glúteos melhora a estabilidade da articulação e reduz a sobrecarga patelofemoral.",
   },
   {
     question: "Joelheira ajuda na corrida?",
-    answer: "Joelheiras podem aliviar sintomas temporariamente, mas não tratam a causa. O ideal é um programa de fortalecimento e correção biomecânica.",
+    answer: "Joelheiras podem auxiliar temporariamente, mas o tratamento deve focar na correção das causas da dor.",
   },
 ];
 
