@@ -324,9 +324,20 @@ const FisioterapiaCorredores = () => {
             Agende sua Avaliação na CareFit Run Base
           </h2>
           <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-            A CareFit Run Base é um centro especializado em fisioterapia esportiva para corredores em Ribeirão Preto, com foco em prevenção de lesões, recuperação e performance na corrida.
+            Se você é corredor ou triatleta em Ribeirão Preto e quer tratar uma lesão, prevenir problemas futuros ou melhorar sua performance na corrida, agende sua avaliação na CareFit Run Base.
+          </p>
+          <p className="text-lg text-white/80 mb-10 max-w-2xl mx-auto">
+            Nossa equipe especializada em fisioterapia esportiva para corredores está pronta para ajudar você a correr melhor e com mais segurança.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button
+              variant="hero"
+              size="lg"
+              className="text-lg px-8 py-4"
+              onClick={() => window.open('https://api.whatsapp.com/send?phone=5516996008849&text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20de%20fisioterapia%20para%20corrida.', '_blank')}
+            >
+              Agendar avaliação
+            </Button>
             <Button
               variant="whatsapp"
               size="lg"
@@ -334,7 +345,7 @@ const FisioterapiaCorredores = () => {
               onClick={() => window.open('https://api.whatsapp.com/send?phone=5516996008849&text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20de%20fisioterapia%20para%20corrida.', '_blank')}
             >
               <MessageCircle className="w-5 h-5" />
-              Agendar pelo WhatsApp
+              Falar no WhatsApp
             </Button>
           </div>
           <p className="text-white/70 text-sm mt-6">
