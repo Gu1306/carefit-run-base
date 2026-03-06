@@ -18,6 +18,7 @@ import NossaHistoria from "./pages/NossaHistoria";
 import EnvioResultados from "./pages/EnvioResultados";
 import CareFitCast from "./pages/CareFitCast";
 import FisioterapiaCorredores from "./pages/FisioterapiaCorredores";
+import NutricaoCorredores from "./pages/NutricaoCorredores";
 import PlaceholderPage from "./pages/PlaceholderPage";
 import NotFound from "./pages/NotFound";
 
@@ -46,6 +47,7 @@ const App = () => (
           <Route path="/carefit-cast" element={<CareFitCast />} />
           <Route path="/fisioterapia-para-corredores-ribeirao-preto" element={<FisioterapiaCorredores />} />
           {/* Placeholder pages - content coming soon */}
+          <Route path="/nutricao-para-corredores-ribeirao-preto" element={<NutricaoCorredores />} />
           <Route path="/recovery-corredores-ribeirao-preto" element={<PlaceholderPage />} />
           <Route path="/avaliacao-do-corredor-ribeirao-preto" element={<PlaceholderPage />} />
           <Route path="/fortalecimento-para-corredores-ribeirao-preto" element={<PlaceholderPage />} />
