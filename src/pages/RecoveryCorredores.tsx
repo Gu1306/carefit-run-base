@@ -47,7 +47,7 @@ const faqItems = [
 
 const RecoveryCorredores = () => {
   const handleWhatsApp = () => {
-    window.open('https://api.whatsapp.com/send?phone=5516996008849&text=Olá! Gostaria de agendar uma sessão de recovery.', '_blank');
+    window.open('https://api.whatsapp.com/send?phone=5516996008849', '_blank');
   };
 
   return (
@@ -73,7 +73,7 @@ const RecoveryCorredores = () => {
         </div>
       </section>
 
-      {/* Seção 1 — Introdução */}
+      {/* Introdução */}
       <section className="py-16 bg-background">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
@@ -84,13 +84,13 @@ const RecoveryCorredores = () => {
               Na CareFit Run Base, em Ribeirão Preto, oferecemos protocolos de recovery especializados para corredores e triatletas, com foco em acelerar a recuperação muscular, reduzir dor pós-treino e melhorar a adaptação ao treinamento.
             </p>
             <p>
-              Nosso recovery faz parte de um ecossistema completo de cuidado ao corredor, integrado com <Link to="/fisioterapia-para-corredores-ribeirao-preto" className="text-accent hover:underline">fisioterapia esportiva</Link>, <Link to="/fortalecimento-para-corredores-ribeirao-preto" className="text-accent hover:underline">fortalecimento específico para corrida</Link> e nutrição esportiva.
+              Nosso recovery faz parte de um ecossistema completo de cuidado ao corredor, integrado com <Link to="/fisioterapia-para-corredores-ribeirao-preto" className="text-accent hover:underline">fisioterapia esportiva</Link>, <Link to="/fortalecimento-para-corredores-ribeirao-preto" className="text-accent hover:underline">fortalecimento específico para corrida</Link> e <Link to="/nutricao-para-corredores-ribeirao-preto" className="text-accent hover:underline">nutrição esportiva</Link>.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Seção 2 — O Recovery dentro do Ecossistema CareFit */}
+      {/* O Recovery dentro do Ecossistema CareFit */}
       <section className="py-16 bg-muted/30">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center gap-4 mb-8">
@@ -118,7 +118,7 @@ const RecoveryCorredores = () => {
             </div>
             <div className="flex items-start gap-3 bg-background p-5 rounded-lg shadow-sm">
               <ArrowRight className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
-              <span className="text-foreground"><strong>Nutrição esportiva</strong> para sustentar recuperação e adaptação ao treinamento</span>
+              <span className="text-foreground"><Link to="/nutricao-para-corredores-ribeirao-preto" className="text-accent hover:underline font-medium">Nutrição esportiva</Link> para sustentar recuperação e adaptação ao treinamento</span>
             </div>
             <div className="flex items-start gap-3 bg-background p-5 rounded-lg shadow-sm">
               <ArrowRight className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
@@ -136,7 +136,7 @@ const RecoveryCorredores = () => {
         </div>
       </section>
 
-      {/* Seção 3 — Por que a CareFit existe? */}
+      {/* Por que a CareFit existe? */}
       <section className="py-16 bg-background">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center gap-4 mb-8">
@@ -168,7 +168,7 @@ const RecoveryCorredores = () => {
         </div>
       </section>
 
-      {/* Seção 4 — Por que o recovery é importante */}
+      {/* Por que o recovery é importante */}
       <section className="py-16 bg-muted/30">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center gap-4 mb-8">
@@ -197,7 +197,7 @@ const RecoveryCorredores = () => {
         </div>
       </section>
 
-      {/* Seção 5 — Protocolos de Recovery */}
+      {/* Protocolos de Recovery */}
       <section className="py-16 bg-background">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-primary mb-12">
@@ -205,7 +205,6 @@ const RecoveryCorredores = () => {
           </h2>
 
           <div className="space-y-12">
-            {/* Crioterapia */}
             <Card className="border-0 shadow-lg overflow-hidden">
               <CardContent className="p-0">
                 <div className="flex flex-col md:flex-row">
@@ -217,29 +216,26 @@ const RecoveryCorredores = () => {
                     <p className="text-muted-foreground leading-relaxed mb-6">
                       A imersão em água fria ajuda a reduzir inflamação, melhorar a circulação e acelerar a recuperação muscular após treinos intensos ou provas.
                     </p>
-                    <div className="space-y-2">
-                      <p className="font-semibold text-foreground">Benefícios:</p>
-                      <ul className="space-y-2">
-                        <li className="flex items-center gap-2">
-                          <ArrowRight className="w-4 h-4 text-accent flex-shrink-0" />
-                          <span className="text-foreground">Redução da inflamação</span>
-                        </li>
-                        <li className="flex items-center gap-2">
-                          <ArrowRight className="w-4 h-4 text-accent flex-shrink-0" />
-                          <span className="text-foreground">Recuperação muscular mais rápida</span>
-                        </li>
-                        <li className="flex items-center gap-2">
-                          <ArrowRight className="w-4 h-4 text-accent flex-shrink-0" />
-                          <span className="text-foreground">Redução da dor muscular tardia</span>
-                        </li>
-                      </ul>
-                    </div>
+                    <p className="font-semibold text-foreground mb-2">Benefícios:</p>
+                    <ul className="space-y-2">
+                      <li className="flex items-center gap-2">
+                        <ArrowRight className="w-4 h-4 text-accent flex-shrink-0" />
+                        <span className="text-foreground">Redução da inflamação</span>
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <ArrowRight className="w-4 h-4 text-accent flex-shrink-0" />
+                        <span className="text-foreground">Recuperação muscular mais rápida</span>
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <ArrowRight className="w-4 h-4 text-accent flex-shrink-0" />
+                        <span className="text-foreground">Redução da dor muscular tardia</span>
+                      </li>
+                    </ul>
                   </div>
                 </div>
               </CardContent>
             </Card>
 
-            {/* Compressão Pneumática */}
             <Card className="border-0 shadow-lg overflow-hidden">
               <CardContent className="p-0">
                 <div className="flex flex-col md:flex-row">
@@ -251,29 +247,26 @@ const RecoveryCorredores = () => {
                     <p className="text-muted-foreground leading-relaxed mb-6">
                       As botas de compressão utilizam pressão sequencial para melhorar o retorno venoso e acelerar a remoção de metabólitos acumulados após o exercício.
                     </p>
-                    <div className="space-y-2">
-                      <p className="font-semibold text-foreground">Benefícios:</p>
-                      <ul className="space-y-2">
-                        <li className="flex items-center gap-2">
-                          <ArrowRight className="w-4 h-4 text-accent flex-shrink-0" />
-                          <span className="text-foreground">Melhora da circulação</span>
-                        </li>
-                        <li className="flex items-center gap-2">
-                          <ArrowRight className="w-4 h-4 text-accent flex-shrink-0" />
-                          <span className="text-foreground">Redução de edema muscular</span>
-                        </li>
-                        <li className="flex items-center gap-2">
-                          <ArrowRight className="w-4 h-4 text-accent flex-shrink-0" />
-                          <span className="text-foreground">Recuperação mais rápida entre treinos</span>
-                        </li>
-                      </ul>
-                    </div>
+                    <p className="font-semibold text-foreground mb-2">Benefícios:</p>
+                    <ul className="space-y-2">
+                      <li className="flex items-center gap-2">
+                        <ArrowRight className="w-4 h-4 text-accent flex-shrink-0" />
+                        <span className="text-foreground">Melhora da circulação</span>
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <ArrowRight className="w-4 h-4 text-accent flex-shrink-0" />
+                        <span className="text-foreground">Redução de edema muscular</span>
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <ArrowRight className="w-4 h-4 text-accent flex-shrink-0" />
+                        <span className="text-foreground">Recuperação mais rápida entre treinos</span>
+                      </li>
+                    </ul>
                   </div>
                 </div>
               </CardContent>
             </Card>
 
-            {/* Liberação Miofascial */}
             <Card className="border-0 shadow-lg overflow-hidden">
               <CardContent className="p-0">
                 <div className="flex flex-col md:flex-row">
@@ -285,23 +278,21 @@ const RecoveryCorredores = () => {
                     <p className="text-muted-foreground leading-relaxed mb-6">
                       Técnicas de liberação miofascial ajudam a reduzir tensão muscular e melhorar mobilidade.
                     </p>
-                    <div className="space-y-2">
-                      <p className="font-semibold text-foreground">Benefícios:</p>
-                      <ul className="space-y-2">
-                        <li className="flex items-center gap-2">
-                          <ArrowRight className="w-4 h-4 text-accent flex-shrink-0" />
-                          <span className="text-foreground">Redução de rigidez muscular</span>
-                        </li>
-                        <li className="flex items-center gap-2">
-                          <ArrowRight className="w-4 h-4 text-accent flex-shrink-0" />
-                          <span className="text-foreground">Melhora da mobilidade</span>
-                        </li>
-                        <li className="flex items-center gap-2">
-                          <ArrowRight className="w-4 h-4 text-accent flex-shrink-0" />
-                          <span className="text-foreground">Prevenção de lesões</span>
-                        </li>
-                      </ul>
-                    </div>
+                    <p className="font-semibold text-foreground mb-2">Benefícios:</p>
+                    <ul className="space-y-2">
+                      <li className="flex items-center gap-2">
+                        <ArrowRight className="w-4 h-4 text-accent flex-shrink-0" />
+                        <span className="text-foreground">Redução de rigidez muscular</span>
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <ArrowRight className="w-4 h-4 text-accent flex-shrink-0" />
+                        <span className="text-foreground">Melhora da mobilidade</span>
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <ArrowRight className="w-4 h-4 text-accent flex-shrink-0" />
+                        <span className="text-foreground">Prevenção de lesões</span>
+                      </li>
+                    </ul>
                   </div>
                 </div>
               </CardContent>
@@ -310,7 +301,7 @@ const RecoveryCorredores = () => {
         </div>
       </section>
 
-      {/* Seção 6 — Recovery para quem treina sério */}
+      {/* Recovery para quem treina sério */}
       <section className="py-16 bg-muted/30">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center gap-4 mb-8">
@@ -328,8 +319,8 @@ const RecoveryCorredores = () => {
             {[
               "Treinam mais de 4 vezes por semana",
               "Estão em preparação para provas",
-              "Fazem treinos longos (longões)",
-              "Realizam treinos intervalados ou de intensidade",
+              "Fazem treinos longos",
+              "Realizam treinos intervalados ou intensos",
               "Participam de maratonas ou triathlon",
             ].map((item, index) => (
               <div key={index} className="flex items-center gap-3 bg-background p-4 rounded-lg shadow-sm">
@@ -344,7 +335,7 @@ const RecoveryCorredores = () => {
         </div>
       </section>
 
-      {/* Seção 7 — Quando fazer recovery */}
+      {/* Quando fazer recovery */}
       <section className="py-16 bg-background">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center gap-4 mb-8">
@@ -372,7 +363,7 @@ const RecoveryCorredores = () => {
         </div>
       </section>
 
-      {/* Seção 8 — Recovery e prevenção de lesões */}
+      {/* Recovery e prevenção de lesões */}
       <section className="py-16 bg-muted/30">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center gap-4 mb-8">
@@ -386,7 +377,7 @@ const RecoveryCorredores = () => {
           <p className="text-lg text-muted-foreground leading-relaxed mb-8">
             A recuperação adequada é um dos fatores mais importantes para prevenir lesões comuns em corredores, como:
           </p>
-          <div className="grid sm:grid-cols-2 gap-4 mb-8">
+          <div className="grid sm:grid-cols-2 gap-4">
             {lesoesPrevenidas.map((lesao, index) => (
               <Link key={index} to={lesao.link} className="flex items-center gap-3 bg-background p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow">
                 <Heart className="w-5 h-5 text-accent flex-shrink-0" />
@@ -397,7 +388,7 @@ const RecoveryCorredores = () => {
         </div>
       </section>
 
-      {/* Seção 9 — Um time trabalhando pela sua corrida */}
+      {/* Um time trabalhando pela sua corrida */}
       <section className="py-16 bg-background">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center gap-4 mb-8">
@@ -422,7 +413,7 @@ const RecoveryCorredores = () => {
             </div>
             <div className="flex items-center gap-4 p-4 bg-muted rounded-lg">
               <ArrowRight className="w-5 h-5 text-accent flex-shrink-0" />
-              <span className="text-foreground font-medium">Nutrição esportiva para endurance</span>
+              <Link to="/nutricao-para-corredores-ribeirao-preto" className="text-accent hover:underline font-medium">Nutrição esportiva para endurance</Link>
             </div>
             <div className="flex items-center gap-4 p-4 bg-muted rounded-lg">
               <ArrowRight className="w-5 h-5 text-accent flex-shrink-0" />
@@ -435,7 +426,7 @@ const RecoveryCorredores = () => {
         </div>
       </section>
 
-      {/* Seção 10 — FAQ */}
+      {/* FAQ */}
       <section className="py-16 bg-muted/30">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-primary mb-8">
