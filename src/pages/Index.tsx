@@ -75,8 +75,11 @@ const Index = () => {
 Viva com equilíbrio.</span>
           </h1>
           
+          <p className="text-lg md:text-xl mb-4 max-w-4xl mx-auto leading-relaxed font-poppins font-medium text-white/95">
+            A CareFit Run Base é um centro especializado em fisioterapia esportiva, recovery, fortalecimento e nutrição para corredores em Ribeirão Preto.
+          </p>
+
           <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto leading-relaxed font-poppins font-light">
-            A CareFit Run Base é o centro especializado em corrida em Ribeirão Preto. Reunimos fisioterapia esportiva para corredores, recovery muscular, fortalecimento específico e nutrição esportiva em um só lugar. Quer você esteja buscando transformação, reabilitação ou prevenção de lesões na corrida, temos a solução ideal para sua jornada.
           </p>
           
           <div className="flex justify-center">
