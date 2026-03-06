@@ -2,39 +2,39 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { ArrowRight, Shield, Activity, Heart, CheckCircle, AlertTriangle, MessageCircle } from "lucide-react";
+import { ArrowRight, Shield, Activity, Heart, CheckCircle, AlertTriangle, MessageCircle, MapPin, ExternalLink, BookOpen } from "lucide-react";
 import Footer from "@/components/Footer";
 import salaFisioterapia from "@/assets/sala-fisioterapia.jpg";
 
 const lesoes = [
   {
-    title: "Canelite em Corredores",
-    description: "Dor na região da canela causada por sobrecarga repetitiva.",
-    link: "/canelite-ribeirao-preto",
-  },
-  {
-    title: "Fascite Plantar em Corredores",
-    description: "Inflamação na fáscia plantar que gera dor no calcanhar.",
-    link: "/fascite-plantar-ribeirao-preto",
-  },
-  {
-    title: "Tendinite do Aquiles em Corredores",
-    description: "Lesão comum em corredores causada por sobrecarga no tendão de Aquiles.",
-    link: "/tendinite-aquiles-ribeirao-preto",
-  },
-  {
-    title: "Dor no Joelho na Corrida",
-    description: "Também conhecida como síndrome patelofemoral ou joelho do corredor.",
+    title: "Dor no Joelho na Corrida (Síndrome Patelofemoral)",
+    description: "A dor patelofemoral é a lesão mais prevalente entre corredores, podendo afetar até 16,7% dos atletas.",
     link: "/dor-no-joelho-corrida-ribeirao-preto",
   },
   {
+    title: "Canelite (Síndrome do Estresse Tibial Medial)",
+    description: "A canelite representa cerca de 9% das lesões em corredores e é caracterizada por dor na região interna da tíbia.",
+    link: "/canelite-ribeirao-preto",
+  },
+  {
+    title: "Fascite Plantar",
+    description: "Responsável por aproximadamente 7,9% das lesões em corredores, causando dor no calcanhar devido à inflamação da fáscia plantar.",
+    link: "/fascite-plantar-ribeirao-preto",
+  },
+  {
+    title: "Tendinite do Aquiles",
+    description: "A tendinopatia do Aquiles pode representar até 15% das lesões em corredores recreacionais.",
+    link: "/tendinite-aquiles-ribeirao-preto",
+  },
+  {
     title: "Síndrome da Banda Iliotibial",
-    description: "Dor na lateral do joelho causada por atrito da banda iliotibial.",
+    description: "Lesão comum caracterizada por dor na lateral do joelho causada pelo atrito da banda iliotibial.",
     link: "/banda-iliotibial-ribeirao-preto",
   },
   {
     title: "Fratura por Estresse",
-    description: "Microfraturas ósseas causadas por sobrecarga repetitiva.",
+    description: "Lesão óssea causada por sobrecarga repetitiva, representando o estágio mais grave das lesões por impacto da corrida.",
     link: "/fratura-por-estresse-ribeirao-preto",
   },
 ];
@@ -42,15 +42,34 @@ const lesoes = [
 const faqItems = [
   {
     question: "Quais são as lesões mais comuns na corrida?",
-    answer: "As lesões mais comuns entre corredores incluem canelite, fascite plantar, tendinite do Aquiles, síndrome da banda iliotibial e dor no joelho do corredor.",
+    answer: "As lesões mais comuns incluem síndrome patelofemoral (joelho do corredor), canelite, fascite plantar, tendinopatia do Aquiles e síndrome da banda iliotibial.",
   },
   {
     question: "É possível continuar correndo com dor?",
-    answer: "Depende da intensidade da dor e do tipo de lesão. Em alguns casos é possível manter parte do treino com ajustes de carga e intensidade, mas é fundamental uma avaliação especializada.",
+    answer: "Depende da intensidade da dor e da lesão. Em alguns casos é possível manter parte do treino com ajustes de carga e intensidade. A avaliação fisioterapêutica ajuda a definir a progressão segura.",
   },
   {
     question: "Como evitar lesões na corrida?",
-    answer: "A prevenção envolve fortalecimento específico para corredores, controle de carga de treino, recuperação adequada entre sessões e avaliação periódica da biomecânica da corrida.",
+    answer: "Fortalecimento específico, controle de carga de treino, recuperação adequada e avaliação biomecânica são fundamentais para a prevenção de lesões na corrida.",
+  },
+];
+
+const referencias = [
+  {
+    nome: "British Journal of Sports Medicine",
+    url: "https://bjsm.bmj.com",
+  },
+  {
+    nome: "Journal of Sport and Health Science",
+    url: "https://www.journals.elsevier.com/journal-of-sport-and-health-science",
+  },
+  {
+    nome: "StatPearls",
+    url: "https://www.ncbi.nlm.nih.gov/books",
+  },
+  {
+    nome: "Muscles Ligaments and Tendons Journal",
+    url: "https://www.mltj.online",
   },
 ];
 
@@ -96,7 +115,7 @@ const LesoesNaCorrida = () => {
         </div>
       </section>
 
-      {/* Introdução */}
+      {/* Seção 1 — Por que corredores se lesionam? */}
       <section className="py-20 bg-background">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center gap-4 mb-8">
@@ -112,23 +131,33 @@ const LesoesNaCorrida = () => {
               A corrida é um dos esportes mais populares do mundo, mas também está entre aqueles com maior incidência de lesões por sobrecarga.
             </p>
             <p>
-              Estudos indicam que entre <strong className="text-foreground">60% e 80% dos corredores</strong> sofrerão algum tipo de lesão ao longo do ano. A maioria dessas lesões ocorre por aumento rápido de volume de treino, desequilíbrios musculares ou falhas na recuperação.
+              Estudos científicos mostram que entre <strong className="text-foreground">60% e 80% dos corredores</strong> apresentam algum tipo de lesão ao longo do ano, sendo a maioria causada por erros de treinamento.
             </p>
             <p>
-              Na <strong className="text-foreground">CareFit Run Base</strong>, em Ribeirão Preto, trabalhamos com fisioterapia esportiva especializada em corrida para tratar lesões, prevenir recidivas e ajudar corredores a voltarem aos treinos com segurança.
+              A principal causa identificada pela literatura científica é o <strong className="text-foreground">aumento rápido da carga de treino</strong>, quando o volume ou intensidade aumentam mais rápido do que a capacidade de adaptação do corpo.
             </p>
             <p>
-              Atendemos corredores de 5 km, 10 km, meia maratona, maratona e também triatletas que buscam tratar lesões, prevenir recidivas e melhorar sua performance na corrida.
+              Uma pesquisa com mais de 5.000 corredores publicada no{" "}
+              <a href="https://bjsm.bmj.com" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline inline-flex items-center gap-1">
+                British Journal of Sports Medicine <ExternalLink className="w-3 h-3" />
+              </a>{" "}
+              demonstrou que o risco de lesão aumenta significativamente quando um corredor ultrapassa em mais de 10% a maior distância que correu em uma única sessão nos últimos 30 dias.
+            </p>
+            <p>
+              Músculos, tendões e ossos precisam de tempo para se adaptar ao impacto repetitivo da corrida. Quando essa adaptação é insuficiente, surgem as lesões por sobrecarga.
+            </p>
+            <p>
+              Na <strong className="text-foreground">CareFit Run Base</strong>, em Ribeirão Preto, nossa abordagem de <Link to="/fisioterapia-para-corredores-ribeirao-preto" className="text-accent hover:underline">fisioterapia esportiva</Link> é focada em identificar e corrigir as principais causas das lesões, que frequentemente incluem:
             </p>
           </div>
-          <div className="grid md:grid-cols-2 gap-4 mt-10">
+          <div className="grid md:grid-cols-2 gap-4 mt-8">
             {[
-              "Aumento rápido do volume de treino",
-              "Falta de fortalecimento específico",
-              "Recuperação insuficiente entre treinos",
-              "Biomecânica de corrida alterada",
-              "Calçados inadequados",
-              "Treinos em excesso sem periodização",
+              "Aumento rápido do volume ou intensidade do treino",
+              "Falta de fortalecimento específico para corrida",
+              "Recuperação insuficiente entre sessões de treino",
+              "Desequilíbrios na biomecânica da corrida",
+              "Uso de calçados inadequados",
+              "Periodização de treinos inadequada",
             ].map((item, i) => (
               <div key={i} className="flex items-center gap-4 p-4 bg-muted rounded-lg">
                 <AlertTriangle className="w-5 h-5 text-accent flex-shrink-0" />
@@ -136,18 +165,21 @@ const LesoesNaCorrida = () => {
               </div>
             ))}
           </div>
+          <p className="text-lg text-muted-foreground leading-relaxed mt-8">
+            Atendemos corredores de 5 km, 10 km, meia maratona, maratona e triatletas que buscam tratar lesões e melhorar sua performance com segurança.
+          </p>
         </div>
       </section>
 
-      {/* Principais Lesões */}
+      {/* Seção 2 — Principais Lesões na Corrida */}
       <section className="py-20 bg-muted">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
               Principais Lesões na Corrida
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Conheça as lesões mais comuns entre corredores e acesse o conteúdo completo sobre cada uma delas.
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+              As lesões na corrida seguem padrões que foram extensivamente estudados na literatura científica. Revisões sistemáticas mostram que algumas lesões aparecem com maior frequência entre corredores.
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -163,8 +195,10 @@ const LesoesNaCorrida = () => {
                     </Link>
                   </h3>
                   <p className="text-muted-foreground leading-relaxed mb-4">{lesao.description}</p>
-                  <Link to={lesao.link} className="text-accent hover:underline text-sm font-medium inline-flex items-center gap-1">
-                    Saiba mais <ArrowRight className="w-4 h-4" />
+                  <Link to={lesao.link}>
+                    <Button variant="outline" size="sm" className="w-full">
+                      Saiba mais <ArrowRight className="w-4 h-4 ml-1" />
+                    </Button>
                   </Link>
                 </CardContent>
               </Card>
@@ -173,7 +207,7 @@ const LesoesNaCorrida = () => {
         </div>
       </section>
 
-      {/* Como prevenir */}
+      {/* Seção 3 — Como Prevenir Lesões na Corrida */}
       <section className="py-20 bg-background">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center gap-4 mb-8">
@@ -184,14 +218,17 @@ const LesoesNaCorrida = () => {
               Como Prevenir Lesões na Corrida
             </h2>
           </div>
+          <p className="text-lg text-muted-foreground leading-relaxed mb-8">
+            A prevenção de lesões na corrida envolve uma abordagem integrada que combina diferentes estratégias:
+          </p>
           <div className="space-y-4 mb-10">
             {[
               "Fortalecimento específico para corredores",
               "Controle de carga de treino",
               "Recuperação adequada entre sessões",
               "Avaliação biomecânica da corrida",
-              "Planejamento de treinos progressivos",
-              "Integração com fisioterapia preventiva",
+              "Planejamento progressivo de treinos",
+              "Fisioterapia preventiva",
             ].map((item, i) => (
               <div key={i} className="flex items-center gap-4 p-4 bg-muted rounded-lg">
                 <CheckCircle className="w-5 h-5 text-accent flex-shrink-0" />
@@ -200,20 +237,23 @@ const LesoesNaCorrida = () => {
             ))}
           </div>
           <div className="grid md:grid-cols-3 gap-4">
-            <Link to="/fortalecimento-para-corredores-ribeirao-preto" className="block p-4 bg-muted rounded-lg text-center hover:shadow-md transition-shadow">
+            <Link to="/fortalecimento-para-corredores-ribeirao-preto" className="block p-6 bg-muted rounded-lg text-center hover:shadow-md transition-shadow">
+              <Shield className="w-8 h-8 text-accent mx-auto mb-2" />
               <span className="text-accent font-medium">Fortalecimento para Corredores →</span>
             </Link>
-            <Link to="/recovery-corredores-ribeirao-preto" className="block p-4 bg-muted rounded-lg text-center hover:shadow-md transition-shadow">
+            <Link to="/recovery-corredores-ribeirao-preto" className="block p-6 bg-muted rounded-lg text-center hover:shadow-md transition-shadow">
+              <Heart className="w-8 h-8 text-accent mx-auto mb-2" />
               <span className="text-accent font-medium">Recovery para Corredores →</span>
             </Link>
-            <Link to="/avaliacao-do-corredor-ribeirao-preto" className="block p-4 bg-muted rounded-lg text-center hover:shadow-md transition-shadow">
+            <Link to="/avaliacao-do-corredor-ribeirao-preto" className="block p-6 bg-muted rounded-lg text-center hover:shadow-md transition-shadow">
+              <Activity className="w-8 h-8 text-accent mx-auto mb-2" />
               <span className="text-accent font-medium">Avaliação do Corredor →</span>
             </Link>
           </div>
         </div>
       </section>
 
-      {/* Tratamento na CareFit */}
+      {/* Seção 4 — Tratamento na CareFit */}
       <section className="py-20 bg-muted">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center gap-4 mb-8">
@@ -225,7 +265,7 @@ const LesoesNaCorrida = () => {
             </h2>
           </div>
           <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-            A <strong className="text-foreground">CareFit Run Base é um centro especializado em fisioterapia para corredores em Ribeirão Preto</strong>. Nosso tratamento é integrado e individualizado, combinando diferentes abordagens para garantir o melhor resultado.
+            A <strong className="text-foreground">CareFit Run Base é um centro especializado em fisioterapia esportiva para corredores em Ribeirão Preto</strong>. Nosso tratamento é integrado e individualizado, combinando diferentes abordagens para garantir o melhor resultado.
           </p>
           <div className="grid md:grid-cols-2 gap-6">
             {[
@@ -265,6 +305,25 @@ const LesoesNaCorrida = () => {
               </AccordionItem>
             ))}
           </Accordion>
+
+          {/* JSON-LD FAQ */}
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "FAQPage",
+                mainEntity: faqItems.map((item) => ({
+                  "@type": "Question",
+                  name: item.question,
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: item.answer,
+                  },
+                })),
+              }),
+            }}
+          />
         </div>
       </section>
 
@@ -277,7 +336,7 @@ const LesoesNaCorrida = () => {
           <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
             Se você é corredor ou triatleta em Ribeirão Preto e está lidando com dor ou lesão na corrida, nossa equipe especializada pode ajudar.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
             <Button variant="hero" size="lg" className="text-lg px-8 py-4" onClick={handleAgendar}>
               Agendar avaliação
             </Button>
@@ -286,9 +345,38 @@ const LesoesNaCorrida = () => {
               Falar no WhatsApp
             </Button>
           </div>
-          <p className="text-white/70 text-sm mt-6">
-            Av. Áurea Aparecida Bragheto Machado, 241 — Ribeirão Preto, SP
-          </p>
+          <div className="flex items-center justify-center gap-2 text-white/70">
+            <MapPin className="w-5 h-5" />
+            <span>Av. Áurea Aparecida Bragheto Machado, 241 — Ribeirão Preto, SP</span>
+          </div>
+        </div>
+      </section>
+
+      {/* Referências Científicas */}
+      <section className="py-16 bg-muted/30">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center gap-4 mb-8">
+            <div className="w-14 h-14 bg-gradient-to-br from-earth to-secondary rounded-full flex items-center justify-center">
+              <BookOpen className="w-7 h-7 text-white" />
+            </div>
+            <h2 className="text-3xl font-bold text-primary">
+              Referências Científicas
+            </h2>
+          </div>
+          <div className="space-y-4">
+            {referencias.map((ref, index) => (
+              <a
+                key={index}
+                href={ref.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-3 p-4 bg-background rounded-lg shadow-sm hover:shadow-md transition-shadow group"
+              >
+                <ExternalLink className="w-5 h-5 text-accent flex-shrink-0" />
+                <span className="text-foreground group-hover:text-accent transition-colors font-medium">{ref.nome}</span>
+              </a>
+            ))}
+          </div>
         </div>
       </section>
 
