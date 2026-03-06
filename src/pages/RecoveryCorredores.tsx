@@ -216,8 +216,42 @@ const RecoveryCorredores = () => {
         </div>
       </section>
 
-      {/* Quando fazer recovery */}
+      {/* Recovery para quem treina sério */}
       <section className="py-16 bg-muted/30">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center gap-4 mb-8">
+            <div className="w-14 h-14 bg-gradient-to-br from-warm to-accent rounded-full flex items-center justify-center">
+              <Zap className="w-7 h-7 text-white" />
+            </div>
+            <h2 className="text-3xl font-bold text-primary">
+              Recovery para quem treina sério
+            </h2>
+          </div>
+          <p className="text-lg text-muted-foreground leading-relaxed mb-8">
+            O recovery é especialmente importante para corredores que:
+          </p>
+          <div className="grid sm:grid-cols-2 gap-4 mb-8">
+            {[
+              "Treinam mais de 4 vezes por semana",
+              "Estão em preparação para provas",
+              "Fazem treinos longos (longões)",
+              "Realizam treinos intervalados ou de intensidade",
+              "Participam de maratonas ou triathlons",
+            ].map((item, index) => (
+              <div key={index} className="flex items-center gap-3 bg-background p-4 rounded-lg shadow-sm">
+                <CheckCircle className="w-5 h-5 text-accent flex-shrink-0" />
+                <span className="text-foreground">{item}</span>
+              </div>
+            ))}
+          </div>
+          <p className="text-lg text-muted-foreground leading-relaxed">
+            Nesses casos, a recuperação adequada pode ser a diferença entre evoluir no treino ou desenvolver uma lesão.
+          </p>
+        </div>
+      </section>
+
+      {/* Quando fazer recovery */}
+      <section className="py-16 bg-background">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-primary mb-6">
             Quando o corredor deve fazer recovery?
