@@ -76,7 +76,7 @@ Viva com equilíbrio.</span>
           </h1>
           
           <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto leading-relaxed font-poppins font-light">
-            CareFit Run Base é o HUB completo para o corredor. Quer você esteja buscando transformação, reabilitação, recuperação acelerada ou fortalecimento, temos a solução perfeita para sua jornada. Corredores de todos os níveis confiam em nós.
+            A CareFit Run Base é o centro especializado em corrida em Ribeirão Preto. Reunimos fisioterapia esportiva para corredores, recovery muscular, fortalecimento específico e nutrição esportiva em um só lugar. Quer você esteja buscando transformação, reabilitação ou prevenção de lesões na corrida, temos a solução ideal para sua jornada.
           </p>
           
           <div className="flex justify-center">
