@@ -97,10 +97,13 @@ const FraturaEstresse = () => {
           </div>
           <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
             <p>
-              A fratura por estresse é uma <Link to="/lesoes-na-corrida" className="text-accent hover:underline">lesão</Link> causada por sobrecarga repetitiva no osso, ocorrendo principalmente em corredores que aumentam o volume de treino rapidamente.
+              A fratura por estresse está entre as <Link to="/lesoes-na-corrida" className="text-accent hover:underline">lesões mais graves relacionadas à sobrecarga na corrida</Link>, ocorrendo principalmente em corredores que aumentam o volume de treino rapidamente.
             </p>
             <p>
-              O tratamento envolve diagnóstico adequado, controle de carga e reabilitação progressiva. Na <strong className="text-foreground">CareFit Run Base</strong> auxiliamos corredores no processo de recuperação e retorno seguro à corrida com <Link to="/fisioterapia-para-corredores-ribeirao-preto" className="text-accent hover:underline">fisioterapia esportiva especializada</Link>.
+              O tratamento envolve diagnóstico adequado, controle de carga e reabilitação progressiva. Na <strong className="text-foreground">CareFit Run Base</strong> auxiliamos corredores no processo de recuperação e retorno seguro à corrida com <Link to="/fisioterapia-para-corredores-ribeirao-preto" className="text-accent hover:underline">fisioterapia esportiva especializada</Link>. Atendemos corredores de 5 km, 10 km, meia maratona, maratona e triatletas que desenvolvem fraturas por estresse devido ao aumento de carga de treino.
+            </p>
+            <p>
+              O <Link to="/fortalecimento-para-corredores-ribeirao-preto" className="text-accent hover:underline">fortalecimento específico para corredores</Link> ajuda a reduzir o risco de lesões ósseas por sobrecarga. A <Link to="/nutricao-para-corredores-ribeirao-preto" className="text-accent hover:underline">nutrição adequada</Link> é essencial para saúde óssea e prevenção de fraturas por estresse.
             </p>
           </div>
         </div>
