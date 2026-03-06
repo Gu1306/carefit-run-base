@@ -44,19 +44,19 @@ const faqItems = [
   },
   {
     question: "Quanto tempo leva para tratar?",
-    answer: "O tempo varia conforme a gravidade. Com fisioterapia e ajustes de treino, muitos corredores melhoram em 4 a 8 semanas.",
+    answer: "O tempo de recuperação depende da intensidade da lesão e da carga de treino do corredor. Com fisioterapia adequada, muitos atletas apresentam melhora em algumas semanas.",
   },
   {
     question: "Posso correr com dor na lateral do joelho?",
-    answer: "Depende da intensidade. Continuar correndo com dor intensa pode agravar o quadro. Uma avaliação especializada define os ajustes necessários no treino.",
+    answer: "Em alguns casos é possível manter parte do treino com ajustes de carga e intensidade. A avaliação fisioterapêutica ajuda a definir a progressão segura.",
   },
   {
     question: "Foam roller ajuda na banda iliotibial?",
-    answer: "O foam roller pode auxiliar na liberação de tensão, mas não trata a causa. O fortalecimento dos glúteos e a correção biomecânica são fundamentais.",
+    answer: "O uso de foam roller pode ajudar a reduzir tensão na musculatura lateral da coxa, mas deve ser associado a fortalecimento e correção biomecânica.",
   },
   {
     question: "A síndrome da banda iliotibial volta?",
-    answer: "Se os fatores de risco não forem corrigidos, sim. O fortalecimento contínuo e a avaliação periódica são essenciais para prevenir recidivas.",
+    answer: "Pode voltar se as causas da lesão não forem tratadas, como fraqueza muscular ou progressão inadequada de treino.",
   },
 ];
 
@@ -73,7 +73,7 @@ const BandaIliotibial = () => {
       <section className="relative py-20 bg-gradient-to-r from-primary to-secondary">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
-            Síndrome da Banda Iliotibial em Corredores
+            Síndrome da Banda Iliotibial em Corredores: tratamento da dor lateral no joelho em Ribeirão Preto
           </h1>
           <p className="text-xl text-white/90 max-w-2xl mx-auto mb-8">
             Tratamento especializado para síndrome da banda iliotibial em corredores em Ribeirão Preto.
@@ -97,10 +97,13 @@ const BandaIliotibial = () => {
           </div>
           <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
             <p>
-              A síndrome da banda iliotibial é uma <Link to="/lesoes-na-corrida" className="text-accent hover:underline">lesão comum em corredores</Link> que causa dor na lateral do joelho, especialmente em treinos longos ou descidas.
+              A síndrome da banda iliotibial é uma das <Link to="/lesoes-na-corrida" className="text-accent hover:underline">lesões mais comuns entre corredores</Link> e causa dor na lateral do joelho, especialmente em treinos longos ou descidas.
             </p>
             <p>
-              Na <strong className="text-foreground">CareFit Run Base</strong>, em Ribeirão Preto, tratamos essa condição com <Link to="/fisioterapia-para-corredores-ribeirao-preto" className="text-accent hover:underline">fisioterapia esportiva</Link> focada na correção biomecânica e no fortalecimento.
+              Na <strong className="text-foreground">CareFit Run Base</strong>, em Ribeirão Preto, tratamos essa condição com <Link to="/fisioterapia-para-corredores-ribeirao-preto" className="text-accent hover:underline">fisioterapia esportiva</Link> focada na correção biomecânica e no fortalecimento. Atendemos corredores de 5 km, 10 km, meia maratona, maratona e triatletas que desenvolvem dor lateral no joelho durante ou após a corrida.
+            </p>
+            <p>
+              O <Link to="/fortalecimento-para-corredores-ribeirao-preto" className="text-accent hover:underline">fortalecimento específico para corredores</Link> é fundamental para reduzir a sobrecarga na banda iliotibial. Além disso, <Link to="/recovery-corredores-ribeirao-preto" className="text-accent hover:underline">protocolos de recovery</Link> ajudam a melhorar a recuperação entre treinos.
             </p>
           </div>
         </div>
@@ -198,6 +201,14 @@ const BandaIliotibial = () => {
               </AccordionItem>
             ))}
           </Accordion>
+        </div>
+      </section>
+
+      <section className="py-20 bg-background">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <p className="text-lg text-muted-foreground leading-relaxed text-center">
+            A CareFit Run Base é um centro especializado em fisioterapia esportiva para corredores em Ribeirão Preto, com experiência no tratamento de lesões causadas pela corrida.
+          </p>
         </div>
       </section>
 
