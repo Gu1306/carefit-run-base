@@ -39,24 +39,20 @@ const prevencao = [
 
 const faqItems = [
   {
-    question: "O que é tendinite do Aquiles?",
-    answer: "É uma lesão por sobrecarga no tendão de Aquiles, que conecta a panturrilha ao calcanhar. Causa dor, rigidez e pode limitar a capacidade de correr.",
-  },
-  {
     question: "Quanto tempo leva para tratar tendinite do Aquiles?",
-    answer: "O tratamento pode levar de algumas semanas a alguns meses, dependendo da gravidade. O protocolo de exercícios excêntricos costuma mostrar resultados significativos em 6 a 12 semanas.",
+    answer: "O tempo de recuperação depende da gravidade da lesão e da carga de treino do corredor. Com fisioterapia adequada e controle de carga, muitos atletas apresentam melhora significativa em algumas semanas.",
   },
   {
     question: "Posso correr com tendinite do Aquiles?",
-    answer: "Em muitos casos é possível manter parte do treino com ajustes de carga. A dor deve ser monitorada e o volume ajustado conforme a resposta do tendão.",
+    answer: "Em alguns casos é possível manter parte do treino com redução de impacto e ajustes de volume. A avaliação fisioterapêutica ajuda a determinar a progressão segura.",
   },
   {
     question: "Tendinite do Aquiles pode virar ruptura?",
-    answer: "A tendinopatia crônica não tratada pode enfraquecer o tendão e aumentar o risco de ruptura. Por isso, o tratamento precoce é fundamental.",
+    answer: "Sim. Se a sobrecarga continuar sem tratamento adequado, a tendinopatia pode evoluir para ruptura parcial ou total do tendão.",
   },
   {
     question: "Exercício excêntrico realmente funciona?",
-    answer: "Sim. O protocolo de exercícios excêntricos é o tratamento com maior evidência científica para tendinopatia do Aquiles, promovendo remodelação e fortalecimento do tendão.",
+    answer: "Sim. Exercícios excêntricos para a panturrilha são considerados padrão-ouro no tratamento da tendinopatia do Aquiles.",
   },
 ];
 
