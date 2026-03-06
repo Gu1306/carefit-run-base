@@ -2,7 +2,8 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { useNavigate } from "react-router-dom";
-import { Heart, Zap, Target, Users, MapPin, Calendar, Star, Award, Clock, CheckCircle, Sparkles, Activity, Utensils, Dumbbell, Timer, Stethoscope } from "lucide-react";
+import { Heart, Zap, Target, Users, MapPin, Calendar, Star, Award, Clock, CheckCircle, Sparkles, Activity, Utensils, Dumbbell, Timer, Stethoscope, Shield, Microscope, TreeDeciduous, UserCheck, Layers } from "lucide-react";
+import { Link } from "react-router-dom";
 import Footer from "@/components/Footer";
 import { AnimatedCounter } from "@/components/AnimatedCounter";
 import espaco1 from "@/assets/espaco-1.jpg";
@@ -18,19 +19,19 @@ const Index = () => {
     icon: Heart,
     title: "Recovery",
     subtitle: "Recuperar também é treinar",
-    description: "Técnicas avançadas de recuperação muscular e prevenção de lesões para manter você sempre em movimento.",
+    description: "Recovery muscular com técnicas avançadas de recuperação e prevenção de lesões na corrida. Mantenha-se sempre em movimento com protocolos científicos.",
     produtos: "Presente em: Todos os produtos"
   }, {
     icon: Zap,
     title: "Fortalecimento",
     subtitle: "Base forte, corrida sem dor",
-    description: "Fortalecimento específico para corredores, focando nos grupos musculares essenciais para performance.",
+    description: "Treinamento de força para corrida específico para corredores, focando nos grupos musculares essenciais para performance e prevenção de lesões.",
     produtos: "Presente em: Fortalecimento para Corredores, Jornada Propósito"
   }, {
     icon: Target,
     title: "Nutrição",
     subtitle: "Combustível para a performance",
-    description: "Orientação nutricional especializada para otimizar seu rendimento e acelerar a recuperação.",
+    description: "Nutrição esportiva especializada para corredores, otimizando rendimento e acelerando a recuperação com acompanhamento individualizado.",
     produtos: "Presente em: Nutrição, Jornada Propósito"
   }, {
     icon: Users,
@@ -75,7 +76,7 @@ Viva com equilíbrio.</span>
           </h1>
           
           <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto leading-relaxed font-poppins font-light">
-            CareFit Run Base é o HUB completo para o corredor. Quer você esteja buscando transformação, reabilitação, recuperação acelerada ou fortalecimento, temos a solução perfeita para sua jornada. Corredores de todos os níveis confiam em nós.
+            A CareFit Run Base é o centro especializado em corrida em Ribeirão Preto. Reunimos fisioterapia esportiva para corredores, recovery muscular, fortalecimento específico e nutrição esportiva em um só lugar. Quer você esteja buscando transformação, reabilitação ou prevenção de lesões na corrida, temos a solução ideal para sua jornada.
           </p>
           
           <div className="flex justify-center">
@@ -246,6 +247,85 @@ Viva com equilíbrio.</span>
                 </Button>
               </CardContent>
             </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Lesões Comuns na Corrida */}
+      <section className="py-20 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-montserrat font-bold text-primary mb-6">
+              Lesões Comuns na Corrida
+            </h2>
+            <p className="text-xl text-primary/80 max-w-3xl mx-auto font-poppins">
+              Corredores podem desenvolver lesões por sobrecarga, desequilíbrios musculares ou falta de recuperação adequada. Conheça as principais e saiba como preveni-las.
+            </p>
+          </div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            {[
+              { nome: "Canelite", link: "/canelite-ribeirao-preto", desc: "Dor na região da canela causada por sobrecarga repetitiva durante a corrida." },
+              { nome: "Fascite Plantar", link: "/fascite-plantar-ribeirao-preto", desc: "Inflamação na fáscia plantar que causa dor no calcanhar, comum em corredores." },
+              { nome: "Dor no Joelho", link: "/dor-no-joelho-corrida-ribeirao-preto", desc: "Dor anterior no joelho frequente em corredores com desequilíbrio muscular." },
+              { nome: "Tendinite do Aquiles", link: "/tendinite-aquiles-ribeirao-preto", desc: "Inflamação do tendão de Aquiles por aumento rápido de carga de treino." },
+              { nome: "Síndrome da Banda Iliotibial", link: "/banda-iliotibial-ribeirao-preto", desc: "Dor lateral no joelho associada a fraqueza de glúteo e sobrecarga." },
+            ].map((lesao, index) => (
+              <Link key={index} to={lesao.link} className="group">
+                <Card className="bg-white border-0 shadow-lg hover:shadow-xl transition-all duration-300 group-hover:-translate-y-2 h-full">
+                  <CardContent className="p-6">
+                    <div className="w-12 h-12 bg-gradient-to-br from-accent to-earth rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                      <Activity className="h-6 w-6 text-white" />
+                    </div>
+                    <h3 className="text-xl font-montserrat font-bold text-primary mb-2">{lesao.nome}</h3>
+                    <p className="text-primary/70 font-poppins text-sm leading-relaxed">{lesao.desc}</p>
+                    <span className="text-accent font-montserrat font-semibold text-sm mt-3 inline-block">Saiba mais →</span>
+                  </CardContent>
+                </Card>
+              </Link>
+            ))}
+          </div>
+
+          <div className="text-center mt-10">
+            <Link to="/lesoes-na-corrida">
+              <Button size="lg" className="bg-primary hover:bg-primary/90 text-white px-8 py-4 text-lg font-montserrat font-semibold">
+                Ver todas as lesões na corrida
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Por que corredores escolhem a CareFit */}
+      <section className="py-20 bg-muted/30">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-montserrat font-bold text-primary mb-6">
+              Por que Corredores Escolhem a CareFit Run Base
+            </h2>
+            <p className="text-xl text-primary/80 max-w-3xl mx-auto font-poppins">
+              Somos referência em fisioterapia esportiva e cuidado integrado para corredores em Ribeirão Preto.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {[
+              { icon: Target, title: "Centro especializado em corredores", desc: "Espaço 100% dedicado ao corredor, com equipamentos, protocolos e ambiente pensados exclusivamente para quem corre." },
+              { icon: UserCheck, title: "Equipe formada por corredores", desc: "Nossos profissionais são corredores. Entendemos suas dores porque vivemos isso na pele, todos os dias." },
+              { icon: Layers, title: "Abordagem integrada", desc: "Fisioterapia esportiva, fortalecimento para corredores, nutrição esportiva e recovery muscular trabalhando juntos em um único ecossistema." },
+              { icon: Microscope, title: "Protocolos científicos", desc: "Métodos baseados em evidências científicas, com avaliações periódicas e acompanhamento contínuo de resultados." },
+              { icon: TreeDeciduous, title: "Foco em longevidade esportiva", desc: "Nosso objetivo vai além da próxima prova. Trabalhamos para que você corra com saúde por muitos anos." },
+            ].map((diff, index) => (
+              <Card key={index} className="bg-white border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+                <CardContent className="p-8">
+                  <div className="w-16 h-16 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                    <diff.icon className="h-8 w-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-montserrat font-bold text-primary mb-3">{diff.title}</h3>
+                  <p className="text-primary/70 font-poppins leading-relaxed">{diff.desc}</p>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
       </section>
