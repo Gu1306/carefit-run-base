@@ -53,7 +53,7 @@ const faqItems = [
   },
   {
     question: "A avaliação inclui tratamento?",
-    answer: "Durante a avaliação já são realizados testes e técnicas clínicas que ajudam a identificar e iniciar o processo de recuperação.",
+    answer: "Durante a avaliação já são realizados testes clínicos e técnicas de análise funcional que ajudam a identificar e iniciar o processo de recuperação.",
   },
 ];
 
