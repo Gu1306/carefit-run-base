@@ -131,7 +131,11 @@ const FisioterapiaCorredores = () => {
                       <lesao.icon className="w-6 h-6 text-white" />
                     </div>
                     <div>
-                      <h3 className="text-xl font-semibold text-primary mb-3">{lesao.title}</h3>
+                      <h3 className="text-xl font-semibold text-primary mb-3">
+                        <Link to={lesao.link} className="hover:text-accent transition-colors">
+                          {lesao.title}
+                        </Link>
+                      </h3>
                       <p className="text-muted-foreground leading-relaxed">{lesao.description}</p>
                     </div>
                   </div>
