@@ -160,7 +160,7 @@ const NutricaoCorredores = () => {
           </div>
           <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
             <p>
-              A alimentação é o combustível que define como você treina, se recupera e compete. Uma estratégia nutricional bem construída impacta diretamente a <strong className="text-foreground">performance, a longevidade esportiva e a saúde</strong> do corredor.
+              A nutrição esportiva é um dos pilares da performance para corredores e triatletas. Na CareFit Run Base, em Ribeirão Preto, trabalhamos a nutrição aplicada à corrida para melhorar a <strong className="text-foreground">performance, acelerar a recuperação e reduzir o risco de lesões</strong>.
             </p>
             <p>
               Sem nutrição adequada, até o melhor plano de treino pode falhar. Com ela, cada sessão rende mais — e o corpo responde melhor.
