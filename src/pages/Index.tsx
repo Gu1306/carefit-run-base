@@ -9,6 +9,7 @@ import { AnimatedCounter } from "@/components/AnimatedCounter";
 import espaco1 from "@/assets/espaco-1.jpg";
 import espaco2 from "@/assets/espaco-2.jpg";
 import espaco8 from "@/assets/espaco-8.jpg";
+import heroRunners from "@/assets/hero-runners.jpg";
 
 const Index = () => {
   const navigate = useNavigate();
