@@ -36,23 +36,23 @@ const lesoes = [
 const faqItems = [
   {
     question: "Quanto tempo leva para tratar uma lesão de corrida?",
-    answer: "O tempo de recuperação depende da lesão, do histórico do atleta e da fase do tratamento. Lesões leves podem melhorar em poucas semanas, enquanto quadros mais complexos podem exigir um processo de reabilitação mais longo.",
+    answer: "O tempo depende do tipo de lesão, do histórico do atleta e da fase da reabilitação. Lesões leves podem melhorar em algumas semanas, enquanto quadros mais complexos exigem acompanhamento mais prolongado.",
   },
   {
     question: "Posso continuar correndo durante o tratamento?",
-    answer: "Em muitos casos é possível manter parte do treino com ajustes de carga, intensidade e volume. O fisioterapeuta avalia cada caso e define a progressão segura.",
+    answer: "Em muitos casos é possível manter parte do treino com ajustes de carga e intensidade. A decisão é sempre baseada na avaliação do fisioterapeuta.",
   },
   {
     question: "Qual a diferença entre fisioterapia comum e fisioterapia para corredores?",
-    answer: "A fisioterapia para corredores considera a biomecânica da corrida, o impacto repetitivo e as demandas específicas do esporte, criando estratégias de tratamento e prevenção voltadas ao gesto da corrida.",
+    answer: "A fisioterapia para corredores considera a biomecânica da corrida, o impacto repetitivo e as demandas específicas do esporte.",
+  },
+  {
+    question: "Preciso estar lesionado para procurar fisioterapia?",
+    answer: "Não. Muitos corredores buscam avaliação preventiva para melhorar mobilidade, força e biomecânica da corrida.",
   },
   {
     question: "A CareFit atende convênio?",
     answer: "A CareFit Run Base trabalha com atendimento especializado e individualizado. Para informações sobre valores e formas de atendimento, entre em contato diretamente com nossa equipe.",
-  },
-  {
-    question: "Preciso estar lesionado para procurar a fisioterapia?",
-    answer: "Não. Muitos corredores procuram a fisioterapia de forma preventiva para melhorar mobilidade, força e biomecânica da corrida, reduzindo o risco de lesões futuras.",
   },
   {
     question: "Como funciona a primeira consulta?",
