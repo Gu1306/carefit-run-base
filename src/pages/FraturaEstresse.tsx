@@ -39,24 +39,20 @@ const prevencao = [
 
 const faqItems = [
   {
-    question: "O que é fratura por estresse?",
-    answer: "É uma microfratura óssea causada por sobrecarga repetitiva. Ocorre quando o osso não consegue se recuperar do impacto acumulado nos treinos.",
-  },
-  {
     question: "Quanto tempo leva para recuperar de uma fratura por estresse?",
-    answer: "O tempo de recuperação varia de 6 a 12 semanas, dependendo da localização e gravidade da fratura. O retorno à corrida deve ser gradual e supervisionado.",
+    answer: "O tempo de recuperação depende do osso afetado e da gravidade da lesão. Em muitos casos o retorno à corrida pode ocorrer após algumas semanas ou meses de reabilitação adequada.",
   },
   {
     question: "Posso correr com fratura por estresse?",
-    answer: "Não. A corrida deve ser interrompida durante o período de consolidação óssea. Atividades de baixo impacto podem ser mantidas conforme orientação profissional.",
+    answer: "Na maioria dos casos é necessário interromper temporariamente a corrida para permitir a consolidação óssea e evitar agravamento da lesão.",
   },
   {
     question: "Quais ossos são mais afetados em corredores?",
-    answer: "Os ossos mais comuns são a tíbia, os metatarsos, o fêmur e a fíbula. A tíbia é o local mais frequente em corredores.",
+    answer: "Os ossos mais afetados são tíbia, metatarsos, fêmur e calcâneo, devido ao impacto repetitivo da corrida.",
   },
   {
     question: "Como diferenciar fratura por estresse de canelite?",
-    answer: "A canelite causa dor difusa na canela, enquanto a fratura por estresse causa dor pontual e localizada. Exames de imagem ajudam no diagnóstico diferencial.",
+    answer: "A canelite causa dor difusa na canela, enquanto a fratura por estresse costuma apresentar dor localizada em um ponto específico do osso.",
   },
 ];
 
