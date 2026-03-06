@@ -19,19 +19,19 @@ const Index = () => {
     icon: Heart,
     title: "Recovery",
     subtitle: "Recuperar também é treinar",
-    description: "Técnicas avançadas de recuperação muscular e prevenção de lesões para manter você sempre em movimento.",
+    description: "Recovery muscular com técnicas avançadas de recuperação e prevenção de lesões na corrida. Mantenha-se sempre em movimento com protocolos científicos.",
     produtos: "Presente em: Todos os produtos"
   }, {
     icon: Zap,
     title: "Fortalecimento",
     subtitle: "Base forte, corrida sem dor",
-    description: "Fortalecimento específico para corredores, focando nos grupos musculares essenciais para performance.",
+    description: "Treinamento de força para corrida específico para corredores, focando nos grupos musculares essenciais para performance e prevenção de lesões.",
     produtos: "Presente em: Fortalecimento para Corredores, Jornada Propósito"
   }, {
     icon: Target,
     title: "Nutrição",
     subtitle: "Combustível para a performance",
-    description: "Orientação nutricional especializada para otimizar seu rendimento e acelerar a recuperação.",
+    description: "Nutrição esportiva especializada para corredores, otimizando rendimento e acelerando a recuperação com acompanhamento individualizado.",
     produtos: "Presente em: Nutrição, Jornada Propósito"
   }, {
     icon: Users,
