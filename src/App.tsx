@@ -21,6 +21,7 @@ import FisioterapiaCorredores from "./pages/FisioterapiaCorredores";
 import NutricaoCorredores from "./pages/NutricaoCorredores";
 import PlaceholderPage from "./pages/PlaceholderPage";
 import RecoveryCorredores from "./pages/RecoveryCorredores";
+import AvaliacaoCorredor from "./pages/AvaliacaoCorredor";
 import LesoesNaCorrida from "./pages/LesoesNaCorrida";
 import Canelite from "./pages/Canelite";
 import FascitePlantar from "./pages/FascitePlantar";
@@ -57,7 +58,7 @@ const App = () => (
           {/* Placeholder pages - content coming soon */}
           <Route path="/nutricao-para-corredores-ribeirao-preto" element={<NutricaoCorredores />} />
           <Route path="/recovery-corredores-ribeirao-preto" element={<RecoveryCorredores />} />
-          <Route path="/avaliacao-do-corredor-ribeirao-preto" element={<PlaceholderPage />} />
+          <Route path="/avaliacao-do-corredor-ribeirao-preto" element={<AvaliacaoCorredor />} />
           <Route path="/fortalecimento-para-corredores-ribeirao-preto" element={<PlaceholderPage />} />
           <Route path="/fisioterapia-para-triatletas-ribeirao-preto" element={<PlaceholderPage />} />
           <Route path="/lesoes-na-corrida" element={<LesoesNaCorrida />} />
