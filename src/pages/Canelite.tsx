@@ -39,24 +39,20 @@ const prevencao = [
 
 const faqItems = [
   {
-    question: "O que é canelite?",
-    answer: "Canelite é o nome popular da síndrome do estresse tibial medial, uma inflamação causada por sobrecarga repetitiva na região da canela, muito comum em corredores.",
-  },
-  {
     question: "Quanto tempo leva para tratar canelite?",
-    answer: "O tempo varia conforme a gravidade. Casos leves podem melhorar em 2 a 4 semanas com ajustes de carga e fisioterapia. Casos crônicos podem exigir acompanhamento mais prolongado.",
+    answer: "O tempo de recuperação depende da intensidade da lesão e da carga de treino do corredor. Em muitos casos, com fisioterapia adequada e controle de carga, a melhora ocorre em algumas semanas.",
   },
   {
     question: "Posso continuar correndo com canelite?",
-    answer: "Depende da intensidade da dor. Em muitos casos é possível manter parte do treino com ajustes de volume e intensidade, sempre com orientação do fisioterapeuta.",
+    answer: "Em alguns casos é possível manter parte do treino com redução de impacto e ajustes de volume. A avaliação fisioterapêutica ajuda a definir a progressão segura.",
   },
   {
     question: "Canelite pode virar fratura por estresse?",
-    answer: "Sim. Se não tratada, a canelite pode evoluir para uma fratura por estresse na tíbia, por isso é fundamental o diagnóstico e tratamento precoce.",
+    answer: "Sim. Quando a sobrecarga continua sem tratamento adequado, a canelite pode evoluir para fratura por estresse da tíbia.",
   },
   {
     question: "O que fazer quando sentir dor na canela?",
-    answer: "Reduza o volume de treino, aplique gelo na região e procure avaliação com fisioterapeuta esportivo para identificar a causa e iniciar o tratamento adequado.",
+    answer: "O ideal é reduzir temporariamente o volume de corrida e buscar avaliação especializada para identificar as causas da dor.",
   },
 ];
 
@@ -74,7 +70,7 @@ const Canelite = () => {
       <section className="relative py-20 bg-gradient-to-r from-primary to-secondary">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
-            Canelite em Corredores: tratamento e prevenção em Ribeirão Preto
+            Canelite em Corredores: tratamento em Ribeirão Preto
           </h1>
           <p className="text-xl text-white/90 max-w-2xl mx-auto mb-8">
             Fisioterapia esportiva especializada no tratamento de canelite para corredores em Ribeirão Preto.
@@ -103,6 +99,12 @@ const Canelite = () => {
             </p>
             <p>
               Na <strong className="text-foreground">CareFit Run Base</strong>, em Ribeirão Preto, tratamos corredores com <Link to="/fisioterapia-para-corredores-ribeirao-preto" className="text-accent hover:underline">fisioterapia esportiva especializada</Link> para reduzir a dor, corrigir fatores de risco e permitir um retorno seguro aos treinos.
+            </p>
+            <p>
+              Atendemos corredores de 5 km, 10 km, meia maratona, maratona e triatletas que desenvolvem dor na canela durante ou após a corrida.
+            </p>
+            <p>
+              O <Link to="/fortalecimento-para-corredores-ribeirao-preto" className="text-accent hover:underline">fortalecimento específico para corredores</Link> é um dos principais fatores na prevenção da canelite, assim como a integração com protocolos de <Link to="/recovery-corredores-ribeirao-preto" className="text-accent hover:underline">recovery</Link>.
             </p>
           </div>
         </div>
@@ -212,8 +214,11 @@ const Canelite = () => {
       <section className="py-20 bg-gradient-to-r from-primary to-secondary">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-bold text-white mb-6">Agende sua Avaliação na CareFit Run Base</h2>
+          <p className="text-lg text-white/80 mb-6 max-w-2xl mx-auto">
+            A CareFit Run Base é um centro especializado em fisioterapia esportiva para corredores em Ribeirão Preto, com experiência no tratamento de lesões causadas pela corrida.
+          </p>
           <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-            Se você está com dor na canela e quer voltar a correr com segurança, nossa equipe de fisioterapia esportiva em Ribeirão Preto pode ajudar.
+            Se você está com dor na canela e quer voltar a correr com segurança, nossa equipe pode ajudar.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button variant="hero" size="lg" className="text-lg px-8 py-4" onClick={handleAgendar}>Agendar avaliação</Button>
