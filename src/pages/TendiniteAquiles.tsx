@@ -102,6 +102,12 @@ const TendiniteAquiles = () => {
             <p>
               Na <strong className="text-foreground">CareFit Run Base</strong> realizamos tratamento com <Link to="/fisioterapia-para-corredores-ribeirao-preto" className="text-accent hover:underline">fisioterapia esportiva</Link> especializada para reduzir dor, restaurar função e permitir retorno progressivo à corrida.
             </p>
+            <p>
+              Atendemos corredores de 5 km, 10 km, meia maratona, maratona e triatletas que desenvolvem dor no tendão de Aquiles durante ou após a corrida.
+            </p>
+            <p>
+              O <Link to="/fortalecimento-para-corredores-ribeirao-preto" className="text-accent hover:underline">fortalecimento específico para corredores</Link> é fundamental para reduzir o risco de sobrecarga no tendão, e protocolos de <Link to="/recovery-corredores-ribeirao-preto" className="text-accent hover:underline">recovery</Link> ajudam a melhorar a recuperação entre sessões de treino.
+            </p>
           </div>
         </div>
       </section>
