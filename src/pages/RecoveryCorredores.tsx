@@ -393,6 +393,40 @@ const RecoveryCorredores = () => {
         </div>
       </section>
 
+      {/* Um time trabalhando pela sua corrida */}
+      <section className="py-16 bg-background">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center gap-4 mb-8">
+            <div className="w-14 h-14 bg-gradient-to-br from-earth to-secondary rounded-full flex items-center justify-center">
+              <Users className="w-7 h-7 text-white" />
+            </div>
+            <h2 className="text-3xl font-bold text-primary">
+              Um time trabalhando pela sua corrida
+            </h2>
+          </div>
+          <p className="text-lg text-muted-foreground leading-relaxed mb-8">
+            Na CareFit Run Base o recovery não funciona isoladamente. Ele faz parte de um acompanhamento integrado com:
+          </p>
+          <div className="space-y-4 mb-8">
+            <div className="flex items-center gap-4 p-4 bg-muted rounded-lg">
+              <ArrowRight className="w-5 h-5 text-accent flex-shrink-0" />
+              <Link to="/fisioterapia-para-corredores-ribeirao-preto" className="text-accent hover:underline font-medium">Fisioterapia esportiva para corredores</Link>
+            </div>
+            <div className="flex items-center gap-4 p-4 bg-muted rounded-lg">
+              <ArrowRight className="w-5 h-5 text-accent flex-shrink-0" />
+              <Link to="/fortalecimento-para-corredores-ribeirao-preto" className="text-accent hover:underline font-medium">Fortalecimento específico para corrida</Link>
+            </div>
+            <div className="flex items-center gap-4 p-4 bg-muted rounded-lg">
+              <ArrowRight className="w-5 h-5 text-accent flex-shrink-0" />
+              <span className="text-foreground font-medium">Nutrição esportiva para endurance</span>
+            </div>
+          </div>
+          <p className="text-lg text-muted-foreground leading-relaxed">
+            Essa integração permite olhar para o corredor de forma completa, considerando treinamento, recuperação, alimentação e prevenção de lesões.
+          </p>
+        </div>
+      </section>
+
       {/* FAQ */}
       <section className="py-16 bg-muted/30">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
