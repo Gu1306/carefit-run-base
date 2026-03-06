@@ -1,7 +1,7 @@
-import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Users, Heart, MessageCircle, Star, Target, Shield, Zap, Brain, Award, Flag, ChevronRight } from "lucide-react";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { Users, Heart, MessageCircle, Star, Target, Shield, Zap, Brain, Award, Flag, ChevronRight, ShieldCheck } from "lucide-react";
 import Footer from "@/components/Footer";
 import maratonaGrupo from "@/assets/maratona_grupo.jpg";
 
@@ -28,11 +28,11 @@ const ComunidadeCareFit = () => {
   ];
 
   const gruposProvas = [
-    "Esquadrão SP City",
-    "Pelotão POA",
-    "Elite NB POA",
-    "Missão Berlim",
-    "Legião Boston",
+    { nome: "Esquadrão SP City", desc: "A conquista urbana: dicas, altimetria e estratégia para dominar a maior metrópole.", embaixador: "Raquel Josino" },
+    { nome: "Pelotão POA", desc: "A jornada plana: um percurso amplo e acessível onde corredores de todos os níveis encontram seu ritmo.", embaixador: "Livia Dias" },
+    { nome: "Elite NB POA", desc: "O padrão internacional: preparação de alto nível para a única prova com selo Elite World Athletics.", embaixador: "Lilian Vidal" },
+    { nome: "Missão Berlim", desc: "A quebra de limites: planejamento, logística e treinos para um dos percursos mais rápidos do mundo.", embaixador: "Rafael Paiva" },
+    { nome: "Legião Boston", desc: "A resiliência pura: superação mental e física para enfrentar a Heartbreak Hill e a tradição.", embaixador: "Sarah Cecílio Marques" },
   ];
 
   const hubItems = [
@@ -56,6 +56,20 @@ const ComunidadeCareFit = () => {
     "Respeito ao corpo",
     "Disciplina",
     "Cuidado antes da dor",
+  ];
+
+  const regrasDeOuro = [
+    { titulo: "100% Corrida", desc: "O foco é absoluto. Falamos sobre treinos, provas, recovery, nutrição e equipamentos." },
+    { titulo: "Zero Spam", desc: "Sem correntes, política, futebol ou mensagens de \"bom dia\". Apenas conteúdo que agrega à sua jornada." },
+    { titulo: "Respeito à Jornada", desc: "Celebramos desde o primeiro 5K até o índice para Boston. Toda conquista importa." },
+    { titulo: "Ciência e Cuidado", desc: "Dúvidas sobre dores? A recomendação será sempre buscar avaliação profissional. O cuidado vem antes da dor." },
+  ];
+
+  const faqItems = [
+    { pergunta: "Preciso ser paciente da CareFit para entrar?", resposta: "Não! A comunidade é aberta a todos os corredores de Ribeirão Preto e região, de qualquer assessoria esportiva. Nosso objetivo é conectar histórias." },
+    { pergunta: "Posso entrar em mais de um grupo?", resposta: "Sim, você pode entrar no seu grupo de Base (ex: Propósito 21K) e também no grupo da sua prova alvo (ex: Esquadrão SP City)." },
+    { pergunta: "Os grupos são pagos?", resposta: "Não, a participação na Comunidade CareFit no WhatsApp é 100% gratuita." },
+    { pergunta: "Posso divulgar minha marca ou serviços nos grupos?", resposta: "Não. Para manter o foco e a qualidade das trocas, não permitimos propagandas, vendas ou anúncios externos." },
   ];
 
   return (
@@ -90,7 +104,7 @@ const ComunidadeCareFit = () => {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button variant="hero" size="lg" className="text-lg px-8 py-4" onClick={handleWhatsApp}>
-              Entrar na Comunidade
+              Escolher meu Grupo no WhatsApp
             </Button>
             <Button
               size="lg"
@@ -99,7 +113,7 @@ const ComunidadeCareFit = () => {
               onClick={handleWhatsApp}
             >
               <MessageCircle className="mr-2 h-5 w-5" />
-              Falar com a CareFit no WhatsApp
+              Tirar dúvidas com nossa equipe
             </Button>
           </div>
         </div>
@@ -220,10 +234,14 @@ const ComunidadeCareFit = () => {
                 Grupos de Provas Icônicas
               </h3>
               <div className="space-y-4">
-                {gruposProvas.map((nome) => (
-                  <Card key={nome} className="border-0 bg-white/10 backdrop-blur text-white">
+                {gruposProvas.map((grupo) => (
+                  <Card key={grupo.nome} className="border-0 bg-white/10 backdrop-blur text-white">
                     <CardContent className="p-5">
-                      <h4 className="font-montserrat font-bold text-lg">{nome}</h4>
+                      <h4 className="font-montserrat font-bold text-lg mb-1">{grupo.nome}</h4>
+                      <p className="text-white/80 font-poppins text-sm">{grupo.desc}</p>
+                      <p className="text-accent font-montserrat font-semibold text-sm mt-2">
+                        Embaixador(a): {grupo.embaixador}
+                      </p>
                     </CardContent>
                   </Card>
                 ))}
@@ -248,7 +266,7 @@ const ComunidadeCareFit = () => {
             <p>Os grupos são conduzidos por corredores que vivem os valores da CareFit.</p>
             <p className="font-semibold text-primary">Chamamos esses líderes de Embaixadores.</p>
             <p>
-              Eles compartilham suas jornadas reais de treinamento, recovery, nutrição e preparação para provas.
+              Os Embaixadores não são escolhidos pelo pace mais rápido, mas por viverem intensamente o DNA da CareFit. Eles estão em ciclo ativo para provas e compartilham suas rotinas reais: o fortalecimento com a nossa equipe, as estratégias nutricionais, e as sessões de recovery.
             </p>
             <p>Mais do que pace ou performance, os Embaixadores representam:</p>
           </div>
@@ -270,8 +288,34 @@ const ComunidadeCareFit = () => {
         </div>
       </section>
 
-      {/* Por que participar */}
+      {/* Regras de Ouro */}
       <section className="py-20 bg-background">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl md:text-4xl font-montserrat font-bold text-primary mb-4 text-center">
+            Nossas Regras de Ouro
+          </h2>
+          <p className="text-lg text-foreground/80 font-poppins mb-10 text-center">
+            Para garantir que a comunidade seja um espaço de valor, temos regras claras:
+          </p>
+
+          <div className="grid sm:grid-cols-2 gap-6 max-w-3xl mx-auto">
+            {regrasDeOuro.map((regra) => (
+              <Card key={regra.titulo} className="border-0 shadow-md bg-warm">
+                <CardContent className="p-6">
+                  <div className="flex items-center gap-3 mb-3">
+                    <ShieldCheck className="h-6 w-6 text-accent flex-shrink-0" />
+                    <h3 className="font-montserrat font-bold text-primary text-lg">{regra.titulo}</h3>
+                  </div>
+                  <p className="font-poppins text-foreground/70 text-sm leading-relaxed">{regra.desc}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Por que participar */}
+      <section className="py-20 bg-warm">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-montserrat font-bold text-primary mb-8 text-center">
             Por que participar da Comunidade CareFit
@@ -279,7 +323,7 @@ const ComunidadeCareFit = () => {
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
             {beneficios.map((b) => (
-              <Card key={b} className="border-0 shadow-md bg-warm">
+              <Card key={b} className="border-0 shadow-md bg-background">
                 <CardContent className="p-5 flex items-start gap-3">
                   <Star className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
                   <span className="font-poppins text-primary">{b}</span>
@@ -315,6 +359,28 @@ const ComunidadeCareFit = () => {
         </div>
       </section>
 
+      {/* FAQ */}
+      <section className="py-20 bg-background">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl md:text-4xl font-montserrat font-bold text-primary mb-10 text-center">
+            Perguntas Frequentes
+          </h2>
+
+          <Accordion type="single" collapsible className="w-full">
+            {faqItems.map((item, index) => (
+              <AccordionItem key={index} value={`faq-${index}`} className="border-b border-border">
+                <AccordionTrigger className="text-left font-montserrat font-semibold text-primary text-lg hover:no-underline py-5">
+                  {item.pergunta}
+                </AccordionTrigger>
+                <AccordionContent className="text-foreground/80 font-poppins text-base leading-relaxed">
+                  {item.resposta}
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
+        </div>
+      </section>
+
       {/* CTA Final */}
       <section className="py-20 bg-gradient-to-r from-accent via-secondary to-accent text-white">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -330,7 +396,7 @@ const ComunidadeCareFit = () => {
               className="bg-primary hover:bg-primary/90 text-primary-foreground text-lg px-8 py-4 font-montserrat font-semibold"
               onClick={handleWhatsApp}
             >
-              Entrar para a Comunidade CareFit
+              Escolher meu Grupo no WhatsApp
             </Button>
             <Button
               size="lg"
