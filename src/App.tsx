@@ -24,6 +24,9 @@ import RecoveryCorredores from "./pages/RecoveryCorredores";
 import AvaliacaoCorredor from "./pages/AvaliacaoCorredor";
 import FortalecimentoCorredores from "./pages/FortalecimentoCorredores";
 import FisioterapiaTriatletas from "./pages/FisioterapiaTriatletas";
+import BiomecanicaCorrida from "./pages/BiomecanicaCorrida";
+import TreinamentoMaratona from "./pages/TreinamentoMaratona";
+import PrevencaoLesoes from "./pages/PrevencaoLesoes";
 import LesoesNaCorrida from "./pages/LesoesNaCorrida";
 import Canelite from "./pages/Canelite";
 import FascitePlantar from "./pages/FascitePlantar";
@@ -63,6 +66,9 @@ const App = () => (
           <Route path="/avaliacao-do-corredor-ribeirao-preto" element={<AvaliacaoCorredor />} />
           <Route path="/fortalecimento-para-corredores-ribeirao-preto" element={<FortalecimentoCorredores />} />
           <Route path="/fisioterapia-para-triatletas-ribeirao-preto" element={<FisioterapiaTriatletas />} />
+          <Route path="/biomecanica-da-corrida-ribeirao-preto" element={<BiomecanicaCorrida />} />
+          <Route path="/treinamento-para-maratona-ribeirao-preto" element={<TreinamentoMaratona />} />
+          <Route path="/prevencao-de-lesoes-na-corrida" element={<PrevencaoLesoes />} />
           <Route path="/lesoes-na-corrida" element={<LesoesNaCorrida />} />
           <Route path="/canelite-ribeirao-preto" element={<Canelite />} />
           <Route path="/fascite-plantar-ribeirao-preto" element={<FascitePlantar />} />

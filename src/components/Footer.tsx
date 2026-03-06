@@ -43,6 +43,16 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
+                <Link to="/biomecanica-da-corrida-ribeirao-preto" className="text-sm text-primary-foreground/70 hover:text-accent transition-colors">
+                  Biomecânica da Corrida
+                </Link>
+              </li>
+              <li>
+                <Link to="/treinamento-para-maratona-ribeirao-preto" className="text-sm text-primary-foreground/70 hover:text-accent transition-colors">
+                  Treinamento para Maratona
+                </Link>
+              </li>
+              <li>
                 <Link to="/fisioterapia-para-triatletas-ribeirao-preto" className="text-sm text-primary-foreground/70 hover:text-accent transition-colors">
                   Triatletas
                 </Link>
@@ -79,6 +89,16 @@ const Footer = () => {
               <li>
                 <Link to="/banda-iliotibial-ribeirao-preto" className="text-sm text-primary-foreground/70 hover:text-accent transition-colors">
                   Banda Iliotibial
+                </Link>
+              </li>
+              <li>
+                <Link to="/fratura-por-estresse-ribeirao-preto" className="text-sm text-primary-foreground/70 hover:text-accent transition-colors">
+                  Fratura por Estresse
+                </Link>
+              </li>
+              <li>
+                <Link to="/prevencao-de-lesoes-na-corrida" className="text-sm text-primary-foreground/70 hover:text-accent transition-colors">
+                  Prevenção de Lesões
                 </Link>
               </li>
             </ul>
