@@ -9,21 +9,25 @@ import equipamentosFisio from "@/assets/equipamentos_fisio.jpg";
 const lesoes = [
   {
     title: "Canelite (Síndrome do Estresse Tibial Medial)",
+    link: "/canelite-ribeirao-preto",
     description: "Dor na região da canela causada por sobrecarga repetitiva. Comum em corredores que aumentam volume ou intensidade rapidamente. O tratamento inclui fortalecimento muscular, correção biomecânica e ajuste do plano de treino.",
     icon: AlertTriangle,
   },
   {
     title: "Fascite Plantar",
+    link: "/fascite-plantar-ribeirao-preto",
     description: "Inflamação da fáscia plantar que causa dor intensa no calcanhar, especialmente nos primeiros passos da manhã. A fisioterapia atua com terapia manual, exercícios de alongamento e fortalecimento específicos.",
     icon: AlertTriangle,
   },
   {
     title: "Tendinite do Aquiles",
+    link: "/tendinite-aquiles-ribeirao-preto",
     description: "Lesão no tendão de Aquiles por uso excessivo, gerando dor e rigidez na parte posterior do tornozelo. O tratamento envolve exercícios excêntricos, controle de carga e técnicas de terapia manual.",
     icon: AlertTriangle,
   },
   {
     title: "Dor no Joelho (Síndrome Patelofemoral)",
+    link: "/dor-no-joelho-corrida-ribeirao-preto",
     description: "Dor na região anterior do joelho, frequente em corredores. Causada por desequilíbrios musculares e alterações biomecânicas. A reabilitação foca no fortalecimento de quadríceps, glúteos e estabilidade do quadril.",
     icon: AlertTriangle,
   },
