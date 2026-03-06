@@ -24,7 +24,7 @@ const Index = () => {
   }, {
     icon: Zap,
     title: "Fortalecimento",
-    subtitle: "Base forte, corrida sem dor",
+    subtitle: "Fortalecimento específico para corredores",
     description: "Treinamento de força para corrida específico para corredores, focando nos grupos musculares essenciais para performance e prevenção de lesões.",
     produtos: "Presente em: Fortalecimento para Corredores, Jornada Propósito"
   }, {
