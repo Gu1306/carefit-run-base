@@ -60,12 +60,12 @@ const App = () => (
           <Route path="/fortalecimento-para-corredores-ribeirao-preto" element={<PlaceholderPage />} />
           <Route path="/fisioterapia-para-triatletas-ribeirao-preto" element={<PlaceholderPage />} />
           <Route path="/lesoes-na-corrida" element={<LesoesNaCorrida />} />
-          <Route path="/canelite-ribeirao-preto" element={<PlaceholderPage />} />
-          <Route path="/fascite-plantar-ribeirao-preto" element={<PlaceholderPage />} />
-          <Route path="/dor-no-joelho-corrida-ribeirao-preto" element={<PlaceholderPage />} />
-          <Route path="/tendinite-aquiles-ribeirao-preto" element={<PlaceholderPage />} />
-          <Route path="/banda-iliotibial-ribeirao-preto" element={<PlaceholderPage />} />
-          <Route path="/fratura-por-estresse-ribeirao-preto" element={<PlaceholderPage />} />
+          <Route path="/canelite-ribeirao-preto" element={<Canelite />} />
+          <Route path="/fascite-plantar-ribeirao-preto" element={<FascitePlantar />} />
+          <Route path="/dor-no-joelho-corrida-ribeirao-preto" element={<DorNoJoelho />} />
+          <Route path="/tendinite-aquiles-ribeirao-preto" element={<TendiniteAquiles />} />
+          <Route path="/banda-iliotibial-ribeirao-preto" element={<BandaIliotibial />} />
+          <Route path="/fratura-por-estresse-ribeirao-preto" element={<FraturaEstresse />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
