@@ -23,6 +23,7 @@ import PlaceholderPage from "./pages/PlaceholderPage";
 import RecoveryCorredores from "./pages/RecoveryCorredores";
 import AvaliacaoCorredor from "./pages/AvaliacaoCorredor";
 import FortalecimentoCorredores from "./pages/FortalecimentoCorredores";
+import FisioterapiaTriatletas from "./pages/FisioterapiaTriatletas";
 import LesoesNaCorrida from "./pages/LesoesNaCorrida";
 import Canelite from "./pages/Canelite";
 import FascitePlantar from "./pages/FascitePlantar";
