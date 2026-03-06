@@ -7,17 +7,17 @@ import Footer from "@/components/Footer";
 
 const lesoes = [
   {
-    title: "Canelite",
+    title: "Canelite em Corredores",
     description: "Dor na região da canela causada por sobrecarga repetitiva.",
     link: "/canelite-ribeirao-preto",
   },
   {
-    title: "Fascite Plantar",
+    title: "Fascite Plantar em Corredores",
     description: "Inflamação na fáscia plantar que gera dor no calcanhar.",
     link: "/fascite-plantar-ribeirao-preto",
   },
   {
-    title: "Tendinite do Aquiles",
+    title: "Tendinite do Aquiles em Corredores",
     description: "Lesão comum em corredores causada por sobrecarga no tendão de Aquiles.",
     link: "/tendinite-aquiles-ribeirao-preto",
   },
