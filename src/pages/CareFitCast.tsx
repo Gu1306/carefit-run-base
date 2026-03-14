@@ -18,6 +18,13 @@ const episodes: Episode[] = [
   // ↓ O PRIMEIRO da lista é sempre o destaque. Para adicionar um novo episódio,
   //   basta colar um novo objeto aqui no TOPO do array.
   {
+    youtubeId: "0NLCzuD8ops",
+    title: "EP 09 — Série Assessorias de RP – Assessoria Cássio Lucca",
+    guest: "Cássio Lucca",
+    description:
+      "Uma história inspiradora de resiliência e transformação. Cássio Lucca, fundador da Assessoria Cássio Lucca, compartilha sua trajetória desde os campos de futebol até a criação de sua assessoria em Ribeirão Preto, sua visão sobre o exercício como ferramenta de transformação e como sua equipe respeita a história de cada aluno.",
+  },
+  {
     youtubeId: "3WPQLAiSl1w",
     title: "EP 08 — Série Assessorias de RP – Triple Assessoria com Murilo Bredariol",
     guest: "Murilo Bredariol",
